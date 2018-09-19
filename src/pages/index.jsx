@@ -1,10 +1,12 @@
 import React from "react";
 import Helmet from "react-helmet";
+import { Link } from "react-scroll";
 import { graphql } from "gatsby";
 import Layout from "../layout";
 import PostListing from "../components/PostListing";
 import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
+import "./index.scss";
 
 class Index extends React.Component {
   render() {
@@ -16,8 +18,18 @@ class Index extends React.Component {
             <title>{config.siteTitle}</title>
             <link rel="canonical" href={`${config.siteUrl}`} />
           </Helmet>
-          <SEO postEdges={postEdges} />
-          <PostListing postEdges={postEdges} />
+          
+          <Link
+                className="scroll-down icon-arrow-left"
+                to="content"
+                data-offset="-45"
+                spy
+                smooth
+                duration={500}
+              >
+                <span className="hidden">Scroll Down</span>
+              </Link>
+
         </div>
       </Layout>
     );
