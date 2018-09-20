@@ -18,10 +18,10 @@ class Index extends React.Component {
             <title>{config.siteTitle}</title>
             <link rel="canonical" href={`${config.siteUrl}`} />
           </Helmet>
-          
+
           <Link
                 className="scroll-down icon-arrow-left"
-                to="content"
+                to="main-content"
                 data-offset="-45"
                 spy
                 smooth
@@ -30,6 +30,8 @@ class Index extends React.Component {
                 <span className="hidden">Scroll Down</span>
               </Link>
 
+          <PostListing postEdges={postEdges} />        
+          
         </div>
       </Layout>
     );

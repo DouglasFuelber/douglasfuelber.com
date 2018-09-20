@@ -9,16 +9,16 @@ class Navigation extends Component {
   render() {
     const { children, config, LocalTitle } = this.props;
     const footerLinks = LocalTitle !== "About";
+    const pageTitle = LocalTitle !== "Home" ? LocalTitle : "";
     return (
       <NavigationDrawer
         drawerTitle={config.siteTitle}
-        toolbarTitle={LocalTitle}
+        toolbarTitle={pageTitle}
         contentClassName="main-content"
         navItems={GetNavList(config)}
         mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
         tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
         desktopDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-        toolbarActions={<ToolbarActions config={config} />}
       >
         <div className="main-container">{children}</div>
         <Footer userLinks={footerLinks} />

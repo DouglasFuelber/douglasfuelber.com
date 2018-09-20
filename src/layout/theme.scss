@@ -1,7 +1,22 @@
-@import '~react-md/src/scss/react-md';
-$md-primary-color: $md-grey-400;
-$md-secondary-color: $md-red-800;
-$md-tertiary-color: $md-grey-300;
+@font-face {
+	font-family: quote(Raleway);
+	font-style: null;
+	font-weight: null;
+	src: 'https://fonts.googleapis.com/css?family=Raleway';
+}
+
+$md-colors-warn-md: false;
+$md-primary-color: rgb(1, 21, 61);;
+$md-secondary-color: rgb(0, 46, 172);
+$md-tertiary-color: rgb(3, 59, 243);
+
+body {
+	font-family: "Raleway", "Roboto", sans-serif;
+
+	h1, h2, h3, h4, h5, h6, p, button, input, textarea, html {
+		font-family: "Raleway", "Roboto", sans-serif;
+	}
+}
 
 .main-container,
 .darker-background {

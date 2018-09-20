@@ -1,6 +1,36 @@
+@import "../../layout/theme.scss";
+
+header {
+    &.md-toolbar--fixed {
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+nav {
+    header,
+    .md-list {
+        background-color: $md-primary-color;
+    }
+
+    .md-title--toolbar,
+    .md-icon,
+    .md-text {
+        color: white;
+    }
+
+    .md-divider {
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
 .main-content {
     display: flex;
     flex-direction: column;
+    
+    &.md-toolbar-relative {
+        margin-top: 0;
+    }
 
     .main-container {
         display: flex;
