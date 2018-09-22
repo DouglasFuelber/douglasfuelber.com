@@ -9,21 +9,19 @@ $md-colors-warn-md: false;
 $md-primary-color: rgb(1, 21, 61);;
 $md-secondary-color: rgb(0, 46, 172);
 $md-tertiary-color: rgb(3, 59, 243);
+$md-white-color: rgb(255, 255, 255);
+$md-black-color: rgb(0, 0, 0);
 
 body {
 	font-family: "Raleway", "Roboto", sans-serif;
+	font-size: 18px;
 
 	h1, h2, h3, h4, h5, h6, p, button, input, textarea, html {
 		font-family: "Raleway", "Roboto", sans-serif;
 	}
 }
 
-.main-container,
-.darker-background {
-    background-color: $md-tertiary-color;
-}
-
 a:link {
-    color: $md-secondary-color;
+    color: $md-white-color;
     text-decoration: none;
 }

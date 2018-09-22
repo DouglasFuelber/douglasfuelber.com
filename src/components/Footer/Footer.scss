@@ -1,9 +1,9 @@
 @import "../../layout/theme.scss";
 
 .footer {
+  color: $md-white-color;
   justify-content: center;
   align-content: center;
-  background-color: $md-primary-color;
   padding: 10px 5px 5px;
 
   .notice-container {
@@ -15,37 +15,11 @@
     .copyright {
       display: flex;
       flex: 1;
-      justify-content: flex-start;
-
-      @media (max-width: 640px - 1px) {
-        justify-content: center;
-      }
-    }
-
-    .rss {
-      display: flex;
-
-      @media (max-width: 640px - 1px) {
-        display: none;
-      }
-
-      flex: 1;
       justify-content: center;
     }
 
-    .based-on {
-      display: flex;
-
-      @media (max-width: 640px - 1px) {
-        display: none;
-      }
-
-      flex: 1;
-      justify-content: flex-end;
-    }
-
     h4 {
-      color: $md-secondary-color;
+      color: $md-white-color;
       text-align: center;
       margin: 0;
     }

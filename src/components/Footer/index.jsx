@@ -1,13 +1,10 @@
 import React, { Component } from "react";
-import Button from "react-md/lib/Buttons";
-import { Link } from "gatsby";
-import UserLinks from "../UserLinks";
+import ContactLinks from "../ContactLinks";
 import config from "../../../data/SiteConfig";
 import "./Footer.scss";
 
 class Footer extends Component {
   render() {
-    const url = config.siteRss;
     const { userLinks } = this.props;
     const { copyright, fixedFooter } = config;
     if (!copyright) {
@@ -15,26 +12,12 @@ class Footer extends Component {
     }
     return (
       <footer className={fixedFooter ? "footer footer-fixed" : "footer"}>
-        {userLinks ? <UserLinks config={config} labeled /> : null}
-        <div className="notice-container">
-          <div className="copyright">
-            <h4>{copyright}</h4>
-          </div>
-
-          <div className="rss">
-            <Link to={url}>
-              <Button flat secondary iconClassName="fa fa-rss">
-                Subscribe
-              </Button>
-            </Link>
-          </div>
-          <div className="based-on">
-            <h4>
-              Based on{" "}
-              <a href="https://github.com/Vagr9K/gatsby-material-starter">
-                Gatsby Material Starter
-              </a>.
-            </h4>
+        <div className="md-grid md-cell--8">
+          {userLinks ? <ContactLinks config={config} /> : null}
+          <div className="notice-container md-grid md-cell--12">
+            <div className="copyright">
+              <h4>{copyright}</h4>
+            </div>
           </div>
         </div>
       </footer>

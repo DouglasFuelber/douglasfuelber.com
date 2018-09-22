@@ -1,0 +1,45 @@
+@import "../../layout/theme.scss";
+
+#contact {
+    color: $md-white-color;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    position: relative;
+
+    h3 {
+      color: $md-white-color;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .left-border-area {
+        border-left: 4px solid $md-primary-color;
+        margin-bottom: 10px;
+        padding-left: 5px;
+
+        .md-grid {
+            padding: 0;
+        }
+
+        .md-icon {
+            font-size: 28px;
+        }
+    }
+
+    .mail {
+        font-size: 22px;
+        margin-bottom: 5px;
+        padding-left: 10px;
+        text-transform: lowercase;
+        vertical-align: middle;
+
+        a {
+            color: $md-white-color;      
+            text-decoration: none;
+            word-wrap: break-word;
+        }            
+    }
+}

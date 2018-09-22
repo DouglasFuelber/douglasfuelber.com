@@ -14,9 +14,13 @@ nav {
     }
 
     .md-title--toolbar,
-    .md-icon,
+    .md-icon {
+        color: white;
+    }
+    
     .md-text {
         color: white;
+        font-size: 16px;
     }
 
     .md-divider {
@@ -33,6 +37,7 @@ nav {
     }
 
     .main-container {
+        background-color: $md-primary-color;
         display: flex;
         min-height: 100%;
         flex-direction: column;
