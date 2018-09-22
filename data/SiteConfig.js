@@ -4,7 +4,7 @@ module.exports = {
   siteTitleAlt: "Douglas Fuelber - Developer", // Alternative site title for SEO.
   siteLogo: "", //"/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "https://www.douglasfuelber.com", // Domain of your website without pathPrefix.
-  pathPrefix: "/site", // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
+  pathPrefix: "", // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
   fixedFooter: false, // Whether the footer component is fixed, i.e. always visible
   siteDescription: "Douglas Fuelber - Bacharel em Ciência da Computação pela Unisc e programador na empresa Conectt", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
