@@ -3,14 +3,11 @@ import Helmet from "react-helmet";
 import { Link } from "react-scroll";
 import { graphql } from "gatsby";
 import Layout from "../layout";
-import PostListing from "../components/PostListing";
-import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
 import "./index.scss";
 
 class Index extends React.Component {
   render() {
-    const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
       <Layout location={this.props.location} title="Home">
         <div className="index-container">
@@ -19,18 +16,25 @@ class Index extends React.Component {
             <link rel="canonical" href={`${config.siteUrl}`} />
           </Helmet>
 
+          <div id="main_banner">
+            <h2>Teste de Título</h2>
+          </div>
+
           <Link
-                className="scroll-down icon-arrow-left"
-                to="main-content"
+                className="scroll-down"
+                to="main_area"
                 data-offset="-45"
                 spy
                 smooth
                 duration={500}
               >
-                <span className="hidden">Scroll Down</span>
+              
+              <i class="material-icons">keyboard_arrow_down</i>
               </Link>
 
-          <PostListing postEdges={postEdges} />        
+          <div id="main_area">
+            <h3>Teste de conteúdo</h3>
+          </div>
           
         </div>
       </Layout>
