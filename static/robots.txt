@@ -2,5 +2,6 @@ User-agent: *
 Disallow: *
 Disallow: */tags/
 Disallow: */categories/
+Allow:    /
 
 sitemap: https://www.douglasfuelber.com/sitemap.xml

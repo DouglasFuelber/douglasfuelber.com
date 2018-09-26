@@ -9,7 +9,7 @@ module.exports = {
   siteDescription: "Douglas Fuelber - Bacharel em Ciência da Computação pela Unisc e programador na empresa Conectt", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "", // FB Application ID for using app insights
-  siteGATrackingID: "", // Tracking code ID for google analytics.
+  siteGATrackingID: "UA-99213358-1", // Tracking code ID for google analytics.
   disqusShortname: "", // Disqus shortname.
   postDefaultCategoryID: "Programação", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
