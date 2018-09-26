@@ -17,7 +17,10 @@ class Index extends React.Component {
           </Helmet>
 
           <div id="main_banner">
-            <h2>Teste de Título</h2>
+            <div id="page_title">
+              <h1>Douglas Fuelber</h1>
+              <h2>Web Developer</h2>
+            </div>
           </div>
 
           <Link
@@ -29,11 +32,10 @@ class Index extends React.Component {
                 duration={500}
               >
               
-              <i class="material-icons">keyboard_arrow_down</i>
+              <i className="material-icons">keyboard_arrow_down</i>
               </Link>
 
           <div id="main_area">
-            <h3>Teste de conteúdo</h3>
           </div>
           
         </div>
