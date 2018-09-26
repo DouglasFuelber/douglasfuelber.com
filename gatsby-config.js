@@ -1,21 +1,19 @@
 const config = require("./data/SiteConfig");
 const urljoin = require("url-join");
 
-const regexExcludeRobots = /^(?!\/(dev-404-page|404|offline-plugin-app-shell-fallback|tags|categories)).*$/;
+//const regexExcludeRobots = /^(?!\/(dev-404-page|404|offline-plugin-app-shell-fallback|tags|categories)).*$/;
+const regexExcludeRobots = /^(?!\/(about|dev-404-page|404|offline-plugin-app-shell-fallback|tags|categories|bold-mage|angels-of-mist|the-fallen-time|random-project-4-with-super-long-title-phase-one|the-butterfly-of-the-edge|birch-in-the-roses|the-fairys-witches|introducing-gatsby-material-starter|big-sample-test|site)).*$/;
 
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteUrl: urljoin(config.siteUrl, config.pathPrefix),
+    siteUrl: config.siteUrl,
     rssMetadata: {
-      site_url: urljoin(config.siteUrl, config.pathPrefix),
-      feed_url: urljoin(config.siteUrl, config.pathPrefix, config.siteRss),
+      site_url: config.siteUrl,
+      feed_url: urljoin(config.siteUrl, config.siteRss),
       title: config.siteTitle,
       description: config.siteDescription,
-      image_url: `${urljoin(
-        config.siteUrl,
-        config.pathPrefix
-      )}/logos/logo-512.png`,
+      image_url: `${config.siteUrl}/logos/logo-512.png`,
       author: config.userName,
       copyright: config.copyright
     }
