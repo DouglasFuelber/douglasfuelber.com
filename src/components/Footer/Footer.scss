@@ -27,8 +27,13 @@
 
     h4 {
       color: $md-white-color;
+      font-size: 11px;
       margin: 0;
       text-align: center;
+
+      @media (min-width: 420px) {
+        font-size: inherit;
+      }
     }
   }
 }

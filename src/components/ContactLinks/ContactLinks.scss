@@ -5,6 +5,7 @@
     padding-bottom: 15px;
     padding-top: 15px;
     position: relative;
+    width: 100%;
 
     h3 {
       color: $md-white-color;
@@ -17,29 +18,44 @@
 
     .left-border-area {
         border-left: 4px solid $md-primary-color;
-        margin-bottom: 10px;
-        padding-left: 5px;
+        margin-bottom: 10px;        
+
+        @media (min-width: 420px) {
+            padding-left: 5px;
+        }
 
         .md-grid {
             padding: 0;
         }
 
         .md-icon {
-            font-size: 28px;
+            font-size: 22px;
+            @media (min-width: 420px) {
+                font-size: 28px;
+            }
         }
     }
 
     .mail {
-        font-size: 22px;
+        font-size: 14px;
         margin-bottom: 5px;
         padding-left: 10px;
         text-transform: lowercase;
         vertical-align: middle;
 
+        @media (min-width: 420px) {
+            font-size: 22px;
+        }
+
         a {
             color: $md-white-color;      
             text-decoration: none;
             word-wrap: break-word;
-        }            
+        }
+        
+        .md-icon-text {
+            width: 100%;
+            word-break: break-all;
+        }
     }
 }
