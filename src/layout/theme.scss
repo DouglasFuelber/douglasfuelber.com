@@ -1,9 +1,4 @@
-@font-face {
-	font-family: quote(Raleway);
-	font-style: null;
-	font-weight: null;
-	src: 'https://fonts.googleapis.com/css?family=Raleway';
-}
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800');
 
 $md-colors-warn-md: false;
 $md-primary-color: rgb(1, 21, 61);;
