@@ -1,3 +1,5 @@
+@import "../layout/theme.scss";
+
 * {
     box-sizing: border-box;
 }
@@ -7,12 +9,8 @@ html {
 }
 
 body {
-    background-color: transparent;
-    background: url("../../static/images/background.jpg") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-color: $md-secondary-color;
+    background-image: url("../../static/images/bg_pattern.png"); 
     margin: 0;
 }
 
