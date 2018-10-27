@@ -37,11 +37,6 @@
       }
 }
 
-#main_area {
-    background-color: $md-primary-color;
-}
-
-
 /* Create a bouncing scroll-down arrow on homepage with cover image */
 .scroll-down {    
     .material-icons {
@@ -52,7 +47,7 @@
         display: block;
         font-size: 60px;
         left: 50%;
-        margin-left: -22px;
+        margin-left: -25px;
         position: absolute;
         text-align: center;
         text-decoration: none;

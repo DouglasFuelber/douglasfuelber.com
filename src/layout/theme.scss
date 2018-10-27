@@ -12,7 +12,29 @@ body {
 	font-size: 18px;
 
 	h1, h2, h3, h4, h5, h6, p, button, input, textarea, html {
+		color: $md-white-color;
 		font-family: "Raleway", "Roboto", sans-serif;
+	}
+
+	h3 {
+		color: $md-white-color;
+		font-size: 26px;
+		font-weight: 800;
+		letter-spacing: 1px;
+		margin-bottom: 15px;
+		text-transform: uppercase;
+	}
+
+	.dark_bg {
+		background-color: $md-primary-color;		
+	}
+
+	.left-border-area {
+		border-left: 4px solid $md-primary-color;
+		padding-left: 20px;
+		&.light-border {
+			border-left-color: $md-tertiary-color;
+		}
 	}
 }
 

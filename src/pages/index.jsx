@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import { Link } from "react-scroll";
 import { graphql } from "gatsby";
 import Layout from "../layout";
+import About from "../components/About";
 import config from "../../data/SiteConfig";
 import "./index.scss";
 
@@ -35,7 +36,8 @@ class Index extends React.Component {
               <i className="material-icons">keyboard_arrow_down</i>
               </Link>
 
-          <div id="main_area">
+          <div id="main_area" className="dark_bg">
+            <About/>
           </div>
           
         </div>

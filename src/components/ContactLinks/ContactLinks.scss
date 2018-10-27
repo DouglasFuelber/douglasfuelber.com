@@ -7,17 +7,7 @@
     position: relative;
     width: 100%;
 
-    h3 {
-      color: $md-white-color;
-      font-size: 26px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      margin-bottom: 15px;
-      text-transform: uppercase;
-    }
-
     .left-border-area {
-        border-left: 4px solid $md-primary-color;
         margin-bottom: 10px;        
 
         @media (min-width: 420px) {

@@ -17,7 +17,7 @@ module.exports = {
   userName: "Douglas Fuelber", // Username to display in the author segment.
   userTwitter: "", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "Brasil", // User location to display in the author segment.
-  userAvatar: "https://scontent.fpoa11-1.fna.fbcdn.net/v/t1.0-9/30713004_1522740204502520_2647134068470185984_n.jpg?_nc_cat=0&oh=ce24a65e4743d07697af4121f44497eb&oe=5C26A9CE", // User avatar to display in the author segment.
+  userAvatar: "/images/avatar.jpg", // User avatar to display in the author segment.
   userDescription:
   "Como programador, gosto de aprender novas tecnologias e linguagens, buscando não me limitar em apenas aprimorar o conhecimento que já possuo. Além disso, gosto muito de séries, filmes, esportes e de conhecer novos lugares.", // User description to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
