@@ -13,7 +13,6 @@ class Navigation extends Component {
     return (
       <NavigationDrawer
         drawerTitle={config.siteTitle}
-        toolbarTitle={pageTitle}
         contentClassName="main-content"
         navItems={GetNavList(config)}
         mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
