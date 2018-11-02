@@ -53,6 +53,32 @@ module.exports = {
         level: "Intermediário"
       }
     ],
+    publications: [
+      {
+        title: "Gerenciamento de Tráfego Urbano empregando Sistemas Multiagentes: Análise Qualitativa de Trabalhos Relacionados",
+        type: "Artigo e apresentação",
+        event: "XXXVII ENEGEP",
+        eventComplement: "Encontro Nacional de Engenharia de Produção",
+        date: "Outubro de 2017",
+        link: "https://online.unisc.br/acadnet/anais/index.php/salao_ensino_extensao/article/view/17284",
+        colaborator: {
+          role: "Coautora",
+          name: "Profª. Drª. Rejane Frozza"
+        }
+      },
+      {
+        title: "Desenvolvimento de um Sistema Multiagentes para Análise de Tempos de Semáforos e Consumo de Combustível",
+        type: "Artigo e apresentação",
+        event: "VIII Salão de Ensino e Extensão",
+        eventComplement: "Universidade de Santa Cruz do Sul (UNISC)",
+        date: "Outubro de 2017",
+        link: "http://www.abepro.org.br/biblioteca/TN_STO_245_419_32999.pdf",
+        colaborator: {
+          role: "Coautora",
+          name: "Profª. Drª. Rejane Frozza"
+        }
+      }
+    ],
     skills: [
       "HTML / CSS", "JavaScript", "JQuery", "Bootstrap", "AngularJS", "C#", "ASP.NET MVC", "Entity Framework",
       "Microsoft SQL Server", "Microsoft SharePoint", "PHP", "Wordpress", "Java", "GIT", "Photoshop", "Corel Draw"

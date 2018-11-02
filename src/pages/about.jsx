@@ -5,6 +5,7 @@ import About from "../components/About";
 import ResumeCareer from "../components/ResumeCareer";
 import ResumeEducation from "../components/ResumeEducation";
 import ResumeLanguages from "../components/ResumeLanguages";
+import ResumePublications from "../components/ResumePublications";
 import ResumeSkills from "../components/ResumeSkills";
 import config from "../../data/SiteConfig";
 import "./about.scss";
@@ -23,6 +24,7 @@ class AboutPage extends Component {
           <ResumeEducation />
           <ResumeSkills />
           <ResumeLanguages />
+          <ResumePublications />
         </div>
       </Layout>
     );
