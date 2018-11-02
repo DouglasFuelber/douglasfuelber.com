@@ -9,7 +9,7 @@ module.exports = {
             month: "MAR",
             year: "2017"
         },
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mi purus. Aliquam accumsan risus fermentum felis lacinia tincidunt. Vivamus tortor erat, maximus nec sollicitudin in, convallis nec arcu.",
+        description: "Desenvolvedor de sistemas, websites e portais corporativos em diversas tecnologias e plataformas, destacando-se Microsoft SharePoint, ASP.NET MVC e Wordpress.",
       },
       {
         company: "Conectt",
@@ -20,18 +20,18 @@ module.exports = {
             month: "NOV",
             year: "2016"
         },
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mi purus. Aliquam accumsan risus fermentum felis lacinia tincidunt. Vivamus tortor erat, maximus nec sollicitudin in, convallis nec arcu.",
+        description: "Desenvolvimento de websites e portais corporativos sobre a plataforma Microsoft SharePoint.",
       },
       {
         company: "Imagem.com",
-        companyUrl: "http://http://www.imaggem.com.br/",
+        companyUrl: "http://www.imaggem.com.br/",
         companyLocation: "Vera Cruz / RS / Brasil",
         jobTitle: "Designer Gráfico",
         beginDate: {
             month: "JUL",
             year: "2012"
         },
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mi purus. Aliquam accumsan risus fermentum felis lacinia tincidunt. Vivamus tortor erat, maximus nec sollicitudin in, convallis nec arcu.",
+        description: "Responsável pela criação de artes gráficas, finalização de arquivos para impressão e eventuais atendimentos a clientes.",
       },
     ]
   };  

@@ -25,6 +25,25 @@ body {
 		text-transform: uppercase;
 	}
 
+	h4 {
+		color: $md-white-color;
+		font-size: 26px;
+		font-weight: 600;
+	}
+
+	h5 {
+		color: $md-white-color;
+		font-size: 24px;
+		font-weight: 400;
+	}
+
+	a:link,
+	a:hover,
+	a:visited {
+		color: $md-white-color;
+		text-decoration: none;
+	}
+
 	.dark_bg {
 		background-color: $md-primary-color;		
 	}
@@ -38,10 +57,7 @@ body {
 	}
 }
 
-a:link {
-    color: $md-white-color;
-    text-decoration: none;
-}
+
 
 @-webkit-keyframes bounce {
 	0% { transform: translateY(-5px)  }

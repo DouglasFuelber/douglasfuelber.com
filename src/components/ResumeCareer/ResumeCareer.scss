@@ -1,4 +1,4 @@
-//@import "../../layout/theme.scss";
+@import "../../layout/theme.scss";
 
 .career-wrapper {
     display: flex;
@@ -6,5 +6,102 @@
     padding: 25px 15px;
     @media (min-width: 991px) {
         max-width: 66%;
+    }
+
+    #jobs {
+        .job {
+            padding: 45px 0 40px 20px;
+            position: relative;
+            top: -40px;
+
+            .job-company {
+                @media (min-width: 991px) {
+                    display: inline;
+                }
+            }
+            .job-description {
+                font-size: 16px;
+                line-height: 25px;
+                margin-top: 10px;
+            }
+            .job-location {
+                color: $md-tertiary-color;
+                font-size: 20px;
+                font-weight: 600;
+                @media (min-width: 991px) {
+                    display: inline;
+                    &:before {
+                        content: " - ";
+                    }
+                }
+            }
+        }
+        .job-begin-date {
+            color: $md-tertiary-color;
+            font-weight: 600;
+            margin-top: 25px;
+            position: absolute;
+            text-transform: uppercase;
+            .date-indicator {
+                background-color: $md-tertiary-color;
+                border: 3px solid $md-tertiary-color;
+                border-radius: 50%;
+                height: 25px;
+                left: -34px;
+                position: relative;
+                top: -25px;
+                width: 25px;
+                @media (min-width: 991px) {
+                    top: -40px;
+                }
+            }
+            .job-begin-month {
+                display: inline;
+                @media (min-width: 991px) {
+                    color: $md-white-color;
+                    display: block;
+                    font-size: 20px;
+                    position: relative;
+                }
+            }
+            .job-begin-year {
+                display: inline;
+                font-size: 22px;
+                &:before {
+                    content: "/";
+                    font-size: 20px;
+                }
+                @media (min-width: 991px) {
+                    color: $md-white-color;
+                    display: block;
+                    position: relative;
+                    &:before {
+                        content: unset;
+                    }
+                }
+            }
+            &.current {
+                padding-left: 25px;
+                position: relative;
+                .date-indicator {
+                    background-color: $md-primary-color;
+                    z-index: 5;
+                }
+                .job-begin-month {
+                    left: -185px;
+                    top: -12px;
+                }
+            }
+        }
+
+        @media (min-width: 991px) {
+            padding-left: 160px;
+            .job-date {
+                left: -95px;
+                line-height: 25px;
+                position: relative;
+                text-align: center;
+            }
+        }
     }
 }
