@@ -2,7 +2,7 @@ const config = require("./data/SiteConfig");
 const urljoin = require("url-join");
 
 //const regexExcludeRobots = /^(?!\/(dev-404-page|404|offline-plugin-app-shell-fallback|tags|categories)).*$/;
-const regexExcludeRobots = /^(?!\/(about|dev-404-page|404|offline-plugin-app-shell-fallback|tags|categories|bold-mage|angels-of-mist|the-fallen-time|random-project-4-with-super-long-title-phase-one|the-butterfly-of-the-edge|birch-in-the-roses|the-fairys-witches|introducing-gatsby-material-starter|big-sample-test|site)).*$/;
+const regexExcludeRobots = /^(?!\/(dev-404-page|404|offline-plugin-app-shell-fallback|tags|categories|bold-mage|angels-of-mist|the-fallen-time|random-project-4-with-super-long-title-phase-one|the-butterfly-of-the-edge|birch-in-the-roses|the-fairys-witches|introducing-gatsby-material-starter|big-sample-test|site)).*$/;
 
 module.exports = {
   pathPrefix: config.pathPrefix,
