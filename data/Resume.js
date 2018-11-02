@@ -43,6 +43,16 @@ module.exports = {
         period: "2012/1 - 2018/1"
       }
     ],
+    languages: [
+      {
+        title: "Português",
+        level: "Língua Materna"
+      },
+      {
+        title: "Inglês",
+        level: "Intermediário"
+      }
+    ],
     skills: [
       "HTML / CSS", "JavaScript", "JQuery", "Bootstrap", "AngularJS", "C#", "ASP.NET MVC", "Entity Framework",
       "Microsoft SQL Server", "Microsoft SharePoint", "PHP", "Wordpress", "Java", "GIT", "Photoshop", "Corel Draw"
