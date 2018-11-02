@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import Layout from "../layout";
 import About from "../components/About";
 import ResumeCareer from "../components/ResumeCareer";
+import ResumeEducation from "../components/ResumeEducation";
 import config from "../../data/SiteConfig";
 import "./about.scss";
 
@@ -17,6 +18,7 @@ class AboutPage extends Component {
           </Helmet>
           <About />
           <ResumeCareer />
+          <ResumeEducation />
         </div>
       </Layout>
     );

@@ -33,5 +33,14 @@ module.exports = {
         },
         description: "Responsável pela criação de artes gráficas, finalização de arquivos para impressão e eventuais atendimentos a clientes.",
       },
+    ],
+    education: [
+      {
+        title: "Ciência da Computação",
+        school: "UNISC",
+        schoolLocation: "Santa Cruz do Sul / RS / Brasil",
+        schoolUrl: "https://www.unisc.br",
+        period: "2012/1 - 2018/1"
+      }
     ]
   };  
