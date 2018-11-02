@@ -42,5 +42,9 @@ module.exports = {
         schoolUrl: "https://www.unisc.br",
         period: "2012/1 - 2018/1"
       }
+    ],
+    skills: [
+      "HTML / CSS", "JavaScript", "JQuery", "Bootstrap", "AngularJS", "C#", "ASP.NET MVC", "Entity Framework",
+      "Microsoft SQL Server", "Microsoft SharePoint", "PHP", "Wordpress", "Java", "GIT", "Photoshop", "Corel Draw"
     ]
   };  

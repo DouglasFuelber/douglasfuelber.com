@@ -4,6 +4,7 @@ import Layout from "../layout";
 import About from "../components/About";
 import ResumeCareer from "../components/ResumeCareer";
 import ResumeEducation from "../components/ResumeEducation";
+import ResumeSkills from "../components/ResumeSkills";
 import config from "../../data/SiteConfig";
 import "./about.scss";
 
@@ -19,6 +20,7 @@ class AboutPage extends Component {
           <About />
           <ResumeCareer />
           <ResumeEducation />
+          <ResumeSkills />
         </div>
       </Layout>
     );
