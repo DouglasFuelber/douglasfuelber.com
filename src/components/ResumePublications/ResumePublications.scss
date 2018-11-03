@@ -1,0 +1,51 @@
+@import "../../layout/theme.scss";
+
+.publications-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 15px;
+    @media (min-width: 991px) {
+        max-width: 66%;
+    }
+    #publications {
+        .publication {
+            margin: 20px 0 40px;
+            .publication-date,
+            .publication-colaborator {
+                color: $md-white-color;
+                font-size: 18px;
+                font-weight: 400;
+                .publication-colaborator-role {
+                    color: $md-tertiary-color;
+                }
+            }
+            .publication-event {
+                font-size: 20px;
+                @media (min-width: 991px) {
+                    display: inline;
+                }
+            }
+            .publication-eventComplement {
+                color: $md-tertiary-color;
+                font-size: 18px;
+                font-weight: 500;
+                @media (min-width: 991px) {
+                    display: inline;
+                    &:before {
+                        content: " - ";
+                    }
+                }
+            }
+            .publication-title {
+                font-size: 22px;
+                margin-bottom: 15px;
+                margin-top: 10px;
+            }
+            .publication-type {
+                color: $md-tertiary-color;
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+    }
+}

@@ -9,13 +9,13 @@ function GetNavList(config) {
       leftIcon: <FontIcon>home</FontIcon>,
       component: Link,
       to: "/"
-    }/*,
+    },
     {
       primaryText: "Sobre mim",
       leftIcon: <FontIcon>person</FontIcon>,
       component: Link,
       to: "/about/"
-    },
+    }/*,
     {
       primaryText: "Blog",
       leftIcon: <FontIcon>library_books</FontIcon>,
