@@ -17,6 +17,7 @@ class ContactLinks extends Component {
         secondary
         iconClassName={email.iconClassName}
         href={email.url}
+        title="Email"
         rel="noopener">
       {email.text}
       </Button>;
@@ -50,7 +51,7 @@ class ContactLinks extends Component {
       return null;
     }
     return <div id="contact">
-          <h3>Contato</h3>
+          <h3>Contact</h3>
           <div className="left-border-area">
             <div className="md-grid md-cell--12">
               {this.getMailLink()}

@@ -69,7 +69,7 @@
                 display: inline;
                 font-size: 22px;
                 &:before {
-                    content: "/";
+                    content: ", ";
                     font-size: 20px;
                 }
                 @media (min-width: 991px) {
@@ -89,14 +89,14 @@
                     z-index: 5;
                 }
                 .job-begin-month {
-                    left: -185px;
+                    left: -140px;
                     top: -12px;
                 }
             }
         }
 
         @media (min-width: 991px) {
-            padding-left: 160px;
+            padding-left: 115px;
             .job-date {
                 left: -95px;
                 line-height: 25px;

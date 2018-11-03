@@ -5,13 +5,13 @@ import { Link } from "gatsby";
 function GetNavList(config) {
   const NavList = [
     {
-      primaryText: "Início",
+      primaryText: "Home",
       leftIcon: <FontIcon>home</FontIcon>,
       component: Link,
       to: "/"
     },
     {
-      primaryText: "Sobre mim",
+      primaryText: "About me",
       leftIcon: <FontIcon>person</FontIcon>,
       component: Link,
       to: "/about/"

@@ -7,7 +7,7 @@ class ResumeEducation extends Component {
         return (
             <div className="education-container mobile-fix">
                 <div className="education-wrapper md-cell--center">
-                    <h3>Educação</h3>
+                    <h3>Education</h3>
                     <div id="educations">
                         {this.getEducation()}
                     </div>         

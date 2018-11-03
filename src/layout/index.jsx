@@ -13,7 +13,7 @@ export default class MainLayout extends React.Component {
       <Navigation config={config} LocalTitle={this.props.title}>
         <div>
           <Helmet>
-            <html lang="pt-br"/>
+            <html lang="en"/>
             <meta name="description" content={config.siteDescription} />
           </Helmet>
           {children}

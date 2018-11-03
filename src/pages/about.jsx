@@ -13,10 +13,10 @@ import "./about.scss";
 class AboutPage extends Component {
   render() {
     return (
-      <Layout location={this.props.location} title="Sobre mim">
+      <Layout location={this.props.location} title="About me">
         <div id="about-container">
           <Helmet>
-            <title>{`Sobre mim | ${config.siteTitle}`}</title>
+            <title>{`About me | ${config.siteTitle}`}</title>
             <link rel="canonical" href={`${config.siteUrl}/about/`} />
           </Helmet>
           <About />

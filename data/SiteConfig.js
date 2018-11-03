@@ -6,20 +6,20 @@ module.exports = {
   siteUrl: "https://www.douglasfuelber.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
   fixedFooter: false, // Whether the footer component is fixed, i.e. always visible
-  siteDescription: "Douglas Fuelber - Bacharel em Ciência da Computação pela Unisc e programador na empresa Conectt", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "Douglas Fuelber - Bachelor in Computer Science at Unisc and programmer at Conectt.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "", // FB Application ID for using app insights
   siteGATrackingID: "UA-99213358-1", // Tracking code ID for google analytics.
   disqusShortname: "", // Disqus shortname.
-  postDefaultCategoryID: "Programação", // Default category for posts.
+  postDefaultCategoryID: "Programming", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
   userName: "Douglas Fuelber", // Username to display in the author segment.
   userTwitter: "", // Optionally renders "Follow Me" in the UserInfo segment.
-  userLocation: "Brasil", // User location to display in the author segment.
+  userLocation: "Brazil", // User location to display in the author segment.
   userAvatar: "/images/avatar.jpg", // User avatar to display in the author segment.
   userDescription:
-  "Como programador, gosto de aprender novas tecnologias e linguagens, buscando não me limitar em apenas aprimorar o conhecimento que já possuo. Além disso, gosto muito de séries, filmes, esportes e de conhecer novos lugares.", // User description to display in the author segment.
+  "As a programmer, I like to learn new technologies and languages, trying not to limit myself in just improving the knowledge I have already acquired. Also, I really like movies, series, to practice sports and getting to know new places.", // User description to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   userLinks: [
     {
@@ -44,5 +44,5 @@ module.exports = {
       iconClassName: "fa fa-envelope"
     }
   ],
-  copyright: "Desenvolvido por Douglas Fuelber | 2018" // Copyright string for the footer of the website and RSS feed.
+  copyright: "Developed by Douglas Fuelber | 2018" // Copyright string for the footer of the website and RSS feed.
 };
