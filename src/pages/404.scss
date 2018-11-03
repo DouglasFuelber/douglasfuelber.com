@@ -1,0 +1,15 @@
+@import "../layout/theme.scss";
+
+#not-found-container {
+    display: table-cell;
+    height: 100vh;
+    text-align: center;
+    vertical-align: middle;
+    width: 100vw;
+
+    h1 {
+        font-size: 100px;
+        font-weight: 600;
+        height: 75px;
+    }
+}
