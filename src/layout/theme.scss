@@ -55,6 +55,15 @@ body {
 			border-left-color: $md-tertiary-color;
 		}
 	}
+
+	.primary-button {
+        background-color: $md-primary-color;
+        border-radius: 5px;
+        padding: 8px;
+        &:hover {
+            background-color: $md-secondary-color;
+        }
+    }
 }
 
 
