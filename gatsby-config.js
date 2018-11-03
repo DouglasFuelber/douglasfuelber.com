@@ -67,7 +67,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-nprogress",
       options: {
-        color: "#c62828"
+        color: "#002eac"
       }
     },
     "gatsby-transformer-sharp",
@@ -116,11 +116,16 @@ module.exports = {
         icons: [
           {
             src: "/logos/favicon.png",
+            sizes: "32x32",
+            type: "image/png"
+          },
+          {
+            src: "/logos/logo-192.png",
             sizes: "192x192",
             type: "image/png"
           },
           {
-            src: "/logos/favicon.png",
+            src: "/logos/logo-512.png",
             sizes: "512x512",
             type: "image/png"
           }

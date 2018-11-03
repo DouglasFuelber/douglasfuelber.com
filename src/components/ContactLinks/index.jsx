@@ -16,7 +16,8 @@ class ContactLinks extends Component {
         flat={true}
         secondary
         iconClassName={email.iconClassName}
-        href={email.url}>
+        href={email.url}
+        rel="noopener">
       {email.text}
       </Button>;
   }
@@ -36,6 +37,8 @@ class ContactLinks extends Component {
         key={link.label}
         iconClassName={link.iconClassName}
         href={link.url}
+        title={link.label}
+        rel="noopener"
       >
         {labeled ? link.label : ""}
       </Button>

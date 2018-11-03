@@ -20,7 +20,7 @@ class ResumePublications extends Component {
             <div className="publication left-border-area light-border">
                 <div className="publication-type">{publication.type}</div>
                 <h4 className="publication-title">
-                    <a href={publication.link} target="_blank">{publication.title}</a>
+                    <a href={publication.link} target="_blank" rel="noopener">{publication.title}</a>
                 </h4>
                 <h5 className="publication-event">{publication.event}</h5>
                 <div className="publication-eventComplement">{publication.eventComplement}</div>
