@@ -26,7 +26,7 @@ class ResumeCareer extends Component {
             <div className="job left-border-area light-border">
                 <h4 className="job-title">{job.jobTitle}</h4>
                 <h5 className="job-company">
-                    <a href={job.companyUrl} target="_blank">{job.company}</a>
+                    <a href={job.companyUrl} target="_blank" rel="noopener">{job.company}</a>
                 </h5>
                 <div className="job-location">{job.companyLocation}</div>                
                 <p className="job-description">{job.description}</p>
