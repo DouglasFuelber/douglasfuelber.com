@@ -118,6 +118,16 @@ module.exports = {
             src: "/logos/favicon.png",
             sizes: "32x32",
             type: "image/png"
+          },
+          {
+            src: "/logos/logo-192.png",
+            sizes: "192x192",
+            type: "image/png"
+          },
+          {
+            src: "/logos/logo-512.png",
+            sizes: "512x512",
+            type: "image/png"
           }
         ]
       }
