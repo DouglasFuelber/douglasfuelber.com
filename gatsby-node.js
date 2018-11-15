@@ -142,7 +142,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
 
           createPage({
-            path: edge.node.fields.slug,
+            path: `/blog${edge.node.fields.slug}/`,
             component: postPage,
             context: {
               slug: edge.node.fields.slug
@@ -153,7 +153,7 @@ exports.createPages = ({ graphql, actions }) => {
         const tagList = Array.from(tagSet);
         tagList.forEach(tag => {
           createPage({
-            path: `/tags/${_.kebabCase(tag)}/`,
+            path: `/blog/tags/${_.kebabCase(tag)}/`,
             component: tagPage,
             context: {
               tag
@@ -164,7 +164,7 @@ exports.createPages = ({ graphql, actions }) => {
         const categoryList = Array.from(categorySet);
         categoryList.forEach(category => {
           createPage({
-            path: `/categories/${_.kebabCase(category)}/`,
+            path: `/blog/categories/${_.kebabCase(category)}/`,
             component: categoryPage,
             context: {
               category

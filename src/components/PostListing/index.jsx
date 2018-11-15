@@ -1,5 +1,6 @@
 import React from "react";
 import PostPreview from "../PostPreview";
+import "./PostListing.scss";
 
 class PostListing extends React.Component {
   getPostList() {
@@ -10,6 +11,7 @@ class PostListing extends React.Component {
         tags: postEdge.node.frontmatter.tags,
         cover: postEdge.node.frontmatter.cover,
         title: postEdge.node.frontmatter.title,
+        category: postEdge.node.frontmatter.category,
         date: postEdge.node.fields.date,
         excerpt: postEdge.node.excerpt,
         timeToRead: postEdge.node.timeToRead
@@ -21,7 +23,7 @@ class PostListing extends React.Component {
     const postList = this.getPostList();
     return (
       <div className="md-grid md-grid--no-spacing md-cell--middle">
-        <div className="md-grid md-cell--8 mobile-fix">
+        <div id="post-container" className="md-grid md-cell--8 mobile-fix">
           {postList.map(post => (
             <PostPreview key={post.title} postInfo={post} />
           ))}

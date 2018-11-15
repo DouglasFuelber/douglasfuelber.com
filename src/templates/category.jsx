@@ -16,15 +16,16 @@ export default class CategoryTemplate extends React.Component {
       >
         <div className="category-container">
           <Helmet>
-            <title>
-              {`Posts in category "${category}" | ${config.siteTitle}`}
-            </title>
-            <link
-              rel="canonical"
-              href={`${config.siteUrl}/categories/${category}`}
-            />
+            <title>{`Blog | Posts in category: ${category} | ${config.siteTitle}`}</title>
+            <link rel="canonical" href={`${config.siteUrl}/blog/categories/${category}`}/>
           </Helmet>
-          <PostListing postEdges={postEdges} />
+          <div id="page_title" className="md-grid md-cell--8">
+            <h1>Blog</h1>
+            <h2>Posts in category: <span className="md-text-uppercase">{category}</span></h2>
+          </div>
+          <div id="blog-container" className="dark_bg">
+            <PostListing postEdges={postEdges} />          
+          </div>
         </div>
       </Layout>
     );
@@ -52,6 +53,7 @@ export const pageQuery = graphql`
             tags
             cover
             date
+            category
           }
         }
       }

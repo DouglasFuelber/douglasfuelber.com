@@ -1,5 +1,15 @@
+@import "../../layout/theme.scss";
+
 .post-preview-tags {
-    margin: 5px 2px 0;
+    margin: 5px 2px;
+    
+    &:hover {
+        background-color: $md-primary-color;
+    }
+
+    .md-chip-text{
+        font-size: 15px;
+    }
 }
 
 .post-tag-container {

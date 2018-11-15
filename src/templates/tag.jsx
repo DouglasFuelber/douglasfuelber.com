@@ -17,10 +17,16 @@ export default class TagTemplate extends React.Component {
       >
         <div className="tag-container">
           <Helmet>
-            <title>{`Posts tagged as "${tag}" | ${config.siteTitle}`}</title>
-            <link rel="canonical" href={`${config.siteUrl}/tags/${tag}`} />
+            <title>{`Blog | Posts tagged as: ${tag} | ${config.siteTitle}`}</title>
+            <link rel="canonical" href={`${config.siteUrl}/blog/tags/${tag}`}/>
           </Helmet>
-          <PostListing postEdges={postEdges} />
+          <div id="page_title" className="md-grid md-cell--8">
+            <h1>Blog</h1>
+            <h2>Posts tagged as: <span className="md-text-uppercase">{tag}</span></h2>
+          </div>
+          <div id="blog-container" className="dark_bg">
+            <PostListing postEdges={postEdges} />          
+          </div>
         </div>
       </Layout>
     );
@@ -46,6 +52,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             tags
+            category
             cover
             date
           }

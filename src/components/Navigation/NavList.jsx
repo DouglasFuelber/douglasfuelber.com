@@ -11,17 +11,17 @@ function GetNavList(config) {
       to: "/"
     },
     {
-      primaryText: "About me",
+      primaryText: "Resume",
       leftIcon: <FontIcon>person</FontIcon>,
       component: Link,
-      to: "/about/"
-    }/*,
+      to: "/resume/"
+    },
     {
       primaryText: "Blog",
       leftIcon: <FontIcon>library_books</FontIcon>,
       component: Link,
       to: "/blog/"
-    }*/,
+    },
     {
       divider: true
     }

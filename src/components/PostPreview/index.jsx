@@ -6,6 +6,7 @@ import Avatar from "react-md/lib/Avatars";
 import CardText from "react-md/lib/Cards/CardText";
 import FontIcon from "react-md/lib/FontIcons";
 import { Link } from "gatsby";
+import _ from "lodash";
 import moment from "moment";
 import Media, { MediaOverlay } from "react-md/lib/Media";
 import PostTags from "../PostTags";
@@ -40,36 +41,51 @@ class PostPreview extends Component {
   render() {
     const { postInfo } = this.props;
     const { mobile } = this.state;
-    const expand = mobile;
     /* eslint no-undef: "off" */
     const coverHeight = mobile ? 162 : 225;
     return (
-      <Card key={postInfo.path} raise className="md-grid md-cell md-cell--12">
-        <Link style={{ textDecoration: "none" }} to={postInfo.path}>
+      <Card key={postInfo.path} raise className="post md-grid md-cell md-cell--12">
+        <Link style={{ textDecoration: "none" }} to={`blog/${postInfo.path}`}>
           <Media style={{ height: coverHeight, paddingBottom: "0px" }}>
             <PostCover postNode={postInfo} coverHeight={coverHeight} />
             <MediaOverlay>
-              <CardTitle title={postInfo.title}>
-                <Button raised secondary className="md-cell--right">
-                  Read
-                </Button>
-              </CardTitle>
+              <CardTitle className="post-title" title={postInfo.title}/>
             </MediaOverlay>
           </Media>
         </Link>
-        <CardTitle
-          expander={expand}
-          avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
-          title={`Published on ${moment(postInfo.date).format(
-            config.dateFormat
-          )}`}
-          subtitle={`${postInfo.timeToRead} min read`}
-        />
-
-        <CardText expandable={expand}>
-          {postInfo.excerpt}
-          <PostTags tags={postInfo.tags} />
-        </CardText>
+        <div className="md-grid">
+          <CardTitle
+            className="post-description md-cell--6"
+            avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
+            title={`Published on ${moment(postInfo.date).format(
+              config.dateFormat
+            )}`}
+            subtitle={`${postInfo.timeToRead} min read`}>
+          </CardTitle>
+          <Link
+              className="category-link md-cell--6"
+              to={`/blog/categories/${_.kebabCase(postInfo.category)}`}>
+              <CardTitle
+                className="post-description"
+                avatar={
+                  <Avatar icon={<FontIcon iconClassName="fa fa-folder-open" />} />
+                }
+                title="In category"
+                subtitle={postInfo.category}
+              />
+          </Link>
+          <CardText className="post-excerpt md-cell--12 left-border-area">
+            {postInfo.excerpt}
+          </CardText>
+        </div>        
+        <PostTags tags={postInfo.tags} />
+        <div className="md-grid">
+          <Link className="md-cell--center" style={{ textDecoration: "none" }} to={`blog/${postInfo.path}`}>
+            <Button raised primary>
+              Read this post
+            </Button>
+          </Link>          
+        </div>
       </Card>
     );
   }
