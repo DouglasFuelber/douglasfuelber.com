@@ -20,7 +20,7 @@ class Index extends React.Component {
           <div id="main_banner">
             <div id="page_title">
               <h1>Douglas Fuelber</h1>
-              <h2>Programmer</h2>
+              <h2>Full Stack Developer</h2>
             </div>
           </div>
 
