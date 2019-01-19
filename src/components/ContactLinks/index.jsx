@@ -51,7 +51,6 @@ class ContactLinks extends Component {
       return null;
     }
     return <div id="contact">
-          <h3>Contact</h3>
           <div className="left-border-area">
             <div className="md-grid md-cell--12">
               {this.getMailLink()}
