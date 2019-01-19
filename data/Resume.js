@@ -4,6 +4,17 @@ module.exports = {
         company: "Conectt",
         companyUrl: "https://conectt.com.br/",
         companyLocation: "Santa Cruz do Sul / RS / Brazil",
+        jobTitle: "Programmer",
+        beginDate: {
+            month: "DEC",
+            year: "2018"
+        },
+        description: "Developer of computer systems, websites and corporate portals in diverse technologies and platforms, highlighting Microsoft SharePoint, ASP.NET MVC and Wordpress.",
+      },
+      {
+        company: "Conectt",
+        companyUrl: "https://conectt.com.br/",
+        companyLocation: "Santa Cruz do Sul / RS / Brazil",
         jobTitle: "Junior Programmer",
         beginDate: {
             month: "MAR",
@@ -55,10 +66,11 @@ module.exports = {
     ],
     publications: [
       {
-        title: "Gerenciamento de Tráfego Urbano empregando Sistemas Multiagentes: Análise Qualitativa de Trabalhos Relacionados",
+        title: "Urban Traffic Management using Multi-Agent Systems: Qualitative Analysis of Related Work",
+        language: "PT-BR",
         type: "Article and presentation",
         event: "XXXVII ENEGEP",
-        eventComplement: "Encontro Nacional de Engenharia de Produção",
+        eventComplement: "National Meeting of Production Engineering",
         date: "October, 2017",
         link: "https://online.unisc.br/acadnet/anais/index.php/salao_ensino_extensao/article/view/17284",
         colaborator: {
@@ -67,9 +79,10 @@ module.exports = {
         }
       },
       {
-        title: "Desenvolvimento de um Sistema Multiagentes para Análise de Tempos de Semáforos e Consumo de Combustível",
+        title: "Development of a Multi-Agent System for the Analysis of Traffic Lights Times and Fuel Consumption",
+        language: "PT-BR",
         type: "Article and presentation",
-        event: "VIII Salão de Ensino e Extensão",
+        event: "VIII Teaching and Extension Hall",
         eventComplement: "University of Santa Cruz do Sul (UNISC)",
         date: "October, 2017",
         link: "http://www.abepro.org.br/biblioteca/TN_STO_245_419_32999.pdf",

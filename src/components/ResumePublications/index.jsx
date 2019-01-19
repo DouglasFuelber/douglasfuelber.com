@@ -18,7 +18,7 @@ class ResumePublications extends Component {
     getPublications() {    
         return resume.publications.map(publication => (
             <div className="publication left-border-area light-border">
-                <div className="publication-type">{publication.type}</div>
+                <div className="publication-type">{publication.type} | <span className="publication-language">{publication.language}</span></div>
                 <h4 className="publication-title">
                     <a href={publication.link} target="_blank" rel="noopener">{publication.title}</a>
                 </h4>
