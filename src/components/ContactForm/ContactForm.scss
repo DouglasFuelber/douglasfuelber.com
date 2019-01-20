@@ -1,3 +1,5 @@
+@import "../../layout/theme.scss";
+
 .contact-wrapper {
     align-items: center;
     display: flex;
@@ -10,8 +12,21 @@
     #form {
         width: 100%;
 
-        input {
+        label {
+            color: $md-white-color;
+        }
+
+        input,
+        textarea {
+            color: $md-white-color;
             width: 100%;
+        }
+
+        hr {
+            background-color: $md-secondary-color;
+            &::after {
+                background-color: $md-tertiary-color;
+            }
         }
     }
 }

@@ -16,20 +16,17 @@ class ContactForm extends Component {
                                     <TextField
                                         id="name"
                                         label="Name"
-                                        lineDirection="center"
                                         className="md-cell--12 md-cell--bottom"
                                         />
                                     <TextField
                                         id="email"
                                         label="Email"
-                                        lineDirection="center"
                                         className="md-cell--12 md-cell--bottom"
                                         type="email"
                                         />
                                     <TextField
                                         id="message"
                                         label="Message"
-                                        lineDirection="center"
                                         rows={5}
                                         className="md-cell--12 md-cell--bottom"
                                         />
