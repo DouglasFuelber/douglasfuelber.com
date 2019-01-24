@@ -13,7 +13,7 @@ class ContactForm extends Component {
                         <p>If you want to contact me, leave me a message:</p>
                     </div>
                     <div id="form">                        
-                        <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                        <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true">
                             <input type="hidden" name="form-name" value="contact" />
                             <div className="md-grid">
                                 <TextField
@@ -40,7 +40,6 @@ class ContactForm extends Component {
                                     required
                                     />
                                 <div className="md-cell--12">
-                                    <div data-netlify-recaptcha="true"></div>
                                 </div>
                                 <div className="md-cell--12">
                                     <br/>
