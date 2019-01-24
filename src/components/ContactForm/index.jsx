@@ -39,9 +39,11 @@ class ContactForm extends Component {
                                     className="md-cell--12 md-cell--bottom"
                                     required
                                     />
-                                <div className="md-cell--12">
+                                <div className="md-cell--6">
+                                    <br/>
+                                    <div class="g-recaptcha" data-sitekey="6Ld3gIwUAAAAAM9ztAk0bBTf40Oe-dd_-qzv2GON"></div>
                                 </div>
-                                <div className="md-cell--12">
+                                <div className="md-cell--6">
                                     <br/>
                                     <Button flat className="submit-button" type="submit">Send</Button>
                                 </div>
