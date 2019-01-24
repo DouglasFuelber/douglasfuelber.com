@@ -19,12 +19,14 @@ class ContactForm extends Component {
                                 <TextField
                                     id="name"
                                     label="Name"
+                                    name="Name"
                                     className="md-cell--12 md-cell--bottom"
                                     required
                                     />
                                 <TextField
                                     id="email"
                                     label="Email"
+                                    name="Email"
                                     className="md-cell--12 md-cell--bottom"
                                     type="email"
                                     required
@@ -32,6 +34,7 @@ class ContactForm extends Component {
                                 <TextField
                                     id="message"
                                     label="Message"
+                                    name="Message"
                                     rows={5}
                                     className="md-cell--12 md-cell--bottom"
                                     required
