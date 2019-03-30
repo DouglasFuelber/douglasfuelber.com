@@ -23,11 +23,17 @@ function GetNavList(config) {
       to: "/blog/"
     },
     {
+      primaryText: "Contact",
+      leftIcon: <FontIcon>forum</FontIcon>,
+      component: Link,
+      to: "/contact/"
+    },
+    {
       divider: true
     }
   ];
 
-  if (config.userLinks) {
+  /*if (config.userLinks) {
     config.userLinks.forEach(link => {
       NavList.push({
         primaryText: link.label,
@@ -36,7 +42,7 @@ function GetNavList(config) {
         href: link.url
       });
     });
-  }
+  }*/
   return NavList;
 }
 export default GetNavList;

@@ -1,0 +1,45 @@
+@import "../../layout/theme.scss";
+
+.contact-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 15px;
+    @media (min-width: 991px) {
+        max-width: 66%;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    #form {
+        width: 100%;
+
+        label {
+            color: $md-white-color;
+        }
+
+        input,
+        textarea {
+            color: $md-white-color;
+            width: 100%;
+        }
+
+        hr {
+            background-color: $md-secondary-color;
+            &::after {
+                background-color: $md-tertiary-color;
+            }
+        }
+
+        .submit-button {
+            background-color: $md-secondary-color;
+            color: $md-white-color;
+            float: right;
+            &:hover {
+                background-color: $md-tertiary-color;
+            }
+        }
+    }
+}
