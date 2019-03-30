@@ -41,7 +41,7 @@ class ContactForm extends Component {
                                     />
                                 <div className="md-cell--6">
                                     <br/>
-                                    <div class="g-recaptcha" data-sitekey="6Ld3gIwUAAAAAM9ztAk0bBTf40Oe-dd_-qzv2GON"></div>
+                                    <div data-netlify-recaptcha="true"></div>
                                 </div>
                                 <div className="md-cell--6">
                                     <br/>
