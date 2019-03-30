@@ -6,6 +6,7 @@ module.exports = {
   siteUrl: "https://www.douglasfuelber.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
   fixedFooter: false, // Whether the footer component is fixed, i.e. always visible
+  recaptchaPublicKey: "6Ld3gIwUAAAAAM9ztAk0bBTf40Oe-dd_-qzv2GON", // Recaptcha public key
   siteDescription: "Douglas Fuelber - Bachelor in Computer Science at Unisc and full stack developer at Conectt.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "", // FB Application ID for using app insights

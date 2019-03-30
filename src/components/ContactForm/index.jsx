@@ -1,10 +1,17 @@
 import React, { Component } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import Button from "react-md/lib/Buttons";
+import config from "../../../data/SiteConfig";
 import { TextField } from 'react-md';
 import "./ContactForm.scss";
 
 class ContactForm extends Component {
+    onSubmit() {
+        const recaptchaValue = recaptchaRef.current.getValue();
+        this.props.onSubmit(recaptchaValue);
+      }
     render() {
+        const recaptchaRef = React.createRef();
         return (
             <div className="contact-container mobile-fix">
                 <div className="contact-wrapper md-cell--center">
@@ -13,7 +20,7 @@ class ContactForm extends Component {
                         <p>If you want to contact me, leave me a message:</p>
                     </div>
                     <div id="form">                        
-                        <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+                        <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.onSubmit}>
                             <input type="hidden" name="form-name" value="contact" />
                             <div className="md-grid">
                                 <TextField
@@ -40,8 +47,10 @@ class ContactForm extends Component {
                                     required
                                     />
                                 <div className="md-cell--6">
-                                    <br/>
-                                    <div data-netlify-recaptcha="true"></div>
+                                    <ReCAPTCHA
+                                        ref={recaptchaRef}
+                                        sitekey={config.recaptchaPublicKey}
+                                        onChange={onChange} />
                                 </div>
                                 <div className="md-cell--6">
                                     <br/>
