@@ -47,10 +47,10 @@ class ContactForm extends Component {
                                     required
                                     />
                                 <div className="md-cell--6">
+                                    <br/>
                                     <ReCAPTCHA
                                         ref={recaptchaRef}
-                                        sitekey={config.recaptchaPublicKey}
-                                        onChange={onChange} />
+                                        sitekey={config.recaptchaPublicKey} />
                                 </div>
                                 <div className="md-cell--6">
                                     <br/>
