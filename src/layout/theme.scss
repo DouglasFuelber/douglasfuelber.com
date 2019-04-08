@@ -10,6 +10,7 @@ $md-black-color: rgb(0, 0, 0);
 body {
 	font-family: "Raleway", "Roboto", sans-serif;
 	font-size: 18px;
+	min-height: 100vH;
 
 	h1, h2, h3, h4, h5, h6, p, button, input, textarea, html {
 		color: $md-white-color;

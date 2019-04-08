@@ -22,7 +22,7 @@ module.exports = {
   userDescription:
   "As a programmer, I like to learn new technologies and languages, trying not to limit myself in just improving the knowledge I have already acquired. Also, I really like movies, series, to practice sports and getting to know new places.", // User description to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
-  userLinks: [
+  /*userLinks: [
     {
       label: "LinkedIn",
       url: "https://www.linkedin.com/in/douglasfuelber",
@@ -44,6 +44,6 @@ module.exports = {
       text: "contato@douglasfuelber.com",
       iconClassName: "fa fa-envelope"
     }
-  ],
+  ],*/
   copyright: "Developed by Douglas Fuelber | 2019" // Copyright string for the footer of the website and RSS feed.
 };
