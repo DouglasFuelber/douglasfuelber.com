@@ -26,15 +26,6 @@ class ContactForm extends Component {
             formIsValid = false;
             errors["Name"] = "This field is required";
         }
-        else if (typeof fields["Name"] !== "undefined") {
-            if (!fields["Name"].match(/^[a-zA-Z]+$/)) {
-                formIsValid = false;
-                errors["Name"] = "Only letters are allowed";
-            }
-            else {
-                errors["Name"] = "";
-            }
-        }
         else {
             errors["Name"] = "";
         }
@@ -84,9 +75,9 @@ class ContactForm extends Component {
         }
     }
     handleChange(field, e) {
-        let fields = this.state.fields;
+        let fields = this.state.fields;        
         fields[field] = e;
-        this.setState({ fields });
+        this.setState({ fields });      
     }
     render() {
         const recaptchaRef = React.createRef();
