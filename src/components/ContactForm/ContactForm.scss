@@ -26,6 +26,16 @@
             width: 100%;
         }
 
+        input:-internal-autofill-previewed,
+        input:-internal-autofill-selected,
+        textarea:-internal-autofill-previewed,
+        textarea:-internal-autofill-selected,
+        select:-internal-autofill-previewed,
+        select:-internal-autofill-selected {
+            -webkit-box-shadow: 0 0 0px 1000px $md-primary-color inset !important;
+            -webkit-text-fill-color: $md-white-color !important;
+        }
+
         hr {
             background-color: $md-secondary-color;
             &::after {

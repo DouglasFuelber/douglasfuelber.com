@@ -13,7 +13,7 @@ class Footer extends Component {
     return (
       <footer className={fixedFooter ? "footer footer-fixed" : "footer"}>
         <div className="md-grid md-cell--8">
-          {userLinks ? <ContactLinks config={config} /> : null}
+          {/*userLinks ? <ContactLinks config={config} /> : null*/}
           <div className="notice-container md-grid md-cell--12">
             <div className="copyright">
               <h4>{copyright}</h4>

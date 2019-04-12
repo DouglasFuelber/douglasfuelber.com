@@ -6,6 +6,7 @@ module.exports = {
   siteUrl: "https://www.douglasfuelber.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
   fixedFooter: false, // Whether the footer component is fixed, i.e. always visible
+  recaptchaPublicKey: "6Ld3gIwUAAAAAM9ztAk0bBTf40Oe-dd_-qzv2GON", // Recaptcha public key
   siteDescription: "Douglas Fuelber - Bachelor in Computer Science at Unisc and full stack developer at Conectt.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "", // FB Application ID for using app insights
@@ -21,7 +22,7 @@ module.exports = {
   userDescription:
   "As a programmer, I like to learn new technologies and languages, trying not to limit myself in just improving the knowledge I have already acquired. Also, I really like movies, series, to practice sports and getting to know new places.", // User description to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
-  userLinks: [
+  /*userLinks: [
     {
       label: "LinkedIn",
       url: "https://www.linkedin.com/in/douglasfuelber",
@@ -43,6 +44,6 @@ module.exports = {
       text: "contato@douglasfuelber.com",
       iconClassName: "fa fa-envelope"
     }
-  ],
+  ],*/
   copyright: "Developed by Douglas Fuelber | 2019" // Copyright string for the footer of the website and RSS feed.
 };
