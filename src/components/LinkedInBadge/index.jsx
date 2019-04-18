@@ -3,12 +3,14 @@ import React, { Component } from "react";
 class LinkedInBadge extends Component {
   render() {
 
-    var aScript = document.createElement('script');
-    aScript.type = 'text/javascript';
-    aScript.src = "https://platform.linkedin.com/badges/js/profile.js";
-    aScript.async = true;
-    aScript.defer = true;
-    document.head.appendChild(aScript);
+    if (typeof document !== `undefined`) {
+      var aScript = document.createElement('script');
+      aScript.type = 'text/javascript';
+      aScript.src = "https://platform.linkedin.com/badges/js/profile.js";
+      aScript.async = true;
+      aScript.defer = true;
+      document.head.appendChild(aScript);
+    }  
 
     return (
       <div className="linkedin-badge-container mobile-fix">
