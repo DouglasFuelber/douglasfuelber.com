@@ -1,0 +1,18 @@
+@import "../../layout/theme.scss";
+
+.linkedin-badge-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 15px;
+    @media (min-width: 991px) {
+        max-width: 66%;
+    }
+
+    .badge {
+        margin-bottom: 20px;
+
+        .LI-badge-container-horizontal-light {
+            background-color: $md-white-color;
+        }
+    }    
+}

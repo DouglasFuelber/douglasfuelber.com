@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import resume from "../../../data/Resume";
-import LinkedInBadge from "../LinkedInBadge";
 import "./ResumePublications.scss";
 
 class ResumePublications extends Component {
@@ -8,17 +7,10 @@ class ResumePublications extends Component {
         return (
             <div className="publications-container mobile-fix">
                 <div className="publications-wrapper md-cell--center">
-                    <div className="md-grid">
-                        <div className="md-cell--9">
-                            <h3>Publications</h3>
-                            <div id="publications">
-                                {this.getPublications()}
-                            </div>    
-                        </div>
-                        <div className="md-cell--3 md-cell--middle">
-                            <LinkedInBadge />
-                        </div>
-                    </div>                  
+                    <h3>Publications</h3>
+                    <div id="publications">
+                        {this.getPublications()}
+                    </div>                   
                 </div>
             </div>
         );

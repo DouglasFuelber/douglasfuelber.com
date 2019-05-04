@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./LinkedInBadge.scss";
 
 class LinkedInBadge extends Component {
   render() {
@@ -15,12 +16,10 @@ class LinkedInBadge extends Component {
     return (
       <div className="linkedin-badge-container mobile-fix">
         <div className="linkedin-badge-wrapper md-cell--center">
-          <div className="md-grid">
-            <div className="md-cell--center md-cell--4">
-                <div class="LI-profile-badge"  data-version="v1" data-size="small" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="douglasfuelber">
-                    <a class="LI-simple-link" href='https://br.linkedin.com/in/douglasfuelber/en?trk=profile-badge'>Douglas Fuelber</a>
-                </div>
-            </div>            
+          <div className="badge left-border-area light-border">
+            <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="douglasfuelber">
+                <a class="LI-simple-link" href='https://br.linkedin.com/in/douglasfuelber/en?trk=profile-badge'>Douglas Fuelber</a>
+            </div>
           </div>
         </div>
       </div>

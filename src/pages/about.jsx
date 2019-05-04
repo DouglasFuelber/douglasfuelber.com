@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Helmet from "react-helmet";
 import Layout from "../layout";
 import About from "../components/About";
+import LinkedInBadge from "../components/LinkedInBadge";
 import ResumeCareer from "../components/ResumeCareer";
 import ResumeEducation from "../components/ResumeEducation";
 import ResumeLanguages from "../components/ResumeLanguages";
@@ -25,6 +26,7 @@ class AboutPage extends Component {
           <ResumeSkills />
           <ResumeLanguages />
           <ResumePublications />
+          <LinkedInBadge />
         </div>
       </Layout>
     );
