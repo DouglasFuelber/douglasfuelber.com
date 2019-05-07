@@ -5,6 +5,7 @@ import Layout from "../layout";
 import PostListing from "../components/PostListing";
 import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
+import "./blog.scss";
 
 class BlogPage extends Component {
   render() {
@@ -17,13 +18,15 @@ class BlogPage extends Component {
         </Helmet>
         <SEO postEdges={postEdges} />
 
-        <div id="page_title" className="md-grid md-cell--8">
-            <h1>Blog</h1>
-        </div>
+        <div id="blog-container" className="dark_bg">
+        
+            <div id="page_title" className="md-grid md-cell--8">
+                <h1 className="left-border-area light-border">Blog</h1>
+            </div>
 
-        <div id="blog-container" className="dark_bg">          
             <PostListing postEdges={postEdges} />          
         </div>
+
       </Layout>
     );
   }
