@@ -10,7 +10,7 @@ class ResumePublications extends Component {
                     <h3>Publications</h3>
                     <div id="publications">
                         {this.getPublications()}
-                    </div>         
+                    </div>                   
                 </div>
             </div>
         );

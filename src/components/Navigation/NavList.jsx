@@ -11,10 +11,10 @@ function GetNavList(config) {
       to: "/"
     },
     {
-      primaryText: "Resume",
+      primaryText: "About",
       leftIcon: <FontIcon>person</FontIcon>,
       component: Link,
-      to: "/resume/"
+      to: "/about/"
     },
     {
       primaryText: "Blog",
