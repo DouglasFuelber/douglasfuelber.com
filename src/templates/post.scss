@@ -1,6 +1,14 @@
 @import '~react-md/src/scss/react-md';
 $phone-status-bar-height: 24px - 12px;
 
+#post-wrapper {
+    padding-top: 50px;
+    
+    .post {
+        margin-top: 40px;
+    }
+}	
+
 .post-page {
     display: flex;
     flex-direction: column;

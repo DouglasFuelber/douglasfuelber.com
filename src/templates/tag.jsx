@@ -15,24 +15,22 @@ export default class TagTemplate extends React.Component {
         location={this.props.location}
         title={`Tagged in ${tag.charAt(0).toUpperCase() + tag.slice(1)}`}
       >
-        <div className="tag-container">
-          <Helmet>
-            <title>{`Blog | Posts tagged as: ${tag} | ${config.siteTitle}`}</title>
-            <link rel="canonical" href={`${config.siteUrl}/blog/tags/${tag}`}/>
-          </Helmet>
+        <Helmet>
+          <title>{`Blog | Posts tagged as: ${tag} | ${config.siteTitle}`}</title>
+          <link rel="canonical" href={`${config.siteUrl}/blog/tags/${tag}`}/>
+        </Helmet>
 
-          <div id="blog-container" className="dark_bg">
+        <div id="blog-container" className="dark_bg">
 
-            <div id="page_title" className="md-grid md-cell--8">
-              <Link style={{ textDecoration: "none" }} to="/blog/">
-                <h1 className="left-border-area light-border">Blog</h1>
-              </Link>
-              <h2>Posts tagged as: <span className="md-text-uppercase">{tag}</span></h2>
-            </div>
-
-            <PostListing postEdges={postEdges} />  
-                    
+          <div id="page_title" className="md-grid md-cell--8">
+            <Link style={{ textDecoration: "none" }} to="/blog/">
+              <h1 className="left-border-area light-border">Blog</h1>
+            </Link>
+            <h2>Posts tagged as: <span className="md-text-uppercase">{tag}</span></h2>
           </div>
+
+          <PostListing postEdges={postEdges} />  
+                    
         </div>
       </Layout>
     );
