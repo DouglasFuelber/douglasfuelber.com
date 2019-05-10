@@ -109,11 +109,8 @@ export default class PostTemplate extends React.Component {
                     subtitle={post.category}
                   />
               </Link>
-              <CardText className="post-excerpt md-cell--12 left-border-area">
-                {postNode.excerpt}
-              </CardText>
               <CardText className="post-info md-cell--12">
-                <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+                <div className="post-body" dangerouslySetInnerHTML={{ __html: postNode.html }} />
               </CardText>
             </div>
           </Card>
