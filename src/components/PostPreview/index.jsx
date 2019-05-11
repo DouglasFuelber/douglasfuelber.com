@@ -64,7 +64,7 @@ class PostPreview extends Component {
           </CardTitle>
           <Link
               className="category-link md-cell--6"
-              to={`/blog/categories/${_.kebabCase(postInfo.category)}`}>
+              to={`/blog/categorias/${_.kebabCase(postInfo.category)}`}>
               <CardTitle
                 className="post-description"
                 avatar={

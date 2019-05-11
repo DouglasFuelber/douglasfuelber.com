@@ -9,7 +9,7 @@ import ResumeLanguages from "../components/ResumeLanguages";
 import ResumePublications from "../components/ResumePublications";
 import ResumeSkills from "../components/ResumeSkills";
 import config from "../../data/SiteConfig";
-import "./about.scss";
+import "./sobre.scss";
 
 class AboutPage extends Component {
   render() {
@@ -18,7 +18,7 @@ class AboutPage extends Component {
         <div id="about-container">
           <Helmet>
             <title>{`Sobre mim | ${config.siteTitle}`}</title>
-            <link rel="canonical" href={`${config.siteUrl}/about/`} />
+            <link rel="canonical" href={`${config.siteUrl}/sobre/`} />
           </Helmet>
           <About />
           <ResumeCareer />

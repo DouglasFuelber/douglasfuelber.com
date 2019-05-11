@@ -99,7 +99,7 @@ export default class PostTemplate extends React.Component {
               </CardTitle>
               <Link
                   className="category-link md-cell--6"
-                  to={`/blog/categories/${_.kebabCase(post.category)}`}>
+                  to={`/blog/categorias/${_.kebabCase(post.category)}`}>
                   <CardTitle
                     className="post-description"
                     avatar={

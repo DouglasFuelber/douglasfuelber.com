@@ -16,20 +16,20 @@ class PostInfo extends Component {
       <div className="post-info">
         <CardTitle
           avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
-          title={`Published on ${moment(postNode.fields.date).format(
+          title={`Publicado em ${moment(postNode.fields.date).format(
             config.dateFormat
           )}`}
-          subtitle={`${postNode.timeToRead} min read`}
+          subtitle={`${postNode.timeToRead} minutos de leitura`}
         />
         <Link
           className="category-link"
-          to={`/categories/${_.kebabCase(post.category)}`}
+          to={`/categorias/${_.kebabCase(post.category)}`}
         >
           <CardTitle
             avatar={
               <Avatar icon={<FontIcon iconClassName="fa fa-folder-open" />} />
             }
-            title="In category"
+            title="Na categoria"
             subtitle={post.category}
           />
         </Link>

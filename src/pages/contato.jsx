@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import Layout from "../layout";
 import ContactForm from "../components/ContactForm";
 import config from "../../data/SiteConfig";
-import "./contact.scss";
+import "./contato.scss";
 
 class ContactPage extends Component {
   render() {

@@ -16,7 +16,7 @@ export default class CategoryTemplate extends React.Component {
       >
         <Helmet>
           <title>{`Blog | Categoria: ${category} | ${config.siteTitle}`}</title>
-          <link rel="canonical" href={`${config.siteUrl}/blog/categories/${category}`}/>
+          <link rel="canonical" href={`${config.siteUrl}/blog/categorias/${category}`}/>
         </Helmet>
 
         <div id="blog-container" className="dark_bg">
