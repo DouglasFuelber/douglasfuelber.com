@@ -57,10 +57,10 @@ class PostPreview extends Component {
           <CardTitle
             className="post-description md-cell--6"
             avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
-            title={`Published on ${moment(postInfo.date).format(
+            title={`Publicado em ${moment(postInfo.date).format(
               config.dateFormat
             )}`}
-            subtitle={`${postInfo.timeToRead} min read`}>
+            subtitle={`${postInfo.timeToRead} minutos de leitura`}>
           </CardTitle>
           <Link
               className="category-link md-cell--6"
@@ -70,7 +70,7 @@ class PostPreview extends Component {
                 avatar={
                   <Avatar icon={<FontIcon iconClassName="fa fa-folder-open" />} />
                 }
-                title="In category"
+                title="Na categoria"
                 subtitle={postInfo.category}
               />
           </Link>
@@ -82,7 +82,7 @@ class PostPreview extends Component {
         <div className="md-grid">
           <Link className="md-cell--center" style={{ textDecoration: "none" }} to={`blog/${postInfo.path}`}>
             <Button raised primary>
-              Read this post
+              Continuar lendo
             </Button>
           </Link>          
         </div>

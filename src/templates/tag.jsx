@@ -13,10 +13,10 @@ export default class TagTemplate extends React.Component {
     return (
       <Layout
         location={this.props.location}
-        title={`Tagged in ${tag.charAt(0).toUpperCase() + tag.slice(1)}`}
+        title={tag.charAt(0).toUpperCase() + tag.slice(1)}
       >
         <Helmet>
-          <title>{`Blog | Posts tagged as: ${tag} | ${config.siteTitle}`}</title>
+          <title>{`Blog | Tag: ${tag} | ${config.siteTitle}`}</title>
           <link rel="canonical" href={`${config.siteUrl}/blog/tags/${tag}`}/>
         </Helmet>
 
@@ -26,7 +26,7 @@ export default class TagTemplate extends React.Component {
             <Link style={{ textDecoration: "none" }} to="/blog/">
               <h1 className="left-border-area light-border">Blog</h1>
             </Link>
-            <h2>Posts tagged as: <span className="md-text-uppercase">{tag}</span></h2>
+            <h2>Tag: <span className="md-text-uppercase">{tag}</span></h2>
           </div>
 
           <PostListing postEdges={postEdges} />  

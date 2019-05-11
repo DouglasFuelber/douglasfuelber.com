@@ -15,7 +15,7 @@ export default class CategoryTemplate extends React.Component {
         title={category.charAt(0).toUpperCase() + category.slice(1)}
       >
         <Helmet>
-          <title>{`Blog | Posts in category: ${category} | ${config.siteTitle}`}</title>
+          <title>{`Blog | Categoria: ${category} | ${config.siteTitle}`}</title>
           <link rel="canonical" href={`${config.siteUrl}/blog/categories/${category}`}/>
         </Helmet>
 
@@ -25,7 +25,7 @@ export default class CategoryTemplate extends React.Component {
             <Link style={{ textDecoration: "none" }} to="/blog/">
               <h1 className="left-border-area light-border">Blog</h1>
             </Link>
-            <h2>Posts in category: <span className="md-text-uppercase">{category}</span></h2>
+            <h2>Categoria: <span className="md-text-uppercase">{category}</span></h2>
           </div>
 
           <PostListing postEdges={postEdges} /> 

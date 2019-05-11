@@ -92,10 +92,10 @@ export default class PostTemplate extends React.Component {
               <CardTitle
                 className="post-description md-cell--6"
                 avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
-                title={`Published on ${moment(post.date).format(
+                title={`Publicado em ${moment(post.date).format(
                   config.dateFormat
                 )}`}
-                subtitle={`${postNode.timeToRead} min read`}>
+                subtitle={`${postNode.timeToRead} minutos de leitura`}>
               </CardTitle>
               <Link
                   className="category-link md-cell--6"
@@ -105,7 +105,7 @@ export default class PostTemplate extends React.Component {
                     avatar={
                       <Avatar icon={<FontIcon iconClassName="fa fa-folder-open" />} />
                     }
-                    title="In category"
+                    title="Na categoria"
                     subtitle={post.category}
                   />
               </Link>
