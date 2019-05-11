@@ -8,15 +8,15 @@ import "./success.scss";
 class SuccessContact extends Component {
   render() {
     return (
-      <Layout location={this.props.location} title="Message Sent">
+      <Layout location={this.props.location} title="Mensagem enviada">
         <div id="success-message-container">
           <Helmet>
-            <title>{`Message Sent | ${config.siteTitle}`}</title>
+            <title>{`Mensagem enviada | ${config.siteTitle}`}</title>
             <link rel="canonical" href={`${config.siteUrl}/success/`} />
           </Helmet>
-            <h1>Message sent</h1>
-            <h2>Thanks for contact me! I'll reply as soon as possible...</h2>
-            <Button className="primary-button" href="/">Take me to home page</Button>
+            <h1>Mensagem enviada!</h1>
+            <h2>Obrigado por me contatar! Responderei assim que possível...</h2>
+            <Button className="primary-button" href="/">Continuar navegando no site</Button>
         </div>
       </Layout>
     );

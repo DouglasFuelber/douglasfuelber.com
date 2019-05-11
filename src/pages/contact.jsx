@@ -8,10 +8,10 @@ import "./contact.scss";
 class ContactPage extends Component {
   render() {
     return (
-      <Layout location={this.props.location} title="Contact">
+      <Layout location={this.props.location} title="Contato">
         <div id="contact-container">
           <Helmet>
-            <title>{`Contact | ${config.siteTitle}`}</title>
+            <title>{`Contato | ${config.siteTitle}`}</title>
             <link rel="canonical" href={`${config.siteUrl}/contact/`} />
           </Helmet>
           <ContactForm/>

@@ -8,15 +8,15 @@ import "./404.scss";
 class PageNotFound extends Component {
   render() {
     return (
-      <Layout location={this.props.location} title="Page Not Found">
+      <Layout location={this.props.location} title="Página não encontrada">
         <div id="not-found-container">
           <Helmet>
-            <title>{`Page Not Found | ${config.siteTitle}`}</title>
+            <title>{`Página não encontrada | ${config.siteTitle}`}</title>
             <link rel="canonical" href={`${config.siteUrl}/404/`} />
           </Helmet>
-            <h1>404</h1>
-            <h2>Ops! We didn't find the page you're looking for...</h2>
-            <Button className="primary-button" href="/">Take me to home page</Button>
+            <h1>Ops!</h1>
+            <h2>Não foi possível encontrar a página que você está buscando...</h2>
+            <Button className="primary-button" href="/">Continuar navegando no site</Button>
         </div>
       </Layout>
     );

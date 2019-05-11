@@ -17,7 +17,7 @@ class LinkedInBadge extends Component {
       <div className="linkedin-badge-container mobile-fix">
         <div className="linkedin-badge-wrapper md-cell--center">
           <div className="badge left-border-area light-border">
-            <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="douglasfuelber">
+            <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="pt_BR" data-type="horizontal" data-theme="light" data-vanity="douglasfuelber">
                 <a class="LI-simple-link" href='https://br.linkedin.com/in/douglasfuelber/en?trk=profile-badge'>Douglas Fuelber</a>
             </div>
           </div>

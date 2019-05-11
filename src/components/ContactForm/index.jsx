@@ -24,7 +24,7 @@ class ContactForm extends Component {
         //Name
         if (!fields["Name"]) {
             formIsValid = false;
-            errors["Name"] = "This field is required";
+            errors["Name"] = "Por favor, me informe seu nome";
         }
         else {
             errors["Name"] = "";
@@ -33,7 +33,7 @@ class ContactForm extends Component {
         //Email
         if (!fields["Email"]) {
             formIsValid = false;
-            errors["Email"] = "This field is required";
+            errors["Email"] = "Por favor, me informe seu email";
         }
         else if (typeof fields["Email"] !== "undefined") {
             let lastAtPos = fields["Email"].lastIndexOf('@');
@@ -41,7 +41,7 @@ class ContactForm extends Component {
 
             if (!(lastAtPos < lastDotPos && lastAtPos > 0 && fields["Email"].indexOf('@@') == -1 && lastDotPos > 2 && (fields["Email"].length - lastDotPos) > 2)) {
                 formIsValid = false;
-                errors["Email"] = "Email is not valid";
+                errors["Email"] = "Por favor, me informe um email válido";
             }
         } else {
             errors["Email"] = "";
@@ -50,7 +50,7 @@ class ContactForm extends Component {
         //Message
         if (!fields["Message"]) {
             formIsValid = false;
-            errors["Message"] = "This field is required";
+            errors["Message"] = "Conte-me o motivo do seu contato, por favor";
         } else {
             errors["Message"] = "";
         }
@@ -58,7 +58,7 @@ class ContactForm extends Component {
         //Recaptcha
         if (!fields["Recaptcha"]) {
             formIsValid = false;
-            errors["Recaptcha"] = "This field is required";
+            errors["Recaptcha"] = "Por favor, marque o reCaptcha acima";
         } else {
             errors["Recaptcha"] = "";
         }        
@@ -85,8 +85,8 @@ class ContactForm extends Component {
             <div className="contact-container mobile-fix">
                 <div className="contact-wrapper md-cell--center">
                     <div className="md-cell--12">
-                        <h3>Contact</h3>
-                        <p>If you want to contact me, leave me a message:</p>
+                        <h3>Contato</h3>
+                        <p>Se quiser entrar em contato comigo, deixe me uma mensagem:</p>
                     </div>
                     <div id="form">
                         <form action="/success" name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.handleSubmit}>
@@ -95,7 +95,7 @@ class ContactForm extends Component {
 
                                 <TextField
                                     id="name"
-                                    label="Name"
+                                    label="Nome"
                                     name="Name"
                                     ref="Name"
                                     className="md-cell--12 md-cell--bottom"
@@ -118,7 +118,7 @@ class ContactForm extends Component {
 
                                 <TextField
                                     id="message"
-                                    label="Message"
+                                    label="Mensagem"
                                     name="Message"
                                     rows={5}
                                     className="md-cell--12 md-cell--bottom"
@@ -139,7 +139,7 @@ class ContactForm extends Component {
                                 </div>
                                 <div className="md-cell--6">
                                     <br />
-                                    <Button flat className="submit-button" type="submit">Send</Button>
+                                    <Button flat className="submit-button" type="submit">Enviar</Button>
                                 </div>
                             </div>
                         </form>
