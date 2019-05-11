@@ -11,7 +11,7 @@ function GetNavList(config) {
       to: "/"
     },
     {
-      primaryText: "About me",
+      primaryText: "Sobre mim",
       leftIcon: <FontIcon>person</FontIcon>,
       component: Link,
       to: "/about/"
@@ -23,7 +23,7 @@ function GetNavList(config) {
       to: "/blog/"
     }*/,
     {
-      primaryText: "Contact",
+      primaryText: "Contato",
       leftIcon: <FontIcon>forum</FontIcon>,
       component: Link,
       to: "/contact/"

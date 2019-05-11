@@ -7,7 +7,7 @@ class ResumeLanguages extends Component {
         return (
             <div className="languages-container mobile-fix">
                 <div className="languages-wrapper md-cell--center">
-                    <h3>Languages</h3>
+                    <h3>Idiomas</h3>
                     <div id="languages" className="md-grid">
                         {this.getLanguages()}
                     </div>         

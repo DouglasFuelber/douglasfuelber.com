@@ -13,7 +13,7 @@ export default class MainLayout extends React.Component {
       <Navigation config={config} LocalTitle={this.props.title}>
         <div>
           <Helmet>
-            <html lang="en"/>
+            <html lang="pt-BR"/>
             <meta name="description" content={config.siteDescription} />
             <script src='https://www.google.com/recaptcha/api.js'></script>
           </Helmet>
