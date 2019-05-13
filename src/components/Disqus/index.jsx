@@ -41,9 +41,9 @@ class Disqus extends Component {
     );
 
     return (
-      <Card className="md-grid md-cell md-cell--12">
+      <Card className="md-grid md-cell--8">
         <CardTitle
-          title="Comments"
+          title="Comentários"
           avatar={<Avatar icon={<FontIcon>comment</FontIcon>} />}
           expander={!expanded}
         />
