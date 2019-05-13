@@ -26,7 +26,7 @@ class UserInfo extends Component {
     if (!userAvatar && !userName && !userLocation && !userDescription) {
       if (userLinks) {
         return (
-          <Card className="md-grid md-cell md-cell--12 user-info">
+          <Card className="md-grid md-cell--8 user-info">
             {userLinksElement}
           </Card>
         );
@@ -34,7 +34,7 @@ class UserInfo extends Component {
       return null;
     }
     return (
-      <Card className="md-grid md-cell md-cell--12 user-info">
+      <Card className="md-grid md-cell--8 user-info">
         <CardTitle
           expander={!expanded}
           avatar={userAvatar && <Avatar src={userAvatar} role="presentation" />}
@@ -46,7 +46,7 @@ class UserInfo extends Component {
                 options={{ count: expanded ? "none" : "none" }}
               />
             ) : (
-              "Author"
+              "Autor"
             )
           }
         />
