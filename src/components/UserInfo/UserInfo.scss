@@ -1,9 +1,23 @@
+@import "../../layout/theme.scss";
+
 .user-info {    
     margin-bottom: 10px;
     margin-top: 10px;
 
     p {
-        color: #000;
+        color:  $md-black-color;
         margin: 15px 0;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+    h3 {
+        color: $md-primary-color;
+    }
+
+    .md-icon {
+        color: $md-primary-color;
     }
 }

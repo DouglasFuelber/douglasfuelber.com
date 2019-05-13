@@ -8,6 +8,7 @@ import Avatar from "react-md/lib/Avatars";
 import FontIcon from "react-md/lib/FontIcons";
 import Snackbar from "react-md/lib/Snackbars";
 import config from "../../../data/SiteConfig";
+import "./Disqus.scss";
 
 class Disqus extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class Disqus extends Component {
   }
   notifyAboutComment() {
     const toasts = this.state.toasts.slice();
-    toasts.push({ text: "New comment available!" });
+    toasts.push({ text: "Novo comentário!" });
     this.setState({ toasts });
   }
   render() {
@@ -41,7 +42,7 @@ class Disqus extends Component {
     );
 
     return (
-      <Card className="md-grid md-cell--8">
+      <Card className="comments md-grid md-cell--8">
         <CardTitle
           title="Comentários"
           avatar={<Avatar icon={<FontIcon>comment</FontIcon>} />}
