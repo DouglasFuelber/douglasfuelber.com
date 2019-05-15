@@ -1,7 +1,7 @@
 const config = require("./data/SiteConfig");
 const urljoin = require("url-join");
 
-const regexExcludeRobots = /^(?!\/(dev-404-page|404|offline-plugin-app-shell-fallback|tags|categories|site)).*$/;
+const regexExcludeRobots = /^(?!\/(dev-404-page|404|offline-plugin-app-shell-fallback|tags|categories|sucesso|site)).*$/;
 
 module.exports = {
   pathPrefix: config.pathPrefix,
