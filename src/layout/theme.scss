@@ -59,10 +59,21 @@ body {
 
 	.primary-button {
         background-color: $md-primary-color;
-        border-radius: 5px;
+		border-radius: 5px;
+		color: $md-white-color;
         padding: 8px;
         &:hover {
             background-color: $md-secondary-color;
+        }
+	}
+
+	.secondary-button {
+        background-color: $md-secondary-color;
+		border-radius: 5px;
+		color: $md-white-color;
+        padding: 8px;
+        &:hover {
+            background-color: $md-primary-color;
         }
 	}
 

@@ -9,6 +9,7 @@ import CardTitle from "react-md/lib/Cards/CardTitle";
 import moment from "moment";
 import _ from "lodash";
 import Layout from "../layout";
+import Button from "react-md/lib/Buttons";
 import UserInfo from "../components/UserInfo";
 import Disqus from "../components/Disqus";
 import Media, { MediaOverlay } from "react-md/lib/Media";
@@ -128,7 +129,15 @@ export default class PostTemplate extends React.Component {
             config={config}
             expanded={expanded}
           />
-          <Disqus postNode={postNode} expanded={expanded} />
+          {/*<Disqus postNode={postNode} expanded={expanded} />*/}
+
+          <div className="md-grid post-back">
+            <Link className="md-cell--center" to={`blog/`}>
+              <Button className="secondary-button">
+                Voltar para o Blog
+              </Button>
+            </Link>          
+          </div>    
           
         </div>
 
