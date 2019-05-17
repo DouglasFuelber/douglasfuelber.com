@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import ReactDisqusComments from "react-disqus-comments";
-import urljoin from "url-join";
+import Disqus from 'gatsby-plugin-disqus';
 import Card from "react-md/lib/Cards/Card";
 import CardTitle from "react-md/lib/Cards/CardTitle";
 import CardText from "react-md/lib/Cards/CardText";
@@ -10,7 +9,7 @@ import Snackbar from "react-md/lib/Snackbars";
 import config from "../../../data/SiteConfig";
 import "./Disqus.scss";
 
-class Disqus extends Component {
+class DisqusArea extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,15 +30,8 @@ class Disqus extends Component {
   }
   render() {
     const { postNode, expanded } = this.props;
-    if (!config.disqusShortname) {
-      return null;
-    }
     const post = postNode.frontmatter;
-    const url = urljoin(
-      config.siteUrl,
-      config.pathPrefix,
-      postNode.fields.slug
-    );
+    const url = `${config.siteUrl}` + '/blog' + `${postNode.fields.slug}`;
 
     return (
       <Card className="comments md-grid md-cell--8">
@@ -49,13 +41,10 @@ class Disqus extends Component {
           expander={!expanded}
         />
         <CardText expandable={!expanded}>
-          <ReactDisqusComments
-            shortname={config.disqusShortname}
+          <Disqus 
             identifier={post.title}
             title={post.title}
             url={url}
-            category_id={post.category_id}
-            onNewComment={this.notifyAboutComment}
           />
         </CardText>
         <Snackbar
@@ -67,4 +56,4 @@ class Disqus extends Component {
   }
 }
 
-export default Disqus;
+export default DisqusArea;

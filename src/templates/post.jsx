@@ -1,25 +1,25 @@
-import React from "react";
-import Helmet from "react-helmet";
-import { Link, graphql } from "gatsby";
+import _ from "lodash";
+import Avatar from "react-md/lib/Avatars";
+import Button from "react-md/lib/Buttons";
 import Card from "react-md/lib/Cards";
 import CardText from "react-md/lib/Cards/CardText";
-import Avatar from "react-md/lib/Avatars";
-import FontIcon from "react-md/lib/FontIcons";
 import CardTitle from "react-md/lib/Cards/CardTitle";
-import moment from "moment";
-import _ from "lodash";
+import config from "../../data/SiteConfig";
+import DisqusArea from "../components/Disqus";
+import FontIcon from "react-md/lib/FontIcons";
+import { graphql, Link } from "gatsby";
+import Helmet from "react-helmet";
 import Layout from "../layout";
-import Button from "react-md/lib/Buttons";
-import UserInfo from "../components/UserInfo";
-import Disqus from "../components/Disqus";
 import Media, { MediaOverlay } from "react-md/lib/Media";
+import moment from "moment";
 import PostTags from "../components/PostTags";
 import PostCover from "../components/PostCover";
-import PostInfo from "../components/PostInfo";
-import SocialLinks from "../components/SocialLinks";
 import PostSuggestions from "../components/PostSuggestions";
+import React from "react";
 import SEO from "../components/SEO";
-import config from "../../data/SiteConfig";
+import SocialLinks from "../components/SocialLinks";
+import UserInfo from "../components/UserInfo";
+
 import "./b16-tomorrow-dark.css";
 import "./post.scss";
 
@@ -129,7 +129,7 @@ export default class PostTemplate extends React.Component {
             config={config}
             expanded={expanded}
           />
-          {/*<Disqus postNode={postNode} expanded={expanded} />*/}
+          <DisqusArea postNode={postNode} expanded={expanded} />
 
           <div className="md-grid post-back">
             <Link className="md-cell--center" to={`blog/`}>
