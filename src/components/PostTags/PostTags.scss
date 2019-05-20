@@ -13,9 +13,10 @@
 }
 
 .post-tag-container {
+    align-content: center;
+    align-items: center;
     display: flex;
     flex-flow: row wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;    
+    padding: 8px;
 }
