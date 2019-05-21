@@ -97,6 +97,14 @@ body {
 			@media (min-width: 768px) {
 				margin: 0;
 			}
+
+			&.title {
+				color: $md-white-color;
+				font-size: 45px;
+				font-weight: 700;
+				letter-spacing: 1px;
+				width: 100%;
+			}
 		}
 	}
 }

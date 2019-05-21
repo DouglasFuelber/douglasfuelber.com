@@ -76,7 +76,7 @@ export default class PostTemplate extends React.Component {
 
           <div id="page_title" className="md-grid md-cell--8">
             <Link style={{ textDecoration: "none" }} to="/blog/">
-              <h1 className="left-border-area light-border">Blog</h1>
+              <h2 className="left-border-area light-border title">Blog</h2>
             </Link>
           </div>
 
@@ -85,7 +85,9 @@ export default class PostTemplate extends React.Component {
             <Media style={{ height: coverHeight, paddingBottom: "0px" }}>
               <PostCover postNode={postNode} coverHeight={coverHeight} />
               <MediaOverlay>
-                <CardTitle className="post-title" title={post.title}/>
+                <div className="md-card-title md-card-title--primary post-title">
+                  <h1 className="md-card-title--title md-card-title--large md-text">{post.title}</h1>
+                </div>
               </MediaOverlay>
             </Media>
 
