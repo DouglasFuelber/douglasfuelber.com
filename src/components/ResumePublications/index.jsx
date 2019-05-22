@@ -7,10 +7,12 @@ class ResumePublications extends Component {
         return (
             <div className="publications-container mobile-fix">
                 <div className="publications-wrapper md-cell--center">
-                    <h3>Publicações</h3>
-                    <div id="publications">
-                        {this.getPublications()}
-                    </div>                   
+                    <div className="md-cell--center md-cell--middle md-cell--12">
+                        <h3>Publicações</h3>
+                        <div id="publications">
+                            {this.getPublications()}
+                        </div>
+                    </div>
                 </div>
             </div>
         );

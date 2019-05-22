@@ -1,8 +1,6 @@
 @import "../../layout/theme.scss";
 
 .linkedin-badge-wrapper {
-    display: flex;
-    flex-direction: column;
     padding: 25px 15px;
     @media (min-width: 991px) {
         max-width: 66%;

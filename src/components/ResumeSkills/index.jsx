@@ -7,10 +7,12 @@ class ResumeSkills extends Component {
         return (
             <div className="skills-container mobile-fix">
                 <div className="skills-wrapper md-cell--center">
-                    <h3>Habilidades</h3>
-                    <div id="skills">
-                        {this.getSkills()}
-                    </div>         
+                    <div className="md-cell--center md-cell--middle md-cell--12">
+                        <h3>Habilidades</h3>
+                        <div id="skills">
+                            {this.getSkills()}
+                        </div>
+                    </div>
                 </div>
             </div>
         );

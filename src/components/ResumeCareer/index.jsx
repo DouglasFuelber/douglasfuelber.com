@@ -7,7 +7,7 @@ class ResumeCareer extends Component {
         return (
             <div className="career-container mobile-fix">
                 <div className="career-wrapper md-cell--center">
-                    <div className="md-grid">
+                    <div className="md-cell--center md-cell--middle md-cell--12">
                         <h3>Experiência</h3>
                         <div id="jobs">
                             <div className="job-begin-date current">
@@ -15,8 +15,8 @@ class ResumeCareer extends Component {
                                 <div className="date-indicator"></div>
                             </div>
                             {this.getJobs()}
-                        </div>         
-                    </div>                    
+                        </div>
+                    </div>
                 </div>
             </div>
         );
