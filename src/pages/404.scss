@@ -1,4 +1,7 @@
+@import "../layout/theme.scss";
+
 #not-found-container {
+    background-color: $md-tertiary-color;
     display: table-cell;
     height: 100vh;
     text-align: center;
@@ -10,4 +13,12 @@
         font-weight: 600;
         height: 75px;
     }
+
+	.primary-button {
+        background-color: $md-secondary-color;
+		color: $md-tertiary-color;
+        &:hover {
+            background-color: $md-primary-color;
+        }
+	}
 }

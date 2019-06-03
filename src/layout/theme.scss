@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800');
 
 $md-colors-warn-md: false;
-$md-primary-color: rgb(1, 21, 61);
-$md-secondary-color: rgb(0, 46, 172);
-$md-tertiary-color: rgb(3, 59, 243);
+$md-primary-color: rgb(41, 41, 41);
+$md-secondary-color: rgb(255, 255, 254);
+$md-tertiary-color: rgb(247, 72, 78);
 $md-white-color: rgb(255, 255, 255);
 $md-black-color: rgb(0, 0, 0);
 
@@ -13,12 +13,12 @@ body {
 	min-height: 100vH;
 
 	h1, h2, h3, h4, h5, h6, p, button, input, textarea, html {
-		color: $md-white-color;
+		color: $md-primary-color;
 		font-family: "Raleway", "Roboto", sans-serif;
 	}
 
 	h3 {
-		color: $md-white-color;
+		color: $md-primary-color;
 		font-size: 26px;
 		font-weight: 800;
 		letter-spacing: 1px;
@@ -27,13 +27,13 @@ body {
 	}
 
 	h4 {
-		color: $md-white-color;
+		color: $md-primary-color;
 		font-size: 26px;
 		font-weight: 600;
 	}
 
 	h5 {
-		color: $md-white-color;
+		color: $md-primary-color;
 		font-size: 22px;
 		font-weight: 400;
 	}
@@ -45,7 +45,7 @@ body {
 	a:link,
 	a:hover,
 	a:visited {
-		color: $md-white-color;
+		color: $md-primary-color;
 		text-decoration: none;
 	}
 

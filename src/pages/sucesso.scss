@@ -1,4 +1,7 @@
+@import "../layout/theme.scss";
+
 #success-message-container {
+    background-color: $md-tertiary-color;
     display: table-cell;
     height: 100vh;
     text-align: center;
@@ -9,5 +12,13 @@
         font-size: 60px;
         font-weight: 600;
         height: 75px;
+    }
+
+	.primary-button {
+        background-color: $md-secondary-color;
+		color: $md-tertiary-color;
+        &:hover {
+            background-color: $md-primary-color;
+        }
     }
 }
