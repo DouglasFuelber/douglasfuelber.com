@@ -19,7 +19,7 @@ export default class CategoryTemplate extends React.Component {
           <link rel="canonical" href={`${config.siteUrl}/blog/categorias/${category}`}/>
         </Helmet>
 
-        <div id="blog-container" className="dark_bg">
+        <div id="blog-container" className="primary_bg">
 
           <div id="page_title" className="md-grid md-cell--8">
             <Link style={{ textDecoration: "none" }} to="/blog/">

@@ -15,11 +15,16 @@ class AboutPage extends Component {
   render() {
     return (
       <Layout location={this.props.location} title="Sobre mim">
-        <div id="about-container">
+        <div id="about-container" className="primary_bg">
           <Helmet>
             <title>{`Sobre mim | ${config.siteTitle}`}</title>
             <link rel="canonical" href={`${config.siteUrl}/sobre/`} />
           </Helmet>
+
+          <div id="page_title" className="md-grid md-cell--8">
+            <h1 className="left-border-area light-border">Contato</h1>
+          </div>
+
           <About />
           <ResumeCareer />
           <ResumeEducation />

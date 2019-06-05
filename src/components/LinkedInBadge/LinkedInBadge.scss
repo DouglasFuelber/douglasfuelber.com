@@ -1,16 +1,20 @@
 @import "../../layout/theme.scss";
 
-.linkedin-badge-wrapper {
-    padding: 25px 15px;
-    @media (min-width: 991px) {
-        max-width: 66%;
-    }
+.linkedin-badge-container { 
+    background-color: $md-secondary-color;
 
-    .badge {
-        margin-bottom: 20px;
-
-        .LI-badge-container-horizontal-light {
-            background-color: $md-white-color;
+    .linkedin-badge-wrapper {
+        padding: 25px 15px;
+        @media (min-width: 991px) {
+            max-width: 66%;
         }
-    }    
+
+        .badge {
+            margin-bottom: 20px;
+
+            .LI-badge-container-horizontal-light {
+                background-color: $md-white-color;
+            }
+        }    
+    }
 }

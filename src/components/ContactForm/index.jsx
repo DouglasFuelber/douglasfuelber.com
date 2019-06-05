@@ -85,8 +85,7 @@ class ContactForm extends Component {
             <div className="contact-container mobile-fix">
                 <div className="contact-wrapper md-cell--center">
                     <div className="md-cell--12">
-                        <h3>Contato</h3>
-                        <p>Se quiser entrar em contato comigo, deixe me uma mensagem:</p>
+                        <p>Se quiser entrar em contato comigo, deixe-me uma mensagem:</p>
                     </div>
                     <div id="form">
                         <form action="/success" name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.handleSubmit}>

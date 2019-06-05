@@ -36,7 +36,7 @@ class Index extends React.Component {
               <i className="material-icons">keyboard_arrow_down</i>
               </Link>
 
-          <div id="main_area" className="dark_bg">
+          <div id="main_area" className="secondary_bg">
             <About/>
           </div>
           

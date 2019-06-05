@@ -1,105 +1,109 @@
 @import "../../layout/theme.scss";
 
-.career-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-    padding: 25px 15px;
-    @media (min-width: 991px) {
-        max-width: 66%;
-    }
+.career-container { 
+    background-color: $md-secondary-color;
 
-    #jobs {
-        .job {
-            padding: 45px 0 40px 20px;
-            position: relative;
-            top: -40px;
-
-            .job-company {
-                @media (min-width: 991px) {
-                    display: inline;
-                }
-            }
-            .job-description {
-                font-size: 16px;
-                line-height: 25px;
-                margin-top: 10px;
-            }
-            .job-location {
-                color: $md-tertiary-color;
-                font-size: 18px;
-                font-weight: 500;
-                @media (min-width: 991px) {
-                    display: inline;
-                    &:before {
-                        content: " - ";
-                    }
-                }
-            }
+    .career-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        padding: 25px 15px;
+        @media (min-width: 991px) {
+            max-width: 66%;
         }
-        .job-begin-date {
-            color: $md-tertiary-color;
-            font-weight: 600;
-            margin-top: 25px;
-            position: absolute;
-            text-transform: uppercase;
-            .date-indicator {
-                background-color: $md-tertiary-color;
-                border: 3px solid $md-tertiary-color;
-                border-radius: 50%;
-                height: 25px;
-                left: -34px;
+
+        #jobs {
+            .job {
+                padding: 45px 0 40px 20px;
                 position: relative;
-                top: -25px;
-                width: 25px;
-                @media (min-width: 991px) {
-                    top: -40px;
+                top: -40px;
+
+                .job-company {
+                    @media (min-width: 991px) {
+                        display: inline;
+                    }
                 }
-            }
-            .job-begin-month {
-                display: inline;
-                @media (min-width: 991px) {
-                    display: block;
-                    font-size: 20px;
-                    position: relative;
+                .job-description {
+                    font-size: 16px;
+                    line-height: 25px;
+                    margin-top: 10px;
                 }
-            }
-            .job-begin-year {
-                display: inline;
-                font-size: 22px;
-                &:before {
-                    content: ", ";
-                    font-size: 20px;
-                }
-                @media (min-width: 991px) {
-                    display: block;
-                    position: relative;
-                    &:before {
-                        content: unset;
+                .job-location {
+                    color: $md-tertiary-color;
+                    font-size: 18px;
+                    font-weight: 500;
+                    @media (min-width: 991px) {
+                        display: inline;
+                        &:before {
+                            content: " - ";
+                        }
                     }
                 }
             }
-            &.current {
-                padding-left: 25px;
-                position: relative;
+            .job-begin-date {
+                color: $md-tertiary-color;
+                font-weight: 600;
+                margin-top: 25px;
+                position: absolute;
+                text-transform: uppercase;
                 .date-indicator {
-                    background-color: $md-secondary-color;
-                    z-index: 5;
+                    background-color: $md-tertiary-color;
+                    border: 3px solid $md-tertiary-color;
+                    border-radius: 50%;
+                    height: 25px;
+                    left: -34px;
+                    position: relative;
+                    top: -25px;
+                    width: 25px;
+                    @media (min-width: 991px) {
+                        top: -40px;
+                    }
                 }
                 .job-begin-month {
-                    left: -110px;
-                    top: -12px;
+                    display: inline;
+                    @media (min-width: 991px) {
+                        display: block;
+                        font-size: 20px;
+                        position: relative;
+                    }
+                }
+                .job-begin-year {
+                    display: inline;
+                    font-size: 22px;
+                    &:before {
+                        content: ", ";
+                        font-size: 20px;
+                    }
+                    @media (min-width: 991px) {
+                        display: block;
+                        position: relative;
+                        &:before {
+                            content: unset;
+                        }
+                    }
+                }
+                &.current {
+                    padding-left: 25px;
+                    position: relative;
+                    .date-indicator {
+                        background-color: $md-secondary-color;
+                        z-index: 5;
+                    }
+                    .job-begin-month {
+                        left: -110px;
+                        top: -12px;
+                    }
                 }
             }
-        }
 
-        @media (min-width: 991px) {
-            padding-left: 85px;
-            .job-date {
-                left: -95px;
-                line-height: 25px;
-                position: relative;
-                text-align: center;
+            @media (min-width: 991px) {
+                padding-left: 85px;
+                .job-date {
+                    left: -95px;
+                    line-height: 25px;
+                    position: relative;
+                    text-align: center;
+                }
             }
         }
     }

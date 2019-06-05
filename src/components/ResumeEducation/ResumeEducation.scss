@@ -1,34 +1,38 @@
 @import "../../layout/theme.scss";
 
-.education-wrapper {
-    display: flex;
-    flex-direction: column;
-    padding: 25px 15px;
-    @media (min-width: 991px) {
-        max-width: 66%;
-    }
-    #educations {
-        .education {
-            margin: 20px 0 40px;
+.education-container { 
+    background-color: $md-secondary-color;
 
-            .education-location {
-                color: $md-tertiary-color;
-                font-size: 18px;
-                font-weight: 500;
-                @media (min-width: 991px) {
-                    display: inline;
-                    &:before {
-                        content: " - ";
+    .education-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 25px 15px;
+        @media (min-width: 991px) {
+            max-width: 66%;
+        }
+        #educations {
+            .education {
+                margin: 20px 0 40px;
+
+                .education-location {
+                    color: $md-tertiary-color;
+                    font-size: 18px;
+                    font-weight: 500;
+                    @media (min-width: 991px) {
+                        display: inline;
+                        &:before {
+                            content: " - ";
+                        }
                     }
                 }
-            }
-            .education-period {
-                font-size: 20px;
-                font-weight: 400;
-            }
-            .education-school {
-                @media (min-width: 991px) {
-                    display: inline;
+                .education-period {
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+                .education-school {
+                    @media (min-width: 991px) {
+                        display: inline;
+                    }
                 }
             }
         }

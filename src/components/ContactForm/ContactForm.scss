@@ -1,59 +1,64 @@
 @import "../../layout/theme.scss";
 
-.contact-wrapper {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 25px 15px;
-    @media (min-width: 991px) {
-        max-width: 66%;
-    }
+.contact-container { 
+    background-color: $md-secondary-color;
 
-    p {
-        font-size: 16px;
-    }
-
-    #form {
-        width: 100%;
-
-        label {
-            color: $md-white-color;
-            font-size: 14px;
-
-            &.md-floating-label--inactive {
-                font-size: 16px;
-            }
+    .contact-wrapper {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 25px 15px;
+        @media (min-width: 991px) {
+            max-width: 66%;
         }
 
-        input,
-        textarea {
-            color: $md-white-color;
+        p {
+            font-size: 16px;
+        }
+
+        #form {
             width: 100%;
-        }
 
-        input:-internal-autofill-previewed,
-        input:-internal-autofill-selected,
-        textarea:-internal-autofill-previewed,
-        textarea:-internal-autofill-selected,
-        select:-internal-autofill-previewed,
-        select:-internal-autofill-selected {
-            -webkit-box-shadow: 0 0 0px 1000px $md-primary-color inset !important;
-            -webkit-text-fill-color: $md-white-color !important;
-        }
+            label {
+                color: $md-primary-color;
+                font-size: 14px;
 
-        hr {
-            background-color: $md-secondary-color;
-            &::after {
-                background-color: $md-tertiary-color;
+                &.md-floating-label--inactive {
+                    font-size: 16px;
+                }
             }
-        }
 
-        .submit-button {
-            background-color: $md-secondary-color;
-            color: $md-white-color;
-            float: right;
-            &:hover {
+            input,
+            textarea {
+                color: $md-primary-color;
+                font-size: 14px;
+                width: 100%;
+            }
+
+            input:-internal-autofill-previewed,
+            input:-internal-autofill-selected,
+            textarea:-internal-autofill-previewed,
+            textarea:-internal-autofill-selected,
+            select:-internal-autofill-previewed,
+            select:-internal-autofill-selected {
+                -webkit-box-shadow: 0 0 0px 1000px $md-primary-color inset !important;
+                -webkit-text-fill-color: $md-secondary-color !important;
+            }
+
+            hr {
                 background-color: $md-tertiary-color;
+                &::after {
+                    background-color: $md-tertiary-color;
+                }
+            }
+
+            .submit-button {
+                background-color: $md-tertiary-color;
+                color: $md-secondary-color;
+                float: right;
+                &:hover {
+                    background-color: $md-primary-color;
+                }
             }
         }
     }

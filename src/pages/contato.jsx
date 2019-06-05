@@ -9,11 +9,18 @@ class ContactPage extends Component {
   render() {
     return (
       <Layout location={this.props.location} title="Contato">
-        <div id="contact-container">
-          <Helmet>
+        
+        <Helmet>
             <title>{`Contato | ${config.siteTitle}`}</title>
             <link rel="canonical" href={`${config.siteUrl}/contact/`} />
           </Helmet>
+        
+        <div id="contact-container" className="primary_bg">
+        
+          <div id="page_title" className="md-grid md-cell--8">
+            <h1 className="left-border-area light-border">Contato</h1>
+          </div>
+
           <ContactForm/>
         </div>
       </Layout>

@@ -72,7 +72,7 @@ export default class PostTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
 
-        <div id="post-wrapper" className="dark_bg">
+        <div id="post-wrapper" className="primary_bg">
 
           <div id="page_title" className="md-grid md-cell--8">
             <Link style={{ textDecoration: "none" }} to="/blog/">

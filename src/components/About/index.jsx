@@ -16,7 +16,6 @@ class About extends Component {
               />
             </div>
             <div className="md-cell--center md-cell--middle md-cell--8">
-              <h3>Sobre mim</h3>
               <p className="about-text left-border-area light-border">{config.userDescription}</p>
             </div>
           </div>
