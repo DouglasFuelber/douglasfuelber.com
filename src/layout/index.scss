@@ -12,6 +12,14 @@ body {
     background-color: $md-primary-color;
     //background-image: url("../../static/images/bg_pattern.png"); 
     margin: 0;
+
+    header {
+        button {
+            .md-text--inherit.md-text--inherit {
+                color: $md-tertiary-color;
+            }
+        }
+    }
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700|Material+Icons');

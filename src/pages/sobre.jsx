@@ -22,7 +22,7 @@ class AboutPage extends Component {
           </Helmet>
 
           <div id="page_title" className="md-grid md-cell--8">
-            <h1 className="left-border-area light-border">Contato</h1>
+            <h1 className="left-border-area light-border">Sobre mim</h1>
           </div>
 
           <About />
