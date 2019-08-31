@@ -1,7 +1,7 @@
 @import "../../layout/theme.scss";
 
 .education-container { 
-    background-color: $md-secondary-color;
+    background-color: $md-primary-color;
 
     .education-wrapper {
         display: flex;
@@ -15,7 +15,7 @@
                 margin: 20px 0 40px;
 
                 .education-location {
-                    color: $md-tertiary-color;
+                    color: $md-secondary-color;
                     font-size: 18px;
                     font-weight: 500;
                     @media (min-width: 991px) {
@@ -26,6 +26,7 @@
                     }
                 }
                 .education-period {
+                    color: $md-white-color;
                     font-size: 20px;
                     font-weight: 400;
                 }

@@ -18,7 +18,7 @@ class BlogPage extends Component {
         </Helmet>
         <SEO postEdges={postEdges} />
 
-        <div id="blog-container" className="primary_bg">
+        <div id="blog-container" className="tertiary_bg">
         
             <div id="page_title" className="md-grid md-cell--8">
                 <h1 className="left-border-area light-border">Blog</h1>

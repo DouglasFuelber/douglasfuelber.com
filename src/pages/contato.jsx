@@ -15,7 +15,7 @@ class ContactPage extends Component {
             <link rel="canonical" href={`${config.siteUrl}/contact/`} />
           </Helmet>
         
-        <div id="contact-container" className="primary_bg">
+        <div id="contact-container" className="tertiary_bg">
         
           <div id="page_title" className="md-grid md-cell--8">
             <h1 className="left-border-area light-border">Contato</h1>

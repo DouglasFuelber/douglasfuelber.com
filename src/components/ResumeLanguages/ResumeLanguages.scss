@@ -1,7 +1,7 @@
 @import "../../layout/theme.scss";
 
 .languages-container { 
-    background-color: $md-secondary-color;
+    background-color: $md-primary-color;
 
     .languages-wrapper {
         display: flex;
@@ -25,7 +25,7 @@
                     margin: 0;
                 }
                 .language-level {
-                    color: $md-tertiary-color;
+                    color: $md-secondary-color;
                     font-size: 18px;
                     font-weight: 500;
                 }

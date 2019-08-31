@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800');
 
 $md-colors-warn-md: false;
-$md-primary-color: rgb(41, 41, 41);
-$md-secondary-color: rgb(255, 255, 254);
-$md-tertiary-color: rgb(235, 64, 70);
+$md-primary-color: rgb(0, 25, 80);
+$md-secondary-color: rgb(5, 60, 245);
+$md-tertiary-color: rgb(0, 20, 60);
 $md-white-color: rgb(255, 255, 255);
 $md-black-color: rgb(0, 0, 0);
 
@@ -13,12 +13,12 @@ body {
 	min-height: 100vH;
 
 	h1, h2, h3, h4, h5, h6, p, button, input, textarea, html {
-		color: $md-primary-color;
+		color: $md-white-color;
 		font-family: "Raleway", "Roboto", sans-serif;
 	}
 
 	h3 {
-		color: $md-primary-color;
+		color: $md-white-color;
 		font-size: 26px;
 		font-weight: 800;
 		letter-spacing: 1px;
@@ -27,13 +27,13 @@ body {
 	}
 
 	h4 {
-		color: $md-primary-color;
+		color: $md-white-color;
 		font-size: 26px;
 		font-weight: 600;
 	}
 
 	h5 {
-		color: $md-primary-color;
+		color: $md-white-color;
 		font-size: 22px;
 		font-weight: 400;
 	}
@@ -45,7 +45,7 @@ body {
 	a:link,
 	a:hover,
 	a:visited {
-		color: $md-primary-color;
+		color: $md-white-color;
 		text-decoration: none;
 	}
 
@@ -83,7 +83,7 @@ body {
 		border-left: 4px solid $md-primary-color;
 		padding-left: 20px;
 		&.light-border {
-			border-left-color: $md-tertiary-color;
+			border-left-color: $md-secondary-color;
 		}
 	}
 

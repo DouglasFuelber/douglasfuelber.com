@@ -9,14 +9,13 @@ html {
 }
 
 body {
-    background-color: $md-primary-color;
-    //background-image: url("../../static/images/bg_pattern.png"); 
+    background-color: $md-tertiary-color;
     margin: 0;
 
     header {
         button {
             .md-text--inherit.md-text--inherit {
-                color: $md-tertiary-color;
+                color: $md-white-color;
             }
         }
     }

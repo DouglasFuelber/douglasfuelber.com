@@ -1,7 +1,7 @@
 @import "../../layout/theme.scss";
 
 .contact-container { 
-    background-color: $md-secondary-color;
+    background-color: $md-primary-color;
 
     .contact-wrapper {
         align-items: center;
@@ -20,7 +20,7 @@
             width: 100%;
 
             label {
-                color: $md-primary-color;
+                color: $md-white-color;
                 font-size: 14px;
 
                 &.md-floating-label--inactive {
@@ -30,7 +30,7 @@
 
             input,
             textarea {
-                color: $md-primary-color;
+                color: $md-white-color;
                 font-size: 14px;
                 width: 100%;
             }
@@ -42,22 +42,22 @@
             select:-internal-autofill-previewed,
             select:-internal-autofill-selected {
                 -webkit-box-shadow: 0 0 0px 1000px $md-primary-color inset !important;
-                -webkit-text-fill-color: $md-secondary-color !important;
+                -webkit-text-fill-color: $md-white-color !important;
             }
 
             hr {
-                background-color: $md-tertiary-color;
+                background-color: $md-secondary-color;
                 &::after {
-                    background-color: $md-tertiary-color;
+                    background-color: $md-secondary-color;
                 }
             }
 
             .submit-button {
-                background-color: $md-tertiary-color;
-                color: $md-secondary-color;
+                background-color: $md-secondary-color;
+                color: $md-white-color;
                 float: right;
                 &:hover {
-                    background-color: $md-primary-color;
+                    background-color: $md-tertiary-color;
                 }
             }
         }

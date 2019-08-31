@@ -1,7 +1,7 @@
 @import "../../layout/theme.scss";
 
 .career-container { 
-    background-color: $md-secondary-color;
+    background-color: $md-primary-color;
 
     .career-wrapper {
         display: flex;
@@ -28,7 +28,7 @@
                     margin-top: 10px;
                 }
                 .job-location {
-                    color: $md-tertiary-color;
+                    color: $md-secondary-color;
                     font-size: 18px;
                     font-weight: 500;
                     @media (min-width: 991px) {
@@ -40,14 +40,14 @@
                 }
             }
             .job-begin-date {
-                color: $md-tertiary-color;
+                color: $md-secondary-color;
                 font-weight: 600;
                 margin-top: 25px;
                 position: absolute;
                 text-transform: uppercase;
                 .date-indicator {
-                    background-color: $md-tertiary-color;
-                    border: 3px solid $md-tertiary-color;
+                    background-color: $md-secondary-color;
+                    border: 3px solid $md-secondary-color;
                     border-radius: 50%;
                     height: 25px;
                     left: -34px;
@@ -85,7 +85,7 @@
                     padding-left: 25px;
                     position: relative;
                     .date-indicator {
-                        background-color: $md-secondary-color;
+                        background-color: $md-primary-color;
                         z-index: 5;
                     }
                     .job-begin-month {

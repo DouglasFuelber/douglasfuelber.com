@@ -16,15 +16,14 @@
     }
 
     h2 {
-        color: $md-secondary-color;
+        color: $md-white-color;
     }
 
 	.primary-button {
-        background-color: $md-tertiary-color;
-		color: $md-secondary-color;
+        background-color: $md-secondary-color;
+		color: $md-white-color;
         &:hover {
-            background-color: $md-secondary-color;
-            color: $md-tertiary-color;
+            background-color: $md-tertiary-color;
         }
     }
 }

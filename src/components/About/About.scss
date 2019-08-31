@@ -1,7 +1,7 @@
 @import "../../layout/theme.scss";
 
 .about-container { 
-    background-color: $md-secondary-color;
+    background-color: $md-primary-color;
 
     .about-wrapper {
         align-items: center;
@@ -14,7 +14,7 @@
 
         .about-img {
             border-radius: 50%;
-            box-shadow: 0 0 0px 5px $md-tertiary-color;
+            box-shadow: 0 0 0px 5px $md-secondary-color;
             height: auto;
             margin: 10px 0 25px;
             max-width: 240px;

@@ -15,7 +15,7 @@ class AboutPage extends Component {
   render() {
     return (
       <Layout location={this.props.location} title="Sobre mim">
-        <div id="about-container" className="primary_bg">
+        <div id="about-container" className="tertiary_bg">
           <Helmet>
             <title>{`Sobre mim | ${config.siteTitle}`}</title>
             <link rel="canonical" href={`${config.siteUrl}/sobre/`} />

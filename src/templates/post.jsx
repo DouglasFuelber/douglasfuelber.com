@@ -72,7 +72,7 @@ export default class PostTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
 
-        <div id="post-wrapper" className="primary_bg">
+        <div id="post-wrapper" className="tertiary_bg">
 
           <div id="page_title" className="md-grid md-cell--8">
             <Link style={{ textDecoration: "none" }} to="/blog/">
@@ -80,66 +80,68 @@ export default class PostTemplate extends React.Component {
             </Link>
           </div>
 
-          <Card className="post md-grid md-cell--8">
+          <div className="primary_bg card-wrapper">
+            <Card className="post md-grid md-cell--8">
 
-            <Media style={{ height: coverHeight, paddingBottom: "0px" }}>
-              <PostCover postNode={postNode} coverHeight={coverHeight} />
-              <MediaOverlay>
-                <div className="md-card-title md-card-title--primary post-title">
-                  <h1 className="md-card-title--title md-card-title--large md-text">{post.title}</h1>
-                </div>
-              </MediaOverlay>
-            </Media>
+              <Media style={{ height: coverHeight, paddingBottom: "0px" }}>
+                <PostCover postNode={postNode} coverHeight={coverHeight} />
+                <MediaOverlay>
+                  <div className="md-card-title md-card-title--primary post-title">
+                    <h1 className="md-card-title--title md-card-title--large md-text">{post.title}</h1>
+                  </div>
+                </MediaOverlay>
+              </Media>
 
-            <div className="md-grid">
-              <CardTitle
-                className="post-description md-cell--6"
-                avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
-                title={`Publicado em ${moment(post.date).format(
-                  config.dateFormat
-                )}`}
-                subtitle={`${postNode.timeToRead} minutos de leitura`}>
-              </CardTitle>
-              <Link
-                  className="category-link md-cell--6"
-                  to={`/blog/categorias/${_.kebabCase(post.category)}`}>
-                  <CardTitle
-                    className="post-description"
-                    avatar={
-                      <Avatar icon={<FontIcon iconClassName="fa fa-folder-open" />} />
-                    }
-                    title="Na categoria"
-                    subtitle={post.category}
+              <div className="md-grid">
+                <CardTitle
+                  className="post-description md-cell--6"
+                  avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
+                  title={`Publicado em ${moment(post.date).format(
+                    config.dateFormat
+                  )}`}
+                  subtitle={`${postNode.timeToRead} minutos de leitura`}>
+                </CardTitle>
+                <Link
+                    className="category-link md-cell--6"
+                    to={`/blog/categorias/${_.kebabCase(post.category)}`}>
+                    <CardTitle
+                      className="post-description"
+                      avatar={
+                        <Avatar icon={<FontIcon iconClassName="fa fa-folder-open" />} />
+                      }
+                      title="Na categoria"
+                      subtitle={post.category}
+                    />
+                </Link>
+                <CardText className="post-info md-cell--12">
+                  <div className="post-body" dangerouslySetInnerHTML={{ __html: postNode.html }} />
+                </CardText>
+                <CardText className="post-meta md-cell--12">
+                  <PostTags tags={post.tags} />
+                  <SocialLinks
+                    postPath={slug}
+                    postNode={postNode}
+                    mobile={this.state.mobile}
                   />
-              </Link>
-              <CardText className="post-info md-cell--12">
-                <div className="post-body" dangerouslySetInnerHTML={{ __html: postNode.html }} />
-              </CardText>
-              <CardText className="post-meta md-cell--12">
-                <PostTags tags={post.tags} />
-                <SocialLinks
-                  postPath={slug}
-                  postNode={postNode}
-                  mobile={this.state.mobile}
-                />
-              </CardText>
+                </CardText>
 
-            </div>            
-          </Card>
-          <UserInfo
-            className="md-grid md-cell md-cell--12"
-            config={config}
-            expanded={expanded}
-          />
-          <DisqusArea postNode={postNode} expanded={expanded} />
+              </div>            
+            </Card>
+            <UserInfo
+              className="md-grid md-cell md-cell--12"
+              config={config}
+              expanded={expanded}
+            />
+            <DisqusArea postNode={postNode} expanded={expanded} />
 
-          <div className="md-grid post-back">
-            <Link className="md-cell--center" to={`blog/`}>
-              <Button className="secondary-button">
-                Voltar para o Blog
-              </Button>
-            </Link>          
-          </div>    
+            <div className="md-grid post-back">
+              <Link className="md-cell--center" to={`blog/`}>
+                <Button className="secondary-button">
+                  Voltar para o Blog
+                </Button>
+              </Link>          
+            </div>
+          </div>
           
         </div>
 
