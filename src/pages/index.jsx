@@ -17,27 +17,27 @@ class Index extends React.Component {
             <link rel="canonical" href={`${config.siteUrl}`} />
           </Helmet>
 
-          <div id="main_banner">
+          <div id="main_area">
+
             <div id="page_title">
               <h1>Douglas Fuelber</h1>
               <h2>Desenvolvedor Full Stack</h2>
             </div>
-          </div>
 
-          <Link
-                className="scroll-down"
-                to="main_area"
-                data-offset="-45"
-                spy
-                smooth
-                duration={500}
-              >
-              
-              <i className="material-icons">keyboard_arrow_down</i>
-              </Link>
+            <div id="icons_area" className="md-cell--center">
+              <div className="md-grid">
+                <div className="md-cell--center md-cell--4 md-text-center">
+                  Teste
+                </div>
+                <div className="md-cell--center md-cell--4 md-text-center">
+                  Teste
+                </div>
+                <div className="md-cell--center md-cell--4 md-text-center">
+                  Teste
+                </div>
+              </div>
+            </div>
 
-          <div id="main_area" className="secondary_bg">
-            <About/>
           </div>
           
         </div>

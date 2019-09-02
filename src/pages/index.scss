@@ -1,6 +1,6 @@
 @import "../layout/theme.scss";
 
-#main_banner {
+#main_area {
     display: table-cell;
     height: 100vh;
     text-align: center;
@@ -8,37 +8,42 @@
     width: 100vw;
 
     #page_title {
-        display: inline-block;
-        text-align: center;
+      display: inline-block;
+      text-align: center;
+
+      @media (min-width: 768px) {
+          text-align: right;
+      }
+  
+      h1 {
+        color: $md-white-color;
+        font-size: 55px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        line-height: 60px;
+        margin: 0 0 15px;
 
         @media (min-width: 768px) {
-            text-align: right;
-        }
-    
-        h1 {
-          color: $md-white-color;
-          font-size: 55px;
-          font-weight: 800;
-          letter-spacing: 1px;
-          line-height: 60px;
-          margin: 0 0 15px;
-
-          @media (min-width: 768px) {
-            margin: 0;
-          }
-        }
-    
-        h2 {
-          color: $md-secondary-color;
-          font-size: 25px;
-          font-weight: 700;
-          text-transform: uppercase;          
+          margin: 0;
         }
       }
-}
+  
+      h2 {
+        color: $md-secondary-color;
+        font-size: 25px;
+        font-weight: 700;
+        text-transform: uppercase;          
+      }
+    }
 
-#main_area {
-    min-height: 50vh;
+    #icons_area {
+      height: 50%;
+      text-align: center;
+
+      @media (min-width: 991px) {
+        max-width: 66%;
+      }
+    }
 }
 
 /* Create a bouncing scroll-down arrow on homepage with cover image */
