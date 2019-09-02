@@ -12,7 +12,7 @@ function GetNavList(config) {
     },
     {
       primaryText: "Sobre mim",
-      leftIcon: <FontIcon>person</FontIcon>,
+      leftIcon: <FontIcon>emoji_people</FontIcon>,
       component: Link,
       to: "/sobre/"
     },
