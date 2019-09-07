@@ -47,7 +47,7 @@ module.exports = {
     ],
     education: [
       {
-        title: "Ciência da Computação",
+        title: "Bacharelado em Ciência da Computação",
         school: "UNISC",
         schoolLocation: "Santa Cruz do Sul / RS / Brasil",
         schoolUrl: "https://www.unisc.br",
@@ -94,6 +94,6 @@ module.exports = {
     ],
     skills: [
       "HTML / CSS", "JavaScript", "JQuery", "C#", "ASP.NET MVC", "Entity Framework", "Microsoft SharePoint", "WordPress", "PHP", "Git",
-      "AngularJS", "React.js", "Bootstrap", "SASS", "Microsoft SQL Server", "Java", "Photoshop", "Corel Draw"
+      "AngularJS", "React.js", "SASS", "Microsoft SQL Server", "Java", "Photoshop", "Corel Draw"
     ]
   };  
