@@ -18,13 +18,19 @@ class Index extends React.Component {
 
           <div id="main_area">
 
-            <div id="page_title">
-              <h1>Douglas Fuelber</h1>
-              <h2>Desenvolvedor Full Stack</h2>
-            </div>
+            <div id="main_area_content">
 
-            <div id="icons_area" className="md-cell--center">
-              <HomeLinks collumnSize={4} />
+              <div id="page_title">
+                <h1>Douglas Fuelber</h1>
+                <h2>Desenvolvedor Full Stack</h2>
+              </div>
+
+              <div id="page_content">
+                <div id="icons_area" className="md-cell--center">
+                  <HomeLinks collumnSize={4} />
+                </div>
+              </div>              
+
             </div>
 
           </div>

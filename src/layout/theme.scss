@@ -134,6 +134,12 @@ body {
 			}
 		}
 	}
+
+	#page_content {
+		background-color: $md-primary-color;
+		border-bottom: 2px solid $md-secondary-color;
+		border-top: 2px solid $md-secondary-color;
+	}
 }
 
 

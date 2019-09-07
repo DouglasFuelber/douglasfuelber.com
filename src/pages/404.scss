@@ -2,6 +2,7 @@
 
 #not-found-container {
     background-color: $md-primary-color;
+    border-bottom: 2px solid $md-secondary-color;
     display: table-cell;
     height: 100vh;
     text-align: center;

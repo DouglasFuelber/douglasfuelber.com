@@ -29,7 +29,9 @@ export default class TagTemplate extends React.Component {
             <h2>Tag: <span className="md-text-uppercase">{tag}</span></h2>
           </div>
 
-          <PostListing postEdges={postEdges} />  
+          <div id="page_content">
+            <PostListing postEdges={postEdges} />  
+          </div>
                     
         </div>
       </Layout>

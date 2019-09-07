@@ -1,7 +1,6 @@
 @import "../../layout/theme.scss";
 
 .about-container { 
-    background-color: $md-primary-color;
 
     .about-wrapper {
         align-items: center;
@@ -19,10 +18,6 @@
             margin: 10px 0 25px;
             max-width: 240px;
             width: 100%;
-
-            @media (max-width: 360px - 1px) {
-                padding: 20px;
-            }
         }
 
         .about-text {

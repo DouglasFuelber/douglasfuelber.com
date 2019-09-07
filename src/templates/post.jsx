@@ -80,6 +80,7 @@ export default class PostTemplate extends React.Component {
             </Link>
           </div>
 
+          <div id="page_content">
           <div className="primary_bg card-wrapper">
             <Card className="post md-grid md-cell--8">
 
@@ -141,6 +142,7 @@ export default class PostTemplate extends React.Component {
                 </Button>
               </Link>          
             </div>
+          </div>
           </div>
           
         </div>

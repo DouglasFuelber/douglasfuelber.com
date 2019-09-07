@@ -21,7 +21,9 @@ class ContactPage extends Component {
             <h1 className="left-border-area light-border">Contato</h1>
           </div>
 
-          <ContactForm/>
+          <div id="page_content">
+            <ContactForm/>
+          </div>
         </div>
       </Layout>
     );

@@ -7,41 +7,42 @@
     vertical-align: middle;
     width: 100vw;
 
-    #page_title {
-      display: inline-block;
-      text-align: center;
-
-      @media (min-width: 768px) {
-          text-align: right;
-      }
+    #main_area_content {
+      
+      #page_title {
+        display: inline-block;
+        padding-top: 45px;
+        text-align: center;
   
-      h1 {
-        color: $md-white-color;
-        font-size: 55px;
-        font-weight: 800;
-        letter-spacing: 1px;
-        line-height: 60px;
-        margin: 0 0 15px;
-
         @media (min-width: 768px) {
-          margin: 0;
+            text-align: right;
+        }
+    
+        h1 {
+          color: $md-white-color;
+          font-size: 55px;
+          font-weight: 800;
+          letter-spacing: 1px;
+          line-height: 60px;
+          margin: 0 0 15px;
+  
+          @media (min-width: 768px) {
+            margin: 0;
+          }
+        }
+    
+        h2 {
+          color: $md-secondary-color;
+          font-size: 25px;
+          font-weight: 700;
+          text-transform: uppercase;          
         }
       }
   
-      h2 {
-        color: $md-secondary-color;
-        font-size: 25px;
-        font-weight: 700;
-        text-transform: uppercase;          
+      #icons_area {
+        @media (min-width: 991px) {
+          //max-width: 66%;
+        }
       }
-    }
-
-    #icons_area {
-      height: 50%;
-      text-align: center;
-
-      @media (min-width: 991px) {
-        max-width: 66%;
-      }
-    }
+    }    
 }

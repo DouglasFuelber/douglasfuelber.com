@@ -24,7 +24,9 @@ class BlogPage extends Component {
                 <h1 className="left-border-area light-border">Blog</h1>
             </div>
 
-            <PostListing postEdges={postEdges} />          
+            <div id="page_content">
+              <PostListing postEdges={postEdges} />          
+            </div>
         </div>
 
       </Layout>

@@ -24,14 +24,15 @@ class AboutPage extends Component {
           <div id="page_title" className="md-grid md-cell--8">
             <h1 className="left-border-area light-border">Sobre mim</h1>
           </div>
-
-          <About />
-          <ResumeCareer />
-          <ResumeEducation />
-          <ResumeSkills />
-          <ResumeLanguages />
-          <ResumePublications />
-          <LinkedInBadge />
+          <div id="page_content">
+            <About />
+            <ResumeCareer />
+            <ResumeEducation />
+            <ResumeSkills />
+            <ResumeLanguages />
+            <ResumePublications />
+            <LinkedInBadge />
+          </div>
         </div>
       </Layout>
     );

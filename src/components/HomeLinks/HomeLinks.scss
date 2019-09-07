@@ -1,20 +1,44 @@
 @import "../../layout/theme.scss";
 
-.links-area {
-    .link {
-        h5 {
-            color: $md-secondary-color;
-            font-weight: 400;
+.links-container {
+    .links-wrapper {
+
+        @media (min-width: 991px) {
+            max-width: 66%;
+            padding: 20px;
         }
-        .icon {
-            i {
-                color: $md-white-color;
-                font-size: 40px;
+
+        .link {
+            margin-bottom: 5px;
+            margin-top: 5px;
+            
+            h5 {
+                color: $md-secondary-color;
+                font-weight: 400;
+                margin-bottom: 5px;
             }
-        }
-        &:hover {
-            transform: scale(1.1);
-            transition-duration: 0.5s;
+            .icon {
+                display: inline-block;
+                i {
+                    color: $md-white-color;
+                    font-size: 40px;
+                }
+                @media (min-width: 991px) {
+                    display: initial;
+                }
+            }
+            .text {
+                display: inline-block;
+                margin-left: 10px;
+    
+                @media (min-width: 991px) {
+                    display: initial;
+                }
+            }
+            &:hover {
+                transform: scale(1.1);
+                transition-duration: 0.5s;
+            }
         }
     }
 }

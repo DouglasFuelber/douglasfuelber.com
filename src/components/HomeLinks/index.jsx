@@ -9,18 +9,22 @@ class HomeLinks extends Component {
   render() {
     const { collumnSize } = this.props;
     return (
-      <div className="md-grid links-area">
-        { Home.homeLinks.map(item => (
-          <div className={"link md-cell--center md-text-center md-cell--" + `${collumnSize}`}>
-            <Link to={item.link}>
-              <div className="icon">
-                <FontIcon>{item.icon}</FontIcon>
-              </div>                    
-              <h5>{item.secondaryTitle}</h5>
-              <h3>{item.primaryTitle}</h3>
-            </Link>
-          </div>  
-        )) }
+      <div className="links-container">
+        <div className="md-grid links-wrapper">
+          { Home.homeLinks.map(item => (
+            <div className={"link md-cell--center md-text-center md-cell--" + `${collumnSize}`}>
+              <Link to={item.link}>
+                <div className="icon">
+                  <FontIcon>{item.icon}</FontIcon>
+                </div>
+                <div className="text">
+                  <h5>{item.secondaryTitle}</h5>
+                  <h3>{item.primaryTitle}</h3>
+                </div>              
+              </Link>
+            </div>  
+          )) }
+        </div>
       </div>
     );
   }

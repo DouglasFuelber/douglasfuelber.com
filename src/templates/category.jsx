@@ -28,7 +28,9 @@ export default class CategoryTemplate extends React.Component {
             <h2>Categoria: <span className="md-text-uppercase">{category}</span></h2>
           </div>
 
-          <PostListing postEdges={postEdges} /> 
+          <div id="page_content">
+            <PostListing postEdges={postEdges} /> 
+          </div>
                      
         </div>
       </Layout>
