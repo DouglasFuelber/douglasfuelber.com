@@ -1,6 +1,6 @@
 module.exports = {
   siteTitle: "Douglas Fuelber", // Site title.
-  siteTitleShort: "Douglas Dev", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
+  siteTitleShort: "Douglas Site", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "Douglas Fuelber - Desenvolvedor Full Stack", // Alternative site title for SEO.
   siteLogo: "/logos/favicon.png", // Logo used for SEO and manifest.
   siteUrl: "https://www.douglasfuelber.com", // Domain of your website without pathPrefix.
