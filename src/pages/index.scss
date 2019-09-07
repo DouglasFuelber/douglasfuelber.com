@@ -45,29 +45,3 @@
       }
     }
 }
-
-/* Create a bouncing scroll-down arrow on homepage with cover image */
-.scroll-down {    
-    .material-icons {
-        animation: bounce 4s 2s infinite;
-        bottom: 45px;
-        color: rgba(255, 255, 255, 0.7);
-        cursor: pointer;
-        display: block;
-        font-size: 60px;
-        left: 50%;
-        margin-left: -25px;
-        position: absolute;
-        text-align: center;
-        text-decoration: none;
-        z-index: 10;   
-        -webkit-animation: bounce 2s 1s infinite;
-
-        /* Stop it bouncing and increase contrast when hovered */
-        &:hover{
-            animation: none;
-            color: $md-white-color;
-            -webkit-animation: none;            
-        }
-    }  
-}

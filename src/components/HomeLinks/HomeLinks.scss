@@ -1,0 +1,20 @@
+@import "../../layout/theme.scss";
+
+.links-area {
+    .link {
+        h5 {
+            color: $md-secondary-color;
+            font-weight: 400;
+        }
+        .icon {
+            i {
+                color: $md-white-color;
+                font-size: 40px;
+            }
+        }
+        &:hover {
+            transform: scale(1.1);
+            transition-duration: 0.5s;
+        }
+    }
+}

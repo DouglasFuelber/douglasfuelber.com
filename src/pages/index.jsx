@@ -1,10 +1,8 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { Link } from "gatsby";
 import { graphql } from "gatsby";
-import FontIcon from "react-md/lib/FontIcons";
 import Layout from "../layout";
-import About from "../components/About";
+import HomeLinks from "../components/HomeLinks";
 import config from "../../data/SiteConfig";
 import "./index.scss";
 
@@ -26,38 +24,7 @@ class Index extends React.Component {
             </div>
 
             <div id="icons_area" className="md-cell--center">
-              <div className="md-grid">
-                <div className="md-cell--center md-cell--4 md-text-center">
-                  <Link
-                    className=""
-                    to={`/sobre/`}
-                  >
-                    <FontIcon>emoji_people</FontIcon>
-                    <h5>Conheça mais</h5>
-                    <h3>Sobre mim</h3>
-                  </Link>
-                </div>
-                <div className="md-cell--center md-cell--4 md-text-center">
-                  <Link
-                      className=""
-                      to={`/blog/`}
-                    >
-                    <FontIcon>library_books</FontIcon>
-                    <h5>Leia meu</h5>
-                    <h3>Blog</h3>
-                  </Link>
-                </div>
-                <div className="md-cell--center md-cell--4 md-text-center">
-                  <Link
-                      className=""
-                      to={`/contato/`}
-                    >
-                    <FontIcon>forum</FontIcon>
-                    <h5>Entre em</h5>
-                    <h3>Contato</h3>
-                  </Link>
-                </div>
-              </div>
+              <HomeLinks collumnSize={4} />
             </div>
 
           </div>
