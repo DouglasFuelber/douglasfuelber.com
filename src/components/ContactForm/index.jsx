@@ -88,7 +88,7 @@ class ContactForm extends Component {
                         <p>Se quiser entrar em contato comigo, deixe-me uma mensagem:</p>
                     </div>
                     <div id="form">
-                        <form action="/success" name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.handleSubmit}>
+                        <form action="/sucesso" name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.handleSubmit}>
                             <input type="hidden" name="form-name" value="contact" />
                             <div className="md-grid">
 
