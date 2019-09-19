@@ -30,11 +30,7 @@ class SocialLinks extends Component {
 
     return (
       <div className="social-links">
-        <LinkedinShareButton
-          url={url}
-          title={post.title}
-          description={postNode.excerpt}
-        >
+        <LinkedinShareButton url={url}>
           <LinkedinIcon round size={iconSize} />
         </LinkedinShareButton>
         <FacebookShareButton url={url} quote={postNode.excerpt}>
