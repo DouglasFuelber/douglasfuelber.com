@@ -64,7 +64,7 @@ As the master branch is watched to provide a continuous deployment proccess, we 
 - To run locally the project, execute the following command and access [http://localhost:8000](http://localhost:8000)
 
 ```sh
-        gatsby develop
+        npm run dev
 ```
 
 - After changes are made, stage, commit and push your files to your new branch
