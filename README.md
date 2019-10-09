@@ -2,7 +2,7 @@
 
 ###[Live website](https://www.douglasfuelber.com)
 
-This documento has the objetive to describe the steps to run and publish the project
+This document has the objetive to describe the steps to run and publish the project
 
 ________________________________________________
 
@@ -26,7 +26,7 @@ ________________________________________________
 - Clone the repository and access it
 
 ```sh
-        git clone https://DouglasFuelber@bitbucket.org/DouglasFuelber/douglas-fuelber-site-gatsby.git
+        git clone https://github.com/DouglasFuelber/douglas-fuelber-gatsby.git
 ```
 
 - Install project dependencies
