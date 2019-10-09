@@ -1,7 +1,5 @@
 # README
 
-###[Live website](https://www.douglasfuelber.com)
-
 This document has the objetive to describe the steps to run and publish the project
 
 ________________________________________________

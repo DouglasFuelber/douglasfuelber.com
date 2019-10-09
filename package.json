@@ -1,7 +1,7 @@
 {
   "name": "douglas-fuelber-site",
   "description": "Douglas Fuelber - Website",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Douglas Fuelber <contato@douglasfuelber.com>",
   "dependencies": {
     "babel-polyfill": "6.26.0",
