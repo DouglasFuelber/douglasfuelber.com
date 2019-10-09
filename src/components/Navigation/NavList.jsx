@@ -6,25 +6,25 @@ function GetNavList(config) {
   const NavList = [
     {
       primaryText: "Home",
-      leftIcon: <FontIcon>home</FontIcon>,
+      leftIcon: <i className={"fa fa-home"}></i>,
       component: Link,
       to: "/"
     },
     {
       primaryText: "Sobre mim",
-      leftIcon: <FontIcon>emoji_people</FontIcon>,
+      leftIcon: <i className={"fa fa-id-card"}></i>,
       component: Link,
       to: "/sobre/"
     },
     {
       primaryText: "Blog",
-      leftIcon: <FontIcon>library_books</FontIcon>,
+      leftIcon: <i className={"fa fa-book"}></i>,
       component: Link,
       to: "/blog/"
     },
     {
       primaryText: "Contato",
-      leftIcon: <FontIcon>forum</FontIcon>,
+      leftIcon: <i className={"fa fa-comments"}></i>,
       component: Link,
       to: "/contato/"
     },

@@ -15,7 +15,7 @@ class HomeLinks extends Component {
             <div className={"link md-cell--center md-text-center md-cell--" + `${collumnSize}`}>
               <Link to={item.link}>
                 <div className="icon">
-                  <FontIcon>{item.icon}</FontIcon>
+                  <i className={"fa " + `${item.icon}`}></i>
                 </div>
                 <div className="text">
                   <h5>{item.secondaryTitle}</h5>

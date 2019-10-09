@@ -3,19 +3,19 @@ module.exports = {
         homeLinks: [
             {
                 link: "/sobre/",
-                icon: "emoji_people",
+                icon: "fa-id-card",
                 secondaryTitle: "Conheça mais",
                 primaryTitle: "Sobre mim"
             },
             {
                 link: "/blog/",
-                icon: "library_books",
+                icon: "fa-book",
                 secondaryTitle: "Leia meu",
                 primaryTitle: "Blog"
             },
             {
                 link: "/contato/",
-                icon: "forum",
+                icon: "fa-comments",
                 secondaryTitle: "Entre em",
                 primaryTitle: "Contato"
             },
