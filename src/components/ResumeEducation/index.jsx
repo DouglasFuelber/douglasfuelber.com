@@ -22,7 +22,7 @@ class ResumeEducation extends Component {
             <div className="education left-border-area light-border">
                 <h4 className="education-title">{education.title}</h4>
                 <h5 className="education-school">
-                    <a href={education.schoolUrl} target="_blank" rel="noopener">{education.school}</a>
+                    <a href={education.schoolUrl} target="_blank" rel="noopener">{education.school} <i class="fa fa-external-link external-link-icon"></i></a>
                 </h5>
                 <div className="education-location">{education.schoolLocation}</div>                
                 <div className="education-period">{education.period}</div>
