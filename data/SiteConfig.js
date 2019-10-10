@@ -21,11 +21,16 @@ module.exports = {
   userDescription:
   "Como programador, gosto sempre de aprender novas tecnologias e linguagens, buscando não me limitar em apenas aprimorar o conhecimento que já possuo. Além disso, gosto muito de filmes, séries, praticar esportes e conhecer novos lugares.", // User description to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
-  /*userLinks: [
+  userLinks: [
+    {
+      label: "GitHub",
+      url: "https://github.com/DouglasFuelber",
+      iconClassName: "fa fa-github"
+    },
     {
       label: "LinkedIn",
       url: "https://www.linkedin.com/in/douglasfuelber",
-      iconClassName: "fa fa-linkedin"
+      iconClassName: "fa fa-linkedin-square"
     },
     {
       label: "Instagram",
@@ -35,14 +40,8 @@ module.exports = {
     {
       label: "Facebook",
       url: "https://www.facebook.com/douglas.fuelber",
-      iconClassName: "fa fa-facebook"
-    },
-    {
-      label: "Email",
-      url: "mailto:contato@douglasfuelber.com",
-      text: "contato@douglasfuelber.com",
-      iconClassName: "fa fa-envelope"
+      iconClassName: "fa fa-facebook-official"
     }
-  ],*/
+  ],
   copyright: "Desenvolvido por Douglas Fuelber | 2019" // Copyright string for the footer of the website and RSS feed.
 };

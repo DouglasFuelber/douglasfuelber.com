@@ -33,16 +33,16 @@ function GetNavList(config) {
     }
   ];
 
-  /*if (config.userLinks) {
+  if (config.userLinks) {
     config.userLinks.forEach(link => {
       NavList.push({
         primaryText: link.label,
-        leftIcon: <FontIcon forceSize iconClassName={link.iconClassName} />,
+        leftIcon: <i className={link.iconClassName} />,
         component: "a",
         href: link.url
       });
     });
-  }*/
+  }
   return NavList;
 }
 export default GetNavList;

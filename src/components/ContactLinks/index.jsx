@@ -3,26 +3,7 @@ import Button from "react-md/lib/Buttons";
 import "./ContactLinks.scss";
 
 class ContactLinks extends Component {
-  getMailLink() {
-    const { userLinks } = this.props.config;
-    const { labeled } = this.props;
-    
-    var email = userLinks.find( obj => {
-      return obj.label === "Email";
-    });
-
-    return <Button
-        className="mail"
-        flat={true}
-        secondary
-        iconClassName={email.iconClassName}
-        href={email.url}
-        title="Email"
-        rel="noopener">
-      {email.text}
-      </Button>;
-  }
-  getSocialLinks() {
+    getSocialLinks() {
     const { userLinks } = this.props.config;
     const { labeled } = this.props;
 
@@ -50,16 +31,15 @@ class ContactLinks extends Component {
     if (!userLinks) {
       return null;
     }
-    return <div id="contact">
-          <div className="left-border-area">
-            <div className="md-grid md-cell--12">
-              {this.getMailLink()}
+    return <div className="contact-links-container mobile-fix">
+            <div className="contact-links-wrapper md-cell--center">
+              <div className="md-cell--center md-cell--middle md-cell--12">
+                <div className="left-border-area light-border">
+                  {this.getSocialLinks()}
+                </div>
+              </div>
             </div>
-            <div className="md-grid md-cell--12">
-              {this.getSocialLinks()}
-            </div>           
-          </div>
-        </div>;
+          </div>;
   }
 }
 

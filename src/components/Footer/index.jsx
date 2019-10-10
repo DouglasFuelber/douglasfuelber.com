@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ContactLinks from "../ContactLinks";
+import LinkedInBadge from "../LinkedInBadge";
 import config from "../../../data/SiteConfig";
 import "./Footer.scss";
 
@@ -13,8 +14,10 @@ class Footer extends Component {
     return (
       <footer className={fixedFooter ? "footer footer-fixed" : "footer"}>
         <div className="md-grid md-cell--8">
-          {/*userLinks ? <ContactLinks config={config} /> : null*/}
-          <div className="notice-container md-grid md-cell--12">
+          <div className="md-cell--6">
+            {userLinks ? <ContactLinks config={config} /> : null}
+          </div>
+          <div className="notice-container md-cell--6">
             <div className="copyright">
               <h4>{copyright}</h4>
             </div>
