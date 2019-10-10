@@ -5,9 +5,9 @@ cover: 2.jpg
 slug: criar-tipos-de-post-taxonomias-customizadas-wordpress
 category: Wordpress
 tags:
-  - wordpress
-  - tipos de post
   - taxonomias
+  - tipos de post
+  - wordpress
 ---
 
 Ao desenvolver para a plataforma Wordpress, muitas vezes precisamos tipos de post e/ou taxonomias customizadas, de forma que seja possível organizar melhor o conteúdo de nossos sites. Este processo pode ser facilmente realizado através de plugins. No entanto o objetivo deste post é exemplificar rapidamente este processo de criação sem a utilização de nenhum plugin.
@@ -29,3 +29,10 @@ Se, além de cadastrar os filmes em nosso site, gostaríamos de categorizá-los 
 Na imagem abaixo podemos visualizar o resultados dos registros realizados. A tela apresentada é a de criação de um novo filme. Também é possível visualizar, no menu do lado esquerdo o link para a página de gerência dos filmes, e do lado direito, a opções de adicionar os gêneros do filme.
 
 ![Tela de cadastro de filme](/assets/custom-post-type.png "Tela de cadastro de filme")
+<center>Tela de cadastro de filme (Fonte: do autor)</center>
+
+##Referências
+
+- [Codex Wordpress: Register post type](https://codex.wordpress.org/Function_Reference/register_post_type)
+
+- [Codex Wordpress: Register taxonomy](https://codex.wordpress.org/Function_Reference/register_taxonomy)
