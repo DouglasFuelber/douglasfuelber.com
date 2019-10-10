@@ -48,5 +48,3 @@ Caso não deseje enviar arquivos ou pastas esepcificas para o FTP, é possível 
 - [Configure bitbucket-pipelines.yml](https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html)
 
 - [Git-FTP](https://git-ftp.github.io/)
-
-- [Imagem de capa](https://www.atlassian.com/blog/bitbucket/introducing-bitbucket-pipelines-beta-continuous-delivery-built-within-bitbucket)
