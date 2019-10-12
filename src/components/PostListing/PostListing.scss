@@ -1,7 +1,15 @@
-#post-container {
-    margin: 25px auto;
+#posts-wrapper {
+    padding: 25px 15px;
+    
+    @media (min-width: 991px) {
+        max-width: 66%;
+    }
 
-    .md-card {
-        margin-bottom: 25px;
+    #post-container {
+        margin: 25px auto;
+        
+        .md-card {
+            margin-bottom: 25px;
+        }
     }
 }
