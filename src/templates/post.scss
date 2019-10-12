@@ -42,6 +42,13 @@ $phone-status-bar-height: 24px - 12px;
             max-width: 100%;
             a {
                 color: $md-secondary-color;
+
+                &[target="_blank"]:after{
+                    content: "\f08e";
+                    font-family: 'FontAwesome';
+                    font-size: 11px;
+                    margin-left: 5px;
+                }
             }           
 
             > h1,

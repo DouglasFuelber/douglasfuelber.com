@@ -11,9 +11,9 @@ tags:
 
 Durante o desenvolvimento de um tema para um site em Wordpress, me deparei com uma situação que tomava muito tempo durante a aplicação de algum ajuste no ambiente de homologação utilizado pelo cliente: para cada alteração que desejava aplicar nesse ambiente, eu necessitava subir os arquivos via FTP para o servidor.
 
-Esta é uma situação muito comum neste tipo de desenvolvimento, porém queria otimizar esta atividade. Como o projeto estava sendo armazenado no BitBucket, encontrei uma maneira de utilizar os [pipelines do BitBucket](https://bitbucket.org/product/br/features/pipelines), juntamente com o [Git-FTP](https://git-ftp.github.io/).
+Esta é uma situação muito comum neste tipo de desenvolvimento, porém queria otimizar esta atividade. Como o projeto estava sendo armazenado no BitBucket, encontrei uma maneira de utilizar os <a href="https://bitbucket.org/product/br/features/pipelines" target="_blank">pipelines do BitBucket</a>, juntamente com o <a href="https://git-ftp.github.io/" target="_blank">Git-FTP</a>.
 
-A configuração do pipeline no BitBucket acontece através de um arquivo *bitbucket-pipelines.yml* criado dentro do repositório. A estrutura do arquivo e como configurá-lo pode ser verificada na [documentação do BitBucket](https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html).
+A configuração do pipeline no BitBucket acontece através de um arquivo *bitbucket-pipelines.yml* criado dentro do repositório. A estrutura do arquivo e como configurá-lo pode ser verificada na <a href="https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html" target="_blank">documentação do BitBucket</a>.
 
 Abaixo apresento um exemplo do arquivo de configuração do pipeline utilizado.
 
@@ -41,8 +41,8 @@ Caso não deseje enviar arquivos ou pastas esepcificas para o FTP, é possível 
 
 ##Referências
 
-- [Bitbucket Pipelines](https://bitbucket.org/product/br/features/pipelines)
+- <a href="https://bitbucket.org/product/br/features/pipelines" target="_blank">Bitbucket Pipelines</a>
 
-- [Configure bitbucket-pipelines.yml](https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html)
+- <a href="https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html" target="_blank">Configure bitbucket-pipelines.yml</a>
 
-- [Git-FTP](https://git-ftp.github.io/)
+- <a href="https://git-ftp.github.io/" target="_blank">Git-FTP</a>
