@@ -8,10 +8,10 @@ class PostCategoriesListing extends React.Component {
   getCategoryChip(category, location) {
 
     var active = false;
-    var categoryUrl = `/blog/categorias/${_.kebabCase(category.fieldValue)}/`;
+    var categoryUrl = `/blog/categorias/${_.kebabCase(category.fieldValue)}`;
     if (categoryUrl === location) {
         active = true;
-        categoryUrl = `/blog/`;
+        categoryUrl = `/blog`;
     }        
 
     return (

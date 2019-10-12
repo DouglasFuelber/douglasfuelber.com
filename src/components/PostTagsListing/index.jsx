@@ -8,10 +8,10 @@ class PostTagsListing extends React.Component {
   getTagChip(tag, location) {
 
     var active = false;
-    var tagUrl = `/blog/tags/${_.kebabCase(tag.fieldValue)}/`;
+    var tagUrl = `/blog/tags/${_.kebabCase(tag.fieldValue)}`;
     if (tagUrl === location) {
         active = true;
-        tagUrl = `/blog/`;
+        tagUrl = `/blog`;
     }        
 
     return (
