@@ -5,10 +5,8 @@ cover: bitbucket-pipeline.jpeg
 slug: integracao-continua-entre-bitbucket-e-ftp
 category: DevOps
 tags:
-  - bitbucket
-  - ci/cd  
-  - ftp
-  - wordpress  
+  - ci/cd
+  - tutorial
 ---
 
 Durante o desenvolvimento de um tema para um site em Wordpress, me deparei com uma situação que tomava muito tempo durante a aplicação de algum ajuste no ambiente de homologação utilizado pelo cliente: para cada alteração que desejava aplicar nesse ambiente, eu necessitava subir os arquivos via FTP para o servidor.
