@@ -1,5 +1,6 @@
 import React from "react";
 import PostCategoriesListing from "../PostCategoriesListing";
+import PostTagsListing from "../PostTagsListing";
 import PostPreview from "../PostPreview";
 import "./PostListing.scss";
 
@@ -26,6 +27,7 @@ class PostListing extends React.Component {
       <div id="posts-wrapper" className="md-grid md-grid--no-spacing md-cell--middle primary_bg">
         <div className="md-cell--3 md-cell--order-2-desktop mobile-fix">
           <PostCategoriesListing location={this.props.location} />
+          <PostTagsListing location={this.props.location} />
         </div>
         <div id="post-container" className="md-cell--9 mobile-fix">
           {postList.map(post => (
