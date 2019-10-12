@@ -30,7 +30,7 @@ export default class TagTemplate extends React.Component {
           </div>
 
           <div id="page_content">
-            <PostListing postEdges={postEdges} />  
+            <PostListing postEdges={postEdges} location={this.props.location} />  
           </div>
                     
         </div>

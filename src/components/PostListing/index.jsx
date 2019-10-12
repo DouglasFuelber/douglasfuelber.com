@@ -25,7 +25,7 @@ class PostListing extends React.Component {
     return (
       <div id="posts-wrapper" className="md-grid md-grid--no-spacing md-cell--middle primary_bg">
         <div className="md-cell--3 md-cell--order-2-desktop mobile-fix">
-          <PostCategoriesListing />
+          <PostCategoriesListing location={this.props.location} />
         </div>
         <div id="post-container" className="md-cell--9 mobile-fix">
           {postList.map(post => (
