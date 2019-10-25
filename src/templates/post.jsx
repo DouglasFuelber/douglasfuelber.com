@@ -20,7 +20,6 @@ import SEO from "../components/SEO";
 import SocialLinks from "../components/SocialLinks";
 import UserInfo from "../components/UserInfo";
 
-import "./b16-tomorrow-dark.css";
 import "./post.scss";
 
 export default class PostTemplate extends React.Component {
