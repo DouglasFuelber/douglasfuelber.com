@@ -5,6 +5,7 @@ module.exports = {
   siteLogo: "/logos/favicon.png", // Logo used for SEO and manifest.
   siteUrl: "https://www.douglasfuelber.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
+  blogPrefix: "/blog", // Prefixes all blog links.
   fixedFooter: false, // Whether the footer component is fixed, i.e. always visible
   recaptchaPublicKey: "6Ld3gIwUAAAAAM9ztAk0bBTf40Oe-dd_-qzv2GON", // Recaptcha public key
   siteDescription: "Douglas Fuelber - Bachelor in Computer Science at Unisc and full stack developer at Conectt.", // Website description used for RSS feeds/meta description tag.

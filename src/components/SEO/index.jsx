@@ -16,15 +16,14 @@ class SEO extends Component {
       description = postMeta.description
         ? postMeta.description
         : postNode.excerpt;
-      image = postMeta.cover;
-      postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
+      image = urljoin(config.siteUrl, '/assets', postMeta.cover);
+      postURL = urljoin(config.siteUrl, config.blogPrefix, postPath);
     } else {
       title = config.siteTitle;
       description = config.siteDescription;
-      image = config.siteLogo;
+      image = urljoin(config.siteUrl, config.siteLogo);
     }
-    image = urljoin(config.siteUrl, config.pathPrefix, image);
-    const blogURL = urljoin(config.siteUrl, config.pathPrefix);
+    const blogURL = urljoin(config.siteUrl, config.blogPrefix);
     const schemaOrgJSONLD = [
       {
         "@context": "http://schema.org",
