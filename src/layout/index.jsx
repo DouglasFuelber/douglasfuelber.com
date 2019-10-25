@@ -15,7 +15,7 @@ export default class MainLayout extends React.Component {
           <Helmet>
             <html lang="pt-BR"/>
             <meta name="description" content={config.siteDescription} />
-            <script src='https://www.google.com/recaptcha/api.js'></script>
+            <script src='https://www.google.com/recaptcha/api.js' async></script>
           </Helmet>
           {children}
         </div>
