@@ -52,12 +52,7 @@
             }
 
             .submit-button {
-                background-color: $md-secondary-color;
-                color: $md-white-color;
                 float: right;
-                &:hover {
-                    background-color: $md-tertiary-color;
-                }
             }
         }
     }

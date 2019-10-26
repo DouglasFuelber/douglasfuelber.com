@@ -98,12 +98,14 @@ body {
 	}
 
 	.secondary-button {
-        background-color: $md-secondary-color;
+        background-color: $md-white-color;
 		border-radius: 5px;
-		color: $md-white-color;
+		color: $md-primary-color;
+		font-weight: 600;
         padding: 8px;
         &:hover {
-            background-color: $md-primary-color;
+			background-color: $md-tertiary-color;
+			color: $md-white-color;
         }
 	}
 

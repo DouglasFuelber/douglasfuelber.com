@@ -138,7 +138,7 @@ class ContactForm extends Component {
                                 </div>
                                 <div className="md-cell--6">
                                     <br />
-                                    <Button flat className="submit-button" type="submit">Enviar</Button>
+                                    <Button flat className="submit-button secondary-button" type="submit">Enviar</Button>
                                 </div>
                             </div>
                         </form>
