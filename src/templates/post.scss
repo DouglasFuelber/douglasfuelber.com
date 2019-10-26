@@ -41,12 +41,14 @@ $phone-status-bar-height: 24px - 12px;
         .post-body {
             max-width: 100%;
             a {
-                color: $md-secondary-color;
+                color: $md-primary-color;
+                text-decoration: underline;
 
                 &[target="_blank"]:after{
-                    content: "\f08e";
-                    font-family: 'FontAwesome';
+                    content: "\f35d";
+                    font-family: "Font Awesome 5 Free";
                     font-size: 11px;
+                    font-weight: 900;
                     margin-left: 5px;
                 }
             }           
