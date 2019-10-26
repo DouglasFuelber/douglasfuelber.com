@@ -6,25 +6,25 @@ function GetNavList(config) {
   const NavList = [
     {
       primaryText: "Home",
-      leftIcon: <i className={"fa fa-home"}></i>,
+      leftIcon: <i className={"fas fa-home"}></i>,
       component: Link,
       to: "/"
     },
     {
       primaryText: "Sobre mim",
-      leftIcon: <i className={"fa fa-id-card"}></i>,
+      leftIcon: <i className={"fas fa-id-card"}></i>,
       component: Link,
       to: "/sobre/"
     },
     {
       primaryText: "Blog",
-      leftIcon: <i className={"fa fa-book"}></i>,
+      leftIcon: <i className={"fas fa-book"}></i>,
       component: Link,
       to: "/blog/"
     },
     {
       primaryText: "Contato",
-      leftIcon: <i className={"fa fa-comments"}></i>,
+      leftIcon: <i className={"fas fa-comments"}></i>,
       component: Link,
       to: "/contato/"
     },

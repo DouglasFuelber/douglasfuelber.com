@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
-import "font-awesome/scss/font-awesome.scss";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "@fortawesome/fontawesome-free/js/all.min.js";
 import Navigation from "../components/Navigation";
 import config from "../../data/SiteConfig";
 import "./index.scss";

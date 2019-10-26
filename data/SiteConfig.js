@@ -26,22 +26,22 @@ module.exports = {
     {
       label: "GitHub",
       url: "https://github.com/DouglasFuelber",
-      iconClassName: "fa fa-github"
+      iconClassName: "fab fa-github"
     },
     {
       label: "LinkedIn",
       url: "https://www.linkedin.com/in/douglasfuelber",
-      iconClassName: "fa fa-linkedin-square"
+      iconClassName: "fab fa-linkedin"
     },
     {
       label: "Instagram",
       url: "https://www.instagram.com/douglasfuelber/",
-      iconClassName: "fa fa-instagram"
+      iconClassName: "fab fa-instagram"
     },
     {
       label: "Facebook",
       url: "https://www.facebook.com/douglas.fuelber",
-      iconClassName: "fa fa-facebook-official"
+      iconClassName: "fab fa-facebook-square"
     }
   ],
   copyright: "Desenvolvido por Douglas Fuelber | 2019" // Copyright string for the footer of the website and RSS feed.

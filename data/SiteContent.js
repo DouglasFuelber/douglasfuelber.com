@@ -9,7 +9,7 @@ module.exports = {
             },
             {
                 link: "/blog/",
-                icon: "fa-book",
+                icon: "fa-book-open",
                 secondaryTitle: "Leia meu",
                 primaryTitle: "Blog"
             },

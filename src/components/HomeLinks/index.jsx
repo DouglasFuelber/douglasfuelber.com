@@ -12,10 +12,10 @@ class HomeLinks extends Component {
       <div className="links-container">
         <div className="md-grid links-wrapper">
           { Home.homeLinks.map(item => (
-            <div className={"link md-cell--center md-text-center md-cell--" + `${collumnSize}`}>
+            <div className={`link md-cell--center md-text-center md-cell--${collumnSize}`}>
               <Link to={item.link}>
                 <div className="icon">
-                  <i className={"fa " + `${item.icon}`}></i>
+                  <i className={`fas ${item.icon} fa-2x`}></i>
                 </div>
                 <div className="text">
                   <h5>{item.secondaryTitle}</h5>
