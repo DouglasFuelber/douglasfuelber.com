@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import Layout from "../layout";
 import HomeLinks from "../components/HomeLinks";
 import config from "../../data/SiteConfig";
+import { injectIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
 import "./index.scss";
 
 class Index extends React.Component {
@@ -21,7 +22,7 @@ class Index extends React.Component {
 
               <div id="page_title">
                 <h1>Douglas Fuelber</h1>
-                <h2>Desenvolvedor Full Stack</h2>
+                <h2><FormattedMessage id="home.subtitle" /></h2>
               </div>
 
               <div id="page_content">
