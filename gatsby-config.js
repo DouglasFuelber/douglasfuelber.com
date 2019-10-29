@@ -209,5 +209,18 @@ module.exports = {
         shortname: `douglasfuelber`
       }
     },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // language JSON resource path
+        path: `${__dirname}/src/translations`,
+        // supported language
+        languages: config.languageKeys,
+        // language file path
+        defaultLanguage: `en`,
+        // option to redirect to `/en` when connecting `/`
+        redirect: true,
+      },
+    },
   ]
 };

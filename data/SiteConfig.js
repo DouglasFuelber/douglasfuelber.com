@@ -21,6 +21,11 @@ module.exports = {
   userAvatar: "/images/avatar.jpg", // User avatar to display in the author segment.
   userDescription:
   "Como programador, gosto sempre de aprender novas tecnologias e linguagens, buscando não me limitar em apenas aprimorar o conhecimento que já possuo. Além disso, gosto muito de filmes, séries, praticar esportes e conhecer novos lugares.", // User description to display in the author segment.
+  languageKeys: ['en', 'pt'],
+  languages: {
+    'en': 'English',
+    'pt': 'Português'
+  },
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   userLinks: [
     {
