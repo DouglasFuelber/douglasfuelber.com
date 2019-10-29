@@ -9,7 +9,7 @@ import DisqusArea from "../components/Disqus";
 import FontIcon from "react-md/lib/FontIcons";
 import { graphql, Link } from "gatsby";
 import Helmet from "react-helmet";
-import Layout from "../layout";
+import Layout from "../components/Layout";
 import Media, { MediaOverlay } from "react-md/lib/Media";
 import moment from "moment";
 import PostTags from "../components/PostTags";

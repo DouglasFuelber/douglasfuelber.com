@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { Link, graphql } from "gatsby";
 import PostListing from "../components/PostListing";
-import Layout from "../layout";
+import Layout from "../components/Layout";
 import config from "../../data/SiteConfig";
 
 export default class CategoryTemplate extends React.Component {

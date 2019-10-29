@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Button from "react-md/lib/Buttons";
 import Helmet from "react-helmet";
-import Layout from "../layout";
+import Layout from "../components/Layout";
 import config from "../../data/SiteConfig";
 import "./sucesso.scss";
 

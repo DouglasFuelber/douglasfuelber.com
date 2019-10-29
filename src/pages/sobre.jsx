@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Helmet from "react-helmet";
-import Layout from "../layout";
+import Layout from "../components/Layout";
 import About from "../components/About";
 import LinkedInBadge from "../components/LinkedInBadge";
 import ResumeCareer from "../components/ResumeCareer";

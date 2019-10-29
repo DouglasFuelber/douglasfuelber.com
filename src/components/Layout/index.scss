@@ -1,4 +1,4 @@
-@import "../layout/theme.scss";
+@import "../../layout/theme.scss";
 
 * {
     box-sizing: border-box;
@@ -21,8 +21,8 @@ body {
     }
 }
 
-@import 'fonts.scss';
+@import '../../layout/fonts.scss';
 @import '~react-md/src/scss/react-md';
-@import 'theme.scss';
+@import '../../layout/theme.scss';
 
 @include react-md-everything;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Helmet from "react-helmet";
-import Layout from "../layout";
+import Layout from "../components/Layout";
 import ContactForm from "../components/ContactForm";
 import config from "../../data/SiteConfig";
 import "./contato.scss";
