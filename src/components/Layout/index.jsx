@@ -1,21 +1,24 @@
 import React from "react";
-import { useIntl } from "gatsby-plugin-intl"
 import Helmet from "react-helmet";
+import { useIntl } from "gatsby-plugin-intl"
+import Navigation from "../Navigation";
+
+import config from "../../../data/SiteConfig";
+
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@fortawesome/fontawesome-free/js/all.min.js";
-import Navigation from "../Navigation";
-import config from "../../../data/SiteConfig";
+
 import "./index.scss";
 import "../../layout/global.scss";
 
 export default ({ children }) => {
   const intl = useIntl()
   return (
-    <Navigation config={config} LocalTitle={children.title}>
+    <Navigation config={config}>
       <div>
         <Helmet>
           <html lang={intl.locale} />
-          <meta name="description" content={config.siteDescription} />
+          <meta name="description" content={intl.formatMessage({ id: "site.description" })} />
           <script src='https://www.google.com/recaptcha/api.js' async></script>
         </Helmet>
         {children}

@@ -1,11 +1,17 @@
 {
+    "site": {
+        "description": "Douglas Fuelber - Bachelor in Computer Science at Unisc and full stack developer at Conectt.",
+        "copyright": "Developed by Douglas Fuelber | 2019"
+    },
+    "navigation": {
+        "home": "Home",
+        "about": "About me",
+        "blog": "Blog",
+        "contact": "Contact"
+    },
     "home": {
         "subtitle": "Full Stack Developer"
     },
-    "about": {
-
-    },
-    "contact": {
-
-    }
-} 
+    "about": {},
+    "contact": {}
+}

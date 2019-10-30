@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
@@ -7,11 +7,10 @@ import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
 import "./blog.scss";
 
-class BlogPage extends Component {
-  render() {
-    const postEdges = this.props.data.allMarkdownRemark.edges;
+const BlogPage = ({location, data}) => {
+    const postEdges = data.allMarkdownRemark.edges;
     return (
-      <Layout location={this.props.location} title="Blog">
+      <Layout location={location} title="Blog">
         <Helmet>
             <title>{`Blog | ${config.siteTitle}`}</title>
             <link rel="canonical" href={`${config.siteUrl}/blog/`} />
@@ -25,14 +24,13 @@ class BlogPage extends Component {
             </div>
 
             <div id="page_content">
-              <PostListing postEdges={postEdges} location={this.props.location} />          
+              <PostListing postEdges={postEdges} location={location} />
             </div>
         </div>
 
       </Layout>
     );
   }
-}
 
 export default BlogPage;
 

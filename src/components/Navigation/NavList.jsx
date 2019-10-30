@@ -1,40 +1,40 @@
 import React from "react";
-import FontIcon from "react-md/lib/FontIcons";
-import { Link } from "gatsby";
+import { Link, useIntl } from "gatsby-plugin-intl";
 
-function GetNavList(config) {
+function GetNavList(userLinks) {
+  const intl = useIntl();
   const NavList = [
     {
-      primaryText: "Home",
+      primaryText: intl.formatMessage({ id: "navigation.home" }),
       leftIcon: <i className={"fas fa-home"}></i>,
       component: Link,
       to: "/"
     },
     {
-      primaryText: "Sobre mim",
+      primaryText: intl.formatMessage({ id: "navigation.about" }),
       leftIcon: <i className={"fas fa-id-card"}></i>,
       component: Link,
-      to: "/sobre/"
+      to: "/about/"
     },
     {
-      primaryText: "Blog",
-      leftIcon: <i className={"fas fa-book"}></i>,
+      primaryText: intl.formatMessage({ id: "navigation.blog" }),
+      leftIcon: <i className={"fas fa-book-open"}></i>,
       component: Link,
       to: "/blog/"
     },
     {
-      primaryText: "Contato",
+      primaryText: intl.formatMessage({ id: "navigation.contact" }),
       leftIcon: <i className={"fas fa-comments"}></i>,
       component: Link,
-      to: "/contato/"
+      to: "/contact/"
     },
     {
       divider: true
     }
   ];
 
-  if (config.userLinks) {
-    config.userLinks.forEach(link => {
+  if (userLinks) {
+    userLinks.forEach(link => {
       NavList.push({
         primaryText: link.label,
         leftIcon: <i className={link.iconClassName} />,

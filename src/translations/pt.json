@@ -1,11 +1,17 @@
 {
+    "site": {
+        "description": "Douglas Fuelber - Bacharel em Ciência da Computação pela UNISC e desenvolvedor na Conectt.",
+        "copyright": "Desenvolvido por Douglas Fuelber | 2019"
+    },
+    "navigation": {
+        "home": "Home",
+        "about": "Sobre mim",
+        "blog": "Blog",
+        "contact": "Contato"
+    },
     "home": {
         "subtitle": "Desenvolvedor Full Stack"
     },
-    "about": {
-
-    },
-    "contact": {
-
-    }
-} 
+    "about": {},
+    "contact": {}
+}
