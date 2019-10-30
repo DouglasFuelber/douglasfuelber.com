@@ -4,10 +4,21 @@
         "copyright": "Developed by Douglas Fuelber | 2019"
     },
     "navigation": {
-        "home": "Home",
-        "about": "About me",
-        "blog": "Blog",
-        "contact": "Contact"
+        "home": {
+            "title": "Home"
+        },
+        "about": {
+            "title": "About me",
+            "subtitle": "Know more"
+        },
+        "blog": {
+            "title": "Blog",
+            "subtitle": "Read my"
+        },
+        "contact": {
+            "title": "Contact",
+            "subtitle": "Get in"
+        }
     },
     "home": {
         "subtitle": "Full Stack Developer"

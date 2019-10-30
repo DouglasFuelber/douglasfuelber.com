@@ -10,7 +10,7 @@ export default ({ children, config, LocalTitle }) => {
     <NavigationDrawer
       drawerTitle={config.siteTitle}
       contentClassName="main-content"
-      navItems={GetNavList(config.userLinks)}
+      navItems={GetNavList(config.navigationLinks, config.userLinks)}
       mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
       tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
       desktopDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}

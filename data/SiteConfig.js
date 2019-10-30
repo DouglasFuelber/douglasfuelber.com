@@ -26,6 +26,28 @@ module.exports = {
     'en': 'English',
     'pt': 'Português'
   },
+  navigationLinks: [
+    {
+      id: "home",
+      url: "/",
+      iconClassName: "fas fa-home"
+    },
+    {
+      id: "about",
+      url: "/about/",
+      iconClassName: "fas fa-id-card"
+    },
+    {
+      id: "blog",
+      url: "/blog/",
+      iconClassName: "fas fa-book-open"
+    },
+    {
+      id: "contact",
+      url: "/contact/",
+      iconClassName: "fas fa-comments"
+    },
+  ],
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   userLinks: [
     {

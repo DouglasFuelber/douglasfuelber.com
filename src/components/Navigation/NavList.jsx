@@ -1,37 +1,26 @@
 import React from "react";
 import { Link, useIntl } from "gatsby-plugin-intl";
 
-function GetNavList(userLinks) {
+function GetNavList(navigationLinks, userLinks) {
+
   const intl = useIntl();
-  const NavList = [
-    {
-      primaryText: intl.formatMessage({ id: "navigation.home" }),
-      leftIcon: <i className={"fas fa-home"}></i>,
-      component: Link,
-      to: "/"
-    },
-    {
-      primaryText: intl.formatMessage({ id: "navigation.about" }),
-      leftIcon: <i className={"fas fa-id-card"}></i>,
-      component: Link,
-      to: "/about/"
-    },
-    {
-      primaryText: intl.formatMessage({ id: "navigation.blog" }),
-      leftIcon: <i className={"fas fa-book-open"}></i>,
-      component: Link,
-      to: "/blog/"
-    },
-    {
-      primaryText: intl.formatMessage({ id: "navigation.contact" }),
-      leftIcon: <i className={"fas fa-comments"}></i>,
-      component: Link,
-      to: "/contact/"
-    },
-    {
-      divider: true
-    }
-  ];
+  const NavList = [];
+
+  if (navigationLinks) {
+    navigationLinks.forEach(link => {
+      NavList.push({
+        primaryText: intl.formatMessage({ id: `navigation.${link.id}.title` }),
+        leftIcon: <i className={link.iconClassName} />,
+        component: Link,
+        to: link.url
+      });
+    });
+    NavList.push(
+      {
+        divider: true
+      }
+    )
+  };
 
   if (userLinks) {
     userLinks.forEach(link => {
