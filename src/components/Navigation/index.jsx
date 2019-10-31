@@ -12,8 +12,8 @@ export default ({ children, config, LocalTitle }) => {
       contentClassName="main-content"
       navItems={GetNavList(config.navigationLinks, config.userLinks)}
       mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-      tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-      desktopDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
+      tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY_MINI}
+      desktopDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
     >
       <div className="main-container">{children}</div>
       <Footer userLinks={footerLinks} />

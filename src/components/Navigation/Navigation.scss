@@ -7,10 +7,37 @@ header {
     }
 }
 
+aside {
+    &.md-drawer,
+    .md-list {
+        background-color: $md-primary-color;
+
+        a {
+            &:hover {
+                background-color: $md-tertiary-color;
+            }
+            &[aria-current="page"] {
+                background-color: $md-tertiary-color;
+                border-left: 3px solid $md-secondary-color;
+            }
+        }
+    }
+}
+
 nav {
     header,
     .md-list {
         background-color: $md-primary-color;
+
+        a {
+            &:hover {
+                background-color: $md-tertiary-color;
+            }
+            &[aria-current="page"] {
+                background-color: $md-tertiary-color;
+                border-left: 3px solid $md-secondary-color;
+            }
+        }
     }
 
     .md-title--toolbar,
