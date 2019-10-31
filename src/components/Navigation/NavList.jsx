@@ -1,5 +1,6 @@
 import React from "react";
-import { Link, useIntl, changeLocale } from "gatsby-plugin-intl";
+import { Link, useIntl } from "gatsby-plugin-intl";
+import Languages from "../Languages";
 
 function GetNavList(navigationLinks, userLinks) {
 
@@ -43,6 +44,14 @@ function GetNavList(navigationLinks, userLinks) {
       }
     )
   }
-  return NavList;
+  
+  NavList.push(
+    {
+      primaryText: "Idiomas",
+      subheader: true
+    }
+  )
+
+  return NavList.concat(<Languages/>);
 }
 export default GetNavList;
