@@ -18,7 +18,8 @@
         "contact": {
             "title": "Contact",
             "subtitle": "Get in"
-        }
+        },
+        "follow": "Follow me"
     },
     "home": {
         "subtitle": "Full Stack Developer"

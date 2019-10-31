@@ -18,7 +18,8 @@
         "contact": {
             "title": "Contato",
             "subtitle": "Entre em"
-        }
+        },
+        "follow": "Siga-me"
     },
     "home": {
         "subtitle": "Desenvolvedor Full Stack"
