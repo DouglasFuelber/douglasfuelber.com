@@ -22,10 +22,15 @@ module.exports = {
   userDescription:
   "As a programmer, I like to learn new technologies and languages, trying not to limit myself in just improving the knowledge I have already acquired. Also, I really like movies, series, to practice sports and getting to know new places.", // User description to display in the author segment.
   languageKeys: ['en', 'pt'],
-  languages: {
-    'en': 'English',
-    'pt': 'Português'
-  },
+  languages: [
+    {
+      id: 'en',
+      lang: 'English'
+    }, {
+      id: 'pt',
+      lang: 'Português'
+    }
+  ],
   navigationLinks: [
     {
       id: "home",
