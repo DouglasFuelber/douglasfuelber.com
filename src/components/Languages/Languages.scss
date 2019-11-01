@@ -1,0 +1,42 @@
+@import "../../layout/theme.scss";
+
+#languages {
+    background-color: $md-tertiary-color;
+    color: $md-white-color;
+    position: absolute;
+    right: 0;
+    z-index: 50;
+
+    .language-icon {
+        left: 5px;
+        position: relative;
+        top: -20px;
+        @media (min-width: 991px) {
+            top: -15px;
+        }
+    }
+
+    .language-selector {
+        width: 120px;
+
+        .md-list-tile,
+        .md-select-field--btn {
+            padding: 10px;
+
+            .md-icon-text:first-child {
+                padding-right: 5px;
+            }
+        }
+
+        .md-text,
+        .md-text-field,
+        .md-icon {
+            color: $md-white-color;
+            font-size: 15px;
+        }
+
+        ul {
+            background-color: $md-tertiary-color;         
+        }
+    }
+}
