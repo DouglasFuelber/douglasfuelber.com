@@ -24,11 +24,11 @@ module.exports = {
   languageKeys: ['en', 'pt'],
   languages: [
     {
-      id: 'en',
-      lang: 'English'
+      value: 'en',
+      label: 'English'
     }, {
-      id: 'pt',
-      lang: 'Português'
+      value: 'pt',
+      label: 'Português'
     }
   ],
   navigationLinks: [

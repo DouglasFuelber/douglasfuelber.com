@@ -1,19 +1,21 @@
 import React from "react";
-import { ListItem } from 'react-md';
-import { changeLocale } from "gatsby-plugin-intl";
+import { SelectField } from 'react-md';
+import { useIntl, changeLocale } from "gatsby-plugin-intl";
 import { languages } from "../../../data/SiteConfig";
 
 export default () => {
-    const LangLinks = [];
-    languages.forEach(language => (
-        LangLinks.push(
-            <a key={language.id} onClick={() => changeLocale(language.id)}>
-                <ListItem
-                    leftIcon={<i className="fas">{language.id}</i>}
-                    primaryText={language.lang} />
-            </a>
-        )
-    ));
-    return LangLinks;
+    const intl = useIntl();
+    return <SelectField
+            id="select-field-default-value"
+            label="Language"
+            defaultValue={intl.locale}
+            onChange={() => changeLocale(this.value())}
+            menuItems={languages}
+            itemLabel="label"
+            itemValue="value"
+            className="md-cell"
+            position={SelectField.Positions.BELOW}
+            
+            />
 }
 

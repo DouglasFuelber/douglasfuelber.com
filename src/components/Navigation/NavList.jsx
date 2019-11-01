@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useIntl } from "gatsby-plugin-intl";
-import Languages from "../Languages";
 
 function GetNavList(navigationLinks, userLinks) {
 
@@ -24,12 +23,6 @@ function GetNavList(navigationLinks, userLinks) {
   };
 
   if (userLinks) {
-    NavList.push(
-      {
-        primaryText: intl.formatMessage({ id: "navigation.follow" }),
-        subheader: true
-      }
-    )
     userLinks.forEach(link => {
       NavList.push({
         primaryText: link.label,
@@ -38,20 +31,7 @@ function GetNavList(navigationLinks, userLinks) {
         href: link.url
       });
     });
-    NavList.push(
-      {
-        divider: true
-      }
-    )
   }
-  
-  NavList.push(
-    {
-      primaryText: "Idiomas",
-      subheader: true
-    }
-  )
-
-  return NavList.concat(<Languages/>);
+  return NavList;
 }
 export default GetNavList;
