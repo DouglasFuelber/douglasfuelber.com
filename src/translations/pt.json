@@ -24,10 +24,26 @@
         "subtitle": "Desenvolvedor Full Stack"
     },
     "about": {},
-    "contact": {},
+    "contact": {
+        "pageTitle": "Contato"
+    },
     "404" : {
         "pageTitle": "Página não encontrada",
         "subtitle": "Não foi possível encontrar a página que você está buscando...",
         "button": "Continuar navegando no site"
+    },
+    "components": {
+        "contactForm": {
+            "sentence": "Se quiser entrar em contato comigo, deixe-me uma mensagem:",
+            "nameLabel": "Nome",
+            "nameRequired": "Por favor, me informe seu nome",
+            "emailLabel": "Email",
+            "emailRequired": "Por favor, me informe seu email",
+            "emailInvalid": "Por favor, me informe um email válido",
+            "messageLabel": "Mensagem",
+            "messageRequired": "Conte-me o motivo do seu contato, por favor",
+            "recaptchaRequired": "Por favor, marque o reCaptcha acima",
+            "buttonLabel": "Enviar"
+        }
     }
 }

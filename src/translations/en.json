@@ -24,10 +24,26 @@
         "subtitle": "Full Stack Developer"
     },
     "about": {},
-    "contact": {},
+    "contact": {
+        "pageTitle": "Contact"
+    },
     "404" : {
         "pageTitle": "Page Not Found",
         "subtitle": "This page couldn't be found...",
         "button": "Take me back to the site"
+    },
+    "components": {
+        "contactForm": {
+            "sentence": "If you want to contact me, leave me a message:",
+            "nameLabel": "Name",
+            "nameRequired": "Please, inform your name",
+            "emailLabel": "Email",
+            "emailRequired": "Please, inform your email",
+            "emailInvalid": "Please, inform a valid email",
+            "messageLabel": "Message",
+            "messageRequired": "Please, tell me the reason of your contact",
+            "recaptchaRequired": "Please, check the reCaptcha",
+            "buttonLabel": "Send"
+        }
     }
 }
