@@ -1,7 +1,7 @@
 @import "../../layout/theme.scss";
 
 #languagesSelector {
-    background-color: $md-tertiary-color;
+    background-color: transparent;
     color: $md-white-color;
     position: absolute;
     right: 0;
@@ -34,7 +34,7 @@
         }
 
         ul {
-            background-color: $md-tertiary-color;
+            background-color: transparent;
 
             &.md-paper--2 {
                 box-shadow: none;
