@@ -23,7 +23,9 @@
     "home": {
         "subtitle": "Full Stack Developer"
     },
-    "about": {},
+    "about": {
+        "pageTitle": "About me"
+    },
     "contact": {
         "pageTitle": "Contact"
     },

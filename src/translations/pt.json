@@ -23,7 +23,9 @@
     "home": {
         "subtitle": "Desenvolvedor Full Stack"
     },
-    "about": {},
+    "about": {
+        "pageTitle": "Sobre mim"
+    },
     "contact": {
         "pageTitle": "Contato"
     },
