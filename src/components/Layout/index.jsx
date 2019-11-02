@@ -19,7 +19,6 @@ export default ({ children }) => {
         <Helmet>
           <html lang={intl.locale} />
           <meta name="description" content={intl.formatMessage({ id: "site.description" })} />
-          <script src='https://www.google.com/recaptcha/api.js' async></script>
         </Helmet>
         {children}
       </div>
