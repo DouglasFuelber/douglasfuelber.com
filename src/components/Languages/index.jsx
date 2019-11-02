@@ -12,11 +12,11 @@ export default () => {
         changeLocale(value);
     }
 
-    return <div id="languages">
-                <i class="fas fa-globe-americas language-icon"></i>
+    return <div id="languagesSelector">
                 <SelectField
                     id="languageSelector"
                     key="language"
+                    dropdownIcon={<i class="fas fa-globe-americas language-icon"></i>}
                     placeholder="Objects button"
                     className="md-cell language-selector"
                     menuItems={languages}
