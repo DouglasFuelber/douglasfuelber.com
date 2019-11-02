@@ -35,7 +35,7 @@
         "subtitle": "Obrigado por me contatar! Responderei assim que possível...",
         "button": "Continuar navegando no site"
     },
-    "404" : {
+    "404": {
         "pageTitle": "Página não encontrada",
         "subtitle": "Não foi possível encontrar a página que você está buscando...",
         "button": "Continuar navegando no site"
@@ -52,6 +52,58 @@
             "messageRequired": "Conte-me o motivo do seu contato, por favor",
             "recaptchaRequired": "Por favor, marque o reCaptcha acima",
             "buttonLabel": "Enviar"
+        },
+        "resumeCareer": {
+            "title": "Experiência",
+            "current": "Atual"
+        }
+    },
+    "resume": {
+        "career": {
+            "1": {
+                "company": "Conectt",
+                "companyUrl": "https://conectt.com.br/",
+                "companyLocation": "Santa Cruz do Sul / RS / Brasil",
+                "jobTitle": "Programador Pleno",
+                "beginDate": {
+                    "month": "DEZ",
+                    "year": "2018"
+                },
+                "description": "Desenvolvimento de sistemas, websites e portais corporativos em diversas tecnologias e plataformas, destacando-se Microsoft SharePoint, ASP.NET MVC e Wordpress."
+            },
+            "2": {
+                "company": "Conectt",
+                "companyUrl": "https://conectt.com.br/",
+                "companyLocation": "Santa Cruz do Sul / RS / Brasil",
+                "jobTitle": "Programador Júnior",
+                "beginDate": {
+                    "month": "MAR",
+                    "year": "2017"
+                },
+                "description": "Desenvolvimento de sistemas, websites e portais corporativos em diversas tecnologias e plataformas, destacando-se Microsoft SharePoint, ASP.NET MVC e Wordpress."
+            },
+            "3": {
+                "company": "Conectt",
+                "companyUrl": "https://conectt.com.br/",
+                "companyLocation": "Santa Cruz do Sul / RS / Brasil",
+                "jobTitle": "Estagiário",
+                "beginDate": {
+                    "month": "NOV",
+                    "year": "2016"
+                },
+                "description": "Desenvolvimento de websites e portais corporativos sobre a plataforma Microsoft SharePoint."
+            },
+            "4": {
+                "company": "Imagem.com",
+                "companyUrl": "http://www.imaggem.com.br/",
+                "companyLocation": "Vera Cruz / RS / Brasil",
+                "jobTitle": "Designer Gráfico",
+                "beginDate": {
+                    "month": "JUL",
+                    "year": "2012"
+                },
+                "description": "Responsável pela criação de artes gráficas, finalização de arquivos para impressão e eventuais atendimentos a clientes."
+            }
         }
     }
 }

@@ -1,45 +1,45 @@
-import React, { Component } from "react";
-import resume from "../../../data/Resume";
+import React from "react";
+import { useIntl } from "gatsby-plugin-intl";
+
+import { resume }  from "../../translations/en";
+
 import "./ResumeCareer.scss";
 
-class ResumeCareer extends Component {
-    render() {
-        return (
-            <div className="career-container mobile-fix">
-                <div className="career-wrapper md-cell--center">
-                    <div className="md-cell--center md-cell--middle md-cell--12">
-                        <h3>Experiência</h3>
-                        <div id="jobs">
-                            <div className="job-begin-date current">
-                                <div className="job-begin-month">Atual</div>
-                                <div className="date-indicator"></div>
-                            </div>
-                            {this.getJobs()}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-    getJobs() {    
-        return resume.career.map(job => (
+export default () => {
+    const intl = useIntl();
+
+    const getJobs = () => {
+        return Object.keys(resume.career).map((key) => (
             <div className="job left-border-area light-border">
-                <h4 className="job-title">{job.jobTitle}</h4>
+                <h4 className="job-title">{intl.formatMessage({ id: `resume.career.${key}.jobTitle` })}</h4>
                 <h5 className="job-company">
-                    <a href={job.companyUrl} target="_blank" rel="noopener">{job.company} <i class="fas fa-external-link-alt external-link-icon"></i></a>
+                    <a href={intl.formatMessage({ id: `resume.career.${key}.companyUrl` })} target="_blank" rel="noopener">{intl.formatMessage({ id: `resume.career.${key}.company` })} <i class="fas fa-external-link-alt external-link-icon"></i></a>
                 </h5>
-                <div className="job-location">{job.companyLocation}</div>                
-                <p className="job-description">{job.description}</p>
+                <div className="job-location">{intl.formatMessage({ id: `resume.career.${key}.companyLocation` })}</div>
+                <p className="job-description">{intl.formatMessage({ id: `resume.career.${key}.description` })}</p>
                 <div className="job-begin-date">
                     <div className="job-date">
-                        <div className="job-begin-month">{job.beginDate.month}</div>
-                        <div className="job-begin-year">{job.beginDate.year}</div>
-                    </div>                    
+                        <div className="job-begin-month">{intl.formatMessage({ id: `resume.career.${key}.beginDate.month` })}</div>
+                        <div className="job-begin-year">{intl.formatMessage({ id: `resume.career.${key}.beginDate.year` })}</div>
+                    </div>
                     <div className="date-indicator"></div>
                 </div>
-            </div>          
+            </div>
         ));
     }
-}
 
-export default ResumeCareer;
+    return <div className="career-container mobile-fix">
+        <div className="career-wrapper md-cell--center">
+            <div className="md-cell--center md-cell--middle md-cell--12">
+                <h3>{intl.formatMessage({ id: `components.resumeCareer.title` })}</h3>
+                <div id="jobs">
+                    <div className="job-begin-date current">
+                        <div className="job-begin-month">{intl.formatMessage({ id: `components.resumeCareer.current` })}</div>
+                        <div className="date-indicator"></div>
+                    </div>
+                    {getJobs()}
+                </div>
+            </div>
+        </div>
+    </div>
+}

@@ -88,14 +88,16 @@
                         z-index: 5;
                     }
                     .job-begin-month {
-                        left: -110px;
+                        left: -135px;
+                        text-align: right;
                         top: -12px;
+                        width: 95px;                        
                     }
                 }
             }
 
             @media (min-width: 991px) {
-                padding-left: 85px;
+                padding-left: 110px;
                 .job-date {
                     left: -95px;
                     line-height: 25px;

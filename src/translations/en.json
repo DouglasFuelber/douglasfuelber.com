@@ -35,7 +35,7 @@
         "subtitle": "Thanks for contact me! I'll reply as soon as possible...",
         "button": "Take me back to the site"
     },
-    "404" : {
+    "404": {
         "pageTitle": "Page Not Found",
         "subtitle": "This page couldn't be found...",
         "button": "Take me back to the site"
@@ -52,6 +52,58 @@
             "messageRequired": "Please, tell me the reason of your contact",
             "recaptchaRequired": "Please, check the reCaptcha",
             "buttonLabel": "Send"
+        },
+        "resumeCareer": {
+            "title": "Experience",
+            "current": "Current"
+        }
+    },
+    "resume": {
+        "career": {
+            "1": {
+                "company": "Conectt",
+                "companyUrl": "https://conectt.com.br/",
+                "companyLocation": "Santa Cruz do Sul / RS / Brazil",
+                "jobTitle": "Programmer",
+                "beginDate": {
+                    "month": "DEC",
+                    "year": "2018"
+                },
+                "description": "Developer of computer systems, websites and corporate portals in diverse technologies and platforms, highlighting Microsoft SharePoint, ASP.NET MVC and Wordpress."
+            },
+            "2": {
+                "company": "Conectt",
+                "companyUrl": "https://conectt.com.br/",
+                "companyLocation": "Santa Cruz do Sul / RS / Brazil",
+                "jobTitle": "Junior Programmer",
+                "beginDate": {
+                    "month": "MAR",
+                    "year": "2017"
+                },
+                "description": "Developer of computer systems, websites and corporate portals in diverse technologies and platforms, highlighting Microsoft SharePoint, ASP.NET MVC and Wordpress."
+            },
+            "3": {
+                "company": "Conectt",
+                "companyUrl": "https://conectt.com.br/",
+                "companyLocation": "Santa Cruz do Sul / RS / Brazil",
+                "jobTitle": "Programming Intern",
+                "beginDate": {
+                    "month": "NOV",
+                    "year": "2016"
+                },
+                "description": "Developer of websites and corporate portals on the Microsoft SharePoint platform."
+            },
+            "4": {
+                "company": "Imagem.com",
+                "companyUrl": "http://www.imaggem.com.br/",
+                "companyLocation": "Vera Cruz / RS / Brazil",
+                "jobTitle": "Graphic Designer",
+                "beginDate": {
+                    "month": "JUL",
+                    "year": "2012"
+                },
+                "description": "Responsible for the creation of graphic arts, final arts for printing and eventual customers service."
+            }
         }
     }
 }
