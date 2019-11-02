@@ -1,21 +1,28 @@
 import React from "react";
 import Button from "react-md/lib/Buttons";
 import Helmet from "react-helmet";
+import { useIntl } from "gatsby-plugin-intl";
+
 import Layout from "../components/Layout";
+
 import config from "../../data/SiteConfig";
+
 import "./success.scss";
 
-const SuccessContact = ({ location }) =>
-  <Layout location={location} title="Mensagem enviada">
+const SuccessContact = ({ location }) => {
+  const intl = useIntl();
+
+  return <Layout location={location} title={intl.formatMessage({ id: "success.pageTitle" })}>
     <div id="success-message-container">
       <Helmet>
-        <title>{`Mensagem enviada | ${config.siteTitle}`}</title>
-        <link rel="canonical" href={`${config.siteUrl}/success/`} />
+        <title>{`${intl.formatMessage({ id: "success.pageTitle" })} | ${config.siteTitle}`}</title>
+        <link rel="canonical" href={`${config.siteUrl}/${intl.locale}/success/`} />
       </Helmet>
-      <h1>Mensagem enviada!</h1>
-      <h2>Obrigado por me contatar! Responderei assim que possível...</h2>
-      <Button className="primary-button" href="/">Continuar navegando no site</Button>
+      <h1>{intl.formatMessage({ id: "success.pageTitle" })}!</h1>
+      <h2>{intl.formatMessage({ id: "success.subtitle" })}</h2>
+      <Button className="primary-button" href={`/${intl.locale}/`}>{intl.formatMessage({ id: "success.button" })}</Button>
     </div>
   </Layout>
+}
 
 export default SuccessContact;

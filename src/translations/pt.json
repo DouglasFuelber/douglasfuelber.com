@@ -27,6 +27,11 @@
     "contact": {
         "pageTitle": "Contato"
     },
+    "success": {
+        "pageTitle": "Mensagem enviada",
+        "subtitle": "Obrigado por me contatar! Responderei assim que possível...",
+        "button": "Continuar navegando no site"
+    },
     "404" : {
         "pageTitle": "Página não encontrada",
         "subtitle": "Não foi possível encontrar a página que você está buscando...",
