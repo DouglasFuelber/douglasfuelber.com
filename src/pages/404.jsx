@@ -1,21 +1,27 @@
 import React from "react";
 import Button from "react-md/lib/Buttons";
 import Helmet from "react-helmet";
+import { useIntl } from "gatsby-plugin-intl";
+
 import Layout from "../components/Layout";
+
 import config from "../../data/SiteConfig";
+
 import "./404.scss";
 
-const PageNotFound = ({ location }) =>
-  <Layout location={location} title="Página não encontrada">
+const PageNotFound = ({ location }) => {
+  const intl = useIntl();
+  return <Layout location={location} title={intl.formatMessage({ id: "404.pageTitle" })}>
     <div id="not-found-container">
       <Helmet>
-        <title>{`Página não encontrada | ${config.siteTitle}`}</title>
-        <link rel="canonical" href={`${config.siteUrl}/404/`} />
+        <title>{`${intl.formatMessage({ id: "404.pageTitle" })} | ${config.siteTitle}`}</title>
+        <link rel="canonical" href={`${config.siteUrl}/${intl.locale}/404/`} />
       </Helmet>
       <h1>Ops!</h1>
-      <h2>Não foi possível encontrar a página que você está buscando...</h2>
-      <Button className="primary-button" href="/">Continuar navegando no site</Button>
+      <h2>{intl.formatMessage({ id: "404.subtitle" })}</h2>
+      <Button className="primary-button" href={`/${intl.locale}/`}>{intl.formatMessage({ id: "404.button" })}</Button>
     </div>
   </Layout>
+}
 
 export default PageNotFound;

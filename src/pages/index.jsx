@@ -1,9 +1,12 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { useIntl } from "gatsby-plugin-intl";
-import Layout from "../components/Layout";
+
 import HomeLinks from "../components/HomeLinks";
+import Layout from "../components/Layout";
+
 import config from "../../data/SiteConfig";
+
 import "./index.scss";
 
 export default ({ location }) => {

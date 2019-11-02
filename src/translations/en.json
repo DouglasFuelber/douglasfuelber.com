@@ -24,5 +24,10 @@
         "subtitle": "Full Stack Developer"
     },
     "about": {},
-    "contact": {}
+    "contact": {},
+    "404" : {
+        "pageTitle": "Page Not Found",
+        "subtitle": "This page couldn't be found...",
+        "button": "Take me back to the site"
+    }
 }

@@ -24,5 +24,10 @@
         "subtitle": "Desenvolvedor Full Stack"
     },
     "about": {},
-    "contact": {}
+    "contact": {},
+    "404" : {
+        "pageTitle": "Página não encontrada",
+        "subtitle": "Não foi possível encontrar a página que você está buscando...",
+        "button": "Continuar navegando no site"
+    }
 }
