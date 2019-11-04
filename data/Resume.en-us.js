@@ -1,14 +1,4 @@
 module.exports = {
-    languages: [
-      {
-        title: "Portuguese",
-        level: "Native Language"
-      },
-      {
-        title: "English",
-        level: "Intermediate Level"
-      }
-    ],
     publications: [
       {
         title: "Urban Traffic Management using Multi-Agent Systems: Qualitative Analysis of Related Work",

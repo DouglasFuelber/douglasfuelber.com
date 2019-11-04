@@ -62,6 +62,9 @@
         },
         "resumeSkills": {
             "title": "Habilidades"
+        },
+        "resumeLanguages": {
+            "title": "Idiomas"
         }
     },
     "resume": {
@@ -118,6 +121,20 @@
                 "schoolLocation": "Santa Cruz do Sul / RS / Brasil",
                 "schoolUrl": "https://www.unisc.br",
                 "period": "2012/1 - 2018/1"
+            }
+        },
+        "languages": {
+            "1": {
+                "title": "Português",
+                "level": "Língua Materna"
+            },
+            "2": {
+                "title": "Inglês",
+                "level": "Nível Intermediário"
+            },
+            "3": {
+                "title": "Espanhol",
+                "level": "Nível Básico"
             }
         },
         "skills": {

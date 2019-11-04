@@ -1,14 +1,4 @@
 module.exports = {
-    languages: [
-      {
-        title: "Português",
-        level: "Língua materna"
-      },
-      {
-        title: "Inglês",
-        level: "Nível intermediário"
-      }
-    ],
     publications: [
       {
         title: "Desenvolvimento de um Sistema Multiagentes para Análise de Tempos de Semáforos e Consumo de Combustível",
