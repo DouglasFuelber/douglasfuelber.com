@@ -36,9 +36,5 @@ module.exports = {
           name: "Profª. Drª. Rejane Frozza"
         }
       }
-    ],
-    skills: [
-      "HTML / CSS", "JavaScript", "JQuery", "C#", "ASP.NET MVC", "Entity Framework", "Microsoft SharePoint", "WordPress", "PHP", "Git",
-      "AngularJS", "React.js", "SASS", "Microsoft SQL Server", "Java", "Photoshop", "Corel Draw"
     ]
   };  

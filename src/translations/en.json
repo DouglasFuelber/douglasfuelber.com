@@ -59,6 +59,9 @@
         },
         "resumeEducation": {
             "title": "Education"
+        },
+        "resumeSkills": {
+            "title": "Skills"
         }
     },
     "resume": {
@@ -116,6 +119,26 @@
                 "schoolUrl": "https://www.unisc.br",
                 "period": "2012/1 - 2018/1"
             }
+        },
+        "skills": {
+            "1": "HTML / CSS",
+            "2": "JavaScript",
+            "3": "JQuery",
+            "4": "C#",
+            "5": "ASP.NET MVC",
+            "6": "Entity Framework",
+            "7": "Microsoft SharePoint",
+            "8": "WordPress",
+            "9": "PHP",
+            "10": "Git",
+            "11": "AngularJS",
+            "12": "React",
+            "13": "Bootstrap",
+            "14": "SASS",
+            "15": "Microsoft SQL Server",
+            "16": "Java",
+            "17": "Photoshop",
+            "18": "Corel Draw"
         }
     }
 }
