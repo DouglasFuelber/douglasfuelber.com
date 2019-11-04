@@ -1,39 +1,39 @@
-import React, { Component } from "react";
-import resume from "../../../data/Resume";
+import React from "react";
+import { useIntl } from "gatsby-plugin-intl";
+
+import { resume } from "../../../data/en";
+
 import "./ResumePublications.scss";
 
-class ResumePublications extends Component {
-    render() {
-        return (
-            <div className="publications-container mobile-fix">
-                <div className="publications-wrapper md-cell--center">
-                    <div className="md-cell--center md-cell--middle md-cell--12">
-                        <h3>Publicações</h3>
-                        <div id="publications">
-                            {this.getPublications()}
-                        </div>
-                    </div>
+export default () => {
+    const intl = useIntl();
+
+    const getPublications = () => {
+        return Object.keys(resume.publications).map(key => (
+            <div className="publication left-border-area light-border">
+                <div className="publication-type">{intl.formatMessage({ id: `resume.publications.${key}.type` })} | <span className="publication-language">{intl.formatMessage({ id: `resume.publications.${key}.language` })}</span></div>
+                <h4 className="publication-title">
+                    <a href={intl.formatMessage({ id: `resume.publications.${key}.link` })} target="_blank" rel="noopener">{intl.formatMessage({ id: `resume.publications.${key}.title` })} <i class="fas fa-external-link-alt external-link-icon"></i></a>
+                </h4>
+                <h5 className="publication-event">{intl.formatMessage({ id: `resume.publications.${key}.event` })}</h5>
+                <div className="publication-eventComplement">{intl.formatMessage({ id: `resume.publications.${key}.eventComplement` })}</div>
+                <div className="publication-date">{intl.formatMessage({ id: `resume.publications.${key}.date` })}</div>
+                <div className="publication-colaborator">
+                    <span className="publication-colaborator-role">{intl.formatMessage({ id: `resume.publications.${key}.colaborator.role` })}: </span>
+                    {intl.formatMessage({ id: `resume.publications.${key}.colaborator.name` })}
                 </div>
             </div>
-        );
-    }
-    getPublications() {    
-        return resume.publications.map(publication => (
-            <div className="publication left-border-area light-border">
-                <div className="publication-type">{publication.type} | <span className="publication-language">{publication.language}</span></div>
-                <h4 className="publication-title">
-                    <a href={publication.link} target="_blank" rel="noopener">{publication.title} <i class="fas fa-external-link-alt external-link-icon"></i></a>
-                </h4>
-                <h5 className="publication-event">{publication.event}</h5>
-                <div className="publication-eventComplement">{publication.eventComplement}</div>
-                <div className="publication-date">{publication.date}</div>
-                <div className="publication-colaborator">
-                    <span className="publication-colaborator-role">{publication.colaborator.role}: </span>
-                    {publication.colaborator.name}
-                </div>
-            </div>          
         ));
     }
-}
 
-export default ResumePublications;
+    return <div className="publications-container mobile-fix">
+        <div className="publications-wrapper md-cell--center">
+            <div className="md-cell--center md-cell--middle md-cell--12">
+                <h3>{intl.formatMessage({ id: `components.resumePublications.title` })}</h3>
+                <div id="publications">
+                    {getPublications()}
+                </div>
+            </div>
+        </div>
+    </div>
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { useIntl } from "gatsby-plugin-intl";
 
-import { resume } from "../../translations/en";
+import { resume } from "../../../data/en";
 
 import "./ResumeLanguages.scss";
 
