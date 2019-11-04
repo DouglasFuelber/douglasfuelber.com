@@ -56,6 +56,9 @@
         "resumeCareer": {
             "title": "Experiência",
             "current": "Atual"
+        },
+        "resumeEducation": {
+            "title": "Education"
         }
     },
     "resume": {
@@ -103,6 +106,15 @@
                     "year": "2012"
                 },
                 "description": "Responsável pela criação de artes gráficas, finalização de arquivos para impressão e eventuais atendimentos a clientes."
+            }
+        },
+        "education": {
+            "1": {
+                "title": "Bacharelado em Ciência da Computação",
+                "school": "UNISC",
+                "schoolLocation": "Santa Cruz do Sul / RS / Brasil",
+                "schoolUrl": "https://www.unisc.br",
+                "period": "2012/1 - 2018/1"
             }
         }
     }

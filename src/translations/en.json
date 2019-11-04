@@ -56,11 +56,14 @@
         "resumeCareer": {
             "title": "Experience",
             "current": "Current"
+        },
+        "resumeEducation": {
+            "title": "Education"
         }
     },
     "resume": {
         "career": {
-            "1": {
+            "4": {
                 "company": "Conectt",
                 "companyUrl": "https://conectt.com.br/",
                 "companyLocation": "Santa Cruz do Sul / RS / Brazil",
@@ -71,7 +74,7 @@
                 },
                 "description": "Developer of computer systems, websites and corporate portals in diverse technologies and platforms, highlighting Microsoft SharePoint, ASP.NET MVC and Wordpress."
             },
-            "2": {
+            "3": {
                 "company": "Conectt",
                 "companyUrl": "https://conectt.com.br/",
                 "companyLocation": "Santa Cruz do Sul / RS / Brazil",
@@ -82,7 +85,7 @@
                 },
                 "description": "Developer of computer systems, websites and corporate portals in diverse technologies and platforms, highlighting Microsoft SharePoint, ASP.NET MVC and Wordpress."
             },
-            "3": {
+            "2": {
                 "company": "Conectt",
                 "companyUrl": "https://conectt.com.br/",
                 "companyLocation": "Santa Cruz do Sul / RS / Brazil",
@@ -93,7 +96,7 @@
                 },
                 "description": "Developer of websites and corporate portals on the Microsoft SharePoint platform."
             },
-            "4": {
+            "1": {
                 "company": "Imagem.com",
                 "companyUrl": "http://www.imaggem.com.br/",
                 "companyLocation": "Vera Cruz / RS / Brazil",
@@ -103,6 +106,15 @@
                     "year": "2012"
                 },
                 "description": "Responsible for the creation of graphic arts, final arts for printing and eventual customers service."
+            }
+        },
+        "education": {
+            "1": {
+                "title": "Bachelor of Computer Science",
+                "school": "UNISC",
+                "schoolLocation": "Santa Cruz do Sul / RS / Brazil",
+                "schoolUrl": "https://www.unisc.br",
+                "period": "2012/1 - 2018/1"
             }
         }
     }

@@ -1,13 +1,4 @@
 module.exports = {
-    education: [
-      {
-        title: "Bacharelado em Ciência da Computação",
-        school: "UNISC",
-        schoolLocation: "Santa Cruz do Sul / RS / Brasil",
-        schoolUrl: "https://www.unisc.br",
-        period: "2012/1 - 2018/1"
-      }
-    ],
     languages: [
       {
         title: "Português",

@@ -1,13 +1,4 @@
 module.exports = {
-    education: [
-      {
-        title: "Computer Science",
-        school: "UNISC",
-        schoolLocation: "Santa Cruz do Sul / RS / Brazil",
-        schoolUrl: "https://www.unisc.br",
-        period: "2012/1 - 2018/1"
-      }
-    ],
     languages: [
       {
         title: "Portuguese",

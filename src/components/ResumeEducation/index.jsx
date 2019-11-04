@@ -1,34 +1,34 @@
-import React, { Component } from "react";
-import resume from "../../../data/Resume";
+import React from "react";
+import { useIntl } from "gatsby-plugin-intl";
+
+import { resume } from "../../translations/en";
+
 import "./ResumeEducation.scss";
 
-class ResumeEducation extends Component {
-    render() {
-        return (
-            <div className="education-container mobile-fix">
-                <div className="education-wrapper md-cell--center">
-                    <div className="md-cell--center md-cell--middle md-cell--12">
-                        <h3>Educação</h3>
-                        <div id="educations">
-                            {this.getEducation()}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-    getEducation() {    
-        return resume.education.map(education => (
+export default () => {
+    const intl = useIntl();
+
+    const getEducation = () => {
+        return Object.keys(resume.education).map(key => (
             <div className="education left-border-area light-border">
-                <h4 className="education-title">{education.title}</h4>
+                <h4 className="education-title">{intl.formatMessage({ id: `resume.education.${key}.title` })}</h4>
                 <h5 className="education-school">
-                    <a href={education.schoolUrl} target="_blank" rel="noopener">{education.school} <i class="fas fa-external-link-alt external-link-icon"></i></a>
+                    <a href={intl.formatMessage({ id: `resume.education.${key}.schoolUrl` })} target="_blank" rel="noopener">{intl.formatMessage({ id: `resume.education.${key}.school` })} <i class="fas fa-external-link-alt external-link-icon"></i></a>
                 </h5>
-                <div className="education-location">{education.schoolLocation}</div>                
-                <div className="education-period">{education.period}</div>
-            </div>          
+                <div className="education-location">{intl.formatMessage({ id: `resume.education.${key}.schoolLocation` })}</div>
+                <div className="education-period">{intl.formatMessage({ id: `resume.education.${key}.period` })}</div>
+            </div>
         ));
     }
-}
 
-export default ResumeEducation;
+    return <div className="education-container mobile-fix">
+        <div className="education-wrapper md-cell--center">
+            <div className="md-cell--center md-cell--middle md-cell--12">
+                <h3>{intl.formatMessage({ id: `components.resumeEducation.title` })}</h3>
+                <div id="educations">
+                    {getEducation()}
+                </div>
+            </div>
+        </div>
+    </div>
+}
