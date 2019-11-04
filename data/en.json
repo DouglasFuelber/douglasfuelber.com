@@ -72,7 +72,7 @@
     },
     "resume": {
         "career": {
-            "4": {
+            "1": {
                 "company": "Conectt",
                 "companyUrl": "https://conectt.com.br/",
                 "companyLocation": "Santa Cruz do Sul / RS / Brazil",
@@ -83,7 +83,7 @@
                 },
                 "description": "Developer of computer systems, websites and corporate portals in diverse technologies and platforms, highlighting Microsoft SharePoint, ASP.NET MVC and Wordpress."
             },
-            "3": {
+            "2": {
                 "company": "Conectt",
                 "companyUrl": "https://conectt.com.br/",
                 "companyLocation": "Santa Cruz do Sul / RS / Brazil",
@@ -94,7 +94,7 @@
                 },
                 "description": "Developer of computer systems, websites and corporate portals in diverse technologies and platforms, highlighting Microsoft SharePoint, ASP.NET MVC and Wordpress."
             },
-            "2": {
+            "3": {
                 "company": "Conectt",
                 "companyUrl": "https://conectt.com.br/",
                 "companyLocation": "Santa Cruz do Sul / RS / Brazil",
@@ -105,7 +105,7 @@
                 },
                 "description": "Developer of websites and corporate portals on the Microsoft SharePoint platform."
             },
-            "1": {
+            "4": {
                 "company": "Imagem.com",
                 "companyUrl": "http://www.imaggem.com.br/",
                 "companyLocation": "Vera Cruz / RS / Brazil",
