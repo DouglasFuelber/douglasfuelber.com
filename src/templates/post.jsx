@@ -1,4 +1,5 @@
 import _ from "lodash";
+import React, { useState, useEffect } from "react";
 import Avatar from "react-md/lib/Avatars";
 import Button from "react-md/lib/Buttons";
 import Card from "react-md/lib/Cards";
@@ -9,77 +10,65 @@ import DisqusArea from "../components/Disqus";
 import FontIcon from "react-md/lib/FontIcons";
 import { graphql, Link } from "gatsby";
 import Helmet from "react-helmet";
-import Layout from "../components/Layout";
 import Media, { MediaOverlay } from "react-md/lib/Media";
 import moment from "moment";
+
+import Layout from "../components/Layout";
 import PostTags from "../components/PostTags";
 import PostCover from "../components/PostCover";
-import PostSuggestions from "../components/PostSuggestions";
-import React from "react";
+//import PostSuggestions from "../components/PostSuggestions";
 import SEO from "../components/SEO";
 import SocialLinks from "../components/SocialLinks";
 import UserInfo from "../components/UserInfo";
 
 import "./post.scss";
 
-export default class PostTemplate extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      mobile: true
-    };
-    this.handleResize = this.handleResize.bind(this);
-  }
-  componentDidMount() {
-    this.handleResize();
-    window.addEventListener("resize", this.handleResize);
+const PostTemplate = ({ pageContext, data, location }) => {
+  const [mobile, setMobile] = useState(true);
+
+  const handleResize = () => {
+    setMobile(window.innerWidth >= 640 ? false : true);
   }
 
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.handleResize);
-  }
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
-  handleResize() {
-    if (window.innerWidth >= 640) {
-      this.setState({ mobile: false });
-    } else {
-      this.setState({ mobile: true });
+    return () => {
+      window.removeEventListener("resize", handleResize);
     }
+  }, []);
+
+  const { slug } = pageContext;
+  const expanded = !mobile;
+  const postNode = data.markdownRemark;
+  const post = postNode.frontmatter;
+  if (!post.id) {
+    post.id = slug;
+  }
+  if (!post.category_id) {
+    post.category_id = config.postDefaultCategoryID;
   }
 
-  render() {
-    const { mobile } = this.state;
-    const { slug } = this.props.pageContext;
-    const expanded = !mobile;
-    const postOverlapClass = mobile ? "post-overlap-mobile" : "post-overlap";
-    const postNode = this.props.data.markdownRemark;
-    const post = postNode.frontmatter;
-    if (!post.id) {
-      post.id = slug;
-    }
-    if (!post.category_id) {
-      post.category_id = config.postDefaultCategoryID;
-    }
+  const coverHeight = mobile ? 180 : 350;
+  return (
+    <Layout location={location}>
 
-    const coverHeight = mobile ? 180 : 350;
-    return (
-      <Layout location={this.props.location}>
+      <Helmet>
+        <title>{`${post.title} | ${config.siteTitle}`}</title>
+        <link rel="canonical" href={`${config.siteUrl}${post.id}`} />
+      </Helmet>
+      <SEO postPath={slug} postNode={postNode} postSEO />
 
-        <Helmet>
-          <title>{`${post.title} | ${config.siteTitle}`}</title>
-          <link rel="canonical" href={`${config.siteUrl}${post.id}`} />
-        </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
+      <div id="post-wrapper" className="tertiary_bg">
 
-        <div id="post-wrapper" className="tertiary_bg">
+        <div id="page_title" className="md-grid md-cell--8">
+          <Link style={{ textDecoration: "none" }} to="/blog/">
+            <h2 className="left-border-area light-border title">Blog</h2>
+          </Link>
+        </div>
 
-          <div id="page_title" className="md-grid md-cell--8">
-            <Link style={{ textDecoration: "none" }} to="/blog/">
-              <h2 className="left-border-area light-border title">Blog</h2>
-            </Link>
-          </div>
-
-          <div id="page_content">
+        <div id="page_content">
           <div className="primary_bg card-wrapper">
             <Card className="post md-grid md-cell--8">
 
@@ -102,16 +91,16 @@ export default class PostTemplate extends React.Component {
                   subtitle={`${postNode.timeToRead} minutos de leitura`}>
                 </CardTitle>
                 <Link
-                    className="category-link md-cell--6"
-                    to={`/blog/categorias/${_.kebabCase(post.category)}`}>
-                    <CardTitle
-                      className="post-description"
-                      avatar={
-                        <Avatar icon={<FontIcon iconClassName="fa fa-folder-open" />} />
-                      }
-                      title="Na categoria"
-                      subtitle={post.category}
-                    />
+                  className="category-link md-cell--6"
+                  to={`/blog/categorias/${_.kebabCase(post.category)}`}>
+                  <CardTitle
+                    className="post-description"
+                    avatar={
+                      <Avatar icon={<FontIcon iconClassName="fa fa-folder-open" />} />
+                    }
+                    title="Na categoria"
+                    subtitle={post.category}
+                  />
                 </Link>
                 <CardText className="post-info md-cell--12">
                   <div className="post-body" dangerouslySetInnerHTML={{ __html: postNode.html }} />
@@ -121,11 +110,11 @@ export default class PostTemplate extends React.Component {
                   <SocialLinks
                     postPath={slug}
                     postNode={postNode}
-                    mobile={this.state.mobile}
+                    mobile={mobile}
                   />
                 </CardText>
 
-              </div>            
+              </div>
             </Card>
             <UserInfo
               className="md-grid md-cell md-cell--12"
@@ -138,19 +127,20 @@ export default class PostTemplate extends React.Component {
               <Link className="md-cell--center" to={`blog/`}>
                 <Button className="secondary-button">
                   Voltar para o Blog
-                </Button>
-              </Link>          
+              </Button>
+              </Link>
             </div>
           </div>
-          </div>
-          
         </div>
 
-        {/*<PostSuggestions postNode={postNode} />*/}
-      </Layout>
-    );
-  }
+      </div>
+
+      {/*<PostSuggestions postNode={postNode} />*/}
+    </Layout>
+  );
+
 }
+export default PostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -162,6 +152,7 @@ export const pageQuery = graphql`
         title
         cover
         date
+        language
         category
         tags
       }
