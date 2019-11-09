@@ -1,42 +1,48 @@
 import React from "react";
+import { useIntl } from "gatsby-plugin-intl";
+
 import PostCategoriesListing from "../PostCategoriesListing";
 import PostTagsListing from "../PostTagsListing";
 import PostPreview from "../PostPreview";
+
 import "./PostListing.scss";
 
-class PostListing extends React.Component {
-  getPostList() {
+export default ({ location, postEdges }) => {
+  const intl = useIntl();
+
+  const getPostList = () => {
     const postList = [];
-    this.props.postEdges.forEach(postEdge => {
-      postList.push({
-        path: postEdge.node.fields.slug,
-        tags: postEdge.node.frontmatter.tags,
-        cover: postEdge.node.frontmatter.cover,
-        title: postEdge.node.frontmatter.title,
-        category: postEdge.node.frontmatter.category,
-        date: postEdge.node.fields.date,
-        excerpt: postEdge.node.excerpt,
-        timeToRead: postEdge.node.timeToRead
-      });
+    postEdges.forEach(postEdge => {
+      const { node } = postEdge;
+      if (node.frontmatter.language == intl.locale) {
+        postList.push({
+          path: node.fields.slug,
+          tags: node.frontmatter.tags,
+          cover: node.frontmatter.cover,
+          title: node.frontmatter.title,
+          category: node.frontmatter.category,
+          date: node.fields.date,
+          excerpt: node.excerpt,
+          timeToRead: node.timeToRead
+        });
+      }
     });
     return postList;
   }
-  render() {
-    const postList = this.getPostList();
-    return (
-      <div id="posts-wrapper" className="md-grid md-grid--no-spacing md-cell--middle primary_bg">
-        <div className="md-cell--3 md-cell--order-2-desktop mobile-fix">
-          <PostCategoriesListing location={this.props.location} />
-          <PostTagsListing location={this.props.location} />
-        </div>
-        <div id="post-container" className="md-cell--9 mobile-fix">
-          {postList.map(post => (
-            <PostPreview key={post.title} postInfo={post} />
-          ))}
-        </div>        
-      </div>
-    );
-  }
-}
 
-export default PostListing;
+  const postList = getPostList();
+
+  return (
+    <div id="posts-wrapper" className="md-grid md-grid--no-spacing md-cell--middle primary_bg">
+      <div className="md-cell--3 md-cell--order-2-desktop mobile-fix">
+        <PostCategoriesListing location={location} />
+        <PostTagsListing location={location} />
+      </div>
+      <div id="post-container" className="md-cell--9 mobile-fix">
+        {postList.map(post => (
+          <PostPreview key={post.title} postInfo={post} />
+        ))}
+      </div>
+    </div>
+  );
+}

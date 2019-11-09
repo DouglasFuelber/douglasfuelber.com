@@ -1,19 +1,25 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
+import { useIntl } from "gatsby-plugin-intl";
+
 import Layout from "../components/Layout";
 import PostListing from "../components/PostListing";
 import SEO from "../components/SEO";
+
 import config from "../../data/SiteConfig";
+
 import "./blog.scss";
 
 const BlogPage = ({location, data}) => {
-    const postEdges = data.allMarkdownRemark.edges;
+    const intl = useIntl();
+    const postEdges = data.allMarkdownRemark.edges;   
+
     return (
       <Layout location={location} title="Blog">
         <Helmet>
             <title>{`Blog | ${config.siteTitle}`}</title>
-            <link rel="canonical" href={`${config.siteUrl}/blog/`} />
+            <link rel="canonical" href={`${config.siteUrl}/${intl.locale}/blog/`} />
         </Helmet>
         <SEO postEdges={postEdges} />
 
@@ -53,6 +59,7 @@ export const pageQuery = graphql`
             tags
             cover
             category
+            language
             date
           }
         }

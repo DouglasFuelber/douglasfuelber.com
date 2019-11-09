@@ -2,8 +2,9 @@
 title: Integração contínua entre Bitbucket e FTP
 date: 2019-10-10T09:24:53.000Z
 cover: bitbucket-pipeline.jpeg
-slug: integracao-continua-entre-bitbucket-e-ftp
+slug: bitbucket-ftp-ci
 category: DevOps
+language: pt
 tags:
   - ci/cd
   - tutorial
