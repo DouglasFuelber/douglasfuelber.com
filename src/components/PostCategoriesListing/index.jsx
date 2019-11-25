@@ -13,7 +13,7 @@ export default ({ categoriesEdges, location }) => {
     const { categoryName, count } = category;
 
     var active = false;
-    var categoryUrl = `/blog/categorias/${_.kebabCase(categoryName)}`;
+    var categoryUrl = `/blog/categories/${_.kebabCase(categoryName)}`;
     if (categoryUrl === location) {
       active = true;
       categoryUrl = `/blog`;

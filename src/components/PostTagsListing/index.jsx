@@ -1,63 +1,73 @@
 import _ from "lodash";
 import Chip from "react-md/lib/Chips";
+import { useIntl, Link } from "gatsby-plugin-intl";
 import React from "react";
-import { Link, StaticQuery } from "gatsby";
 import "./PostTagsListing.scss";
 
-class PostTagsListing extends React.Component {
-  getTagChip(tag, location) {
+export default ({ tagsEdges, location }) => {
+
+  const intl = useIntl();
+
+  const getTagChip = (tag, location) => {
+
+    const { tagName, count } = tag;
 
     var active = false;
-    var tagUrl = `/blog/tags/${_.kebabCase(tag.fieldValue)}`;
+    var tagUrl = `/blog/tags/${_.kebabCase(tagName)}`;
     if (tagUrl === location) {
-        active = true;
-        tagUrl = `/blog`;
-    }        
+      active = true;
+      tagUrl = `/blog`;
+    }
 
     return (
       <Link
-        key={tag.fieldValue}
+        key={tagName}
         style={{ textDecoration: "none" }}
         to={tagUrl}
       >
         <Chip
-          label={tag.fieldValue + " (" + tag.totalCount + ")"}
+          label={`${tagName} (${count})`}
           className={"tag-chip " + (active ? "active" : "")}
         />
       </Link>
     );
   }
 
-  render() {
-    const location = this.props.location.pathname;
+  const getTagsList = () => {
+    const tagsList = [];
 
-    return (
-      <div className="md-grid md-grid--no-spacing md-cell--middle primary_bg">
-        <div id="post-container" className="md-grid md-cell--8 mobile-fix">
-          <h3>Tags</h3>
-          <StaticQuery
-            query={graphql`
-              query TagsQuery {
-                allMarkdownRemark {
-                  group(field: frontmatter___tags) {
-                    fieldValue
-                    totalCount
-                  }
-                }
-              }
-            `}
-            render={data => (
-              <div className="left-border-area light-border">
-                {data.allMarkdownRemark.group.map(tag =>
-                  this.getTagChip(tag, location)
-                )}
-              </div>
-            )}
-          />
+    tagsEdges.forEach(tagEdge => {
+      const tagNode = tagEdge.node.frontmatter;
+      if (tagNode.language == intl.locale) {
+
+        tagNode.tags.forEach(tag => {
+          const tagIndex = tagsList.findIndex(e => e.tagName == tag);
+
+          if (tagIndex > -1)
+            tagsList[tagIndex].count++;
+          else
+            tagsList.push({
+              tagName: tag,
+              count: 1
+            });
+        });
+      }
+    });
+    return tagsList;
+  }
+
+  const tagsList = getTagsList();
+
+  return (
+    <div className="md-grid md-grid--no-spacing md-cell--middle primary_bg">
+      <div id="post-container" className="md-grid md-cell--8 mobile-fix">
+        <h3>Tags</h3>
+        <div className="left-border-area light-border">
+          {tagsList.map(tag => (
+            getTagChip(tag, location.pathname)
+          ))}
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
-
-export default PostTagsListing;
