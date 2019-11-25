@@ -14,7 +14,7 @@ export default ({ tagsEdges, location }) => {
 
     var active = false;
     var tagUrl = `/blog/tags/${_.kebabCase(tagName)}`;
-    if (tagUrl === location) {
+    if (`/${intl.locale}${tagUrl}` === location) {
       active = true;
       tagUrl = `/blog`;
     }

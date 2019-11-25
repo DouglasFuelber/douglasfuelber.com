@@ -14,7 +14,7 @@ export default ({ categoriesEdges, location }) => {
 
     var active = false;
     var categoryUrl = `/blog/categories/${_.kebabCase(categoryName)}`;
-    if (categoryUrl === location) {
+    if (`/${intl.locale}${categoryUrl}` === location) {
       active = true;
       categoryUrl = `/blog`;
     }

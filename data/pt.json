@@ -42,6 +42,7 @@
     },
     "blog": {
         "categories": {
+            "category": "Categoria",
             "categories": "Categorias",
             "devops": "DevOps",
             "programming": "Programação"
