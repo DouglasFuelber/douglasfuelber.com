@@ -1,11 +1,10 @@
 import _ from "lodash";
 import Chip from "react-md/lib/Chips";
-import { useIntl } from "gatsby-plugin-intl";
+import { useIntl, Link } from "gatsby-plugin-intl";
 import React from "react";
-import { Link } from "gatsby";
 import "./PostCategoriesListing.scss";
 
-export default ( {categoriesEdges, location }) => {
+export default ({ categoriesEdges, location }) => {
 
   const intl = useIntl();
 
@@ -27,7 +26,7 @@ export default ( {categoriesEdges, location }) => {
         to={categoryUrl}
       >
         <Chip
-          label={categoryName + " (" + count + ")"}
+          label={`${intl.formatMessage({ id: `blog.categories.${categoryName}` })} (${count})`}
           className={"category-chip " + (active ? "active" : "")}
         />
       </Link>
@@ -60,7 +59,7 @@ export default ( {categoriesEdges, location }) => {
   return (
     <div className="md-grid md-grid--no-spacing md-cell--middle primary_bg">
       <div id="post-container" className="md-grid md-cell--8 mobile-fix">
-        <h3>Categorias</h3>
+        <h3>{intl.formatMessage({ id: "blog.categories.categories" })}</h3>
         <div className="left-border-area light-border">
           {categoriesList.map(category => (
             getCategoryChip(category, location.pathname)

@@ -40,6 +40,13 @@
         "subtitle": "This page couldn't be found...",
         "button": "Take me back to the site"
     },
+    "blog": {
+        "categories": {
+            "categories": "Categories",
+            "devops": "DevOps",
+            "programming": "Programming"
+        }
+    },
     "components": {
         "contactForm": {
             "sentence": "If you want to contact me, leave me a message:",

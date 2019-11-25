@@ -40,6 +40,13 @@
         "subtitle": "Não foi possível encontrar a página que você está buscando...",
         "button": "Continuar navegando no site"
     },
+    "blog": {
+        "categories": {
+            "categories": "Categorias",
+            "devops": "DevOps",
+            "programming": "Programação"
+        }
+    },
     "components": {
         "contactForm": {
             "sentence": "Se quiser entrar em contato comigo, deixe-me uma mensagem:",
