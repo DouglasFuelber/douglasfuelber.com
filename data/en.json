@@ -46,6 +46,12 @@
             "categories": "Categories",
             "devops": "DevOps",
             "programming": "Programming"
+        },
+        "posts": {
+            "publishedIn": "Published in",
+            "minutesReading": "minutes reading",
+            "inCategory": "In category",
+            "keepReading": "Keep reading"
         }
     },
     "components": {

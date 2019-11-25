@@ -1,10 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import PostCover from "./PostCoverComponent";
 
-class queryWrapper extends Component {
-  render() {
-    const { postNode, coverHeight, coverClassName } = this.props;
+const queryWrapper = ({ postNode, coverHeight, coverClassName }) => {
+
     return (
       <StaticQuery
         query={graphql`
@@ -52,8 +51,7 @@ class queryWrapper extends Component {
           />
         )}
       />
-    );
-  }
+    );  
 }
 
 export default queryWrapper;
