@@ -1,63 +1,72 @@
 import _ from "lodash";
 import Chip from "react-md/lib/Chips";
+import { useIntl } from "gatsby-plugin-intl";
 import React from "react";
-import { Link, StaticQuery } from "gatsby";
+import { Link } from "gatsby";
 import "./PostCategoriesListing.scss";
 
-class PostCategoriesListing extends React.Component {
-  getCategoryChip(category, location) {
+export default ( {categoriesEdges, location }) => {
+
+  const intl = useIntl();
+
+  const getCategoryChip = (category, location) => {
+
+    const { categoryName, count } = category;
 
     var active = false;
-    var categoryUrl = `/blog/categorias/${_.kebabCase(category.fieldValue)}`;
+    var categoryUrl = `/blog/categorias/${_.kebabCase(categoryName)}`;
     if (categoryUrl === location) {
-        active = true;
-        categoryUrl = `/blog`;
-    }        
+      active = true;
+      categoryUrl = `/blog`;
+    }
 
     return (
       <Link
-        key={category.fieldValue}
+        key={categoryName}
         style={{ textDecoration: "none" }}
         to={categoryUrl}
       >
         <Chip
-          label={category.fieldValue + " (" + category.totalCount + ")"}
+          label={categoryName + " (" + count + ")"}
           className={"category-chip " + (active ? "active" : "")}
         />
       </Link>
     );
   }
 
-  render() {
-    const location = this.props.location.pathname;
+  const getCategoriesList = () => {
+    const categoriesList = [];
 
-    return (
-      <div className="md-grid md-grid--no-spacing md-cell--middle primary_bg">
-        <div id="post-container" className="md-grid md-cell--8 mobile-fix">
-          <h3>Categorias</h3>
-          <StaticQuery
-            query={graphql`
-              query CategoriesQuery {
-                allMarkdownRemark {
-                  group(field: frontmatter___category) {
-                    fieldValue
-                    totalCount
-                  }
-                }
-              }
-            `}
-            render={data => (
-              <div className="left-border-area light-border">
-                {data.allMarkdownRemark.group.map(category =>
-                  this.getCategoryChip(category, location)
-                )}
-              </div>
-            )}
-          />
+    categoriesEdges.forEach(categoryEdge => {
+      const category = categoryEdge.node.frontmatter;
+      if (category.language == intl.locale) {
+
+        const categoryIndex = categoriesList.findIndex(e => e.categoryName == category.category);
+
+        if (categoryIndex > -1)
+          categoriesList[categoryIndex].count++;
+        else
+          categoriesList.push({
+            categoryName: category.category,
+            count: 1
+          });
+      }
+    });
+    return categoriesList;
+  }
+
+  const categoriesList = getCategoriesList();
+
+  return (
+    <div className="md-grid md-grid--no-spacing md-cell--middle primary_bg">
+      <div id="post-container" className="md-grid md-cell--8 mobile-fix">
+        <h3>Categorias</h3>
+        <div className="left-border-area light-border">
+          {categoriesList.map(category => (
+            getCategoryChip(category, location.pathname)
+          ))}
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
-
-export default PostCategoriesListing;

@@ -11,9 +11,9 @@ import config from "../../data/SiteConfig";
 
 import "./blog.scss";
 
-const BlogPage = ({location, data}) => {
+const BlogPage = ({location, data: { posts, categories, tags}}) => {
     const intl = useIntl();
-    const postEdges = data.allMarkdownRemark.edges;   
+    const postEdges = posts.edges;
 
     return (
       <Layout location={location} title="Blog">
@@ -30,7 +30,7 @@ const BlogPage = ({location, data}) => {
             </div>
 
             <div id="page_content">
-              <PostListing postEdges={postEdges} location={location} />
+              <PostListing postEdges={postEdges} categoriesEdges={categories.edges} tagsEdges={tags.edges} location={location} />
             </div>
         </div>
 
@@ -42,7 +42,7 @@ export default BlogPage;
 
 export const pageQuery = graphql`
   query BlogQuery {
-    allMarkdownRemark(
+    posts: allMarkdownRemark(
       limit: 2000
       sort: { fields: [fields___date], order: DESC }
     ) {
@@ -61,6 +61,26 @@ export const pageQuery = graphql`
             category
             language
             date
+          }
+        }
+      }
+    }
+    categories: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            language
+            category
+          }
+        }
+      }
+    }
+    tags: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            language
+            tags
           }
         }
       }

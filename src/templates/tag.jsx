@@ -8,7 +8,9 @@ import config from "../../data/SiteConfig";
 export default class TagTemplate extends React.Component {
   render() {
     const { tag } = this.props.pageContext;
-    const postEdges = this.props.data.allMarkdownRemark.edges;
+    const postEdges = this.props.data.posts.edges;
+    const categories = this.props.data.categories;
+    const tags = this.props.data.tags;
 
     return (
       <Layout
@@ -30,7 +32,7 @@ export default class TagTemplate extends React.Component {
           </div>
 
           <div id="page_content">
-            <PostListing postEdges={postEdges} location={this.props.location} />  
+            <PostListing postEdges={postEdges} categoriesEdges={categories.edges} tagsEdges={tags.edges} location={this.props.location} />  
           </div>
                     
         </div>
@@ -41,7 +43,7 @@ export default class TagTemplate extends React.Component {
 
 export const pageQuery = graphql`
   query TagPage($tag: String) {
-    allMarkdownRemark(
+    posts: allMarkdownRemark(
       limit: 1000
       sort: { fields: [fields___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
@@ -61,6 +63,26 @@ export const pageQuery = graphql`
             category
             cover
             date
+          }
+        }
+      }
+    }
+    categories: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            language
+            category
+          }
+        }
+      }
+    }
+    tags: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            language
+            tags
           }
         }
       }

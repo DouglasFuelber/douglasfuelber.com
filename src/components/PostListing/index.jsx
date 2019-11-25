@@ -7,7 +7,7 @@ import PostPreview from "../PostPreview";
 
 import "./PostListing.scss";
 
-export default ({ location, postEdges }) => {
+export default ({ location, postEdges, categoriesEdges, tagsEdges }) => {
   const intl = useIntl();
 
   const getPostList = () => {
@@ -35,7 +35,7 @@ export default ({ location, postEdges }) => {
   return (
     <div id="posts-wrapper" className="md-grid md-grid--no-spacing md-cell--middle primary_bg">
       <div className="md-cell--3 md-cell--order-2-desktop mobile-fix">
-        <PostCategoriesListing location={location} />
+        <PostCategoriesListing location={location} categoriesEdges={categoriesEdges} />
         <PostTagsListing location={location} />
       </div>
       <div id="post-container" className="md-cell--9 mobile-fix">
