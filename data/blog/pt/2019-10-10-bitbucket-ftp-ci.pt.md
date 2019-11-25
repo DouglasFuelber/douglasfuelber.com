@@ -1,10 +1,11 @@
 ---
-title: Continuous integration between Bitbucket and FTP
+title: Integração contínua entre Bitbucket e FTP
 date: 2019-10-10T09:24:53.000Z
 cover: bitbucket-pipeline.jpeg
 slug: bitbucket-ftp-ci
-category: DevOps
-language: en
+category: devops
+language: pt
+key: bitbucket-ci
 tags:
   - ci/cd
   - tutorial

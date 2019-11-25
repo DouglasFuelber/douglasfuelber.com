@@ -3,8 +3,9 @@ title: Criar tipos de posts e taxonomias customizadas no Wordpress
 date: 2019-05-11T20:22:47.227Z
 cover: 2.jpg
 slug: custom-post-types-taxonomies-wordpress
-category: Programação
+category: programming
 language: pt
+key: cpt-wordpress
 tags:
   - tutorial
   - wordpress
