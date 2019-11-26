@@ -8,7 +8,8 @@ import CardTitle from "react-md/lib/Cards/CardTitle";
 import config from "../../data/SiteConfig";
 import DisqusArea from "../components/Disqus";
 import FontIcon from "react-md/lib/FontIcons";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
+import { useIntl, Link } from "gatsby-plugin-intl"
 import Helmet from "react-helmet";
 import Media, { MediaOverlay } from "react-md/lib/Media";
 import moment from "moment";
@@ -24,6 +25,9 @@ import UserInfo from "../components/UserInfo";
 import "./post.scss";
 
 const PostTemplate = ({ pageContext, data, location }) => {
+
+  const intl = useIntl();
+
   const [mobile, setMobile] = useState(true);
 
   const handleResize = () => {
@@ -56,7 +60,7 @@ const PostTemplate = ({ pageContext, data, location }) => {
 
       <Helmet>
         <title>{`${post.title} | ${config.siteTitle}`}</title>
-        <link rel="canonical" href={`${config.siteUrl}${post.id}`} />
+        <link rel="canonical" href={`${config.siteUrl}/${intl.locale}${config.blogPrefix}${post.id}`} />
       </Helmet>
       <SEO postPath={slug} postNode={postNode} postSEO />
 
@@ -85,21 +89,19 @@ const PostTemplate = ({ pageContext, data, location }) => {
                 <CardTitle
                   className="post-description md-cell--6"
                   avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
-                  title={`Publicado em ${moment(post.date).format(
-                    config.dateFormat
-                  )}`}
-                  subtitle={`${postNode.timeToRead} minutos de leitura`}>
+                  title={`${intl.formatMessage({ id: `blog.posts.publishedIn` })} ${intl.formatDate(moment(post.date))}`}
+                  subtitle={`${postNode.timeToRead} ${intl.formatMessage({ id: `blog.posts.minutesReading` })}`}>
                 </CardTitle>
                 <Link
                   className="category-link md-cell--6"
-                  to={`/blog/categorias/${_.kebabCase(post.category)}`}>
+                  to={`/blog/categories/${_.kebabCase(post.category)}`}>
                   <CardTitle
                     className="post-description"
                     avatar={
                       <Avatar icon={<FontIcon iconClassName="fa fa-folder-open" />} />
                     }
-                    title="Na categoria"
-                    subtitle={post.category}
+                    title={intl.formatMessage({ id: `blog.posts.inCategory` })}
+                    subtitle={intl.formatMessage({ id: `blog.categories.${post.category}` })}
                   />
                 </Link>
                 <CardText className="post-info md-cell--12">
@@ -124,7 +126,7 @@ const PostTemplate = ({ pageContext, data, location }) => {
             <DisqusArea postNode={postNode} expanded={expanded} />
 
             <div className="md-grid post-back">
-              <Link className="md-cell--center" to={`blog/`}>
+              <Link className="md-cell--center" to={`/blog/`}>
                 <Button className="secondary-button">
                   Voltar para o Blog
               </Button>
