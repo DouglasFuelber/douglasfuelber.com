@@ -15,13 +15,9 @@ module.exports = {
   disqusShortName: "douglasfuelber", // Shortname used in Disqus comments component
   postDefaultCategoryID: "Programming", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
-  dateFormat: "DD/MM/YYYY", // Date format for display.
   userName: "Douglas Fuelber", // Username to display in the author segment.
   userTwitter: "", // Optionally renders "Follow Me" in the UserInfo segment.
-  userLocation: "Brazil", // User location to display in the author segment.
   userAvatar: "/images/avatar.jpg", // User avatar to display in the author segment.
-  userDescription:
-  "As a programmer, I like to learn new technologies and languages, trying not to limit myself in just improving the knowledge I have already acquired. Also, I really like movies, series, to practice sports and getting to know new places.", // User description to display in the author segment.
   languageKeys: ['en', 'pt'],
   languages: [
     {
