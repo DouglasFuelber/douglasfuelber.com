@@ -118,18 +118,19 @@ const PostTemplate = ({ pageContext, data, location }) => {
 
               </div>
             </Card>
+
             <UserInfo
               className="md-grid md-cell md-cell--12"
               config={config}
-              expanded={expanded}
-            />
+              expanded={expanded} />
+
             <DisqusArea postNode={postNode} expanded={expanded} />
 
             <div className="md-grid post-back">
               <Link className="md-cell--center" to={`/blog/`}>
                 <Button className="secondary-button">
-                  Voltar para o Blog
-              </Button>
+                  {intl.formatMessage({ id: `blog.posts.backToBlog` })}
+                </Button>
               </Link>
             </div>
           </div>

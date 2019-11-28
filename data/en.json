@@ -52,7 +52,10 @@
             "publishedIn": "Published in",
             "minutesReading": "minutes reading",
             "inCategory": "In category",
-            "keepReading": "Keep reading"
+            "keepReading": "Keep reading",
+            "comments": "Comments",
+            "newComment": "New comment",
+            "backToBlog": "Back to Blog"
         }
     },
     "components": {
