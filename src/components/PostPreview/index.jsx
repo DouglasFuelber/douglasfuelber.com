@@ -11,7 +11,6 @@ import moment from "moment";
 import Media, { MediaOverlay } from "react-md/lib/Media";
 import PostTags from "../PostTags";
 import PostCover from "../PostCover";
-import config from "../../../data/SiteConfig";
 import "./PostPreview.scss";
 
 export default ({ postInfo }) => {
