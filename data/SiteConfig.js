@@ -12,6 +12,7 @@ module.exports = {
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "", // FB Application ID for using app insights
   siteGATrackingID: "UA-99213358-1", // Tracking code ID for google analytics.
+  disqusShortName: "douglasfuelber", // Shortname used in Disqus comments component
   postDefaultCategoryID: "Programming", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
@@ -31,6 +32,7 @@ module.exports = {
       label: 'Português'
     }
   ],
+  defaultLanguage: 'en',
   navigationLinks: [
     {
       id: "home",

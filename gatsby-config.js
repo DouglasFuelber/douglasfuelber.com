@@ -1,7 +1,7 @@
 const config = require("./data/SiteConfig");
 const urljoin = require("url-join");
 
-const regexExcludeRobots = /^(?!\/(dev-404-page|404|offline-plugin-app-shell-fallback|tags|categorias|sucesso|site)).*$/;
+const regexExcludeRobots = /^(?!\/(dev-404-page|404|offline-plugin-app-shell-fallback|tags|categories|success|site)).*$/;
 
 module.exports = {
   pathPrefix: config.pathPrefix,
@@ -67,7 +67,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-nprogress",
       options: {
-        color: "#002eac"
+        color: "#70a2ff"
       }
     },
     "gatsby-transformer-sharp",
@@ -110,8 +110,9 @@ module.exports = {
         short_name: config.siteTitleShort,
         description: config.siteDescription,
         start_url: config.pathPrefix,
-        background_color: "#ffffff",
-        theme_color: "#01153d",
+        background_color: "#001950",
+        theme_color: "#001950",
+        language: config.defaultLanguage,
         display: "minimal-ui",
         icons: [
           {
@@ -206,7 +207,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: `douglasfuelber`
+        shortname: config.disqusShortName
       }
     },
     {
@@ -217,8 +218,8 @@ module.exports = {
         // supported language
         languages: config.languageKeys,
         // language file path
-        defaultLanguage: `en`,
-        // option to redirect to `/en` when connecting `/`
+        defaultLanguage: config.defaultLanguage,
+        // option to redirect to default language when connecting
         redirect: true,
       },
     },
