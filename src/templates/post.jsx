@@ -146,8 +146,8 @@ const PostTemplate = ({ pageContext, data, location }) => {
 export default PostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+  query BlogPostBySlug($slug: String!, $language: String) {
+    markdownRemark(fields: { slug: { eq: $slug } }, frontmatter: {language: {eq: $language}}) {
       html
       timeToRead
       excerpt

@@ -175,3 +175,15 @@ exports.createPages = ({ graphql, actions }) => {
     );
   });
 };
+
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions
+  deletePage(page);
+  createPage({
+    ...page,
+    context: {
+      ...page.context,
+      language: page.context.intl.language,
+    },
+  })
+};
