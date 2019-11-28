@@ -1,7 +1,7 @@
 {
     "site": {
-        "description": "Douglas Fuelber - Bacharel em Ciência da Computação pela UNISC e desenvolvedor na Conectt.",
-        "userDescription": "Como programador, gosto sempre de aprender novas tecnologias e linguagens, buscando não me limitar em apenas aprimorar o conhecimento que já possuo. Além disso, gosto muito de filmes, séries, praticar esportes e conhecer novos lugares.",
+        "description": "Douglas Fuelber - Desenvolvedor Web Full Stack",
+        "userDescription": "Programador desde 2016 e graduado em Ciência da Computação, trabalho no desenvolvimento de sistemas, websites, portais corporativos e aplicativos. Gosto sempre de aprender novas tecnologias, linguagens de programação e idiomas, buscando não me limitar em apenas aprimorar o conhecimento que já possuo, além de auxiliar a equipe com que trabalho, seja com ideias ou com apoio técnico. Além disso, gosto muito de filmes, séries, esportes e conhecer novos lugares.",
         "userLocation": "Brasil",
         "copyright": "Desenvolvido por Douglas Fuelber | 2019"
     },
@@ -23,7 +23,7 @@
         }
     },
     "home": {
-        "subtitle": "Desenvolvedor Full Stack"
+        "subtitle": "Desenvolvedor Web Full Stack"
     },
     "about": {
         "pageTitle": "Sobre mim"
@@ -76,7 +76,7 @@
             "current": "Atual"
         },
         "resumeEducation": {
-            "title": "Education"
+            "title": "Educação"
         },
         "resumeSkills": {
             "title": "Habilidades"
@@ -99,7 +99,7 @@
                     "month": "DEZ",
                     "year": "2018"
                 },
-                "description": "Desenvolvimento de sistemas, websites e portais corporativos em diversas tecnologias e plataformas, destacando-se Microsoft SharePoint, ASP.NET MVC e Wordpress."
+                "description": "Desenvolvimento de sistemas, websites, portais corporativos e aplicativos em diversas tecnologias e plataformas, destacando-se Microsoft SharePoint, ASP.NET MVC, C#, Wordpress e Ionic Framework."
             },
             "2": {
                 "company": "Conectt",
@@ -116,7 +116,7 @@
                 "company": "Conectt",
                 "companyUrl": "https://conectt.com.br/",
                 "companyLocation": "Santa Cruz do Sul / RS / Brasil",
-                "jobTitle": "Estagiário",
+                "jobTitle": "Programador Estagiário",
                 "beginDate": {
                     "month": "NOV",
                     "year": "2016"
@@ -187,24 +187,27 @@
             }
         },
         "skills": {
-            "1": "HTML / CSS",
-            "2": "JavaScript",
-            "3": "JQuery",
-            "4": "C#",
-            "5": "ASP.NET MVC",
-            "6": "Entity Framework",
-            "7": "Microsoft SharePoint",
-            "8": "WordPress",
-            "9": "PHP",
-            "10": "Git",
-            "11": "AngularJS",
-            "12": "React",
-            "13": "Bootstrap",
-            "14": "SASS",
-            "15": "Microsoft SQL Server",
-            "16": "Java",
-            "17": "Photoshop",
-            "18": "Corel Draw"
+            "1": "JavaScript",
+            "2": "C#",
+            "3": "ASP.NET MVC",
+            "4": "React",
+            "5": "HTML/CSS",
+            "6": "Bootstrap",
+            "7": "SASS",
+            "8": "Microsoft SharePoint",
+            "9": "SQL",
+            "10": "WordPress",
+            "11": "PHP",
+            "12": "Git",
+            "13": "AngularJS",
+            "14": "Entity Framework",
+            "15": "LINQ",
+            "16": "Microsoft SQL Server",
+            "17": "MySQL",
+            "18": "Ionic Framework",
+            "19": "Gatsby",            
+            "20": "Photoshop",
+            "21": "Corel Draw"
         }
     }
 }

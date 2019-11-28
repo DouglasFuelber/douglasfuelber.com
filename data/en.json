@@ -1,7 +1,7 @@
 {
     "site": {
-        "description": "Douglas Fuelber - Bachelor in Computer Science at Unisc and full stack developer at Conectt.",
-        "userDescription": "As a programmer, I like to learn new technologies and languages, trying not to limit myself in just improving the knowledge I have already acquired. Also, I really like movies, series, to practice sports and getting to know new places.",
+        "description": "Douglas Fuelber - Full Stack Web Developer",
+        "userDescription": "Programmer since 2016 and graduated in Computer Science, I work developing systems, websites, corporate portals and mobile apps. I like to learn new technologies, programming languages and languages, trying not only to just improve the knowledge I already have, besides helping the team I work with, either with ideas or with technical support. Also, I really like movies, series, sports and getting to know new places.",
         "userLocation": "Brazil",
         "copyright": "Developed by Douglas Fuelber | 2019"
     },
@@ -23,7 +23,7 @@
         }
     },
     "home": {
-        "subtitle": "Full Stack Developer"
+        "subtitle": "Full Stack Web Developer"
     },
     "about": {
         "pageTitle": "About me"
@@ -99,7 +99,7 @@
                     "month": "DEC",
                     "year": "2018"
                 },
-                "description": "Developer of computer systems, websites and corporate portals in diverse technologies and platforms, highlighting Microsoft SharePoint, ASP.NET MVC and Wordpress."
+                "description": "Development of systems, websites, corporate portals and mobile apps in different technologies and platforms, mostly Microsoft SharePoint, ASP.NET MVC, C#, Wordpress and Ionic Framework."
             },
             "2": {
                 "company": "Conectt",
@@ -187,24 +187,27 @@
             }
         },
         "skills": {
-            "1": "HTML / CSS",
-            "2": "JavaScript",
-            "3": "JQuery",
-            "4": "C#",
-            "5": "ASP.NET MVC",
-            "6": "Entity Framework",
-            "7": "Microsoft SharePoint",
-            "8": "WordPress",
-            "9": "PHP",
-            "10": "Git",
-            "11": "AngularJS",
-            "12": "React",
-            "13": "Bootstrap",
-            "14": "SASS",
-            "15": "Microsoft SQL Server",
-            "16": "Java",
-            "17": "Photoshop",
-            "18": "Corel Draw"
+            "1": "JavaScript",
+            "2": "C#",
+            "3": "ASP.NET MVC",
+            "4": "React",
+            "5": "HTML/CSS",
+            "6": "Bootstrap",
+            "7": "SASS",
+            "8": "Microsoft SharePoint",
+            "9": "SQL",
+            "10": "WordPress",
+            "11": "PHP",
+            "12": "Git",
+            "13": "AngularJS",
+            "14": "Entity Framework",
+            "15": "LINQ",
+            "16": "Microsoft SQL Server",
+            "17": "MySQL",
+            "18": "Ionic Framework",
+            "19": "Gatsby",            
+            "20": "Photoshop",
+            "21": "Corel Draw"
         }
     }
 }

@@ -13,10 +13,6 @@
         display: inline-block;
         padding-top: 45px;
         text-align: center;
-  
-        @media (min-width: 768px) {
-            text-align: right;
-        }
     
         h1 {
           color: $md-white-color;

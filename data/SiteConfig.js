@@ -1,14 +1,14 @@
 module.exports = {
   siteTitle: "Douglas Fuelber", // Site title.
   siteTitleShort: "Douglas Site", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: "Douglas Fuelber - Full Stack Developer", // Alternative site title for SEO.
+  siteTitleAlt: "Douglas Fuelber - Full Stack Web Developer", // Alternative site title for SEO.
   siteLogo: "/logos/favicon.png", // Logo used for SEO and manifest.
   siteUrl: "https://www.douglasfuelber.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
   blogPrefix: "/blog", // Prefixes all blog links.
   fixedFooter: false, // Whether the footer component is fixed, i.e. always visible
   recaptchaPublicKey: "6Ld3gIwUAAAAAM9ztAk0bBTf40Oe-dd_-qzv2GON", // Recaptcha public key
-  siteDescription: "Douglas Fuelber - Bachelor in Computer Science at Unisc and full stack developer at Conectt.", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "Douglas Fuelber - Full Stack Web Developer", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "", // FB Application ID for using app insights
   siteGATrackingID: "UA-99213358-1", // Tracking code ID for google analytics.
