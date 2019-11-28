@@ -11,28 +11,28 @@ tags:
   - wordpress
 ---
 
-Ao desenvolver para a plataforma Wordpress, muitas vezes precisamos tipos de post e/ou taxonomias customizadas, de forma que seja possível organizar melhor o conteúdo de nossos sites. Este processo pode ser facilmente realizado através de plugins. No entanto o objetivo deste post é exemplificar rapidamente este processo de criação sem a utilização de nenhum plugin.
+When developing for the Wordpress platform, we often need custom post types or taxonomies so that we can better organize the content of our sites. This process can be easily performed through plugins. However the purpose of this post is to quickly exemplify this creation process without using any plugin.
 
-##Tipo de Post
+##Post Types
 
-O trecho de código abaixo demostra a criação do tipo de post *movie*, para possibilitar o cadastro de filmes em nosso site. No trecho em questão, listo apenas alguns parâmetros e labels para exemplificar. A descrição de cada parâmetro e a lista dos demais parâmetros disponíveis podem ser consultados na documentação do Wordpress para <a href="https://codex.wordpress.org/Function_Reference/register_post_type" target="_blank" rel="noreferrer">registro de tipos de posts</a>.
+The code snippet below demonstrates post type creation *movie*, to allow the registration of films on our site. In the excerpt in question, I list just a few parameters and labels to illustrate. The description of each parameter and the list of other available parameters can be found in the Wordpress documentation for <a href="https://codex.wordpress.org/Function_Reference/register_post_type" target="_blank" rel="noreferrer">register post types</a>.
 
 `gist:DouglasFuelber/1b59d902b9972d9b6f636e9cde31472b#custom-post-type.php`
 
-##Taxonomia
+##Taxonomy
 
-Se, além de cadastrar os filmes em nosso site, gostaríamos de categorizá-los por gênero, podemos fazer uso de uma nova taxonomia. No trecho abaixo realizo a criação da taxonomia *genre*, com alguns poucos parâmetros, e à vinculo com o tipo de post anteriormente criado. Para uma descrição detalhada de cada parâmetro utilizado e consulta de todas opções disponíveis, é possível consultar a documentação do Wordpress para <a href="https://codex.wordpress.org/Function_Reference/register_taxonomy" target="_blank" rel="noreferrer">registro de taxonomias</a>.
+If, in addition to registering the movies on our site, we would like to categorize them by genre, we can make use of a new taxonomy. In the excerpt below I create the taxonomy *genre*, with a few parameters, and link to the previously created post type. For a detailed description of each parameter used and consultation of all available options, you can refer to the documentation for Wordpress <a href="https://codex.wordpress.org/Function_Reference/register_taxonomy" target="_blank" rel="noreferrer">register taxonomies</a>.
 
 `gist:DouglasFuelber/1b59d902b9972d9b6f636e9cde31472b#custom-taxonomy.php`
 
-##Resultado
+##Result
 
-Na imagem abaixo podemos visualizar o resultados dos registros realizados. A tela apresentada é a de criação de um novo filme. Também é possível visualizar, no menu do lado esquerdo o link para a página de gerência dos filmes, e do lado direito, a opções de adicionar os gêneros do filme.
+In the image below we can see the results of the records. The displayed screen is the creation of a new film. You can also see, in the left menu, the link to the movie management page, and on the right, the options to add movie genres.
 
-![Tela de cadastro de filme](/assets/custom-post-type.png "Tela de cadastro de filme")
-<center>Tela de cadastro de filme (Fonte: do autor)</center>
+![Movie register screen](/assets/custom-post-type.png "Movie register screen")
+<center>Movie register screen (Source: the author)</center>
 
-##Referências
+##References
 
 - <a href="https://codex.wordpress.org/Function_Reference/register_post_type" target="_blank" rel="noreferrer">Codex Wordpress: Register post type</a>
 

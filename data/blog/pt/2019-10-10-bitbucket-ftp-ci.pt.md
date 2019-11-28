@@ -39,7 +39,7 @@ Abaixo apresento um exemplo do arquivo de configuração do pipeline utilizado.
 
   - *git ftp push* envia o diretório especificado para o FTP
 
-Caso não deseje enviar arquivos ou pastas esepcificas para o FTP, é possível definir um arquivo *.git-ftp-ignore* dentro do repositório para ignorar alguns caminhos específicos. Sua configuração é exatamente igual ao *.git-ignore*.
+Caso não deseje enviar arquivos ou pastas especificas para o FTP, é possível definir um arquivo *.git-ftp-ignore* dentro do repositório para ignorar alguns caminhos específicos. Sua configuração é exatamente igual ao *.git-ignore*.
 
 ##Referências
 

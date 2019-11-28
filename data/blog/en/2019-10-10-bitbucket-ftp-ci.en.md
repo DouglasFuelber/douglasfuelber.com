@@ -11,37 +11,37 @@ tags:
   - tutorial
 ---
 
-Durante o desenvolvimento de um tema para um site em Wordpress, me deparei com uma situação que tomava muito tempo durante a aplicação de algum ajuste no ambiente de homologação utilizado pelo cliente: para cada alteração que desejava aplicar nesse ambiente, eu necessitava subir os arquivos via FTP para o servidor.
+While developing a theme for a website in Wordpress, I came across a situation that was taking too long while applying some adjustment in the customer approval environment: for every change I wanted to apply to this environment, I needed to upload the files through FTP to the server.
 
-Esta é uma situação muito comum neste tipo de desenvolvimento, porém queria otimizar esta atividade. Como o projeto estava sendo armazenado no BitBucket, encontrei uma maneira de utilizar os <a href="https://bitbucket.org/product/br/features/pipelines" target="_blank" rel="noreferrer">pipelines do BitBucket</a>, juntamente com o <a href="https://git-ftp.github.io/" target="_blank" rel="noreferrer">Git-FTP</a>.
+This is a very common situation in this type of development, but I wanted to optimize this activity. As the project was being stored in BitBucket, I found a way to use the <a href="https://bitbucket.org/product/br/features/pipelines" target="_blank" rel="noreferrer">BitBucket pipelines</a>, together with <a href="https://git-ftp.github.io/" target="_blank" rel="noreferrer">Git-FTP</a>.
 
-A configuração do pipeline no BitBucket acontece através de um arquivo *bitbucket-pipelines.yml* criado dentro do repositório. A estrutura do arquivo e como configurá-lo pode ser verificada na <a href="https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html" target="_blank" rel="noreferrer">documentação do BitBucket</a>.
+Pipeline configuration in BitBucket is realized through a file *bitbucket-pipelines.yml* created within the repository. The file structure and how to configure it can be checked at <a href="https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html" target="_blank" rel="noreferrer">BitBucket docs</a>.
 
-Abaixo apresento um exemplo do arquivo de configuração do pipeline utilizado.
+Below is an example of the pipeline configuration file used.
 
 `gist:DouglasFuelber/195e3a64a26c8eb5ddae64cb0ddebfa2`
 
-- A seção *default* possui a definição do pipeline para as branches que não se encaixam em outras seções (é possível definir um trecho específico a ser executado apenas para uma determinada branch ou tag - muito útil quando se possui uma branch específica para determinado ambiente ou que necessite de ações específicas). Obs.: A seção *default* é executada automaticamente quando um push é realizado no repositório, a não ser que seja definido um pipeline para uma branch específica.
+- The section *default* has a pipeline definition for branches that do not fit into other sections (you can define a specific snippet to be executed only for a particular branch or tag - very useful when you have a specific branch for a particular environment or need specific actions ). Note: The secion *default* is executed automatically when a push is made to the repository unless a pipeline is defined for a specific branch.
 
-- O comando *step* define um bloco a ser executado pelo pipeline. Se forem definidas várias *steps*, elas são executadas de maneira sequencial.
+- The command *step* defines a block to be executed by the pipeline. If multiple *steps*, they are executed sequentially.
 
-- O bloco *script* contém os comandos que o pipeline deve executar.
+- The block *script* contains the commands that the pipeline should execute.
 
-  - Inicialmente são executados dois comandos *apt-get* para instalar o Git-Ftp
+  - Initially two commands are executed *apt-get* to install Git-Ftp
 
-  - *git config git.ftp.syncroot* especifica qual a pasta do seu repositório que você deseja enviar
+  - *git config git.ftp.syncroot* specify which folder of your repository you want to upload
 
-  - *git config git.ftp.url* especifica o diretório de destino no FTP
+  - *git config git.ftp.url* specify destination directory in FTP
 
-  - *git config git-ftp.user* define o usuário do FTP
+  - *git config git-ftp.user* define FTP user
 
-  - *git config git-ftp.password* define a senha do FTP
+  - *git config git-ftp.password* define FTP password
 
-  - *git ftp push* envia o diretório especificado para o FTP
+  - *git ftp push* send specified directory to FTP
 
-Caso não deseje enviar arquivos ou pastas esepcificas para o FTP, é possível definir um arquivo *.git-ftp-ignore* dentro do repositório para ignorar alguns caminhos específicos. Sua configuração é exatamente igual ao *.git-ignore*.
+If you do not want to send specific files or folders to FTP, you can define a file *.git-ftp-ignore* within the repository to ignore some specific paths. Its configuration is exactly the same as *.git-ignore*.
 
-##Referências
+##References
 
 - <a href="https://bitbucket.org/product/br/features/pipelines" target="_blank" rel="noreferrer">Bitbucket Pipelines</a>
 

@@ -11,7 +11,7 @@ tags:
   - wordpress
 ---
 
-Ao desenvolver para a plataforma Wordpress, muitas vezes precisamos tipos de post e/ou taxonomias customizadas, de forma que seja possível organizar melhor o conteúdo de nossos sites. Este processo pode ser facilmente realizado através de plugins. No entanto o objetivo deste post é exemplificar rapidamente este processo de criação sem a utilização de nenhum plugin.
+Ao desenvolver para a plataforma Wordpress, muitas vezes precisamos tipos de post ou taxonomias customizadas, de forma que seja possível organizar melhor o conteúdo de nossos sites. Este processo pode ser facilmente realizado através de plugins. No entanto o objetivo deste post é exemplificar rapidamente este processo de criação sem a utilização de nenhum plugin.
 
 ##Tipo de Post
 
