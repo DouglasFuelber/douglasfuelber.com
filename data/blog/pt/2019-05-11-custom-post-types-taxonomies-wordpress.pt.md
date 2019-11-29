@@ -5,7 +5,6 @@ cover: 2.jpg
 slug: custom-post-types-taxonomies-wordpress
 category: programming
 language: pt
-key: cpt-wordpress
 tags:
   - tutorial
   - wordpress

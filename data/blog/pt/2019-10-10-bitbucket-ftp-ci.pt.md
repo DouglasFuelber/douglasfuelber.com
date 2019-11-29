@@ -5,7 +5,6 @@ cover: bitbucket-pipeline.jpeg
 slug: bitbucket-ftp-ci
 category: devops
 language: pt
-key: bitbucket-ci
 tags:
   - ci/cd
   - tutorial
