@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import { useIntl } from "gatsby-plugin-intl"
 import Navigation from "../Navigation";
 
-import config from "../../../data/SiteConfig";
+import config from "../../data/site-data";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@fortawesome/fontawesome-free/js/all.min.js";

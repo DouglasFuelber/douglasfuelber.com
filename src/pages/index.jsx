@@ -5,7 +5,7 @@ import { useIntl } from "gatsby-plugin-intl";
 import HomeLinks from "../components/HomeLinks";
 import Layout from "../components/Layout";
 
-import config from "../../data/SiteConfig";
+import config from "../data/site-data";
 
 import "./index.scss";
 

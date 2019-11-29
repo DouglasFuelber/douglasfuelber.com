@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useIntl } from "gatsby-plugin-intl";
 
-import { navigationLinks } from "../../../data/SiteConfig";
+import { navigationLinks } from "../../data/site-data";
 
 import "./HomeLinks.scss";
 

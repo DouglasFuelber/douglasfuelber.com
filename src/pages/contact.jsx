@@ -5,7 +5,7 @@ import { useIntl } from "gatsby-plugin-intl";
 import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
 
-import config from "../../data/SiteConfig";
+import config from "../data/site-data";
 
 import "./contact.scss";
 

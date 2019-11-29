@@ -1,4 +1,4 @@
-const config = require("./data/SiteConfig");
+const config = require("./src/data/site-data");
 const urljoin = require("url-join");
 
 const regexExcludeRobots = /^(?!\/(dev-404-page|404|offline-plugin-app-shell-fallback|tags|categories|success|site)).*$/;
@@ -32,7 +32,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "posts",
-        path: `${__dirname}/data/blog/`
+        path: `${__dirname}/src/pages/blog/`
       }
     },
     {
@@ -213,7 +213,7 @@ module.exports = {
       resolve: `gatsby-plugin-intl`,
       options: {
         // language JSON resource path
-        path: `${__dirname}/data`,
+        path: `${__dirname}/src/intl`,
         // supported language
         languages: config.languageKeys,
         // language file path

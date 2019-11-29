@@ -1,7 +1,7 @@
 import React from "react";
 import { SelectField } from 'react-md';
 import { useIntl, changeLocale } from "gatsby-plugin-intl";
-import { languages } from "../../../data/SiteConfig";
+import { languages } from "../../data/site-data";
 
 import "./Languages.scss";
 

@@ -5,7 +5,7 @@ import Button from "react-md/lib/Buttons";
 import Card from "react-md/lib/Cards";
 import CardText from "react-md/lib/Cards/CardText";
 import CardTitle from "react-md/lib/Cards/CardTitle";
-import config from "../../data/SiteConfig";
+import config from "../data/site-data";
 import DisqusArea from "../components/Disqus";
 import FontIcon from "react-md/lib/FontIcons";
 import { graphql } from "gatsby";

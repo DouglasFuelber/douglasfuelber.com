@@ -7,7 +7,7 @@ import Avatar from "react-md/lib/Avatars";
 import { useIntl } from "gatsby-plugin-intl"
 import FontIcon from "react-md/lib/FontIcons";
 import Snackbar from "react-md/lib/Snackbars";
-import config from "../../../data/SiteConfig";
+import config from "../../data/site-data";
 import "./Disqus.scss";
 
 const DisqusArea = ({ postNode, expanded }) => {

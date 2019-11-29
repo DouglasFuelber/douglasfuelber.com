@@ -4,7 +4,7 @@ import Button from "react-md/lib/Buttons";
 import { useIntl } from "gatsby-plugin-intl"
 import ReCAPTCHA from "react-google-recaptcha";
 
-import config from "../../../data/SiteConfig";
+import config from "../../data/site-data";
 
 import "./ContactForm.scss";
 

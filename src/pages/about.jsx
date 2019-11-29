@@ -11,7 +11,7 @@ import ResumeLanguages from "../components/ResumeLanguages";
 import ResumePublications from "../components/ResumePublications";
 import ResumeSkills from "../components/ResumeSkills";
 
-import config from "../../data/SiteConfig";
+import config from "../data/site-data";
 
 import "./about.scss";
 

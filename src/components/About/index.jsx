@@ -1,7 +1,7 @@
 import React from "react";
 import { useIntl } from "gatsby-plugin-intl";
 
-import config from "../../../data/SiteConfig";
+import config from "../../data/site-data";
 
 import "./About.scss";
 

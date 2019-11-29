@@ -1,7 +1,7 @@
 import React from "react";
 import ContactLinks from "../ContactLinks";
 import { useIntl } from "gatsby-plugin-intl";
-import config, { fixedFooter, userLinks } from "../../../data/SiteConfig";
+import config, { fixedFooter, userLinks } from "../../data/site-data";
 import "./Footer.scss";
 
 export default () => {

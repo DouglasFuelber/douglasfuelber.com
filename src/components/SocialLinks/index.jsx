@@ -14,7 +14,7 @@ import {
   LinkedinIcon
 } from "react-share";
 import urljoin from "url-join";
-import config from "../../../data/SiteConfig";
+import config from "../../data/site-data";
 import "./SocialLinks.scss";
 
 export default ({ postNode, postPath, mobile }) => {

@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import { useIntl, Link } from "gatsby-plugin-intl";
 import PostListing from "../components/PostListing";
 import Layout from "../components/Layout";
-import config from "../../data/SiteConfig";
+import config from "../data/site-data";
 
 const CategoryTemplate = ({pageContext, data: { posts, categories, tags}, location}) => {
   const { category } = pageContext;

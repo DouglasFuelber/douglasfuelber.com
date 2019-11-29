@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import urljoin from "url-join";
 import { useIntl } from "gatsby-plugin-intl";
-import config from "../../../data/SiteConfig";
+import config from "../../data/site-data";
 
 export default ({ postNode, postPath, postSEO }) => {
 
