@@ -213,7 +213,7 @@ module.exports = {
       resolve: `gatsby-plugin-intl`,
       options: {
         // language JSON resource path
-        path: `${__dirname}/src/intl`,
+        path: `${__dirname}/src/i18n`,
         // supported language
         languages: config.languageKeys,
         // language file path
