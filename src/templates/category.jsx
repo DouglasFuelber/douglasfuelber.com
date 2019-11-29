@@ -27,7 +27,7 @@ const CategoryTemplate = ({pageContext, data: { posts, categories, tags}, locati
           <Link style={{ textDecoration: "none" }} to="/blog/">
             <h1 className="left-border-area light-border">Blog</h1>
           </Link>
-          <h2>{intl.formatMessage({ id: `blog.categories.category` })}: <span className="md-text-uppercase">{category}</span></h2>
+          <h2>{intl.formatMessage({ id: `blog.categories.category` })}: <span className="md-text-uppercase">{intl.formatMessage({ id: `blog.categories.${category}` })}</span></h2>
         </div>
 
         <div id="page_content">
