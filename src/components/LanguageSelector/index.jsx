@@ -3,7 +3,7 @@ import { SelectField } from 'react-md';
 import { useIntl, changeLocale } from "gatsby-plugin-intl";
 import { languages } from "../../data/site-data";
 
-import "./Languages.scss";
+import "./LanguageSelector.scss";
 
 export default () => {
     const intl = useIntl();

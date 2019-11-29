@@ -1,6 +1,6 @@
 import React from "react";
 import NavigationDrawer from "react-md/lib/NavigationDrawers";
-import Languages from "../Languages";
+import LanguageSelector from "../LanguageSelector";
 import Footer from "../Footer";
 import GetNavList from "./NavList";
 import "./Navigation.scss";
@@ -16,7 +16,7 @@ export default ({ children, config, LocalTitle }) => {
       tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY_MINI}
       desktopDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
     >
-      <Languages/>
+      <LanguageSelector />
       <div className="main-container">{children}</div>
       <Footer userLinks={footerLinks} />
     </NavigationDrawer>
