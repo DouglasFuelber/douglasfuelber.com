@@ -1,8 +1,9 @@
 import React from "react";
 import { Grid, Cell } from 'react-md';
 import { useIntl } from "gatsby-plugin-intl";
+import LevelCounter from "../LevelCounter";
 
-import { resume }  from "../../i18n/en";
+import config from "../../data/site-data";
 
 import "./ResumeSkills.scss";
 
@@ -10,9 +11,10 @@ export default () => {
     const intl = useIntl();
 
     const getSkills = () => {
-        return Object.keys(resume.skills).map(key => (
+        return config.userSkills.sort((a, b) => (a.level < b.level) ? 1 : -1).map(skill => (
             <Cell size="4" className="skill left-border-area light-border">
-                <h4 className="skill-title">{intl.formatMessage({ id: `resume.skills.${key}` })}</h4>
+                <h4 className="skill-title">{skill.label}</h4>
+                <LevelCounter level={skill.level} totalLevel={5} />
             </Cell>
         ));
     }

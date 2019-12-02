@@ -185,29 +185,6 @@
                     "name": "Profª. Drª. Rejane Frozza"
                 }
             }
-        },
-        "skills": {
-            "1": "JavaScript",
-            "2": "C#",
-            "3": "ASP.NET MVC",
-            "4": "React",
-            "5": "HTML/CSS",
-            "6": "Bootstrap",
-            "7": "SASS",
-            "8": "Microsoft SharePoint",
-            "9": "SQL",
-            "10": "WordPress",
-            "11": "PHP",
-            "12": "Git",
-            "13": "AngularJS",
-            "14": "Entity Framework",
-            "15": "LINQ",
-            "16": "Microsoft SQL Server",
-            "17": "MySQL",
-            "18": "Ionic Framework",
-            "19": "Gatsby",            
-            "20": "Photoshop",
-            "21": "Corel Draw"
         }
     }
 }
