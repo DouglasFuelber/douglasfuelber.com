@@ -22,10 +22,10 @@ module.exports = {
   languages: [
     {
       value: 'en',
-      label: 'English'
+      label: 'EN'
     }, {
       value: 'pt',
-      label: 'Português'
+      label: 'PT'
     }
   ],
   defaultLanguage: 'en',

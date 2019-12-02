@@ -4,37 +4,29 @@
     background-color: transparent;
     color: $md-white-color;
     position: absolute;
-    right: 0;
-    z-index: 50;
-
-    .language-icon {
-        left: 10px;
-        position: absolute;
-    }
+    right: 15px;
+    top: 15px;    
+    z-index: 20;
 
     .language-selector {
-        width: 120px;
+        display: inline-block;
+        margin-left: 10px;
+        padding: 0;
 
-        .md-list-tile,
-        .md-select-field--btn {
-            padding: 0;
-            padding-left: 35px;
-        }
+        .language-item {
+            cursor: pointer;
+            font-size: 16px;
+            padding-left: 10px;
 
-        .md-text,
-        .md-text-field,
-        .md-icon {
-            color: $md-white-color;
-            font-size: 15px;
-            
-        }
-
-        ul {
-            background-color: transparent;
-
-            &.md-paper--2 {
-                box-shadow: none;
+            &.active {
+                font-weight: bold;
             }
         }
+    }
+}
+
+.md-drawer-relative {
+    #languagesSelector {
+        z-index: 15;
     }
 }
