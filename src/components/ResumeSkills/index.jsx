@@ -3,7 +3,7 @@ import { Grid, Cell } from 'react-md';
 import { useIntl } from "gatsby-plugin-intl";
 import LevelCounter from "../LevelCounter";
 
-import config from "../../data/site-data";
+import { userSkills } from "../../data/site-data";
 
 import "./ResumeSkills.scss";
 
@@ -11,7 +11,7 @@ export default () => {
     const intl = useIntl();
 
     const getSkills = () => {
-        return config.userSkills.sort((a, b) => (a.level < b.level) ? 1 : -1).map(skill => (
+        return userSkills.sort((a, b) => (a.level < b.level) ? 1 : -1).map(skill => (
             <Cell size="4" className="skill left-border-area light-border">
                 <h4 className="skill-title">{skill.label}</h4>
                 <LevelCounter level={skill.level} />
