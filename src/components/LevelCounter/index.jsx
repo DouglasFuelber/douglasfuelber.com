@@ -2,16 +2,14 @@ import React from 'react';
 
 import "./LevelCounter.scss";
 
-export default ({ levelCount, totalLevel }) => {
-    const getLevels = () => {
-        let levels = [];
-        for (let x = 1; x <= totalLevel; x++) levels.push(x);
-
-        return levels.map((level, i) => <div className={`level-counter-item ${level <= levelCount ? "active" : ""}`} key={i} />)
+export default ({ level, totalLevel }) => {
+    const getLevel = () => {
+        return {
+            width: `${(level * 100) / totalLevel}%`
+        }
     }
 
     return <div className="level-counter">
-        {getLevels()}
+        <div className="level-counter-item" style={getLevel()}></div>
     </div>
-
 }

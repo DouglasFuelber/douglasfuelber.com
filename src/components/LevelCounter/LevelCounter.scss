@@ -1,18 +1,13 @@
 @import "../../layout/theme.scss";
 
 .level-counter {      
-    display: flex;
-    justify-content: flex-start;
+    background-color: $md-tertiary-color;
+    display: block;
+    height: 3px;
     margin-top: 5px;
     
     .level-counter-item {
-        background-color: $md-tertiary-color;        
-        flex: 1;                
-        height: 4px;
-        margin-right: 5px;
-        
-        &.active {
-            background-color: $md-secondary-color;
-        }
+        background-color: $md-secondary-color;
+        height: inherit;
     }
 }
