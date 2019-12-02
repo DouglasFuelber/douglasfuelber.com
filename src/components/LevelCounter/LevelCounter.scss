@@ -5,9 +5,11 @@
     display: block;
     height: 3px;
     margin-top: 5px;
+    overflow: hidden;
     
     .level-counter-item {
         background-color: $md-secondary-color;
         height: inherit;
+        transition-duration: 2s;
     }
 }

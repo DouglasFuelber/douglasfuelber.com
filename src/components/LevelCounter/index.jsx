@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import TrackVisibility from 'react-on-screen';
 
 import "./LevelCounter.scss";
 
-export default ({ level, totalLevel }) => {
-    const getLevel = () => {
-        return {
-            width: `${(level * 100) / totalLevel}%`
-        }
-    }
+export const LevelBar = ({ totalLevel = 5, level, isVisible }) => {
+    const [levelState, setLevelState] = useState({
+        width: "0%"
+    });
 
-    return <div className="level-counter">
-        <div className="level-counter-item" style={getLevel()}></div>
-    </div>
+    useEffect(() => {
+        if (isVisible)
+            setLevelState({
+                width: `${((level * 100) / totalLevel)}%`
+            })
+    }, [isVisible]);
+
+    return <div className="level-counter-item" style={levelState}></div>
+}
+
+export default ({ level, totalLevel }) => {
+    return <TrackVisibility className="level-counter" once>
+        <LevelBar level={level} totalLevel={totalLevel} />
+    </TrackVisibility>
 }
