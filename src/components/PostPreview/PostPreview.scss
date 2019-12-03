@@ -22,7 +22,9 @@
     }    
 
     .post-excerpt {
+        color: $md-tertiary-color;
         font-size: 18px;
+        font-weight: 500;
 
         &.left-border-area {
             margin-left: 16px;
