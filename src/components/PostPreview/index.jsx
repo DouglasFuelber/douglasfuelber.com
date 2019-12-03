@@ -9,6 +9,7 @@ import FontIcon from "react-md/lib/FontIcons";
 import _ from "lodash";
 import moment from "moment";
 import Media, { MediaOverlay } from "react-md/lib/Media";
+import PostCategory from "../PostCategory";
 import PostTags from "../PostTags";
 import PostCover from "../PostCover";
 import "./PostPreview.scss";
@@ -49,18 +50,7 @@ export default ({ postInfo }) => {
           title={`${intl.formatMessage({ id: `blog.posts.publishedIn` })} ${intl.formatDate(moment(postInfo.date))}`}
           subtitle={`${postInfo.timeToRead} ${intl.formatMessage({ id: `blog.posts.minutesReading` })}`}>
         </CardTitle>
-        <Link
-          className="category-link md-cell--6"
-          to={`/blog/categories/${_.kebabCase(postInfo.category)}`}>
-          <CardTitle
-            className="post-description"
-            avatar={
-              <Avatar icon={<FontIcon iconClassName="fa fa-folder-open" />} />
-            }
-            title={intl.formatMessage({ id: `blog.posts.inCategory` })}
-            subtitle={intl.formatMessage({ id: `blog.categories.${postInfo.category}` })}
-          />
-        </Link>
+        <PostCategory category={postInfo.category}/>
         <CardText className="post-excerpt md-cell--12 left-border-area">
           {postInfo.excerpt}
         </CardText>

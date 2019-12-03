@@ -16,6 +16,7 @@ import moment from "moment";
 
 import Layout from "../components/Layout";
 import PostTags from "../components/PostTags";
+import PostCategory from "../components/PostCategory";
 import PostCover from "../components/PostCover";
 //import PostSuggestions from "../components/PostSuggestions";
 import SEO from "../components/SEO";
@@ -92,18 +93,7 @@ const PostTemplate = ({ pageContext, data, location }) => {
                   title={`${intl.formatMessage({ id: `blog.posts.publishedIn` })} ${intl.formatDate(moment(post.date))}`}
                   subtitle={`${postNode.timeToRead} ${intl.formatMessage({ id: `blog.posts.minutesReading` })}`}>
                 </CardTitle>
-                <Link
-                  className="category-link md-cell--6"
-                  to={`/blog/categories/${_.kebabCase(post.category)}`}>
-                  <CardTitle
-                    className="post-description"
-                    avatar={
-                      <Avatar icon={<FontIcon iconClassName="fa fa-folder-open" />} />
-                    }
-                    title={intl.formatMessage({ id: `blog.posts.inCategory` })}
-                    subtitle={intl.formatMessage({ id: `blog.categories.${post.category}` })}
-                  />
-                </Link>
+                <PostCategory category={post.category} />
                 <CardText className="post-info md-cell--12">
                   <div className="post-body" dangerouslySetInnerHTML={{ __html: postNode.html }} />
                 </CardText>
