@@ -12,6 +12,7 @@ import Helmet from "react-helmet";
 import Media, { MediaOverlay } from "react-md/lib/Media";
 
 import Layout from "../components/Layout";
+import PageTitle from "../components/PageTitle";
 import PostCategory from "../components/PostCategory";
 import PostCover from "../components/PostCover";
 import PostDateTime from "../components/PostDateTime";
@@ -65,11 +66,7 @@ const PostTemplate = ({ pageContext, data, location }) => {
 
       <div id="post-wrapper" className="tertiary_bg">
 
-        <div id="page_title" className="md-grid md-cell--8">
-          <Link style={{ textDecoration: "none" }} to="/blog/">
-            <h2 className="left-border-area light-border title">Blog</h2>
-          </Link>
-        </div>
+        <PageTitle title="Blog" post />
 
         <div id="page_content">
           <div className="primary_bg card-wrapper">

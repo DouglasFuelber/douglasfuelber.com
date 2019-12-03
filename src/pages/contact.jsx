@@ -4,6 +4,7 @@ import { useIntl } from "gatsby-plugin-intl";
 
 import ContactForm from "../components/ContactForm";
 import Layout from "../components/Layout";
+import PageTitle from "../components/PageTitle";
 
 import config from "../data/site-data";
 
@@ -21,9 +22,7 @@ const ContactPage = ({ location }) => {
 
     <div id="contact-container" className="tertiary_bg">
 
-      <div id="page_title" className="md-grid md-cell--10">
-        <h1 className="left-border-area light-border">{intl.formatMessage({ id: "contact.pageTitle" })}</h1>
-      </div>
+      <PageTitle title={intl.formatMessage({ id: "contact.pageTitle" })} />
 
       <div id="page_content">
         <ContactForm />

@@ -1,7 +1,8 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
-import { useIntl, Link } from "gatsby-plugin-intl";
+import { useIntl } from "gatsby-plugin-intl";
+import PageTitle from "../components/PageTitle";
 import PostListing from "../components/PostListing";
 import Layout from "../components/Layout";
 import config from "../data/site-data";
@@ -23,12 +24,9 @@ const CategoryTemplate = ({pageContext, data: { posts, categories, tags}, locati
 
       <div id="blog-container" className="tertiary_bg">
 
-        <div id="page_title" className="md-grid md-cell--10">
-          <Link style={{ textDecoration: "none" }} to="/blog/">
-            <h1 className="left-border-area light-border">Blog</h1>
-          </Link>
-          <h2>{intl.formatMessage({ id: `blog.categories.category` })}: <span className="md-text-uppercase">{intl.formatMessage({ id: `blog.categories.${category}` })}</span></h2>
-        </div>
+        <PageTitle title="Blog"
+          subtitle1={intl.formatMessage({ id: `blog.categories.category` })}
+          subtitle2={intl.formatMessage({ id: `blog.categories.${category}` })} />
 
         <div id="page_content">
           <PostListing postEdges={postEdges} categoriesEdges={categories.edges} tagsEdges={tags.edges} location={location} /> 

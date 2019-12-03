@@ -5,6 +5,7 @@ import { useIntl } from "gatsby-plugin-intl";
 import Layout from "../components/Layout";
 import About from "../components/About";
 import LinkedInBadge from "../components/LinkedInBadge";
+import PageTitle from "../components/PageTitle";
 import ResumeCareer from "../components/ResumeCareer";
 import ResumeEducation from "../components/ResumeEducation";
 import ResumeLanguages from "../components/ResumeLanguages";
@@ -25,9 +26,8 @@ const AboutPage = ({ location }) => {
         <link rel="canonical" href={`${config.siteUrl}/${intl.locale}/about/`} />
       </Helmet>
 
-      <div id="page_title" className="md-grid md-cell--10">
-        <h1 className="left-border-area light-border">{intl.formatMessage({ id: "about.pageTitle" })}</h1>
-      </div>
+      <PageTitle title={intl.formatMessage({ id: "about.pageTitle" })} />
+
       <div id="page_content">
         <About />
         <ResumeCareer />

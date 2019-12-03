@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import { useIntl } from "gatsby-plugin-intl";
 
 import Layout from "../components/Layout";
+import PageTitle from "../components/PageTitle";
 import PostListing from "../components/PostListing";
 import SEO from "../components/SEO";
 
@@ -25,9 +26,7 @@ const BlogPage = ({location, data: { posts, categories, tags}}) => {
 
         <div id="blog-container" className="tertiary_bg">
         
-            <div id="page_title" className="md-grid md-cell--10">
-                <h1 className="left-border-area light-border">Blog</h1>
-            </div>
+            <PageTitle title="Blog" />
 
             <div id="page_content">
               <PostListing postEdges={postEdges} categoriesEdges={categories.edges} tagsEdges={tags.edges} location={location} />
