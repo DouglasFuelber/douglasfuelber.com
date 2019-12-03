@@ -1,20 +1,26 @@
 @import "../../layout/theme.scss";
 
-.category-chip {
-    &.md-chip {
-        background-color: $md-primary-color;
-        margin: 2px;
-    
-        .md-chip-text{
-            color: $md-white-color;
-            font-size: 14px;
-            font-weight: 700;
+.category-list {
+    .left-border-area {
+        padding-left: 5px;
+
+        .category-chip {
+            &.md-chip {
+                background-color: $md-primary-color;
+                margin: 2px;
+            
+                .md-chip-text{
+                    color: $md-white-color;
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+                &.active {
+                    background-color: $md-tertiary-color;
+                }
+                &:hover {
+                    background-color: $md-tertiary-color;
+                }    
+            }    
         }
-        &.active {
-            background-color: $md-tertiary-color;
-        }
-        &:hover {
-            background-color: $md-tertiary-color;
-        }    
     }    
 }

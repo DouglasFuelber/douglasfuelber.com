@@ -57,8 +57,8 @@ export default ({ categoriesEdges, location }) => {
   const categoriesList = getCategoriesList();
 
   return (
-    <div className="md-grid md-grid--no-spacing md-cell--middle primary_bg">
-      <div id="post-container" className="md-grid md-cell--8 mobile-fix">
+    <div className="primary_bg">
+      <div id="post-container" className="category-list md-cell--8">
         <h3>{intl.formatMessage({ id: "blog.categories.categories" })}</h3>
         <div className="left-border-area light-border">
           {categoriesList.map(category => (

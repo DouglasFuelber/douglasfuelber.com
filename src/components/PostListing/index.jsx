@@ -34,11 +34,11 @@ export default ({ location, postEdges, categoriesEdges, tagsEdges }) => {
 
   return (
     <div id="posts-wrapper" className="md-grid md-grid--no-spacing md-cell--middle primary_bg">
-      <div className="md-cell--3 md-cell--order-2-desktop mobile-fix">
+      <div className="md-cell--12 md-cell--3-desktop md-cell--order-2-desktop mobile-fix">
         <PostCategoriesListing location={location} categoriesEdges={categoriesEdges} />
         <PostTagsListing location={location} tagsEdges={tagsEdges} />
       </div>
-      <div id="post-container" className="md-cell--9 mobile-fix">
+      <div id="post-container" className="md-cell--12 md-cell--9-desktop mobile-fix">
         {postList.map(post => (
           <PostPreview key={post.title} postInfo={post} />
         ))}

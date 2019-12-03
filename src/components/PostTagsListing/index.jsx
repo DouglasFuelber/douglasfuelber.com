@@ -59,8 +59,8 @@ export default ({ tagsEdges, location }) => {
   const tagsList = getTagsList();
 
   return (
-    <div className="md-grid md-grid--no-spacing md-cell--middle primary_bg">
-      <div id="post-container" className="md-grid md-cell--8 mobile-fix">
+    <div className="primary_bg">
+      <div id="post-container" className="tag-list md-cell--8">
         <h3>Tags</h3>
         <div className="left-border-area light-border">
           {tagsList.map(tag => (
