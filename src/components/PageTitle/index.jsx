@@ -8,6 +8,5 @@ export default ({ title, subtitle1 = null, subtitle2 = null, post = false }) => 
         }
         {(subtitle1 != null && subtitle2 != null) 
             ? <h2>{subtitle1}: <span className="md-text-uppercase">{subtitle2}</span></h2> : ""}            
-    }
     </div>
 }
