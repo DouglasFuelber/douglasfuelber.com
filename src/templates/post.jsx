@@ -1,5 +1,6 @@
 import _ from "lodash";
 import React, { useState, useEffect } from "react";
+import { Grid, Cell } from 'react-md';
 import Button from "react-md/lib/Buttons";
 import Card from "react-md/lib/Cards";
 import CardText from "react-md/lib/Cards/CardText";
@@ -82,10 +83,13 @@ const PostTemplate = ({ pageContext, data, location }) => {
                   </div>
                 </MediaOverlay>
               </Media>
-
-              <div className="md-grid">
-                <PostDateTime date={post.date} timeToRead={postNode.timeToRead} />
-                <PostCategory category={post.category} />
+              <Grid>
+                <Cell size={6}>
+                  <PostDateTime date={post.date} timeToRead={postNode.timeToRead} />
+                </Cell>
+                <Cell size={6}>
+                  <PostCategory category={post.category} />
+                </Cell>
                 <CardText className="post-info md-cell--12">
                   <div className="post-body" dangerouslySetInnerHTML={{ __html: postNode.html }} />
                 </CardText>
@@ -97,8 +101,7 @@ const PostTemplate = ({ pageContext, data, location }) => {
                     mobile={mobile}
                   />
                 </CardText>
-
-              </div>
+              </Grid>
             </Card>
 
             <UserInfo

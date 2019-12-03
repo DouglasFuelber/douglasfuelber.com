@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useIntl, Link } from "gatsby-plugin-intl";
+import { Grid, Cell } from 'react-md';
 import Card from "react-md/lib/Cards/Card";
 import CardTitle from "react-md/lib/Cards/CardTitle";
 import Button from "react-md/lib/Buttons";
@@ -41,13 +42,17 @@ export default ({ postInfo }) => {
           </MediaOverlay>
         </Media>
       </Link>
-      <div className="md-grid">
-        <PostDateTime date={postInfo.date} timeToRead={postInfo.timeToRead}/>
-        <PostCategory category={postInfo.category}/>
+      <Grid>
+        <Cell size="6">
+          <PostDateTime date={postInfo.date} timeToRead={postInfo.timeToRead} />
+        </Cell>
+        <Cell size="6">
+          <PostCategory category={postInfo.category} />
+        </Cell>
         <CardText className="post-excerpt md-cell--12 left-border-area">
           {postInfo.excerpt}
         </CardText>
-      </div>
+      </Grid>
       <PostTags tags={postInfo.tags} />
       <div className="md-grid">
         <Link className="md-cell--center" style={{ textDecoration: "none" }} to={`/blog/${postInfo.path}`}>

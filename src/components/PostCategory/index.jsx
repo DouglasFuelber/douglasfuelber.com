@@ -11,7 +11,7 @@ export default ({ category }) => {
     const intl = useIntl();
 
     return <Link
-        className="category-link md-cell--6"
+        className="category-link"
         to={`/blog/categories/${_.kebabCase(category)}`}>
         <CardTitle
             className="post-category"
