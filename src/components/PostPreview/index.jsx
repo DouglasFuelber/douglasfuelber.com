@@ -3,15 +3,13 @@ import { useIntl, Link } from "gatsby-plugin-intl";
 import Card from "react-md/lib/Cards/Card";
 import CardTitle from "react-md/lib/Cards/CardTitle";
 import Button from "react-md/lib/Buttons";
-import Avatar from "react-md/lib/Avatars";
 import CardText from "react-md/lib/Cards/CardText";
-import FontIcon from "react-md/lib/FontIcons";
 import _ from "lodash";
-import moment from "moment";
 import Media, { MediaOverlay } from "react-md/lib/Media";
 import PostCategory from "../PostCategory";
-import PostTags from "../PostTags";
 import PostCover from "../PostCover";
+import PostDateTime from "../PostDateTime";
+import PostTags from "../PostTags";
 import "./PostPreview.scss";
 
 export default ({ postInfo }) => {
@@ -44,12 +42,7 @@ export default ({ postInfo }) => {
         </Media>
       </Link>
       <div className="md-grid">
-        <CardTitle
-          className="post-description md-cell--6"
-          avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
-          title={`${intl.formatMessage({ id: `blog.posts.publishedIn` })} ${intl.formatDate(moment(postInfo.date))}`}
-          subtitle={`${postInfo.timeToRead} ${intl.formatMessage({ id: `blog.posts.minutesReading` })}`}>
-        </CardTitle>
+        <PostDateTime date={postInfo.date} timeToRead={postInfo.timeToRead}/>
         <PostCategory category={postInfo.category}/>
         <CardText className="post-excerpt md-cell--12 left-border-area">
           {postInfo.excerpt}

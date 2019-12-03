@@ -1,23 +1,20 @@
 import _ from "lodash";
 import React, { useState, useEffect } from "react";
-import Avatar from "react-md/lib/Avatars";
 import Button from "react-md/lib/Buttons";
 import Card from "react-md/lib/Cards";
 import CardText from "react-md/lib/Cards/CardText";
-import CardTitle from "react-md/lib/Cards/CardTitle";
 import config from "../data/site-data";
 import DisqusArea from "../components/Disqus";
-import FontIcon from "react-md/lib/FontIcons";
 import { graphql } from "gatsby";
 import { useIntl, Link } from "gatsby-plugin-intl"
 import Helmet from "react-helmet";
 import Media, { MediaOverlay } from "react-md/lib/Media";
-import moment from "moment";
 
 import Layout from "../components/Layout";
-import PostTags from "../components/PostTags";
 import PostCategory from "../components/PostCategory";
 import PostCover from "../components/PostCover";
+import PostDateTime from "../components/PostDateTime";
+import PostTags from "../components/PostTags";
 //import PostSuggestions from "../components/PostSuggestions";
 import SEO from "../components/SEO";
 import SocialLinks from "../components/SocialLinks";
@@ -87,12 +84,7 @@ const PostTemplate = ({ pageContext, data, location }) => {
               </Media>
 
               <div className="md-grid">
-                <CardTitle
-                  className="post-description md-cell--6"
-                  avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
-                  title={`${intl.formatMessage({ id: `blog.posts.publishedIn` })} ${intl.formatDate(moment(post.date))}`}
-                  subtitle={`${postNode.timeToRead} ${intl.formatMessage({ id: `blog.posts.minutesReading` })}`}>
-                </CardTitle>
+                <PostDateTime date={post.date} timeToRead={postNode.timeToRead} />
                 <PostCategory category={post.category} />
                 <CardText className="post-info md-cell--12">
                   <div className="post-body" dangerouslySetInnerHTML={{ __html: postNode.html }} />

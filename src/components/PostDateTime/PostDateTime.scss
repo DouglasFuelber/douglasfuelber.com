@@ -1,0 +1,13 @@
+@import "../../layout/theme.scss";
+
+.post-datetime {
+    h2 {
+        font-size: 15px;
+    }
+    h3 {
+        color: $md-primary-color;
+    }
+    .md-avatar {
+        background-color: $md-primary-color;
+    }
+}
