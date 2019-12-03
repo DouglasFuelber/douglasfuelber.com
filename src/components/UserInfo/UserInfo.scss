@@ -11,14 +11,23 @@
     }
 
     h2 {
-        font-size: 15px;
+        color: $md-primary-color;
+		font-size: 14px;
+		font-weight: 800;
+		letter-spacing: 1px;
+		text-transform: uppercase;
     }
 
     h3 {
         color: $md-primary-color;
     }
 
-    .md-icon {
-        color: $md-primary-color;
+    .md-avatar {
+        border-width: 2px;
     }
+    
+    .location-icon {        
+        color: $md-primary-color;
+        font-size: 1.75em;
+    }       
 }

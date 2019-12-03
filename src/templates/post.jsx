@@ -70,35 +70,39 @@ const PostTemplate = ({ pageContext, data, location }) => {
 
         <div id="page_content">
           <div className="primary_bg card-wrapper">
-            <Card className="post md-grid md-cell--10">
 
+            <Card className="post">
               <Media style={{ height: coverHeight, paddingBottom: "0px" }}>
                 <PostCover postNode={postNode} coverHeight={coverHeight} />
-                <MediaOverlay>
-                  <div className="md-card-title md-card-title--primary post-title">
-                    <h1 className="md-card-title--title md-card-title--large md-text">{post.title}</h1>
-                  </div>
+                <MediaOverlay>                  
+                    <div className="md-grid md-cell--10">
+                      <div className="md-card-title md-card-title--primary post-title">
+                        <h1 className="md-card-title--title md-card-title--large md-text">{post.title}</h1>
+                      </div>
+                    </div>                  
                 </MediaOverlay>
               </Media>
-              <Grid>
-                <Cell size={6}>
-                  <PostDateTime date={post.date} timeToRead={postNode.timeToRead} />
-                </Cell>
-                <Cell size={6}>
-                  <PostCategory category={post.category} />
-                </Cell>
-                <CardText className="post-info md-cell--12">
-                  <div className="post-body" dangerouslySetInnerHTML={{ __html: postNode.html }} />
-                </CardText>
-                <CardText className="post-meta md-cell--12">
-                  <PostTags tags={post.tags} center />
-                  <SocialLinks
-                    postPath={slug}
-                    postNode={postNode}
-                    mobile={mobile}
-                  />
-                </CardText>
-              </Grid>
+              <div className="md-grid md-cell--10">
+                <Grid>
+                  <Cell size={6}>
+                    <PostDateTime date={post.date} timeToRead={postNode.timeToRead} />
+                  </Cell>
+                  <Cell size={6}>
+                    <PostCategory category={post.category} />
+                  </Cell>
+                  <CardText className="post-info md-cell--12">
+                    <div className="post-body" dangerouslySetInnerHTML={{ __html: postNode.html }} />
+                  </CardText>
+                  <CardText className="post-meta md-cell--12">
+                    <PostTags tags={post.tags} center />
+                    <SocialLinks
+                      postPath={slug}
+                      postNode={postNode}
+                      mobile={mobile}
+                    />
+                  </CardText>
+                </Grid>
+              </div>
             </Card>
 
             <UserInfo

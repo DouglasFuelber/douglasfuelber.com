@@ -3,7 +3,6 @@ import Card from "react-md/lib/Cards/Card";
 import CardTitle from "react-md/lib/Cards/CardTitle";
 import CardText from "react-md/lib/Cards/CardText";
 import Avatar from "react-md/lib/Avatars";
-import FontIcon from "react-md/lib/FontIcons";
 import { useIntl } from "gatsby-plugin-intl"
 import IconSeparator from "react-md/lib/Helpers/IconSeparator";
 import UserLinks from "../UserLinks";
@@ -20,7 +19,7 @@ export default ({ config, expanded }) => {
   if (!userAvatar && !userName) {
     if (userLinks) {
       return (
-        <Card className="md-grid md-cell--10 user-info">
+        <Card className="md-grid user-info">
           {userLinksElement}
         </Card>
       );
@@ -29,16 +28,17 @@ export default ({ config, expanded }) => {
   }
 
   return (
-    <Card className="md-grid md-cell--10 user-info">
+    <Card className="md-grid user-info">
       <CardTitle
+        className="md-grid md-cell--10"
         expander={!expanded}
         avatar={userAvatar && <Avatar src={userAvatar} role="presentation" />}
         title={userName && userName}
       />
-      <CardText expandable={!expanded}>
+      <CardText expandable={!expanded} className="md-grid md-cell--10">
         {intl.formatMessage({ id: `site.userLocation` }) && (
           <IconSeparator label={intl.formatMessage({ id: `site.userLocation` })} iconBefore>
-            <FontIcon iconClassName="fa fa-map-marker" />
+            <i className="fas fa-map-marked-alt location-icon"/>
           </IconSeparator>
         )}
         <p>{intl.formatMessage({ id: `site.userDescription` }) && intl.formatMessage({ id: `site.userDescription` })}</p>

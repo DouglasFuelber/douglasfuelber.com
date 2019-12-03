@@ -3,9 +3,7 @@ import Disqus from 'gatsby-plugin-disqus';
 import Card from "react-md/lib/Cards/Card";
 import CardTitle from "react-md/lib/Cards/CardTitle";
 import CardText from "react-md/lib/Cards/CardText";
-import Avatar from "react-md/lib/Avatars";
 import { useIntl } from "gatsby-plugin-intl"
-import FontIcon from "react-md/lib/FontIcons";
 import Snackbar from "react-md/lib/Snackbars";
 import config from "../../data/site-data";
 import "./Disqus.scss";
@@ -29,14 +27,16 @@ const DisqusArea = ({ postNode, expanded }) => {
   const url = `${config.siteUrl}/blog${postNode.fields.slug}`;
 
   return (
-    <Card className="comments md-grid md-cell--10">
+    <Card className="comments md-grid">
       <CardTitle
+        className="md-grid md-cell--10"
         title={intl.formatMessage({ id: `blog.posts.comments` })}
-        avatar={<Avatar icon={<FontIcon>comment</FontIcon>} />}
+        avatar={<i className="fas fa-comment-alt comments-icon" />}
         expander={!expanded}
       />
       <CardText expandable={!expanded}>
         <Disqus
+          className="md-grid md-cell--10"
           identifier={post.title}
           title={post.title}
           url={url}
