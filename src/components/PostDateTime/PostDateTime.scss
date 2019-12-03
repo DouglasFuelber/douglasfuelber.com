@@ -2,10 +2,13 @@
 
 .post-datetime {
     h2 {
+        color: $md-black-color;
         font-size: 15px;
+        font-weight: 600;
     }
     h3 {
         color: $md-primary-color;
+        font-size: 15px;
     }
     .post-datetime-icon {
         color: $md-primary-color;
