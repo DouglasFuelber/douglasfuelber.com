@@ -29,7 +29,7 @@ const DisqusArea = ({ postNode, expanded }) => {
   const url = `${config.siteUrl}/blog${postNode.fields.slug}`;
 
   return (
-    <Card className="comments md-grid md-cell--8">
+    <Card className="comments md-grid md-cell--10">
       <CardTitle
         title={intl.formatMessage({ id: `blog.posts.comments` })}
         avatar={<Avatar icon={<FontIcon>comment</FontIcon>} />}

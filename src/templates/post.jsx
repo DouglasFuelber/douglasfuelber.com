@@ -70,7 +70,7 @@ const PostTemplate = ({ pageContext, data, location }) => {
 
         <div id="page_content">
           <div className="primary_bg card-wrapper">
-            <Card className="post md-grid md-cell--8">
+            <Card className="post md-grid md-cell--10">
 
               <Media style={{ height: coverHeight, paddingBottom: "0px" }}>
                 <PostCover postNode={postNode} coverHeight={coverHeight} />
