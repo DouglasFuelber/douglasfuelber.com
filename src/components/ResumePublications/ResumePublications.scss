@@ -6,12 +6,11 @@
         display: flex;
         flex-direction: column;
         padding: 25px 15px;
-        @media (min-width: 991px) {
-            max-width: 66%;
-        }
+
         #publications {
             .publication {
                 margin: 20px 0 40px;
+                padding-right: 20px;
                 .publication-date,
                 .publication-colaborator {
                     color: $md-white-color;

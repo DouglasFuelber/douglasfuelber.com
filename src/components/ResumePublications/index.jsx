@@ -10,7 +10,7 @@ export default () => {
 
     const getPublications = () => {
         return Object.keys(resume.publications).map(key => (
-            <div className="publication left-border-area light-border">
+            <div className="publication left-border-area light-border md-cell--12">
                 <div className="publication-type">{intl.formatMessage({ id: `resume.publications.${key}.type` })} | <span className="publication-language">{intl.formatMessage({ id: `resume.publications.${key}.language` })}</span></div>
                 <h4 className="publication-title">
                     <a href={intl.formatMessage({ id: `resume.publications.${key}.link` })} target="_blank" rel="noopener">{intl.formatMessage({ id: `resume.publications.${key}.title` })} <i class="fas fa-external-link-alt external-link-icon"></i></a>
@@ -27,10 +27,10 @@ export default () => {
     }
 
     return <div className="publications-container mobile-fix">
-        <div className="publications-wrapper md-cell--center">
+        <div className="publications-wrapper md-cell--center md-cell--10">
             <div className="md-cell--center md-cell--middle md-cell--12">
                 <h3>{intl.formatMessage({ id: `components.resumePublications.title` })}</h3>
-                <div id="publications">
+                <div id="publications" className="md-grid">
                     {getPublications()}
                 </div>
             </div>

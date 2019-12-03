@@ -60,7 +60,7 @@ export default ({ tagsEdges, location }) => {
 
   return (
     <div className="primary_bg">
-      <div id="post-container" className="tag-list md-cell--8">
+      <div id="post-container" className="tag-list md-cell--10">
         <h3>Tags</h3>
         <div className="left-border-area light-border">
           {tagsList.map(tag => (

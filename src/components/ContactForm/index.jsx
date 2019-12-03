@@ -82,7 +82,7 @@ export default () => {
 
     return (
         <div className="contact-container mobile-fix">
-            <div className="contact-wrapper md-cell--center">
+            <div className="contact-wrapper md-cell--center md-cell--10">
                 <div className="md-cell--12">
                     <p>{intl.formatMessage({ id: "components.contactForm.sentence" })}</p>
                 </div>

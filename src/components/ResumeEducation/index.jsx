@@ -10,7 +10,7 @@ export default () => {
 
     const getEducation = () => {
         return Object.keys(resume.education).map(key => (
-            <div className="education left-border-area light-border">
+            <div className="education left-border-area light-border md-cell--6">
                 <h4 className="education-title">{intl.formatMessage({ id: `resume.education.${key}.title` })}</h4>
                 <h5 className="education-school">
                     <a href={intl.formatMessage({ id: `resume.education.${key}.schoolUrl` })} target="_blank" rel="noopener">{intl.formatMessage({ id: `resume.education.${key}.school` })} <i class="fas fa-external-link-alt external-link-icon"></i></a>
@@ -22,10 +22,10 @@ export default () => {
     }
 
     return <div className="education-container mobile-fix">
-        <div className="education-wrapper md-cell--center">
+        <div className="education-wrapper md-cell--center md-cell--10">
             <div className="md-cell--center md-cell--middle md-cell--12">
                 <h3>{intl.formatMessage({ id: `components.resumeEducation.title` })}</h3>
-                <div id="educations">
+                <div id="educations" className="md-grid">
                     {getEducation()}
                 </div>
             </div>

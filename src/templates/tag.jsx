@@ -23,7 +23,7 @@ const TagTemplate = ({ pageContext, data: { posts, categories, tags }, location 
 
       <div id="blog-container" className="tertiary_bg">
 
-        <div id="page_title" className="md-grid md-cell--8">
+        <div id="page_title" className="md-grid md-cell--10">
           <Link style={{ textDecoration: "none" }} to="/blog/">
             <h1 className="left-border-area light-border">Blog</h1>
           </Link>

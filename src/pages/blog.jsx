@@ -25,7 +25,7 @@ const BlogPage = ({location, data: { posts, categories, tags}}) => {
 
         <div id="blog-container" className="tertiary_bg">
         
-            <div id="page_title" className="md-grid md-cell--8">
+            <div id="page_title" className="md-grid md-cell--10">
                 <h1 className="left-border-area light-border">Blog</h1>
             </div>
 

@@ -8,16 +8,16 @@ import "./About.scss";
 export default () => {
   const intl = useIntl();
   return <div className="about-container mobile-fix">
-    <div className="about-wrapper md-cell--center">
+    <div className="about-wrapper md-cell--center md-cell--10">
       <div className="md-grid">
-        <div className="md-cell--center md-cell--4 md-text-center">
+        <div className="md-cell--center md-cell--3 md-text-center">
           <img
             src={config.userAvatar}
             className="about-img"
             alt={config.userName}
           />
         </div>
-        <div className="md-cell--center md-cell--middle md-cell--8">
+        <div className="md-cell--center md-cell--middle md-cell--9">
           <p className="about-text left-border-area light-border">{intl.formatMessage({ id: "site.userDescription" })}</p>
         </div>
       </div>

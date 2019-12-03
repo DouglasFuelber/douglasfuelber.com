@@ -25,7 +25,7 @@ const AboutPage = ({ location }) => {
         <link rel="canonical" href={`${config.siteUrl}/${intl.locale}/about/`} />
       </Helmet>
 
-      <div id="page_title" className="md-grid md-cell--8">
+      <div id="page_title" className="md-grid md-cell--10">
         <h1 className="left-border-area light-border">{intl.formatMessage({ id: "about.pageTitle" })}</h1>
       </div>
       <div id="page_content">

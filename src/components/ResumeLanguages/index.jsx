@@ -20,7 +20,7 @@ export default () => {
     }
 
     return <div className="languages-container mobile-fix">
-        <div className="languages-wrapper md-cell--center">
+        <div className="languages-wrapper md-cell--center md-cell--10">
             <div className="md-cell--center md-cell--middle md-cell--12">
                 <h3>{intl.formatMessage({ id: `components.resumeLanguages.title` })}</h3>
                 <div id="languages" className="md-grid">

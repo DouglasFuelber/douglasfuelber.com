@@ -21,7 +21,7 @@ const ContactPage = ({ location }) => {
 
     <div id="contact-container" className="tertiary_bg">
 
-      <div id="page_title" className="md-grid md-cell--8">
+      <div id="page_title" className="md-grid md-cell--10">
         <h1 className="left-border-area light-border">{intl.formatMessage({ id: "contact.pageTitle" })}</h1>
       </div>
 

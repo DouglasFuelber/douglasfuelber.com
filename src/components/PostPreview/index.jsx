@@ -33,7 +33,7 @@ export default ({ postInfo }) => {
   const coverHeight = mobile ? 162 : 225;
 
   return (
-    <Card key={postInfo.path} className="post md-grid md-cell md-cell--12">
+    <Card key={postInfo.path} className="post md-grid md-cell--12">
       <Link style={{ textDecoration: "none" }} to={`/blog/${postInfo.path}`}>
         <Media style={{ height: coverHeight, paddingBottom: "0px" }}>
           <PostCover postNode={postInfo} coverHeight={coverHeight} />

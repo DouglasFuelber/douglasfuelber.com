@@ -7,8 +7,8 @@ import "./Footer.scss";
 export default () => {
   const intl = useIntl();
     return (
-      <footer className={fixedFooter ? "footer footer-fixed" : "footer"}>
-        <div className="md-grid md-cell--8">
+      <footer className={`md-grid ${fixedFooter ? "footer footer-fixed" : "footer"}`}>
+        <div className="md-grid md-cell--10">
           <div className="md-cell--6">
             {userLinks ? <ContactLinks config={config} /> : null}
           </div>

@@ -29,7 +29,7 @@ export default () => {
     }
 
     return <div className="career-container mobile-fix">
-        <div className="career-wrapper md-cell--center">
+        <div className="career-wrapper md-cell--center md-cell--10">
             <div className="md-cell--center md-cell--middle md-cell--12">
                 <h3>{intl.formatMessage({ id: `components.resumeCareer.title` })}</h3>
                 <div id="jobs">

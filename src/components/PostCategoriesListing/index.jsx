@@ -58,7 +58,7 @@ export default ({ categoriesEdges, location }) => {
 
   return (
     <div className="primary_bg">
-      <div id="post-container" className="category-list md-cell--8">
+      <div id="post-container" className="category-list md-cell--10">
         <h3>{intl.formatMessage({ id: "blog.categories.categories" })}</h3>
         <div className="left-border-area light-border">
           {categoriesList.map(category => (

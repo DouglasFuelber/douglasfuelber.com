@@ -108,7 +108,7 @@ const PostTemplate = ({ pageContext, data, location }) => {
                   <div className="post-body" dangerouslySetInnerHTML={{ __html: postNode.html }} />
                 </CardText>
                 <CardText className="post-meta md-cell--12">
-                  <PostTags tags={post.tags} />
+                  <PostTags tags={post.tags} center />
                   <SocialLinks
                     postPath={slug}
                     postNode={postNode}

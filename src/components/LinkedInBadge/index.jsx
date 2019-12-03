@@ -16,8 +16,8 @@ export default () => {
   const intl = useIntl();
   const locale = intl.locale == 'en' ? 'en_US' : 'pt_BR';
 
-  return <div className="linkedin-badge-container mobile-fix">
-    <div className="linkedin-badge-wrapper md-cell--center">
+  return <div className="linkedin-badge-container mobile-fix md-grid">
+    <div className="linkedin-badge-wrapper md-cell--center md-cell--10">
       <div className="md-cell--center md-cell--middle md-cell--12">
         <div className="badge left-border-area light-border">
           <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale={locale} data-type="horizontal" data-theme="light" data-vanity="douglasfuelber">

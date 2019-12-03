@@ -33,7 +33,7 @@ export default ({ location, postEdges, categoriesEdges, tagsEdges }) => {
   const postList = getPostList();
 
   return (
-    <div id="posts-wrapper" className="md-grid md-grid--no-spacing md-cell--middle primary_bg">
+    <div id="posts-wrapper" className="md-grid md-grid--no-spacing md-cell--middle primary_bg md-cell--10">
       <div className="md-cell--12 md-cell--3-desktop md-cell--order-2-desktop mobile-fix">
         <PostCategoriesListing location={location} categoriesEdges={categoriesEdges} />
         <PostTagsListing location={location} tagsEdges={tagsEdges} />
