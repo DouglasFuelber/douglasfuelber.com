@@ -17,7 +17,7 @@ module.exports = {
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   userName: "Douglas Fuelber", // Username to display in the author segment.
   userTwitter: "", // Optionally renders "Follow Me" in the UserInfo segment.
-  userAvatar: "/images/avatar.jpg", // User avatar to display in the author segment.
+  userAvatar: "/images/avatar.png", // User avatar to display in the author segment.
   languageKeys: ['en', 'pt'],
   languages: [
     {
