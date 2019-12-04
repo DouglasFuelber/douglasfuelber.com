@@ -160,5 +160,19 @@ module.exports = {
       level: 3
     }
   ],
+  userLanguages: [
+    {
+      key: "pt",
+      level: 5
+    },
+    {
+      key: "en",
+      level: 3
+    },
+    {
+      key: "es",
+      level: 1
+    }
+  ],
   copyright: "Developed by Douglas Fuelber | 2019",
 };

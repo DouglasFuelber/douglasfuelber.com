@@ -145,15 +145,15 @@
             }
         },
         "languages": {
-            "1": {
+            "pt": {
                 "title": "Portuguese",
                 "level": "Native Language"
             },
-            "2": {
+            "en": {
                 "title": "English",
                 "level": "Intermediate Level"
             },
-            "3": {
+            "es": {
                 "title": "Spanish",
                 "level": "Elementary Level"
             }

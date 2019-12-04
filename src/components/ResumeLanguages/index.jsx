@@ -1,7 +1,9 @@
 import React from "react";
 import { useIntl } from "gatsby-plugin-intl";
 
-import { resume } from "../../i18n/en";
+import LevelCounter from "../LevelCounter";
+
+import { userLanguages } from "../../data/site-data";
 
 import "./ResumeLanguages.scss";
 
@@ -9,11 +11,12 @@ export default () => {
     const intl = useIntl();
 
     const getLanguages = () => {
-        return Object.keys(resume.languages).map(key => (
+        return userLanguages.map(language => (
             <div className="md-cell--4">
                 <div className="language left-border-area light-border">
-                    <h4 className="language-title">{intl.formatMessage({ id: `resume.languages.${key}.title` })}</h4>
-                    <div className="language-level">{intl.formatMessage({ id: `resume.languages.${key}.level` })}</div>
+                    <h4 className="language-title">{intl.formatMessage({ id: `resume.languages.${language.key}.title` })}</h4>
+                    <div className="language-level">{intl.formatMessage({ id: `resume.languages.${language.key}.level` })}</div>
+                    <LevelCounter level={language.level} />
                 </div>
             </div>
         ));
