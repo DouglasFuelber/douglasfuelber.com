@@ -1,5 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
+import { Grid } from 'react-md';
 import { useIntl } from "gatsby-plugin-intl";
 
 import Layout from "../components/Layout";
@@ -29,13 +30,19 @@ const AboutPage = ({ location }) => {
       <PageTitle title={intl.formatMessage({ id: "about.pageTitle" })} />
 
       <div id="page_content">
-        <About />
-        <ResumeCareer />
-        <ResumeEducation />
-        <ResumeSkills />
-        <ResumeLanguages />
-        <ResumePublications />
-        <LinkedInBadge />
+        <Grid>
+          <div className="md-cell--10 md-cell--center">
+            <About />
+            <ResumeCareer />
+            <ResumeEducation />
+            <ResumeSkills />
+            <ResumeLanguages />
+            <ResumePublications />
+            <Grid>
+              <LinkedInBadge />
+            </Grid>            
+          </div>
+        </Grid>
       </div>
     </div>
   </Layout>

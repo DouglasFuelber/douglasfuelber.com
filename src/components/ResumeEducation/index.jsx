@@ -22,7 +22,7 @@ export default () => {
     }
 
     return <div className="education-container mobile-fix">
-        <div className="education-wrapper md-cell--center md-cell--10">
+        <div className="education-wrapper">
             <div className="md-cell--center md-cell--middle md-cell--12">
                 <h3>{intl.formatMessage({ id: `components.resumeEducation.title` })}</h3>
                 <div id="educations" className="md-grid">

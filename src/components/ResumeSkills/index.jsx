@@ -20,7 +20,7 @@ export default () => {
     }
 
     return <div className="skills-container mobile-fix">
-        <div className="skills-wrapper md-cell--center md-cell--10">
+        <div className="skills-wrapper">
             <div className="md-cell--center md-cell--middle md-cell--12">
                 <h3>{intl.formatMessage({ id: `components.resumeSkills.title` })}</h3>
                 <Grid id="skills">

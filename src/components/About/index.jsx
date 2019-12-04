@@ -33,7 +33,7 @@ export default () => {
   }
   
   return <div className="about-container mobile-fix">
-    <div className="about-wrapper md-cell--center md-cell--10">
+    <div className="about-wrapper">
       <div className="md-grid">
         <div className="md-cell--center md-cell--3 md-text-center">
           {getAvatar()}
