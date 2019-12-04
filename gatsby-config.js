@@ -198,7 +198,8 @@ module.exports = {
               }
             }
           `,
-            output: config.siteRss
+            output: config.siteRss,
+            title: "Douglas Fuelber RSS Feed",
           }
         ]
       }
