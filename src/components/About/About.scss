@@ -11,10 +11,17 @@
         .about-img {
             border-radius: 50%;
             box-shadow: 0 0 0px 5px $md-secondary-color;
-            height: auto;
+            height: auto !important;
             margin: 10px 0 25px;
             max-width: 240px;
-            width: 100%;
+            width: 100% !important;
+
+            picture {
+                img {
+                    height: auto !important;
+                    position: relative !important;
+                }
+            }            
         }
 
         .about-text {
