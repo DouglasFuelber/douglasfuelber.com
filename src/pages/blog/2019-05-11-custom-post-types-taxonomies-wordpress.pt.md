@@ -28,8 +28,7 @@ Se, além de cadastrar os filmes em nosso site, gostaríamos de categorizá-los 
 
 Na imagem abaixo podemos visualizar o resultados dos registros realizados. A tela apresentada é a de criação de um novo filme. Também é possível visualizar, no menu do lado esquerdo o link para a página de gerência dos filmes, e do lado direito, a opções de adicionar os gêneros do filme.
 
-![Tela de cadastro de filme](/assets/custom-post-type.png "Tela de cadastro de filme")
-<center>Tela de cadastro de filme (Fonte: do autor)</center>
+![Tela de cadastro de filme](/assets/custom-post-type.png "Tela de cadastro de filme (Fonte: do autor)")
 
 ##Referências
 

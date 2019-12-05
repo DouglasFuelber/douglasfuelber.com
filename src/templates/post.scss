@@ -67,19 +67,23 @@ $phone-status-bar-height: 24px - 12px;
                 margin-top: 15px;
             }
 
-            center {
-                color: $md-tertiary-color;
-                font-size: 16px;
-                font-weight: 500;
-                margin-bottom: 25px;
-            }
-
             p {
                 color: $md-tertiary-color;
                 font-size: 19px;
                 font-weight: 500;
                 line-height: 26px;
                 margin-bottom: 25px;
+            }
+
+            figure {
+                figcaption {
+                    color: $md-tertiary-color;
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-bottom: 25px;
+                    margin-top: 10px;
+                    text-align: center;
+                }
             }
 
             /**

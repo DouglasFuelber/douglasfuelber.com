@@ -16,9 +16,7 @@ One thing that always bothered me was the need to install global package, and wo
 
 To exemplify how the *npx* works, I will create a React application. For this we execute the *__npx create-react-app hello-world__* command (Note that we haven't installed the *create-react-app* globally to create the application).
 
-![React application creation with npx](/assets/npx-example.png "React application creation with npx")
-<center>React application creation with npx (Source: the author)</center>
-
+![React application creation with npx](/assets/npx-example.png "React application creation with npx (Source: the author)")
 
 According to the *npx* docs, it will check if the given command exists in the *$PATH* or in the project binaries (*node_modules/.bin*). If found, it will be executed, otherwise the package will be installed temporarily before execution.
 

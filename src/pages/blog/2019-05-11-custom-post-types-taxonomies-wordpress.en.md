@@ -28,8 +28,7 @@ If, in addition to registering the movies on our site, we would like to categori
 
 In the image below we can see the results of the records. The displayed screen is the creation of a new film. You can also see, in the left menu, the link to the movie management page, and on the right, the options to add movie genres.
 
-![Movie register screen](/assets/custom-post-type.png "Movie register screen")
-<center>Movie register screen (Source: the author)</center>
+![Movie register screen](/assets/custom-post-type.png "Movie register screen (Source: the author)")
 
 ##References
 

@@ -16,9 +16,7 @@ Uma coisa que sempre me incomodou muito foi a necessidade de instalar pacotes gl
 
 Para exemplificar como o *npx* funciona, vou criar uma aplicação React. Para isso executamos o comando *__npx create-react-app hello-world__* (Note que não instalamos o *create-react-app* globalmente para criar a aplicação).
 
-![Criação de aplicação React com npx](/assets/npx-example.png "Criação de aplicação React com npx")
-<center>Criação de aplicação React com npx (Fonte: do autor)</center>
-
+![Criação de aplicação React com npx](/assets/npx-example.png "Criação de aplicação React com npx (Fonte: do autor)")
 
 De acordo com a documentação do *npx*, ele irá verificar se o comando informado existe no *$PATH* ou nos binários do projeto (*node_modules/.bin*). Caso encontre, o mesmo será executado, senão o pacote será instalado temporariamente antes da execução.
 
