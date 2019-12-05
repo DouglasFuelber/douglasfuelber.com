@@ -1,7 +1,7 @@
 {
   "name": "douglas-fuelber-site",
   "description": "Douglas Fuelber - Website",
-  "version": "1.8.2",
+  "version": "1.8.3",
   "author": "Douglas Fuelber <contato@douglasfuelber.com>",
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.11.2",
