@@ -88,8 +88,8 @@ module.exports = {
       level: 4
     },
     {
-      label: "React",
-      level: 3
+      label: "ReactJS",
+      level: 4
     },
     {
       label: "HTML/CSS",
@@ -158,6 +158,15 @@ module.exports = {
     {
       label: "Corel Draw",
       level: 3
+    },
+    {
+      label: "Node.js",
+      level: 2
+    }
+    ,
+    {
+      label: "React Native",
+      level: 2
     }
   ],
   userLanguages: [
