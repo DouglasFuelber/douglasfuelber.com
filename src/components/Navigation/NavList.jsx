@@ -28,7 +28,8 @@ function GetNavList(navigationLinks, userLinks) {
         primaryText: link.label,
         leftIcon: <i className={link.iconClassName} />,
         component: "a",
-        href: link.url
+        href: link.url,
+        target: '_blank'
       });
     });
   }
