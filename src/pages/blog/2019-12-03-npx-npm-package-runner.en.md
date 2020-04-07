@@ -6,6 +6,7 @@ slug: npx-npm-package-runner
 category: programming
 language: en
 tags:
+  - nodejs
   - npm
   - npx
 ---
