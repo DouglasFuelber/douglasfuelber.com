@@ -183,5 +183,5 @@ module.exports = {
       level: 1
     }
   ],
-  copyright: "Developed by Douglas Fuelber | 2019",
+  copyright: `Developed by Douglas Fuelber | ${new Date().getFullYear()}`,
 };

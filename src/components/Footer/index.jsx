@@ -13,8 +13,8 @@ export default () => {
             {userLinks ? <ContactLinks config={config} /> : null}
           </div>
           <div className="notice-container md-cell--6">
-            <div className="copyright">
-              <h4>{intl.formatMessage({ id: "site.copyright" })}</h4>
+            <div className="copyright">              
+              <h4>{intl.formatMessage({ id: "site.copyright" })} | {new Date().getFullYear()}</h4>
             </div>
           </div>
         </div>
