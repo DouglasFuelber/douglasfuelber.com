@@ -75,99 +75,36 @@ module.exports = {
     }
   ],
   userSkills: [
-    {
-      label: "JavaScript",
-      level: 5
-    },
-    {
-      label: "C#",
-      level: 4
-    },
-    {
-      label: "ASP.NET MVC",
-      level: 4
-    },
-    {
-      label: "ReactJS",
-      level: 4
-    },
-    {
-      label: "HTML/CSS",
-      level: 5
-    },
-    {
-      label: "Bootstrap",
-      level: 5
-    },
-    {
-      label: "SASS",
-      level: 4
-    },
-    {
-      label: "Microsoft SharePoint",
-      level: 3
-    },
-    {
-      label: "SQL",
-      level: 3
-    },
-    {
-      label: "WordPress",
-      level: 5
-    },
-    {
-      label: "PHP",
-      level: 3
-    },
-    {
-      label: "Git",
-      level: 4
-    },
-    {
-      label: "AngularJS",
-      level: 4
-    },
-    {
-      label: "Entity Framework",
-      level: 3
-    },
-    {
-      label: "LINQ",
-      level: 4
-    },
-    {
-      label: "Microsoft SQL Server",
-      level: 3
-    },
-    {
-      label: "MySQL",
-      level: 3
-    },
-    {
-      label: "Ionic Framework",
-      level: 4
-    },
-    {
-      label: "Gatsby",
-      level: 4
-    },
-    {
-      label: "Photoshop",
-      level: 3
-    },
-    {
-      label: "Corel Draw",
-      level: 3
-    },
-    {
-      label: "Node.js",
-      level: 2
-    }
-    ,
-    {
-      label: "React Native",
-      level: 2
-    }
+    { level: 5, label: "JavaScript" },
+    { level: 4, label: "ReactJS" },
+    { level: 4, label: "Gatsby.js" },
+
+    { level: 4, label: "C#" },
+    { level: 4, label: "Microsoft .NET" },
+    { level: 4, label: "ASP.NET MVC" },
+    
+    { level: 4, label: "LINQ" },
+    { level: 4, label: "Entity Framework" },
+    { level: 2, label: "NUnit" },
+
+    
+    { level: 2, label: "React Native" },
+    { level: 2, label: "Node.js" },
+    { level: 1, label: "TypeScript" },
+    
+    { level: 5, label: "HTML 5 / CSS 3" },
+    { level: 5, label: "Bootstrap" },
+    { level: 4, label: "SASS" },
+    
+    { level: 3, label: "Ionic Framework" },
+    { level: 4, label: "AngularJS" },    
+    { level: 3, label: "Microsoft SharePoint" },
+
+    { level: 3, label: "SQL" },
+    { level: 3, label: "Microsoft SQL Server" },
+    { level: 5, label: "WordPress" },
+    { level: 3, label: "PHP" },    
+    { level: 3, label: "MySQL" },    
   ],
   userLanguages: [
     {

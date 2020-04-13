@@ -11,7 +11,7 @@ export default () => {
     const intl = useIntl();
 
     const getSkills = () => {
-        return userSkills.sort((a, b) => (a.level < b.level) ? 1 : -1).map(skill => (
+        return userSkills.map(skill => (
             <Cell size="4" className="skill left-border-area light-border">
                 <h4 className="skill-title">{skill.label}</h4>
                 <LevelCounter level={skill.level} />
