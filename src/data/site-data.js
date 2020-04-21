@@ -92,9 +92,9 @@ module.exports = {
     { level: 2, label: "Node.js" },
     { level: 1, label: "TypeScript" },
     
-    { level: 5, label: "HTML 5 / CSS 3" },
-    { level: 5, label: "Bootstrap" },
+    { level: 5, label: "HTML / CSS" },
     { level: 4, label: "SASS" },
+    { level: 5, label: "Bootstrap" },    
     
     { level: 3, label: "Ionic Framework" },
     { level: 4, label: "AngularJS" },    
@@ -103,8 +103,10 @@ module.exports = {
     { level: 3, label: "SQL" },
     { level: 3, label: "Microsoft SQL Server" },
     { level: 5, label: "WordPress" },
+
     { level: 3, label: "PHP" },    
-    { level: 3, label: "MySQL" },    
+    { level: 3, label: "MySQL" },
+    { level: 4, label: "Git" },
   ],
   userLanguages: [
     {
