@@ -1,5 +1,5 @@
-const config = require("./src/data/site-data");
-const urljoin = require("url-join");
+const urljoin = require('url-join');
+const config = require('./src/data/site-data');
 
 const regexExcludeRobots = /^(?!\/(dev-404-page|404|offline-plugin-app-shell-fallback|tags|categories|success|site)).*$/;
 
@@ -14,78 +14,78 @@ module.exports = {
       description: config.siteDescription,
       image_url: `${config.siteUrl}/logos/favicon.png`,
       author: config.userName,
-      copyright: config.copyright
-    }
+      copyright: config.copyright,
+    },
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-lodash",
-    "gatsby-plugin-sass",
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-lodash',
+    'gatsby-plugin-sass',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "images",
-        path: `${__dirname}/static/images/`
-      }
+        name: 'images',
+        path: `${__dirname}/static/images/`,
+      },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "assets",
-        path: `${__dirname}/static/assets/`
-      }
+        name: 'assets',
+        path: `${__dirname}/static/assets/`,
+      },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "posts",
-        path: `${__dirname}/src/pages/blog/`
-      }
+        name: 'posts',
+        path: `${__dirname}/src/pages/blog/`,
+      },
     },
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-relative-images"
+            resolve: 'gatsby-remark-relative-images',
           },
           {
-            resolve: "gatsby-remark-images",
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 800,
-              showCaptions: true
-            }
+              showCaptions: true,
+            },
           },
           {
-            resolve: "gatsby-remark-responsive-iframe"
+            resolve: 'gatsby-remark-responsive-iframe',
           },
-          "gatsby-remark-embed-gist",
-          "gatsby-remark-prismjs",
-          "gatsby-remark-copy-linked-files",
-          "gatsby-remark-autolink-headers"
-        ]
-      }
+          'gatsby-remark-embed-gist',
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-autolink-headers',
+        ],
+      },
     },
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: config.siteGATrackingID
-      }
+        trackingId: config.siteGATrackingID,
+      },
     },
     {
-      resolve: "gatsby-plugin-nprogress",
+      resolve: 'gatsby-plugin-nprogress',
       options: {
-        color: "#70a2ff"
-      }
+        color: '#70a2ff',
+      },
     },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-catch-links",
-    "gatsby-plugin-twitter",
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-catch-links',
+    'gatsby-plugin-twitter',
     {
-      resolve: "gatsby-plugin-sitemap",
+      resolve: 'gatsby-plugin-sitemap',
       options: {
-        output: "/sitemap.xml",
+        output: '/sitemap.xml',
         query: `
           {
             site {
@@ -107,47 +107,47 @@ module.exports = {
                 }
               }
             }
-        }`
-      }
+        }`,
+      },
     },
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: config.siteTitle,
         short_name: config.siteTitleShort,
         description: config.siteDescription,
         start_url: config.pathPrefix,
-        background_color: "#001950",
-        theme_color: "#001950",
+        background_color: '#001950',
+        theme_color: '#001950',
         language: config.defaultLanguage,
-        display: "minimal-ui",
+        display: 'minimal-ui',
         icons: [
           {
-            src: "/logos/favicon.png",
-            sizes: "32x32",
-            type: "image/png"
+            src: '/logos/favicon.png',
+            sizes: '32x32',
+            type: 'image/png',
           },
           {
-            src: "/logos/logo-192.png",
-            sizes: "192x192",
-            type: "image/png"
+            src: '/logos/logo-192.png',
+            sizes: '192x192',
+            type: 'image/png',
           },
           {
-            src: "/logos/logo-512.png",
-            sizes: "512x512",
-            type: "image/png"
-          }
-        ]
-      }
+            src: '/logos/logo-512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+        ],
+      },
     },
-    "gatsby-plugin-offline",
+    'gatsby-plugin-offline',
     {
-      resolve: "gatsby-plugin-feed",
+      resolve: 'gatsby-plugin-feed',
       options: {
         setup(ref) {
           const ret = ref.query.site.siteMetadata.rssMetadata;
           ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-          ret.generator = "GatsbyJS Material Starter";
+          ret.generator = 'GatsbyJS Material Starter';
           return ret;
         },
         query: `
@@ -179,7 +179,7 @@ module.exports = {
                 author: rssMetadata.author,
                 url: rssMetadata.site_url + edge.node.fields.slug,
                 guid: rssMetadata.site_url + edge.node.fields.slug,
-                custom_elements: [{ "content:encoded": edge.node.html }]
+                custom_elements: [{ 'content:encoded': edge.node.html }],
               }));
             },
             query: `
@@ -207,16 +207,16 @@ module.exports = {
             }
           `,
             output: config.siteRss,
-            title: "Douglas Fuelber RSS Feed",
-          }
-        ]
-      }
+            title: 'Douglas Fuelber RSS Feed',
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: config.disqusShortName
-      }
+        shortname: config.disqusShortName,
+      },
     },
     {
       resolve: `gatsby-plugin-intl`,
@@ -231,5 +231,5 @@ module.exports = {
         redirect: true,
       },
     },
-  ]
+  ],
 };
