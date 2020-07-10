@@ -231,5 +231,7 @@ module.exports = {
         redirect: true,
       },
     },
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-tslint',
   ],
 };
