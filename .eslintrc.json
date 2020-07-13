@@ -30,7 +30,8 @@
           "preferButton"
         ]
       }
-    ]
+    ],
+    "eslintimport/extensions": "off"
   },
   "settings": {
     "import/core-modules": []

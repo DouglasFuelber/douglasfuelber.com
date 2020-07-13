@@ -1,12 +1,10 @@
-import React from "react";
-import NavigationDrawer from "react-md/lib/NavigationDrawers";
-import LanguageSelector from "../LanguageSelector";
-import Footer from "../Footer";
-import GetNavList from "./NavList";
-import "./Navigation.scss";
+import React from 'react';
+import NavigationDrawer from 'react-md/lib/NavigationDrawers';
+import LanguageSelector from '../LanguageSelector';
+import GetNavList from './NavList';
+import './Navigation.scss';
 
 export default ({ children, config, LocalTitle }) => {
-  const footerLinks = LocalTitle !== "About";
   return (
     <NavigationDrawer
       drawerTitle={config.siteTitle}
@@ -17,8 +15,6 @@ export default ({ children, config, LocalTitle }) => {
       desktopDrawerType={NavigationDrawer.DrawerTypes.PERSISTENT_MINI}
     >
       <LanguageSelector />
-      <div className="main-container">{children}</div>
-      <Footer userLinks={footerLinks} />
     </NavigationDrawer>
   );
 };
