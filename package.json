@@ -4,7 +4,6 @@
   "version": "1.8.5",
   "author": "Douglas Fuelber <contato@douglasfuelber.com>",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.11.2",
     "babel-polyfill": "^6.26.0",
     "gatsby": "^2.18.5",
     "gatsby-image": "^2.2.34",
@@ -44,7 +43,6 @@
     "react-helmet": "^6.0.0",
     "react-md": "^1.12.3",
     "react-on-screen": "^2.1.1",
-    "react-scroll": "^1.7.14",
     "react-share": "^4.1.0",
     "url-join": "^4.0.1"
   },
