@@ -1,18 +1,16 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { useIntl } from 'gatsby-plugin-intl';
-import Navigation from '../Navigation';
+import Header from '../Header';
 import Footer from '../Footer';
 
-import GlobalStyle from '../../styles/global.ts';
+import GlobalStyle from '../../styles/global';
 
-import config from '../../data/site-data';
-
-export default ({ children }) => {
+const Layout: React.FC = ({ children }) => {
   const intl = useIntl();
   return (
     <>
-      <Helmet>
+      <Helmet >
         <html lang={intl.locale} />
         <meta
           name="description"
@@ -23,10 +21,12 @@ export default ({ children }) => {
           rel="stylesheet"
         />
       </Helmet>
-      <Navigation config={config} />
+      <Header />
       <div className="app-container">{children}</div>
       <Footer />
       <GlobalStyle />
     </>
   );
 };
+
+export default Layout;

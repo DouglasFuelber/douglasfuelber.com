@@ -1,8 +1,7 @@
-import React from "react";
-import { Link, useIntl } from "gatsby-plugin-intl";
+import React from 'react';
+import { Link, useIntl } from 'gatsby-plugin-intl';
 
 function GetNavList(navigationLinks, userLinks) {
-
   const intl = useIntl();
   const NavList = [];
 
@@ -12,24 +11,22 @@ function GetNavList(navigationLinks, userLinks) {
         primaryText: intl.formatMessage({ id: `navigation.${link.id}.title` }),
         leftIcon: <i className={link.iconClassName} />,
         component: Link,
-        to: link.url
+        to: link.url,
       });
     });
-    NavList.push(
-      {
-        divider: true
-      }
-    )
-  };
+    NavList.push({
+      divider: true,
+    });
+  }
 
   if (userLinks) {
     userLinks.forEach(link => {
       NavList.push({
         primaryText: link.label,
         leftIcon: <i className={link.iconClassName} />,
-        component: "a",
+        component: 'a',
         href: link.url,
-        target: '_blank'
+        target: '_blank',
       });
     });
   }
