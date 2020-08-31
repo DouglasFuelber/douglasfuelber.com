@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import Helmet from 'react-helmet';
 import { useIntl } from 'gatsby-plugin-intl';
 import Header from '../Header';
 import Footer from '../Footer';
 
 import GlobalStyle from '../../styles/global';
+import { Container, ContentWrapper } from './styles';
 
 const Layout: React.FC = ({ children }) => {
   const intl = useIntl();
+
+  const isHome = useMemo(() => {
+    return window.location.pathname === `/${intl.locale}/`;
+  }, []);
+
   return (
     <>
       <Helmet >
@@ -21,9 +27,13 @@ const Layout: React.FC = ({ children }) => {
           rel="stylesheet"
         />
       </Helmet>
-      <Header />
-      <div className="app-container">{children}</div>
-      <Footer />
+      {(!isHome) && <Header />}
+      <Container>
+        <ContentWrapper>
+          {children}
+        </ContentWrapper>
+      </Container>
+      {(!isHome) && <Footer />}
       <GlobalStyle />
     </>
   );
