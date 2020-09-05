@@ -14,7 +14,11 @@ export const Container = styled.div`
 `;
 
 export const ChildrenWrapper = styled.main`
+  display: flex;
   flex: 1;
+  flex-direction: column;
+  margin: 0 auto;
   max-width: 1144px;
   padding: 0 16px;
+  width: 100%;
 `;

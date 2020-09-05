@@ -4,7 +4,13 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 import LanguageSelector from '../LanguageSelector';
 
-import { Container, Selectors, InfoWrapper, SocialLinks, Copyright } from './styles';
+import {
+  Container,
+  Selectors,
+  InfoWrapper,
+  SocialLinks,
+  Copyright
+} from './styles';
 
 interface IFooterProps {
   IsHome: boolean;

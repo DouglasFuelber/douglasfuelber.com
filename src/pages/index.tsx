@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 
 import config from '../data/site-data';
 
-import { Container, TitleWrapper } from './index-styles';
+import { Container, TitleWrapper, IconsWrapper } from './index-styles';
 
 export default () => {
   const intl = useIntl();
@@ -19,9 +19,12 @@ export default () => {
 
       <Container>
         <TitleWrapper>
-          <h1>Hello, I am Douglas Fuelber</h1>
-          <h2>Full Stack Developer</h2>
+          <h1>Hello,<br /> I am <strong>Douglas Fuelber</strong></h1>
+          <h2>Full Stack Web Developer</h2>
         </TitleWrapper>
+        <IconsWrapper>
+
+        </IconsWrapper>
       </Container>
 
     </Layout>
