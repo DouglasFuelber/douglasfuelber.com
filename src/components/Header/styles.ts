@@ -13,19 +13,20 @@ export const ContentWrapper = styled.div`
   align-items: center;
   display: flex;
   flex: 1;
-  flex-direction: row;
   height: 100%;
   justify-content: space-between;
   max-width: 1144px;
+  padding: 16px;
 `;
 
 export const Nav = styled.nav`
   align-items: center;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 
   img {
-    height: 24px;
+    width: 80px;
   }
 
   ul {
@@ -36,21 +37,17 @@ export const Nav = styled.nav`
 
     li {
       a {
-        border-radius: 24px;
         color: #eee;
-        font-size: 14px;
-        font-weight: 700;
-        margin-right: 4px;
-        text-transform: uppercase;
-        padding: 4px 12px;
+        cursor: pointer;
+        font-size: 16px;
+        padding-left: 16px;
 
-        &:hover {
-          background-color: #001950;
+        &::first-child {
+          padding-left: 0;
         }
 
         &.active {
-          background-color: #eee;
-          color: #00143C;
+            font-weight: bold;
         }
       }
     }

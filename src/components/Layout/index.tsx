@@ -5,7 +5,7 @@ import Header from '../Header';
 import Footer from '../Footer';
 
 import GlobalStyle from '../../styles/global';
-import { Container, ContentWrapper } from './styles';
+import { Container, ChildrenWrapper } from './styles';
 
 const Layout: React.FC = ({ children }) => {
   const intl = useIntl();
@@ -15,8 +15,8 @@ const Layout: React.FC = ({ children }) => {
   }, []);
 
   return (
-    <>
-      <Helmet >
+    <Container>
+      <Helmet>
         <html lang={intl.locale} />
         <meta
           name="description"
@@ -28,14 +28,12 @@ const Layout: React.FC = ({ children }) => {
         />
       </Helmet>
       {(!isHome) && <Header />}
-      <Container>
-        <ContentWrapper>
-          {children}
-        </ContentWrapper>
-      </Container>
-      {(!isHome) && <Footer />}
+      <ChildrenWrapper>
+        {children}
+      </ChildrenWrapper>
+      <Footer IsHome={isHome} />
       <GlobalStyle />
-    </>
+    </Container >
   );
 };
 

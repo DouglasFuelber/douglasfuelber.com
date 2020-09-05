@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-export const Container = styled.main`
+export const Container = styled.div`
   background: #eee;
   display: flex;
+  flex-direction:column;
   justify-content: center;
   min-height: 100vh;
-  padding: 0 16px;
   width: 100%;
 
   &.dark {
@@ -13,6 +13,8 @@ export const Container = styled.main`
   }
 `;
 
-export const ContentWrapper = styled.div`
+export const ChildrenWrapper = styled.main`
+  flex: 1;
   max-width: 1144px;
+  padding: 0 16px;
 `;
