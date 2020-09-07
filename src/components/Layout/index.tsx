@@ -52,7 +52,7 @@ const Layout: React.FC<ILayoutProps> = ({
           rel="stylesheet"
         />
       </Helmet>
-      {!isHome && <Header />}
+      {!isHome && <Header pageUrl={pageRelativeUrl} />}
       <ChildrenWrapper>{children}</ChildrenWrapper>
       <Footer IsHome={isHome} />
       <GlobalStyle />

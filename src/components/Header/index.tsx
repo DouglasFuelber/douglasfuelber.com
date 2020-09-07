@@ -4,11 +4,15 @@ import LanguageSelector from '../LanguageSelector';
 
 import { Container, ContentWrapper, Nav } from './styles';
 
-const Header: React.FC = () => {
+interface IHeaderProps {
+  pageUrl: string;
+}
+
+const Header: React.FC<IHeaderProps> = ({ pageUrl = '' }) => {
   const intl = useIntl();
 
-  const getNavItemClass = useCallback((link: string) => {
-    return link === window.location.pathname ? 'active' : '';
+  const getNavItemClass = useCallback((link: string = '') => {
+    return link === pageUrl ? 'active' : '';
   }, []);
 
   return (
@@ -20,31 +24,22 @@ const Header: React.FC = () => {
           </Link>
           <ul>
             <li>
-              <Link to="/" className={getNavItemClass(`/${intl.locale}/`)}>
+              <Link to="/" className={getNavItemClass()}>
                 {intl.formatMessage({ id: 'navigation.home.title' })}
               </Link>
             </li>
             <li>
-              <Link
-                to="/about/"
-                className={getNavItemClass(`/${intl.locale}/about/`)}
-              >
+              <Link to="/about/" className={getNavItemClass('about')}>
                 {intl.formatMessage({ id: 'navigation.about.title' })}
               </Link>
             </li>
             <li>
-              <Link
-                to="/blog/"
-                className={getNavItemClass(`/${intl.locale}/blog/`)}
-              >
+              <Link to="/blog/" className={getNavItemClass('blog')}>
                 {intl.formatMessage({ id: 'navigation.blog.title' })}
               </Link>
             </li>
             <li>
-              <Link
-                to="/contact/"
-                className={getNavItemClass(`/${intl.locale}/contact/`)}
-              >
+              <Link to="/contact/" className={getNavItemClass('contact')}>
                 {intl.formatMessage({ id: 'navigation.contact.title' })}
               </Link>
             </li>
