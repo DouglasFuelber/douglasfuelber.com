@@ -36,7 +36,8 @@
     "import/extensions": "off",
     "react/jsx-filename-extension": [
       0
-    ]
+    ],
+    "import/prefer-default-export": "off"
   },
   "parser": "babel-eslint",
   "settings": {

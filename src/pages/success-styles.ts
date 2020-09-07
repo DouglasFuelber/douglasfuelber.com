@@ -27,7 +27,7 @@ export const LinkButton = styled.a`
   background-color: #00143c;
   border: none;
   border-radius: 8px;
-  color: #fff;
+  color: #eee;
   font-weight: 600;
   padding: 8px 16px;
 
