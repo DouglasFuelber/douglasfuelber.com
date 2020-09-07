@@ -17,6 +17,17 @@ export const LanguagesWrapper = styled.ul`
     margin-left: 8px;
     position: relative;
 
+    &:hover {
+      &::after {
+        border-bottom: 2px solid #70A1FF;
+        bottom: -2px;
+        content: "";
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
+
     &.active {
         font-weight: bold;
 

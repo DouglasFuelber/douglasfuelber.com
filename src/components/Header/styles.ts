@@ -48,6 +48,17 @@ export const Nav = styled.nav`
         font-size: 16px;
         position: relative;
 
+        &:hover {
+          &::after {
+            border-bottom: 2px solid #70A1FF;
+            bottom: -4px;
+            content: "";
+            left: 0;
+            position: absolute;
+            width: 100%;
+          }
+        }
+
         &.active {
             font-weight: bold;
 
