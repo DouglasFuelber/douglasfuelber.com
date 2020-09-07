@@ -14,10 +14,20 @@ export const LanguagesWrapper = styled.ul`
     color: #eee;
     cursor: pointer;
     font-size: 16px;
-    padding-left: 8px;
+    margin-left: 8px;
+    position: relative;
 
     &.active {
         font-weight: bold;
+
+        &::after {
+          border-bottom: 2px solid #70A1FF;
+          bottom: -2px;
+          content: "";
+          left: 0;
+          position: absolute;
+          width: 100%;
+        }
     }
   }
 `;

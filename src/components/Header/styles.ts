@@ -36,18 +36,29 @@ export const Nav = styled.nav`
     margin-left: 24px;
 
     li {
+      margin-left: 16px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
       a {
         color: #eee;
         cursor: pointer;
         font-size: 16px;
-        padding-left: 16px;
-
-        &::first-child {
-          padding-left: 0;
-        }
+        position: relative;
 
         &.active {
             font-weight: bold;
+
+            &::after {
+              border-bottom: 2px solid #70A1FF;
+              bottom: -4px;
+              content: "";
+              left: 0;
+              position: absolute;
+              width: 100%;
+            }
         }
       }
     }
