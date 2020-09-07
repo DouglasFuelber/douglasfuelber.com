@@ -1,190 +1,192 @@
 {
-    "site": {
-        "description": "Douglas Fuelber - Desenvolvedor Web Full Stack",
-        "userDescription": "Programador desde 2016 e graduado em Ciência da Computação, trabalho no desenvolvimento de sistemas, websites, portais corporativos e aplicativos. Gosto sempre de aprender novas tecnologias, linguagens de programação e idiomas, buscando não me limitar em apenas aprimorar o conhecimento que já possuo, além de auxiliar a equipe com que trabalho, seja com ideias ou com apoio técnico. Além disso, gosto muito de filmes, séries, esportes e conhecer novos lugares.",
-        "userLocation": "Brasil",
-        "copyright": "Desenvolvido por Douglas Fuelber"
-    },
-    "navigation": {
-        "home": {
-            "title": "Home"
-        },
-        "about": {
-            "title": "Sobre mim",
-            "subtitle": "Conheça mais"
-        },
-        "blog": {
-            "title": "Blog",
-            "subtitle": "Leia meu"
-        },
-        "contact": {
-            "title": "Contato",
-            "subtitle": "Entre em"
-        }
-    },
+  "site": {
+    "description": "Douglas Fuelber - Desenvolvedor Web Full Stack",
+    "userDescription": "Programador desde 2016 e graduado em Ciência da Computação, trabalho no desenvolvimento de sistemas, websites, portais corporativos e aplicativos. Gosto sempre de aprender novas tecnologias, linguagens de programação e idiomas, buscando não me limitar em apenas aprimorar o conhecimento que já possuo, além de auxiliar a equipe com que trabalho, seja com ideias ou com apoio técnico. Além disso, gosto muito de filmes, séries, esportes e conhecer novos lugares.",
+    "userLocation": "Brasil",
+    "copyright": "Desenvolvido por Douglas Fuelber"
+  },
+  "navigation": {
     "home": {
-        "subtitle": "Desenvolvedor Web Full Stack"
+      "title": "Home"
     },
     "about": {
-        "pageTitle": "Sobre mim"
-    },
-    "contact": {
-        "pageTitle": "Contato"
-    },
-    "success": {
-        "pageTitle": "Mensagem enviada",
-        "subtitle": "Obrigado por me contatar! Responderei assim que possível...",
-        "button": "Continuar navegando no site"
-    },
-    "404": {
-        "pageTitle": "Página não encontrada",
-        "subtitle": "Não foi possível encontrar a página que você está buscando...",
-        "button": "Continuar navegando no site"
+      "title": "Sobre mim",
+      "subtitle": "Conheça mais"
     },
     "blog": {
-        "categories": {
-            "category": "Categoria",
-            "categories": "Categorias",
-            "devops": "DevOps",
-            "programming": "Programação"
-        },
-        "posts": {
-            "publishedIn": "Publicado em",
-            "minutesReading": "minutos de leitura",
-            "inCategory": "Na categoria",
-            "keepReading": "Continuar lendo",
-            "comments": "Comentários",
-            "newComment": "Novo comentário",
-            "backToBlog": "Voltar para o Blog"
-        }
+      "title": "Blog",
+      "subtitle": "Leia meu"
     },
-    "components": {
-        "contactForm": {
-            "sentence": "Se quiser entrar em contato comigo, deixe-me uma mensagem:",
-            "nameLabel": "Nome",
-            "nameRequired": "Por favor, me informe seu nome",
-            "emailLabel": "Email",
-            "emailRequired": "Por favor, me informe seu email",
-            "emailInvalid": "Por favor, me informe um email válido",
-            "messageLabel": "Mensagem",
-            "messageRequired": "Conte-me o motivo do seu contato, por favor",
-            "recaptchaRequired": "Por favor, marque o reCaptcha acima",
-            "buttonLabel": "Enviar"
-        },
-        "resumeCareer": {
-            "title": "Experiência",
-            "current": "Atual"
-        },
-        "resumeEducation": {
-            "title": "Educação"
-        },
-        "resumeSkills": {
-            "title": "Habilidades"
-        },
-        "resumeLanguages": {
-            "title": "Idiomas"
-        },
-        "resumePublications": {
-            "title": "Publicações"
-        }
-    },
-    "resume": {
-        "career": {
-            "1": {
-                "company": "Conectt",
-                "companyUrl": "https://conectt.com.br/",
-                "companyLocation": "Santa Cruz do Sul / RS / Brasil",
-                "jobTitle": "Programador Pleno",
-                "beginDate": {
-                    "month": "DEZ",
-                    "year": "2018"
-                },
-                "description": "Desenvolvimento de sistemas, websites, portais corporativos e aplicativos em diversas tecnologias e plataformas, destacando-se C#, Microsoft .NET, JavaScript, Microsoft SharePoint, Wordpress e Ionic Framework."
-            },
-            "2": {
-                "company": "Conectt",
-                "companyUrl": "https://conectt.com.br/",
-                "companyLocation": "Santa Cruz do Sul / RS / Brasil",
-                "jobTitle": "Programador Júnior",
-                "beginDate": {
-                    "month": "MAR",
-                    "year": "2017"
-                },
-                "description": "Desenvolvimento de sistemas, websites e portais corporativos em diversas tecnologias e plataformas, destacando-se C#, Microsoft .NET, JavaScript, Microsoft SharePoint e Wordpress."
-            },
-            "3": {
-                "company": "Conectt",
-                "companyUrl": "https://conectt.com.br/",
-                "companyLocation": "Santa Cruz do Sul / RS / Brasil",
-                "jobTitle": "Programador Estagiário",
-                "beginDate": {
-                    "month": "NOV",
-                    "year": "2016"
-                },
-                "description": "Desenvolvimento de websites e portais corporativos sobre a plataforma Microsoft SharePoint."
-            },
-            "4": {
-                "company": "Imagem.com",
-                "companyUrl": "http://www.imaggem.com.br/",
-                "companyLocation": "Vera Cruz / RS / Brasil",
-                "jobTitle": "Designer Gráfico",
-                "beginDate": {
-                    "month": "JUL",
-                    "year": "2012"
-                },
-                "description": "Responsável pela criação de artes gráficas, finalização de arquivos para impressão e eventuais atendimentos a clientes."
-            }
-        },
-        "education": {
-            "1": {
-                "title": "Bacharelado em Ciência da Computação",
-                "school": "UNISC",
-                "schoolLocation": "Santa Cruz do Sul / RS / Brasil",
-                "schoolUrl": "https://www.unisc.br",
-                "period": "2012/1 - 2018/1"
-            }
-        },
-        "languages": {
-            "pt": {
-                "title": "Português",
-                "level": "Língua Materna"
-            },
-            "en": {
-                "title": "Inglês",
-                "level": "Nível Intermediário"
-            },
-            "es": {
-                "title": "Espanhol",
-                "level": "Nível Básico"
-            }
-        },
-        "publications": {
-            "1": {
-                "title": "Desenvolvimento de um Sistema Multiagentes para Análise de Tempos de Semáforos e Consumo de Combustível",
-                "language": "PT-BR",
-                "type": "Resumo e apresentação",
-                "event": "VIII Salão de Ensino e Extensão",
-                "eventComplement": "Universidade de Santa Cruz do Sul (UNISC)",
-                "date": "Outubro de 2017",
-                "link": "https://online.unisc.br/acadnet/anais/index.php/salao_ensino_extensao/article/view/17284",
-                "colaborator": {
-                    "role": "Orientadora",
-                    "name": "Profª. Drª. Rejane Frozza"
-                }
-            },
-            "2": {
-                "title": "Gerenciamento de Tráfego Urbano empregando Sistemas Multiagentes: Análise Qualitativa de Trabalhos Relacionados",
-                "language": "PT-BR",
-                "type": "Artigo e apresentação",
-                "event": "XXXVII ENEGEP",
-                "eventComplement": "Encontro Nacional de Engenharia de Produção",
-                "date": "Outubro de 2017",
-                "link": "http://www.abepro.org.br/biblioteca/TN_STO_245_419_32999.pdf",
-                "colaborator": {
-                    "role": "Coautora",
-                    "name": "Profª. Drª. Rejane Frozza"
-                }
-            }
-        }
+    "contact": {
+      "title": "Contato",
+      "subtitle": "Entre em"
     }
+  },
+  "home": {
+    "hello": "Olá",
+    "iam": "Eu sou",
+    "subtitle": "Desenvolvedor Web Full Stack"
+  },
+  "about": {
+    "pageTitle": "Sobre mim"
+  },
+  "contact": {
+    "pageTitle": "Contato"
+  },
+  "success": {
+    "pageTitle": "Mensagem enviada",
+    "subtitle": "Obrigado por me contatar! Responderei assim que possível...",
+    "button": "Continuar navegando no site"
+  },
+  "404": {
+    "pageTitle": "Página não encontrada",
+    "subtitle": "Não foi possível encontrar a página que você está buscando...",
+    "button": "Continuar navegando no site"
+  },
+  "blog": {
+    "categories": {
+      "category": "Categoria",
+      "categories": "Categorias",
+      "devops": "DevOps",
+      "programming": "Programação"
+    },
+    "posts": {
+      "publishedIn": "Publicado em",
+      "minutesReading": "minutos de leitura",
+      "inCategory": "Na categoria",
+      "keepReading": "Continuar lendo",
+      "comments": "Comentários",
+      "newComment": "Novo comentário",
+      "backToBlog": "Voltar para o Blog"
+    }
+  },
+  "components": {
+    "contactForm": {
+      "sentence": "Se quiser entrar em contato comigo, deixe-me uma mensagem:",
+      "nameLabel": "Nome",
+      "nameRequired": "Por favor, me informe seu nome",
+      "emailLabel": "Email",
+      "emailRequired": "Por favor, me informe seu email",
+      "emailInvalid": "Por favor, me informe um email válido",
+      "messageLabel": "Mensagem",
+      "messageRequired": "Conte-me o motivo do seu contato, por favor",
+      "recaptchaRequired": "Por favor, marque o reCaptcha acima",
+      "buttonLabel": "Enviar"
+    },
+    "resumeCareer": {
+      "title": "Experiência",
+      "current": "Atual"
+    },
+    "resumeEducation": {
+      "title": "Educação"
+    },
+    "resumeSkills": {
+      "title": "Habilidades"
+    },
+    "resumeLanguages": {
+      "title": "Idiomas"
+    },
+    "resumePublications": {
+      "title": "Publicações"
+    }
+  },
+  "resume": {
+    "career": {
+      "1": {
+        "company": "Conectt",
+        "companyUrl": "https://conectt.com.br/",
+        "companyLocation": "Santa Cruz do Sul / RS / Brasil",
+        "jobTitle": "Programador Pleno",
+        "beginDate": {
+          "month": "DEZ",
+          "year": "2018"
+        },
+        "description": "Desenvolvimento de sistemas, websites, portais corporativos e aplicativos em diversas tecnologias e plataformas, destacando-se C#, Microsoft .NET, JavaScript, Microsoft SharePoint, Wordpress e Ionic Framework."
+      },
+      "2": {
+        "company": "Conectt",
+        "companyUrl": "https://conectt.com.br/",
+        "companyLocation": "Santa Cruz do Sul / RS / Brasil",
+        "jobTitle": "Programador Júnior",
+        "beginDate": {
+          "month": "MAR",
+          "year": "2017"
+        },
+        "description": "Desenvolvimento de sistemas, websites e portais corporativos em diversas tecnologias e plataformas, destacando-se C#, Microsoft .NET, JavaScript, Microsoft SharePoint e Wordpress."
+      },
+      "3": {
+        "company": "Conectt",
+        "companyUrl": "https://conectt.com.br/",
+        "companyLocation": "Santa Cruz do Sul / RS / Brasil",
+        "jobTitle": "Programador Estagiário",
+        "beginDate": {
+          "month": "NOV",
+          "year": "2016"
+        },
+        "description": "Desenvolvimento de websites e portais corporativos sobre a plataforma Microsoft SharePoint."
+      },
+      "4": {
+        "company": "Imagem.com",
+        "companyUrl": "http://www.imaggem.com.br/",
+        "companyLocation": "Vera Cruz / RS / Brasil",
+        "jobTitle": "Designer Gráfico",
+        "beginDate": {
+          "month": "JUL",
+          "year": "2012"
+        },
+        "description": "Responsável pela criação de artes gráficas, finalização de arquivos para impressão e eventuais atendimentos a clientes."
+      }
+    },
+    "education": {
+      "1": {
+        "title": "Bacharelado em Ciência da Computação",
+        "school": "UNISC",
+        "schoolLocation": "Santa Cruz do Sul / RS / Brasil",
+        "schoolUrl": "https://www.unisc.br",
+        "period": "2012/1 - 2018/1"
+      }
+    },
+    "languages": {
+      "pt": {
+        "title": "Português",
+        "level": "Língua Materna"
+      },
+      "en": {
+        "title": "Inglês",
+        "level": "Nível Intermediário"
+      },
+      "es": {
+        "title": "Espanhol",
+        "level": "Nível Básico"
+      }
+    },
+    "publications": {
+      "1": {
+        "title": "Desenvolvimento de um Sistema Multiagentes para Análise de Tempos de Semáforos e Consumo de Combustível",
+        "language": "PT-BR",
+        "type": "Resumo e apresentação",
+        "event": "VIII Salão de Ensino e Extensão",
+        "eventComplement": "Universidade de Santa Cruz do Sul (UNISC)",
+        "date": "Outubro de 2017",
+        "link": "https://online.unisc.br/acadnet/anais/index.php/salao_ensino_extensao/article/view/17284",
+        "colaborator": {
+          "role": "Orientadora",
+          "name": "Profª. Drª. Rejane Frozza"
+        }
+      },
+      "2": {
+        "title": "Gerenciamento de Tráfego Urbano empregando Sistemas Multiagentes: Análise Qualitativa de Trabalhos Relacionados",
+        "language": "PT-BR",
+        "type": "Artigo e apresentação",
+        "event": "XXXVII ENEGEP",
+        "eventComplement": "Encontro Nacional de Engenharia de Produção",
+        "date": "Outubro de 2017",
+        "link": "http://www.abepro.org.br/biblioteca/TN_STO_245_419_32999.pdf",
+        "colaborator": {
+          "role": "Coautora",
+          "name": "Profª. Drª. Rejane Frozza"
+        }
+      }
+    }
+  }
 }

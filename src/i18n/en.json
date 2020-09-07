@@ -1,190 +1,192 @@
 {
-    "site": {
-        "description": "Douglas Fuelber - Full Stack Web Developer",
-        "userDescription": "Programmer since 2016 and graduated in Computer Science, I work developing systems, websites, corporate portals and mobile apps. I like to learn new technologies, programming languages and languages, trying not only to just improve the knowledge I already have, besides helping the team I work with, either with ideas or with technical support. Also, I really like movies, series, sports and getting to know new places.",
-        "userLocation": "Brazil",
-        "copyright": "Developed by Douglas Fuelber"
-    },
-    "navigation": {
-        "home": {
-            "title": "Home"
-        },
-        "about": {
-            "title": "About me",
-            "subtitle": "Know more"
-        },
-        "blog": {
-            "title": "Blog",
-            "subtitle": "Read my"
-        },
-        "contact": {
-            "title": "Contact",
-            "subtitle": "Get in"
-        }
-    },
+  "site": {
+    "description": "Douglas Fuelber - Full Stack Web Developer",
+    "userDescription": "Programmer since 2016 and graduated in Computer Science, I work developing systems, websites, corporate portals and mobile apps. I like to learn new technologies, programming languages and languages, trying not only to just improve the knowledge I already have, besides helping the team I work with, either with ideas or with technical support. Also, I really like movies, series, sports and getting to know new places.",
+    "userLocation": "Brazil",
+    "copyright": "Developed by Douglas Fuelber"
+  },
+  "navigation": {
     "home": {
-        "subtitle": "Full Stack Web Developer"
+      "title": "Home"
     },
     "about": {
-        "pageTitle": "About me"
-    },
-    "contact": {
-        "pageTitle": "Contact"
-    },
-    "success": {
-        "pageTitle": "Message sent",
-        "subtitle": "Thanks for contact me! I'll reply as soon as possible...",
-        "button": "Take me back to the site"
-    },
-    "404": {
-        "pageTitle": "Page Not Found",
-        "subtitle": "This page couldn't be found...",
-        "button": "Take me back to the site"
+      "title": "About me",
+      "subtitle": "Know more"
     },
     "blog": {
-        "categories": {
-            "category": "Category",
-            "categories": "Categories",
-            "devops": "DevOps",
-            "programming": "Programming"
-        },
-        "posts": {
-            "publishedIn": "Published in",
-            "minutesReading": "minutes reading",
-            "inCategory": "In category",
-            "keepReading": "Keep reading",
-            "comments": "Comments",
-            "newComment": "New comment",
-            "backToBlog": "Back to Blog"
-        }
+      "title": "Blog",
+      "subtitle": "Read my"
     },
-    "components": {
-        "contactForm": {
-            "sentence": "If you want to contact me, leave me a message:",
-            "nameLabel": "Name",
-            "nameRequired": "Please, inform your name",
-            "emailLabel": "Email",
-            "emailRequired": "Please, inform your email",
-            "emailInvalid": "Please, inform a valid email",
-            "messageLabel": "Message",
-            "messageRequired": "Please, tell me the reason of your contact",
-            "recaptchaRequired": "Please, check the reCaptcha",
-            "buttonLabel": "Send"
-        },
-        "resumeCareer": {
-            "title": "Experience",
-            "current": "Current"
-        },
-        "resumeEducation": {
-            "title": "Education"
-        },
-        "resumeSkills": {
-            "title": "Skills"
-        },
-        "resumeLanguages": {
-            "title": "Languages"
-        },
-        "resumePublications": {
-            "title": "Publications"
-        }
-    },
-    "resume": {
-        "career": {
-            "1": {
-                "company": "Conectt",
-                "companyUrl": "https://conectt.com.br/",
-                "companyLocation": "Santa Cruz do Sul / RS / Brazil",
-                "jobTitle": "Programmer",
-                "beginDate": {
-                    "month": "DEC",
-                    "year": "2018"
-                },
-                "description": "Development of systems, websites, corporate portals and mobile apps in different technologies and platforms, mostly C#, Microsoft .NET, JavaScript, Microsoft SharePoint, Wordpress and Ionic Framework."
-            },
-            "2": {
-                "company": "Conectt",
-                "companyUrl": "https://conectt.com.br/",
-                "companyLocation": "Santa Cruz do Sul / RS / Brazil",
-                "jobTitle": "Junior Programmer",
-                "beginDate": {
-                    "month": "MAR",
-                    "year": "2017"
-                },
-                "description": "Developer of computer systems, websites and corporate portals in diverse technologies and platforms, highlighting C#, Microsoft .NET, JavaScript, Microsoft SharePoint and Wordpress."
-            },
-            "3": {
-                "company": "Conectt",
-                "companyUrl": "https://conectt.com.br/",
-                "companyLocation": "Santa Cruz do Sul / RS / Brazil",
-                "jobTitle": "Programming Intern",
-                "beginDate": {
-                    "month": "NOV",
-                    "year": "2016"
-                },
-                "description": "Developer of websites and corporate portals on the Microsoft SharePoint platform."
-            },
-            "4": {
-                "company": "Imagem.com",
-                "companyUrl": "http://www.imaggem.com.br/",
-                "companyLocation": "Vera Cruz / RS / Brazil",
-                "jobTitle": "Graphic Designer",
-                "beginDate": {
-                    "month": "JUL",
-                    "year": "2012"
-                },
-                "description": "Responsible for the creation of graphic arts, final arts for printing and eventual customers service."
-            }
-        },
-        "education": {
-            "1": {
-                "title": "Bachelor of Computer Science",
-                "school": "UNISC",
-                "schoolLocation": "Santa Cruz do Sul / RS / Brazil",
-                "schoolUrl": "https://www.unisc.br",
-                "period": "2012/1 - 2018/1"
-            }
-        },
-        "languages": {
-            "pt": {
-                "title": "Portuguese",
-                "level": "Native Language"
-            },
-            "en": {
-                "title": "English",
-                "level": "Intermediate Level"
-            },
-            "es": {
-                "title": "Spanish",
-                "level": "Elementary Level"
-            }
-        },
-        "publications": {
-            "1": {
-                "title": "Urban Traffic Management using Multi-Agent Systems: Qualitative Analysis of Related Work",
-                "language": "PT-BR",
-                "type": "Article and presentation",
-                "event": "XXXVII ENEGEP",
-                "eventComplement": "National Meeting of Production Engineering",
-                "date": "October, 2017",
-                "link": "https://online.unisc.br/acadnet/anais/index.php/salao_ensino_extensao/article/view/17284",
-                "colaborator": {
-                    "role": "Co-author",
-                    "name": "Profª. Drª. Rejane Frozza"
-                }
-            },
-            "2": {
-                "title": "Development of a Multi-Agent System for the Analysis of Traffic Lights Times and Fuel Consumption",
-                "language": "PT-BR",
-                "type": "Article and presentation",
-                "event": "VIII Teaching and Extension Hall",
-                "eventComplement": "University of Santa Cruz do Sul (UNISC)",
-                "date": "October, 2017",
-                "link": "http://www.abepro.org.br/biblioteca/TN_STO_245_419_32999.pdf",
-                "colaborator": {
-                    "role": "Co-author",
-                    "name": "Profª. Drª. Rejane Frozza"
-                }
-            }
-        }
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Get in"
     }
+  },
+  "home": {
+    "hello": "Hello",
+    "iam": "I am",
+    "subtitle": "Full Stack Web Developer"
+  },
+  "about": {
+    "pageTitle": "About me"
+  },
+  "contact": {
+    "pageTitle": "Contact"
+  },
+  "success": {
+    "pageTitle": "Message sent",
+    "subtitle": "Thanks for contact me! I'll reply as soon as possible...",
+    "button": "Take me back to the site"
+  },
+  "404": {
+    "pageTitle": "Page Not Found",
+    "subtitle": "This page couldn't be found...",
+    "button": "Take me back to the site"
+  },
+  "blog": {
+    "categories": {
+      "category": "Category",
+      "categories": "Categories",
+      "devops": "DevOps",
+      "programming": "Programming"
+    },
+    "posts": {
+      "publishedIn": "Published in",
+      "minutesReading": "minutes reading",
+      "inCategory": "In category",
+      "keepReading": "Keep reading",
+      "comments": "Comments",
+      "newComment": "New comment",
+      "backToBlog": "Back to Blog"
+    }
+  },
+  "components": {
+    "contactForm": {
+      "sentence": "If you want to contact me, leave me a message:",
+      "nameLabel": "Name",
+      "nameRequired": "Please, inform your name",
+      "emailLabel": "Email",
+      "emailRequired": "Please, inform your email",
+      "emailInvalid": "Please, inform a valid email",
+      "messageLabel": "Message",
+      "messageRequired": "Please, tell me the reason of your contact",
+      "recaptchaRequired": "Please, check the reCaptcha",
+      "buttonLabel": "Send"
+    },
+    "resumeCareer": {
+      "title": "Experience",
+      "current": "Current"
+    },
+    "resumeEducation": {
+      "title": "Education"
+    },
+    "resumeSkills": {
+      "title": "Skills"
+    },
+    "resumeLanguages": {
+      "title": "Languages"
+    },
+    "resumePublications": {
+      "title": "Publications"
+    }
+  },
+  "resume": {
+    "career": {
+      "1": {
+        "company": "Conectt",
+        "companyUrl": "https://conectt.com.br/",
+        "companyLocation": "Santa Cruz do Sul / RS / Brazil",
+        "jobTitle": "Programmer",
+        "beginDate": {
+          "month": "DEC",
+          "year": "2018"
+        },
+        "description": "Development of systems, websites, corporate portals and mobile apps in different technologies and platforms, mostly C#, Microsoft .NET, JavaScript, Microsoft SharePoint, Wordpress and Ionic Framework."
+      },
+      "2": {
+        "company": "Conectt",
+        "companyUrl": "https://conectt.com.br/",
+        "companyLocation": "Santa Cruz do Sul / RS / Brazil",
+        "jobTitle": "Junior Programmer",
+        "beginDate": {
+          "month": "MAR",
+          "year": "2017"
+        },
+        "description": "Developer of computer systems, websites and corporate portals in diverse technologies and platforms, highlighting C#, Microsoft .NET, JavaScript, Microsoft SharePoint and Wordpress."
+      },
+      "3": {
+        "company": "Conectt",
+        "companyUrl": "https://conectt.com.br/",
+        "companyLocation": "Santa Cruz do Sul / RS / Brazil",
+        "jobTitle": "Programming Intern",
+        "beginDate": {
+          "month": "NOV",
+          "year": "2016"
+        },
+        "description": "Developer of websites and corporate portals on the Microsoft SharePoint platform."
+      },
+      "4": {
+        "company": "Imagem.com",
+        "companyUrl": "http://www.imaggem.com.br/",
+        "companyLocation": "Vera Cruz / RS / Brazil",
+        "jobTitle": "Graphic Designer",
+        "beginDate": {
+          "month": "JUL",
+          "year": "2012"
+        },
+        "description": "Responsible for the creation of graphic arts, final arts for printing and eventual customers service."
+      }
+    },
+    "education": {
+      "1": {
+        "title": "Bachelor of Computer Science",
+        "school": "UNISC",
+        "schoolLocation": "Santa Cruz do Sul / RS / Brazil",
+        "schoolUrl": "https://www.unisc.br",
+        "period": "2012/1 - 2018/1"
+      }
+    },
+    "languages": {
+      "pt": {
+        "title": "Portuguese",
+        "level": "Native Language"
+      },
+      "en": {
+        "title": "English",
+        "level": "Intermediate Level"
+      },
+      "es": {
+        "title": "Spanish",
+        "level": "Elementary Level"
+      }
+    },
+    "publications": {
+      "1": {
+        "title": "Urban Traffic Management using Multi-Agent Systems: Qualitative Analysis of Related Work",
+        "language": "PT-BR",
+        "type": "Article and presentation",
+        "event": "XXXVII ENEGEP",
+        "eventComplement": "National Meeting of Production Engineering",
+        "date": "October, 2017",
+        "link": "https://online.unisc.br/acadnet/anais/index.php/salao_ensino_extensao/article/view/17284",
+        "colaborator": {
+          "role": "Co-author",
+          "name": "Profª. Drª. Rejane Frozza"
+        }
+      },
+      "2": {
+        "title": "Development of a Multi-Agent System for the Analysis of Traffic Lights Times and Fuel Consumption",
+        "language": "PT-BR",
+        "type": "Article and presentation",
+        "event": "VIII Teaching and Extension Hall",
+        "eventComplement": "University of Santa Cruz do Sul (UNISC)",
+        "date": "October, 2017",
+        "link": "http://www.abepro.org.br/biblioteca/TN_STO_245_419_32999.pdf",
+        "colaborator": {
+          "role": "Co-author",
+          "name": "Profª. Drª. Rejane Frozza"
+        }
+      }
+    }
+  }
 }
