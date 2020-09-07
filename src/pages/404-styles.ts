@@ -17,8 +17,8 @@ export const Container = styled.div`
   h2 {
     color: #00143c;
     font-weight: 800;
-    margin-bottom: 8px;
-    margin-top: 8px;
+    margin-bottom: 16px;
+    margin-top: 16px;
   }
 `;
 
