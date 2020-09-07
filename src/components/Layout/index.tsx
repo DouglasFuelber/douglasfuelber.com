@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useMemo } from 'react';
 import { Helmet } from 'react-helmet';
 import { useIntl } from 'gatsby-plugin-intl';
 import Header from '../Header';
@@ -16,17 +16,32 @@ interface ILayoutProps {
   children: ReactNode;
 }
 
-const Layout: React.FC<ILayoutProps> = ({ isHome = false, pageTitle = "", pageRelativeUrl = "", children }) => {
+const Layout: React.FC<ILayoutProps> = ({
+  isHome = false,
+  pageTitle = '',
+  pageRelativeUrl = '',
+  children,
+}) => {
   const intl = useIntl();
+
+  const title = useMemo(() => {
+    let { siteTitle } = config;
+    if (pageTitle) siteTitle = `${pageTitle} | ${siteTitle}`;
+    return siteTitle;
+  }, []);
+
+  const pageLink = useMemo(() => {
+    let link = `${config.siteUrl}/${intl.locale}/`;
+    if (pageRelativeUrl) link = `${link}/${pageRelativeUrl}/`;
+    return link;
+  }, []);
+
   return (
     <Container>
       <Helmet>
         <html lang={intl.locale} />
-        <title>{`${(pageTitle && `${pageTitle} | `)} ${config.siteTitle}`}</title>
-        <link
-          rel="canonical"
-          href={`${config.siteUrl}/${intl.locale}/${pageRelativeUrl && `${pageRelativeUrl}/`}`}
-        />
+        <title>{title}</title>
+        <link rel="canonical" href={pageLink} />
         <meta
           name="description"
           content={intl.formatMessage({ id: 'site.description' })}
@@ -37,13 +52,11 @@ const Layout: React.FC<ILayoutProps> = ({ isHome = false, pageTitle = "", pageRe
           rel="stylesheet"
         />
       </Helmet>
-      {(!isHome) && <Header />}
-      <ChildrenWrapper>
-        {children}
-      </ChildrenWrapper>
+      {!isHome && <Header />}
+      <ChildrenWrapper>{children}</ChildrenWrapper>
       <Footer IsHome={isHome} />
       <GlobalStyle />
-    </Container >
+    </Container>
   );
 };
 

@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.footer`
   align-items: center;
-  background: #00143C;
-  border-top: 4px solid #70A1FF;
+  background: #00143c;
+  border-top: 4px solid #70a1ff;
   bottom: 0;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@ export const InfoWrapper = styled.div`
   max-width: 1144px;
   width: 100%;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -34,7 +34,7 @@ export const SocialLinks = styled.div`
   justify-content: center;
   margin-bottom: 16px;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     margin-bottom: 0;
   }
 

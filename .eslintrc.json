@@ -31,8 +31,14 @@
         ]
       }
     ],
-    "eslintimport/extensions": "off"
+    "eslintimport/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "react/jsx-filename-extension": [
+      0
+    ]
   },
+  "parser": "babel-eslint",
   "settings": {
     "import/core-modules": []
   },

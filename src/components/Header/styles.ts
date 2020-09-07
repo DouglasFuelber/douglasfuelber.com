@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  background: #00143C;
-  border-bottom: 4px solid #70A1FF;
+  background: #00143c;
+  border-bottom: 4px solid #70a1ff;
   display: flex;
   height: 72px;
   justify-content: center;
@@ -50,9 +50,9 @@ export const Nav = styled.nav`
 
         &:hover {
           &::after {
-            border-bottom: 2px solid #70A1FF;
+            border-bottom: 2px solid #70a1ff;
             bottom: -4px;
-            content: "";
+            content: '';
             left: 0;
             position: absolute;
             width: 100%;
@@ -60,16 +60,16 @@ export const Nav = styled.nav`
         }
 
         &.active {
-            font-weight: bold;
+          font-weight: bold;
 
-            &::after {
-              border-bottom: 2px solid #70A1FF;
-              bottom: -4px;
-              content: "";
-              left: 0;
-              position: absolute;
-              width: 100%;
-            }
+          &::after {
+            border-bottom: 2px solid #70a1ff;
+            bottom: -4px;
+            content: '';
+            left: 0;
+            position: absolute;
+            width: 100%;
+          }
         }
       }
     }

@@ -9,7 +9,7 @@ import {
   Selectors,
   InfoWrapper,
   SocialLinks,
-  Copyright
+  Copyright,
 } from './styles';
 
 interface IFooterProps {
@@ -21,23 +21,35 @@ const Footer: React.FC<IFooterProps> = ({ IsHome }) => {
 
   return (
     <Container>
-      {IsHome && <Selectors>
-        <LanguageSelector />
-      </Selectors>}
+      {IsHome && (
+        <Selectors>
+          <LanguageSelector />
+        </Selectors>
+      )}
       <InfoWrapper>
         <SocialLinks>
-          <a href="https://github.com/DouglasFuelber" target="_blank">
+          <a
+            href="https://github.com/DouglasFuelber"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             <FaGithub color="#fff" size={24} />
           </a>
-          <a href="https://www.linkedin.com/in/douglasfuelber/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/douglasfuelber/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             <FaLinkedin color="#fff" size={24} />
           </a>
         </SocialLinks>
         <Copyright>
           <img src="/logos/logo.svg" alt="Douglas Fuelber" />
-          <h4>{`${intl.formatMessage({
-            id: 'site.copyright',
-          })} | ${new Date().getFullYear()}`}</h4>
+          <h4>
+            {`${intl.formatMessage({
+              id: 'site.copyright',
+            })} | ${new Date().getFullYear()}`}
+          </h4>
         </Copyright>
       </InfoWrapper>
     </Container>

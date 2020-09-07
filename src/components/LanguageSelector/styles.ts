@@ -5,7 +5,7 @@ export const Container = styled.div`
 `;
 
 export const LanguagesWrapper = styled.ul`
-  border-left: 2px solid #70A1FF;
+  border-left: 2px solid #70a1ff;
   display: flex;
   list-style: none;
   margin-left: 8px;
@@ -19,9 +19,9 @@ export const LanguagesWrapper = styled.ul`
 
     &:hover {
       &::after {
-        border-bottom: 2px solid #70A1FF;
+        border-bottom: 2px solid #70a1ff;
         bottom: -2px;
-        content: "";
+        content: '';
         left: 0;
         position: absolute;
         width: 100%;
@@ -29,16 +29,16 @@ export const LanguagesWrapper = styled.ul`
     }
 
     &.active {
-        font-weight: bold;
+      font-weight: bold;
 
-        &::after {
-          border-bottom: 2px solid #70A1FF;
-          bottom: -2px;
-          content: "";
-          left: 0;
-          position: absolute;
-          width: 100%;
-        }
+      &::after {
+        border-bottom: 2px solid #70a1ff;
+        bottom: -2px;
+        content: '';
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
     }
   }
 `;
