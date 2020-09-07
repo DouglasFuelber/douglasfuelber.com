@@ -10,12 +10,16 @@ export const LanguagesWrapper = styled.ul`
   list-style: none;
   margin-left: 8px;
 
-  li {
+  button {
+    background: none;
+    border: none;
     color: #eee;
     cursor: pointer;
     font-size: 16px;
     margin-left: 8px;
     position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 
     &:hover {
       &::after {
