@@ -7,11 +7,8 @@ module.exports = {
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
   blogPrefix: '/blog', // Prefixes all blog links.
   fixedFooter: false, // Whether the footer component is fixed, i.e. always visible
-  recaptchaPublicKey: '6Ld3gIwUAAAAAM9ztAk0bBTf40Oe-dd_-qzv2GON', // Recaptcha public key
   siteDescription: 'Douglas Fuelber - Full Stack Web Developer', // Website description used for RSS feeds/meta description tag.
   siteRss: '/rss.xml', // Path to the RSS file.
-  siteFBAppID: '', // FB Application ID for using app insights
-  siteGATrackingID: 'UA-99213358-1', // Tracking code ID for google analytics.
   disqusShortName: 'douglasfuelber', // Shortname used in Disqus comments component
   postDefaultCategoryID: 'Programming', // Default category for posts.
   dateFromFormat: 'YYYY-MM-DD', // Date format used in the frontmatter.

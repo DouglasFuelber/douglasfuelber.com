@@ -1,18 +1,21 @@
 const urljoin = require('url-join');
 const config = require('./src/data/site-data');
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
 const regexExcludeRobots = /^(?!\/(dev-404-page|404|offline-plugin-app-shell-fallback|tags|categories|success|site)).*$/;
 
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteUrl: config.siteUrl,
+    siteUrl: process.env.SITE_URL,
     rssMetadata: {
-      site_url: config.siteUrl,
-      feed_url: urljoin(config.siteUrl, config.siteRss),
+      site_url: process.env.SITE_URL,
+      feed_url: urljoin(process.env.SITE_URL, config.siteRss),
       title: config.siteTitle,
       description: config.siteDescription,
-      image_url: `${config.siteUrl}/logos/favicon.png`,
+      image_url: `${process.env.SITE_URL}/logos/favicon.png`,
       author: config.userName,
       copyright: config.copyright,
     },
@@ -69,7 +72,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: config.siteGATrackingID,
+        trackingId: process.env.GA_TRACKING_ID,
       },
     },
     {

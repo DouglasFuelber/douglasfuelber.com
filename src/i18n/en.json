@@ -31,7 +31,18 @@
     "pageTitle": "About me"
   },
   "contact": {
-    "pageTitle": "Contact"
+    "pageTitle": "Contact",
+    "sentence": "If you want to contact me, leave me a message:",
+    "nameLabel": "Name",
+    "nameRequired": "Please, inform your name",
+    "emailLabel": "Email",
+    "emailRequired": "Please, inform your email",
+    "emailInvalid": "Please, inform a valid email",
+    "subjectLabel": "Subject",
+    "subjectRequired": "Please, tell me the subject of your contact",
+    "messageLabel": "Message",
+    "messageRequired": "Please, tell me the reason of your contact",
+    "buttonLabel": "Send"
   },
   "success": {
     "pageTitle": "Message sent",
@@ -61,18 +72,6 @@
     }
   },
   "components": {
-    "contactForm": {
-      "sentence": "If you want to contact me, leave me a message:",
-      "nameLabel": "Name",
-      "nameRequired": "Please, inform your name",
-      "emailLabel": "Email",
-      "emailRequired": "Please, inform your email",
-      "emailInvalid": "Please, inform a valid email",
-      "messageLabel": "Message",
-      "messageRequired": "Please, tell me the reason of your contact",
-      "recaptchaRequired": "Please, check the reCaptcha",
-      "buttonLabel": "Send"
-    },
     "resumeCareer": {
       "title": "Experience",
       "current": "Current"

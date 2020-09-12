@@ -31,7 +31,18 @@
     "pageTitle": "Sobre mim"
   },
   "contact": {
-    "pageTitle": "Contato"
+    "pageTitle": "Contato",
+    "sentence": "Se quiser entrar em contato comigo, deixe-me uma mensagem:",
+    "nameLabel": "Nome",
+    "nameRequired": "Por favor, me informe seu nome",
+    "emailLabel": "Email",
+    "emailRequired": "Por favor, me informe seu email",
+    "emailInvalid": "Por favor, me informe um email válido",
+    "subjectLabel": "Assunto",
+    "subjectRequired": "Por favor, me informe o assunto do seu contato",
+    "messageLabel": "Mensagem",
+    "messageRequired": "Conte-me o motivo do seu contato, por favor",
+    "buttonLabel": "Enviar"
   },
   "success": {
     "pageTitle": "Mensagem enviada",
@@ -61,18 +72,6 @@
     }
   },
   "components": {
-    "contactForm": {
-      "sentence": "Se quiser entrar em contato comigo, deixe-me uma mensagem:",
-      "nameLabel": "Nome",
-      "nameRequired": "Por favor, me informe seu nome",
-      "emailLabel": "Email",
-      "emailRequired": "Por favor, me informe seu email",
-      "emailInvalid": "Por favor, me informe um email válido",
-      "messageLabel": "Mensagem",
-      "messageRequired": "Conte-me o motivo do seu contato, por favor",
-      "recaptchaRequired": "Por favor, marque o reCaptcha acima",
-      "buttonLabel": "Enviar"
-    },
     "resumeCareer": {
       "title": "Experiência",
       "current": "Atual"

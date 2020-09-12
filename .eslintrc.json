@@ -37,7 +37,9 @@
     "react/jsx-filename-extension": [
       0
     ],
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "react/jsx-props-no-spreading": "off",
+    "no-unused-expressions": "off"
   },
   "parser": "babel-eslint",
   "settings": {
