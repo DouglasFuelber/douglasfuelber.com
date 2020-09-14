@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGlobeAmericas } from 'react-icons/fa';
-import { useIntl, changeLocale } from 'gatsby-plugin-intl';
+import { useIntl, changeLocale } from 'gatsby-plugin-react-intl';
 import { languages } from '../../data/site-data';
 
 import { Container, LanguagesWrapper } from './styles';

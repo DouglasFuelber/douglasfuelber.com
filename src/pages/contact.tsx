@@ -1,5 +1,5 @@
 import React, { useRef, useCallback } from 'react';
-import { useIntl } from 'gatsby-plugin-intl';
+import { useIntl } from 'gatsby-plugin-react-intl';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import ReCAPTCHA from 'react-google-recaptcha';

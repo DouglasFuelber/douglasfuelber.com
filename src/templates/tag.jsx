@@ -1,13 +1,17 @@
-import React from "react";
-import Helmet from "react-helmet";
-import { graphql } from "gatsby";
-import { useIntl } from "gatsby-plugin-intl";
-import PageTitle from "../components/PageTitle";
-import PostListing from "../components/PostListing";
-import Layout from "../components/Layout";
-import config from "../data/site-data";
+import React from 'react';
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import { useIntl } from 'gatsby-plugin-react-intl';
+import PageTitle from '../components/PageTitle';
+import PostListing from '../components/PostListing';
+import Layout from '../components/Layout';
+import config from '../data/site-data';
 
-const TagTemplate = ({ pageContext, data: { posts, categories, tags }, location }) => {
+const TagTemplate = ({
+  pageContext,
+  data: { posts, categories, tags },
+  location,
+}) => {
   const { tag } = pageContext;
   const postEdges = posts.edges;
   const intl = useIntl();
@@ -19,21 +23,27 @@ const TagTemplate = ({ pageContext, data: { posts, categories, tags }, location 
     >
       <Helmet>
         <title>{`Blog | Tag: ${tag} | ${config.siteTitle}`}</title>
-        <link rel="canonical" href={`${config.siteUrl}/${intl.locale}/blog/tags/${tag}`} />
+        <link
+          rel="canonical"
+          href={`${config.siteUrl}/${intl.locale}/blog/tags/${tag}`}
+        />
       </Helmet>
 
       <div id="blog-container" className="tertiary_bg">
-
         <PageTitle title="Blog" subtitle1="Tag" subtitle2={tag} />
 
         <div id="page_content">
-          <PostListing postEdges={postEdges} categoriesEdges={categories.edges} tagsEdges={tags.edges} location={location} />
+          <PostListing
+            postEdges={postEdges}
+            categoriesEdges={categories.edges}
+            tagsEdges={tags.edges}
+            location={location}
+          />
         </div>
-
       </div>
     </Layout>
   );
-}
+};
 
 export default TagTemplate;
 

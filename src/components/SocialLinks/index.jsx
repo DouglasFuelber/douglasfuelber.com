@@ -1,5 +1,5 @@
-import React from "react";
-import { useIntl } from "gatsby-plugin-intl"
+import React from 'react';
+import { useIntl } from 'gatsby-plugin-react-intl';
 import {
   FacebookShareButton,
   WhatsappShareButton,
@@ -11,20 +11,19 @@ import {
   TwitterIcon,
   EmailIcon,
   WhatsappIcon,
-  LinkedinIcon
-} from "react-share";
-import urljoin from "url-join";
-import config from "../../data/site-data";
-import "./SocialLinks.scss";
+  LinkedinIcon,
+} from 'react-share';
+import urljoin from 'url-join';
+import config from '../../data/site-data';
+import './SocialLinks.scss';
 
 export default ({ postNode, postPath, mobile }) => {
-
   const intl = useIntl();
 
   const post = postNode.frontmatter;
   const url = urljoin(config.siteUrl, intl.locale, config.blogPrefix, postPath);
   const iconSize = mobile ? 36 : 48;
-  const filter = count => (count > 0 ? count : "");
+  const filter = count => (count > 0 ? count : '');
   const renderShareCount = count => (
     <div className="share-count">{filter(count)}</div>
   );
@@ -51,4 +50,4 @@ export default ({ postNode, postPath, mobile }) => {
       </EmailShareButton>
     </div>
   );
-}
+};

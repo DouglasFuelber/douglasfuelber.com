@@ -39,7 +39,8 @@
     ],
     "import/prefer-default-export": "off",
     "react/jsx-props-no-spreading": "off",
-    "no-unused-expressions": "off"
+    "no-unused-expressions": "off",
+    "import/no-extraneous-dependencies": "off"
   },
   "parser": "babel-eslint",
   "settings": {

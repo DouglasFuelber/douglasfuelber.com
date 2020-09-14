@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Link, useIntl } from 'gatsby-plugin-intl';
+import { Link, useIntl } from 'gatsby-plugin-react-intl';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import LanguageSelector from '../LanguageSelector';
 

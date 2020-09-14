@@ -1,8 +1,8 @@
-const path = require("path");
-const _ = require("lodash");
-const moment = require("moment");
-const siteConfig = require("./src/data/site-data");
-require("babel-polyfill");
+const path = require('path');
+const _ = require('lodash');
+const moment = require('moment');
+const siteConfig = require('./src/data/site-data');
+require('babel-polyfill');
 
 const postNodes = [];
 
@@ -17,7 +17,7 @@ function addSiblingNodes(createNodeField) {
       if (dateB.isBefore(dateA)) return -1;
 
       return 0;
-    }
+    },
   );
   for (let i = 0; i < postNodes.length; i += 1) {
     const nextID = i + 1 < postNodes.length ? i + 1 : 0;
@@ -27,23 +27,23 @@ function addSiblingNodes(createNodeField) {
     const prevNode = postNodes[prevID];
     createNodeField({
       node: currNode,
-      name: "nextTitle",
-      value: nextNode.frontmatter.title
+      name: 'nextTitle',
+      value: nextNode.frontmatter.title,
     });
     createNodeField({
       node: currNode,
-      name: "nextSlug",
-      value: nextNode.fields.slug
+      name: 'nextSlug',
+      value: nextNode.fields.slug,
     });
     createNodeField({
       node: currNode,
-      name: "prevTitle",
-      value: prevNode.frontmatter.title
+      name: 'prevTitle',
+      value: prevNode.frontmatter.title,
     });
     createNodeField({
       node: currNode,
-      name: "prevSlug",
-      value: prevNode.fields.slug
+      name: 'prevSlug',
+      value: prevNode.fields.slug,
     });
   }
 }
@@ -51,38 +51,38 @@ function addSiblingNodes(createNodeField) {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   let slug;
-  if (node.internal.type === "MarkdownRemark") {
+  if (node.internal.type === 'MarkdownRemark') {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
     if (
-      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
-      Object.prototype.hasOwnProperty.call(node.frontmatter, "title")
+      Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')
     ) {
       slug = `/${_.kebabCase(node.frontmatter.title)}`;
-    } else if (parsedFilePath.name !== "index" && parsedFilePath.dir !== "") {
+    } else if (parsedFilePath.name !== 'index' && parsedFilePath.dir !== '') {
       slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
-    } else if (parsedFilePath.dir === "") {
+    } else if (parsedFilePath.dir === '') {
       slug = `/${parsedFilePath.name}/`;
     } else {
       slug = `/${parsedFilePath.dir}/`;
     }
 
-    if (Object.prototype.hasOwnProperty.call(node, "frontmatter")) {
-      if (Object.prototype.hasOwnProperty.call(node.frontmatter, "slug"))
+    if (Object.prototype.hasOwnProperty.call(node, 'frontmatter')) {
+      if (Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug'))
         slug = `/${_.kebabCase(node.frontmatter.slug)}`;
-      if (Object.prototype.hasOwnProperty.call(node.frontmatter, "date")) {
+      if (Object.prototype.hasOwnProperty.call(node.frontmatter, 'date')) {
         const date = moment(node.frontmatter.date, siteConfig.dateFromFormat);
         if (!date.isValid)
           console.warn(`WARNING: Invalid date.`, node.frontmatter);
 
         createNodeField({
           node,
-          name: "date",
-          value: date.toISOString()
+          name: 'date',
+          value: date.toISOString(),
         });
       }
     }
-    createNodeField({ node, name: "slug", value: slug });
+    createNodeField({ node, name: 'slug', value: slug });
     postNodes.push(node);
   }
 };
@@ -90,7 +90,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.setFieldsOnGraphQLNodeType = ({ type, actions }) => {
   const { name } = type;
   const { createNodeField } = actions;
-  if (name === "MarkdownRemark") {
+  if (name === 'MarkdownRemark') {
     addSiblingNodes(createNodeField);
   }
 };
@@ -99,9 +99,9 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const postPage = path.resolve("src/templates/post.jsx");
-    const tagPage = path.resolve("src/templates/tag.jsx");
-    const categoryPage = path.resolve("src/templates/category.jsx");
+    const postPage = path.resolve('src/templates/post.jsx');
+    const tagPage = path.resolve('src/templates/tag.jsx');
+    const categoryPage = path.resolve('src/templates/category.jsx');
     resolve(
       graphql(
         `
@@ -120,7 +120,7 @@ exports.createPages = ({ graphql, actions }) => {
               }
             }
           }
-        `
+        `,
       ).then(result => {
         if (result.errors) {
           /* eslint no-console: "off" */
@@ -145,8 +145,8 @@ exports.createPages = ({ graphql, actions }) => {
             path: `/blog${edge.node.fields.slug}/`,
             component: postPage,
             context: {
-              slug: edge.node.fields.slug
-            }
+              slug: edge.node.fields.slug,
+            },
           });
         });
 
@@ -156,8 +156,8 @@ exports.createPages = ({ graphql, actions }) => {
             path: `/blog/tags/${_.kebabCase(tag)}/`,
             component: tagPage,
             context: {
-              tag
-            }
+              tag,
+            },
           });
         });
 
@@ -167,17 +167,17 @@ exports.createPages = ({ graphql, actions }) => {
             path: `/blog/categories/${_.kebabCase(category)}/`,
             component: categoryPage,
             context: {
-              category
-            }
+              category,
+            },
           });
         });
-      })
+      }),
     );
   });
 };
 
 exports.onCreatePage = ({ page, actions }) => {
-  const { createPage, deletePage } = actions
+  const { createPage, deletePage } = actions;
   deletePage(page);
   createPage({
     ...page,
@@ -185,5 +185,5 @@ exports.onCreatePage = ({ page, actions }) => {
       ...page.context,
       language: page.context.intl.language,
     },
-  })
+  });
 };

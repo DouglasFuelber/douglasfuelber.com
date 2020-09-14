@@ -1,6 +1,6 @@
 import React from "react";
 import _ from "lodash";
-import { Link } from "gatsby-plugin-intl";
+import { Link } from "gatsby-plugin-react-intl";
 import Chip from "react-md/lib/Chips";
 import "./PostTags.scss";
 

@@ -3,7 +3,7 @@ import Disqus from 'gatsby-plugin-disqus';
 import Card from "react-md/lib/Cards/Card";
 import CardTitle from "react-md/lib/Cards/CardTitle";
 import CardText from "react-md/lib/Cards/CardText";
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-react-intl"
 import Snackbar from "react-md/lib/Snackbars";
 import config from "../../data/site-data";
 import "./Disqus.scss";

@@ -1,6 +1,6 @@
 import React, { ReactNode, useMemo } from 'react';
 import { Helmet } from 'react-helmet';
-import { useIntl } from 'gatsby-plugin-intl';
+import { useIntl } from 'gatsby-plugin-react-intl';
 import Header from '../Header';
 import Footer from '../Footer';
 

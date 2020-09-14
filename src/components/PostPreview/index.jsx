@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useIntl, Link } from "gatsby-plugin-intl";
+import { useIntl, Link } from "gatsby-plugin-react-intl";
 import { Grid, Cell } from 'react-md';
 import Card from "react-md/lib/Cards/Card";
 import CardTitle from "react-md/lib/Cards/CardTitle";

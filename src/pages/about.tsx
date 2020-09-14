@@ -1,9 +1,9 @@
 import React from 'react';
-import { useIntl } from 'gatsby-plugin-intl';
+import { useIntl } from 'gatsby-plugin-react-intl';
 
 import Layout from '../components/Layout';
 import PageTitle from '../components/PageTitle';
-// import About from '../components/About';
+import About from '../components/About';
 // import LinkedInBadge from '../components/LinkedInBadge';
 // import ResumeCareer from '../components/ResumeCareer';
 // import ResumeEducation from '../components/ResumeEducation';
@@ -23,7 +23,7 @@ const AboutPage: React.FC = () => {
     >
       <PageTitle title={intl.formatMessage({ id: 'about.pageTitle' })} />
       <Container>
-        {/* <About /> */}
+        <About />
         {/* <ResumeCareer /> */}
         {/* <ResumeEducation /> */}
         {/* <ResumeSkills /> */}

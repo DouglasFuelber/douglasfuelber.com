@@ -6782,18 +6782,6 @@ gatsby-plugin-google-analytics@^2.1.29:
     "@babel/runtime" "^7.10.3"
     minimatch "3.0.4"
 
-gatsby-plugin-intl@^0.3.1:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-intl/-/gatsby-plugin-intl-0.3.3.tgz#3a0e55e6641bfcb09fae20215b8f72e2a0ec3de4"
-  integrity sha512-VPugNJv3GDkT6RcOBfncZPw3Eqh98RyvChsXfX7VuMQ8mBVoNB6XyNSIiEGG/atxFrpSp/r3WUKpnzpLLpY5dg==
-  dependencies:
-    "@babel/runtime" "^7.8.4"
-    "@formatjs/intl-pluralrules" "^1.5.2"
-    "@formatjs/intl-relativetimeformat" "^4.5.9"
-    browser-lang "^0.1.0"
-    intl "^1.2.5"
-    react-intl "^3.12.0"
-
 gatsby-plugin-lodash@^3.1.16:
   version "3.3.10"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-lodash/-/gatsby-plugin-lodash-3.3.10.tgz#e280be5c3587d7f87e6d27064e50465c6871a7f9"
@@ -6853,6 +6841,19 @@ gatsby-plugin-react-helmet@^3.1.16:
   integrity sha512-AcXYwmS3r298JWs6iQ3OLNxIe8L8i5a2iSdLr/SDMpHqumYm7q/vB9kCX0et5wM7DIuZ7aPXDrdi5yDCAvU5lg==
   dependencies:
     "@babel/runtime" "^7.10.3"
+
+gatsby-plugin-react-intl@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-intl/-/gatsby-plugin-react-intl-1.2.1.tgz#015d9d3d628d8bbb1a4003326302920e8d027d12"
+  integrity sha512-kws3mQR5KgxuXm7Ik6eRFzTxmVj9k+aV12pEjG5SkUXIt/UEPOvjD9f3F2by5VG+8CdQNMsoglOqQHaJa0mPOg==
+  dependencies:
+    "@babel/runtime" "^7.8.4"
+    "@formatjs/intl-pluralrules" "^1.5.2"
+    "@formatjs/intl-relativetimeformat" "^4.5.9"
+    browser-lang "^0.1.0"
+    intl "^1.2.5"
+    micromatch "^4.0.2"
+    react-intl "^3.12.0"
 
 gatsby-plugin-sass@^2.1.24:
   version "2.3.12"

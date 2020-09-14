@@ -1,41 +1,44 @@
-import React from "react";
-import Helmet from "react-helmet";
-import { graphql } from "gatsby";
-import { useIntl } from "gatsby-plugin-intl";
+import React from 'react';
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import { useIntl } from 'gatsby-plugin-react-intl';
 
-import Layout from "../components/Layout";
-import PageTitle from "../components/PageTitle";
-import PostListing from "../components/PostListing";
-import SEO from "../components/SEO";
+import Layout from '../components/Layout';
+import PageTitle from '../components/PageTitle';
+import PostListing from '../components/PostListing';
+import SEO from '../components/SEO';
 
-import config from "../data/site-data";
+import config from '../data/site-data';
 
-import "./blog.scss";
+import './blog.scss';
 
-const BlogPage = ({location, data: { posts, categories, tags}}) => {
-    const intl = useIntl();
-    const postEdges = posts.edges;
+const BlogPage = ({ location, data: { posts, categories, tags } }) => {
+  const intl = useIntl();
+  const postEdges = posts.edges;
 
-    return (
-      <Layout location={location} title="Blog">
-        <Helmet>
-            <title>{`Blog | ${config.siteTitle}`}</title>
-            <link rel="canonical" href={`${config.siteUrl}/${intl.locale}/blog/`} />
-        </Helmet>
-        <SEO postEdges={postEdges} />
+  return (
+    <Layout location={location} title="Blog">
+      <Helmet>
+        <title>{`Blog | ${config.siteTitle}`}</title>
+        <link rel="canonical" href={`${config.siteUrl}/${intl.locale}/blog/`} />
+      </Helmet>
+      <SEO postEdges={postEdges} />
 
-        <div id="blog-container" className="tertiary_bg">
-        
-            <PageTitle title="Blog" />
+      <div id="blog-container" className="tertiary_bg">
+        <PageTitle title="Blog" />
 
-            <div id="page_content">
-              <PostListing postEdges={postEdges} categoriesEdges={categories.edges} tagsEdges={tags.edges} location={location} />
-            </div>
+        <div id="page_content">
+          <PostListing
+            postEdges={postEdges}
+            categoriesEdges={categories.edges}
+            tagsEdges={tags.edges}
+            location={location}
+          />
         </div>
-
-      </Layout>
-    );
-  }
+      </div>
+    </Layout>
+  );
+};
 
 export default BlogPage;
 

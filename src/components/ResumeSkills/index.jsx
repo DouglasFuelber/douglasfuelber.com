@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Cell } from 'react-md';
-import { useIntl } from "gatsby-plugin-intl";
+import { useIntl } from "gatsby-plugin-react-intl";
 import LevelCounter from "../LevelCounter";
 
 import { userSkills } from "../../data/site-data";

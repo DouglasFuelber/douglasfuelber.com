@@ -1,6 +1,6 @@
 import _ from "lodash";
 import Chip from "react-md/lib/Chips";
-import { useIntl, Link } from "gatsby-plugin-intl";
+import { useIntl, Link } from "gatsby-plugin-react-intl";
 import React from "react";
 import "./PostCategoriesListing.scss";
 

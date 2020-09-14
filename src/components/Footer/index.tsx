@@ -1,5 +1,5 @@
 import React from 'react';
-import { useIntl } from 'gatsby-plugin-intl';
+import { useIntl } from 'gatsby-plugin-react-intl';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 import LanguageSelector from '../LanguageSelector';

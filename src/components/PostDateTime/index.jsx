@@ -1,5 +1,5 @@
 import React from 'react';
-import { useIntl } from "gatsby-plugin-intl";
+import { useIntl } from "gatsby-plugin-react-intl";
 import CardTitle from "react-md/lib/Cards/CardTitle";
 import moment from "moment";
 import _ from "lodash";

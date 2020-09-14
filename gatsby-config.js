@@ -222,7 +222,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-intl`,
+      resolve: `gatsby-plugin-react-intl`,
       options: {
         // language JSON resource path
         path: `${__dirname}/src/i18n`,
@@ -231,7 +231,11 @@ module.exports = {
         // language file path
         defaultLanguage: config.defaultLanguage,
         // option to redirect to default language when connecting
-        redirect: true,
+        redirect: false,
+        // option for use / as defaultLangauge root path. if your defaultLanguage is `ko`, when `redirectDefaultLanguageToRoot` is true, then it will not generate `/ko/xxx` pages, instead of `/xxx`
+        redirectDefaultLanguageToRoot: true,
+        // paths that you don't want to genereate locale pages, example: ["/dashboard/","/test/**"], string format is from micromatch https://github.com/micromatch/micromatch
+        ignoredPaths: [],
       },
     },
     'gatsby-plugin-typescript',
