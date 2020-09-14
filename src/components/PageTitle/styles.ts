@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  margin-bottom: 56px;
-  margin-top: 56px;
+  margin-bottom: 40px;
+  margin-top: 40px;
 
   h1 {
     border-left: 4px solid #70a1ff;
