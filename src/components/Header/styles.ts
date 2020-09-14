@@ -111,7 +111,7 @@ export const Nav = styled.nav`
 
         @media (min-width: 768px) {
           font-size: 16px;
-          font-weight: 600;
+          font-weight: 400;
           line-height: 32px;
         }
 
