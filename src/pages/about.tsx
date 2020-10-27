@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import PageTitle from '../components/PageTitle';
 import About from '../components/About';
 // import LinkedInBadge from '../components/LinkedInBadge';
-// import ResumeCareer from '../components/ResumeCareer';
+import ResumeCareer from '../components/ResumeCareer';
 // import ResumeEducation from '../components/ResumeEducation';
 // import ResumeLanguages from '../components/ResumeLanguages';
 // import ResumePublications from '../components/ResumePublications';
@@ -24,7 +24,7 @@ const AboutPage: React.FC = () => {
       <PageTitle title={intl.formatMessage({ id: 'about.pageTitle' })} />
       <Container>
         <About />
-        {/* <ResumeCareer /> */}
+        <ResumeCareer />
         {/* <ResumeEducation /> */}
         {/* <ResumeSkills /> */}
         {/* <ResumeLanguages /> */}
