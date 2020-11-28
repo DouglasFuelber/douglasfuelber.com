@@ -56,6 +56,11 @@ export const JobTitle = styled.div`
 
     a {
       color: #00143c;
+
+      svg {
+        font-size: 10px;
+        margin-left: 6px;
+      }
     }
   }
 `;

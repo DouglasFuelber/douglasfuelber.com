@@ -56,6 +56,7 @@ export const Copyright = styled.div`
   }
 
   h4 {
+    font-weight: 500;
     margin-left: 8px;
   }
 `;

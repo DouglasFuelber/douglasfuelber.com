@@ -1,5 +1,6 @@
 import React from 'react';
 import { useIntl } from 'gatsby-plugin-react-intl';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 import { resume } from '../../i18n/en';
 
@@ -13,7 +14,7 @@ const ResumeCareer: React.FC = () => {
       <h3>{intl.formatMessage({ id: `components.resumeCareer.title` })}</h3>
       {Object.keys(resume.career).map((key, index) => {
         return (
-          <Job>
+          <Job key={`job-${key}`}>
             {index === 0 && (
               <JobDate isCurrent>
                 <DateIndicator isCurrent />
@@ -37,6 +38,7 @@ const ResumeCareer: React.FC = () => {
                   rel="noopener noreferrer"
                 >
                   {intl.formatMessage({ id: `resume.career.${key}.company` })}
+                  <FaExternalLinkAlt />
                 </a>
                 {` - ${intl.formatMessage({
                   id: `resume.career.${key}.companyLocation`,
