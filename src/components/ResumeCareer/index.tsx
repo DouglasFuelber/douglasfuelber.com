@@ -3,7 +3,7 @@ import { useIntl } from 'gatsby-plugin-react-intl';
 
 import { resume } from '../../i18n/en';
 
-import { Container } from './styles';
+import { Container, Job, JobTitle, JobDate, DateIndicator } from './styles';
 
 const ResumeCareer: React.FC = () => {
   const intl = useIntl();
@@ -11,13 +11,20 @@ const ResumeCareer: React.FC = () => {
   return (
     <Container>
       <h3>{intl.formatMessage({ id: `components.resumeCareer.title` })}</h3>
-      <div>
-        <div>
-          {intl.formatMessage({ id: `components.resumeCareer.current` })}
-        </div>
-        {Object.keys(resume.career).map(key => {
-          return (
-            <>
+      {Object.keys(resume.career).map((key, index) => {
+        return (
+          <Job>
+            {index === 0 && (
+              <JobDate isCurrent>
+                <span>
+                  {intl.formatMessage({
+                    id: `components.resumeCareer.current`,
+                  })}
+                </span>
+                <DateIndicator isCurrent />
+              </JobDate>
+            )}
+            <JobTitle>
               <h4>
                 {intl.formatMessage({ id: `resume.career.${key}.jobTitle` })}
               </h4>
@@ -27,34 +34,33 @@ const ResumeCareer: React.FC = () => {
                     id: `resume.career.${key}.companyUrl`,
                   })}
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   {intl.formatMessage({ id: `resume.career.${key}.company` })}
-                  <i className="fas fa-external-link-alt external-link-icon" />
                 </a>
-              </h5>
-              <div>
-                {intl.formatMessage({
+                {` - ${intl.formatMessage({
                   id: `resume.career.${key}.companyLocation`,
-                })}
-              </div>
-              <p>
-                {intl.formatMessage({ id: `resume.career.${key}.description` })}
-              </p>
-              <div>
+                })}`}
+              </h5>
+            </JobTitle>
+            <p>
+              {intl.formatMessage({ id: `resume.career.${key}.description` })}
+            </p>
+            <JobDate>
+              <span>
                 {intl.formatMessage({
                   id: `resume.career.${key}.beginDate.month`,
                 })}
-              </div>
-              <div>
+                <br />
                 {intl.formatMessage({
                   id: `resume.career.${key}.beginDate.year`,
                 })}
-              </div>
-            </>
-          );
-        })}
-      </div>
+              </span>
+              <DateIndicator />
+            </JobDate>
+          </Job>
+        );
+      })}
     </Container>
   );
 };
