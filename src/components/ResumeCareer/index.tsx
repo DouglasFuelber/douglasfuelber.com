@@ -16,12 +16,12 @@ const ResumeCareer: React.FC = () => {
           <Job>
             {index === 0 && (
               <JobDate isCurrent>
+                <DateIndicator isCurrent />
                 <span>
                   {intl.formatMessage({
                     id: `components.resumeCareer.current`,
                   })}
                 </span>
-                <DateIndicator isCurrent />
               </JobDate>
             )}
             <JobTitle>
@@ -47,6 +47,7 @@ const ResumeCareer: React.FC = () => {
               {intl.formatMessage({ id: `resume.career.${key}.description` })}
             </p>
             <JobDate>
+              <DateIndicator />
               <span>
                 {intl.formatMessage({
                   id: `resume.career.${key}.beginDate.month`,
@@ -56,7 +57,6 @@ const ResumeCareer: React.FC = () => {
                   id: `resume.career.${key}.beginDate.year`,
                 })}
               </span>
-              <DateIndicator />
             </JobDate>
           </Job>
         );

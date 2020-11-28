@@ -16,9 +16,14 @@ export const Container = styled.div`
 
 export const Job = styled.div`
   border-left: 3px solid #70a1ff;
-  margin-left: 84px;
-  padding: 16px 0 16px 24px;
+  margin-left: 8px;
+  padding: 32px 0 32px 16px;
   position: relative;
+
+  @media (min-width: 768px) {
+    margin-left: 84px;
+    padding: 16px 0 16px 24px;
+  }
 
   p {
     margin-bottom: 8px;
@@ -59,8 +64,8 @@ export const JobDate = styled.div<JobDateProps>`
   align-items: center;
   display: flex;
   bottom: -8px;
-  justify-content: flex-end;
-  left: -86px;
+  justify-content: flex-start;
+  left: -10px;
   position: absolute;
   width: 92px;
 
@@ -72,11 +77,23 @@ export const JobDate = styled.div<JobDateProps>`
     `}
 
   span {
+    color: #70a1ff;
     font-size: 14px;
     font-weight: 700;
-    margin-right: 8px;
+    margin-left: 8px;
     text-align: center;
     text-transform: uppercase;
+  }
+
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+    left: -86px;
+
+    span {
+      color: #00143c;
+      margin-left: 0;
+      margin-right: 24px;
+    }
   }
 `;
 
@@ -92,4 +109,9 @@ export const DateIndicator = styled.div<JobDateProps>`
     css`
       background-color: #eee;
     `}
+
+  @media (min-width: 768px) {
+    position: absolute;
+    right: 0;
+  }
 `;
