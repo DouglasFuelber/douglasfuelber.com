@@ -7,7 +7,7 @@ export const Container = styled.div`
     color: #00143c;
     font-weight: 800;
     margin-bottom: 32px;
-    margin-top: 36px;
+    margin-top: 48px;
     text-transform: uppercase;
   }
 `;
@@ -24,6 +24,7 @@ export const Education = styled.div`
   width: 100%;
 
   @media (min-width: 768px) {
+    padding-right: 32px;
     width: 50%;
   }
 

@@ -7,9 +7,9 @@ import About from '../components/About';
 // import LinkedInBadge from '../components/LinkedInBadge';
 import ResumeCareer from '../components/ResumeCareer';
 import ResumeEducation from '../components/ResumeEducation';
+import ResumeSkills from '../components/ResumeSkills';
 // import ResumeLanguages from '../components/ResumeLanguages';
 // import ResumePublications from '../components/ResumePublications';
-// import ResumeSkills from '../components/ResumeSkills';
 
 import { Container } from './success-styles';
 
@@ -26,7 +26,7 @@ const AboutPage: React.FC = () => {
         <About />
         <ResumeCareer />
         <ResumeEducation />
-        {/* <ResumeSkills /> */}
+        <ResumeSkills />
         {/* <ResumeLanguages /> */}
         {/* <ResumePublications /> */}
         {/* <LinkedInBadge /> */}
