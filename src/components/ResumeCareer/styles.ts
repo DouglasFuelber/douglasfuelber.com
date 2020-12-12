@@ -5,6 +5,8 @@ interface JobDateProps {
 }
 
 export const Container = styled.div`
+  width: 100%;
+
   h3 {
     color: #00143c;
     font-weight: 800;
