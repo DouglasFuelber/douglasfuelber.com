@@ -4,7 +4,7 @@ import { useIntl } from 'gatsby-plugin-react-intl';
 import Layout from '../components/Layout';
 import PageTitle from '../components/PageTitle';
 import About from '../components/About';
-// import LinkedInBadge from '../components/LinkedInBadge';
+import LinkedInBadge from '../components/LinkedInBadge';
 import ResumeCareer from '../components/ResumeCareer';
 import ResumeEducation from '../components/ResumeEducation';
 import ResumeSkills from '../components/ResumeSkills';
@@ -29,7 +29,7 @@ const AboutPage: React.FC = () => {
         <ResumeSkills />
         <ResumeLanguages />
         <ResumePublications />
-        {/* <LinkedInBadge /> */}
+        <LinkedInBadge />
       </Container>
     </Layout>
   );

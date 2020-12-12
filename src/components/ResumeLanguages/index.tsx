@@ -15,7 +15,7 @@ const ResumeLanguages: React.FC = () => {
       <h3>{intl.formatMessage({ id: `components.resumeLanguages.title` })}</h3>
       <LanguagesList>
         {userLanguages.map(language => (
-          <Language>
+          <Language key={language.key}>
             <h4>
               {intl.formatMessage({
                 id: `resume.languages.${language.key}.title`,

@@ -14,7 +14,7 @@ const ResumeEducation: React.FC = () => {
       <h3>{intl.formatMessage({ id: `components.resumeEducation.title` })}</h3>
       <EducationList>
         {Object.keys(resume.education).map(key => (
-          <Education>
+          <Education key={key}>
             <h4>
               {intl.formatMessage({ id: `resume.education.${key}.title` })}
             </h4>

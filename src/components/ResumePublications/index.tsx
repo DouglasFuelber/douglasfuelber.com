@@ -16,7 +16,7 @@ const ResumePublications: React.FC = () => {
       </h3>
       <PublicationsList>
         {Object.keys(resume.publications).map(key => (
-          <Publication>
+          <Publication key={key}>
             <h4>
               <a
                 href={intl.formatMessage({

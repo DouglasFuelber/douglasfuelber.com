@@ -14,7 +14,7 @@ const ResumeSkills: React.FC = () => {
       <h3>{intl.formatMessage({ id: `components.resumeSkills.title` })}</h3>
       <SkillsList>
         {userSkills.map(skill => (
-          <Skill>
+          <Skill key={skill.label}>
             <h4>{skill.label}</h4>
             <LevelCounter level={skill.level} />
           </Skill>
