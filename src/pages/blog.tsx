@@ -60,7 +60,7 @@ const BlogPage: React.FC<IBlogPageProps> = ({
       <PageTitle title="Blog" />
       <Container>
         <PostListing
-          postEdges={posts.edges}
+          postsEdges={posts.edges}
           categoriesEdges={categories.edges}
           tagsEdges={tags.edges}
         />
