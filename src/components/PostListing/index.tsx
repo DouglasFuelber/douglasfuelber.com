@@ -95,8 +95,8 @@ const PostListing: React.FC<IPostListingProps> = ({
        */}
       </PostsMeta>
       <Posts>
-        {posts.map(post => (
-          <PostPreview key={post.title} postInfo={post} />
+        {posts.map((post, index) => (
+          <PostPreview key={post.title} featured={index === 0} post={post} />
         ))}
       </Posts>
     </Container>

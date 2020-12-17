@@ -19,6 +19,8 @@ export const PostsMeta = styled.div`
 `;
 
 export const Posts = styled.div`
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
 
   @media (min-width: 768px) {
