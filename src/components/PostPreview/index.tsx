@@ -21,15 +21,15 @@ interface IPost {
 
 interface IPostPreviewProps {
   post: IPost;
-  featured?: boolean;
+  postIndex: number;
 }
 
-const PostPreview: React.FC<IPostPreviewProps> = ({ featured, post }) => {
-  const intl = useIntl();
+const PostPreview: React.FC<IPostPreviewProps> = ({ postIndex, post }) => {
+  // const intl = useIntl();
   const [coverHeight, setCoverHeight] = useState(0);
 
   const handleResize = useCallback(() => {
-    setCoverHeight(window.innerWidth < 768 ? 162 : 225);
+    setCoverHeight(window.innerWidth < 768 ? 125 : 200);
   }, []);
 
   useEffect(() => {
@@ -42,17 +42,17 @@ const PostPreview: React.FC<IPostPreviewProps> = ({ featured, post }) => {
   }, []);
 
   return (
-    <Container isFeatured={featured}>
-      <Link style={{ textDecoration: 'none' }} to={`/blog/${post.path}`}>
+    <Container postIndex={postIndex}>
+      <Link to={`/blog${post.path}`}>
         <h2>{post.title}</h2>
       </Link>
-      {/* <PostCover postNode={postInfo} coverHeight={coverHeight} />
-      <PostMeta>
+      <PostCover cover={post.cover} coverHeight={coverHeight} />
+      {/* <PostMeta>
         <PostCategory category={postInfo.category} />
         <PostDateTime date={postInfo.date} timeToRead={postInfo.timeToRead} />
         {postInfo.excerpt}
         <PostTags tags={postInfo.tags} />
-        <Link style={{ textDecoration: "none" }} to={`/blog/${postInfo.path}`}>
+        <Link to={`/blog${post.path}`}>
           <Button>
             {intl.formatMessage({ id: `blog.posts.keepReading` })}
           </Button>
