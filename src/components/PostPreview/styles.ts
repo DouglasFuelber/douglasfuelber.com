@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import { darken } from 'polished';
-import { Link } from 'gatsby-plugin-react-intl';
 
 interface PostPreviewProps {
   postIndex: Number;
@@ -68,8 +67,14 @@ export const PostMeta = styled.div<PostPreviewProps>`
   }
 `;
 
-export const LinkButton = styled(Link)`
-  text-align: right;
+export const PostInfoFooter = styled.div`
+  align-items: center;
+  display: flex;
+
+  > div {
+    flex: 1;
+    flex-wrap: wrap;
+  }
 `;
 
 export const Button = styled.button`

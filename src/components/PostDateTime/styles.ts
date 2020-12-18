@@ -17,6 +17,7 @@ export const Container = styled.div<PostDateTimeProps>`
   }
 
   div {
+    align-items: center;
     color: #00143c;
     display: flex;
     font-size: 14px;

@@ -6,7 +6,13 @@ import PostCover from '../PostCover';
 import PostDateTime from '../PostDateTime';
 import PostTags from '../PostTags';
 
-import { Container, PostInfo, PostMeta, LinkButton, Button } from './styles';
+import {
+  Container,
+  PostInfo,
+  PostMeta,
+  PostInfoFooter,
+  Button,
+} from './styles';
 
 interface IPost {
   path: String;
@@ -57,11 +63,15 @@ const PostPreview: React.FC<IPostPreviewProps> = ({ postIndex, post }) => {
           />
         </PostMeta>
         <p>{post.excerpt}</p>
-        <PostTags tags={post.tags} />
+        <PostInfoFooter>
+          <PostTags tags={post.tags} />
+          <Link to={`/blog${post.path}`}>
+            <Button>
+              {intl.formatMessage({ id: `blog.posts.keepReading` })}
+            </Button>
+          </Link>
+        </PostInfoFooter>
       </PostInfo>
-      <LinkButton to={`/blog${post.path}`}>
-        <Button>{intl.formatMessage({ id: `blog.posts.keepReading` })}</Button>
-      </LinkButton>
     </Container>
   );
 };
