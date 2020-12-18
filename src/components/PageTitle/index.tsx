@@ -5,13 +5,19 @@ import { Container } from './styles';
 interface IPageTitleProps {
   title: String;
   subtitle?: String;
+  blogPostPage?: Boolean;
 }
 
-const PageTitle: React.FC<IPageTitleProps> = ({ title, subtitle }) => {
+const PageTitle: React.FC<IPageTitleProps> = ({
+  title,
+  subtitle,
+  blogPostPage,
+}) => {
   return (
     <Container>
-      <h1>{title}</h1>
-      {subtitle && <h2>{subtitle}</h2>}
+      {!blogPostPage && <h1>{title}</h1>}
+      {blogPostPage && <h2>{title}</h2>}
+      {subtitle && <h5>{subtitle}</h5>}
     </Container>
   );
 };

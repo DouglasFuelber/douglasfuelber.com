@@ -1,23 +1,31 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+interface IAboutProps {
+  vertical?: boolean;
+}
+
+export const Container = styled.div<IAboutProps>`
   align-items: center;
   display: flex;
   flex-direction: column;
 
   @media (min-width: 768px) {
-    flex-direction: row;
+    ${props =>
+    !props.vertical &&
+    css`
+        flex-direction: row;
+      `}
   }
 
   img {
     border: 4px solid #70a1ff;
     border-radius: 50%;
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
   }
 `;
 
-export const AboutDescription = styled.p`
+export const AboutDescription = styled.p<IAboutProps>`
   color: #00143c;
   border-left: 4px solid #70a1ff;
   flex: 1;
@@ -26,6 +34,10 @@ export const AboutDescription = styled.p`
   padding-left: 16px;
 
   @media (min-width: 768px) {
-    margin-left: 24px;
+    ${props =>
+    !props.vertical &&
+    css`
+        margin-left: 24px;
+      `}
   }
 `;

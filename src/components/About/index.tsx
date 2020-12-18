@@ -7,7 +7,11 @@ import { userName } from '../../data/site-data';
 
 import { Container, AboutDescription } from './styles';
 
-const About: React.FC = () => {
+interface IAboutProps {
+  vertical?: boolean;
+}
+
+const About: React.FC<IAboutProps> = ({ vertical }) => {
   const intl = useIntl();
 
   const getAvatar = useCallback(() => {
@@ -16,7 +20,7 @@ const About: React.FC = () => {
         query={graphql`
           query ImageQuery {
             image: imageSharp(fixed: { originalName: { regex: "/avatar/" } }) {
-              fixed(width: 250) {
+              fixed(width: 180) {
                 ...GatsbyImageSharpFixed
                 originalName
               }
@@ -29,9 +33,9 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <Container>
+    <Container vertical={vertical}>
       {getAvatar()}
-      <AboutDescription>
+      <AboutDescription vertical={vertical}>
         {intl.formatMessage({ id: 'site.userDescription' })}
       </AboutDescription>
     </Container>

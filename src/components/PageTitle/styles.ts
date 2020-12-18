@@ -4,7 +4,8 @@ export const Container = styled.div`
   margin-bottom: 40px;
   margin-top: 40px;
 
-  h1 {
+  h1,
+  h2 {
     border-left: 4px solid #70a1ff;
     color: #00143c;
     font-size: 40px;
@@ -12,7 +13,7 @@ export const Container = styled.div`
     padding-left: 16px;
   }
 
-  h2 {
+  h5 {
     color: #00143c;
     font-size: 20px;
     font-weight: 600;

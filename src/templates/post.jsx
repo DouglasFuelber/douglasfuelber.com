@@ -24,7 +24,7 @@ import UserInfo from '../components/UserInfo';
 
 import './post.scss';
 
-const PostTemplate = ({ pageContext, data, location }) => {
+const Post2Template = ({ pageContext, data, location }) => {
   const intl = useIntl();
 
   const [mobile, setMobile] = useState(true);
@@ -135,29 +135,4 @@ const PostTemplate = ({ pageContext, data, location }) => {
     </Layout>
   );
 };
-export default PostTemplate;
-
-export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!, $language: String) {
-    markdownRemark(
-      fields: { slug: { eq: $slug } }
-      frontmatter: { language: { eq: $language } }
-    ) {
-      html
-      timeToRead
-      excerpt
-      frontmatter {
-        title
-        cover
-        date
-        language
-        category
-        tags
-      }
-      fields {
-        slug
-        date
-      }
-    }
-  }
-`;
+export default Post2Template;
