@@ -68,7 +68,7 @@ export const PostMeta = styled.div<PostPreviewProps>`
   }
 `;
 
-export const LinkButton = styled.a<Link>`
+export const LinkButton = styled(Link)`
   text-align: right;
 `;
 
