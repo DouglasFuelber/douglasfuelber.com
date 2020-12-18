@@ -14,7 +14,11 @@ const Header: React.FC<IHeaderProps> = ({ pageUrl = '' }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const getNavItemClass = useCallback((link: string = '') => {
-    return link === pageUrl ? 'active' : '';
+    if (pageUrl === link) return 'active';
+
+    if (pageUrl.indexOf(link) > -1 && link !== '') return 'active';
+
+    return '';
   }, []);
 
   return (

@@ -11,4 +11,12 @@ export const Container = styled.div`
     font-weight: 800;
     padding-left: 16px;
   }
+
+  h2 {
+    color: #00143c;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 12px;
+    width: 100%;
+  }
 `;

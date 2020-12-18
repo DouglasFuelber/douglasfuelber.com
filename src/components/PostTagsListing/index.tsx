@@ -26,7 +26,7 @@ const PostTagsListing: React.FC<IPostTagsListingProps> = ({ tagsEdges }) => {
   const [tags, setTags] = useState<IPostTag[]>([]);
 
   useEffect(() => {
-    const tagsList: IPostTag[] = [];
+    let tagsList: IPostTag[] = [];
 
     tagsEdges.forEach(tagEdge => {
       const tagNode = tagEdge.node.frontmatter;
@@ -43,6 +43,8 @@ const PostTagsListing: React.FC<IPostTagsListingProps> = ({ tagsEdges }) => {
         });
       }
     });
+
+    tagsList = tagsList.sort((a, b) => (a.tagName > b.tagName ? 1 : -1));
 
     setTags(tagsList);
   }, []);

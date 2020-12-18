@@ -29,7 +29,7 @@ const PostCategoriesListing: React.FC<IPostCategoriesListingProps> = ({
   const [categories, setCategories] = useState<IPostCategory[]>([]);
 
   useEffect(() => {
-    const categoriesList: IPostCategory[] = [];
+    let categoriesList: IPostCategory[] = [];
 
     categoriesEdges.forEach(categoryEdge => {
       const category = categoryEdge.node.frontmatter;
@@ -46,6 +46,10 @@ const PostCategoriesListing: React.FC<IPostCategoriesListingProps> = ({
           });
       }
     });
+
+    categoriesList = categoriesList.sort((a, b) =>
+      a.categoryName > b.categoryName ? 1 : -1,
+    );
 
     setCategories(categoriesList);
   }, []);

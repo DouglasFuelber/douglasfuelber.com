@@ -66,10 +66,15 @@ const CategoryTemplate: React.FC<IBlogCategoryPageProps> = ({
     <Layout
       pageTitle={`Blog | ${intl.formatMessage({
         id: `blog.categories.category`,
-      })}: ${category}`}
+      })}: ${intl.formatMessage({ id: `blog.categories.${category}` })}`}
       pageRelativeUrl={`blog/categories/${category}`}
     >
-      <PageTitle title="Blog" />
+      <PageTitle
+        title="Blog"
+        subtitle={`${intl.formatMessage({
+          id: `blog.categories.category`,
+        })}: ${intl.formatMessage({ id: `blog.categories.${category}` })}`}
+      />
       <Container>
         <PostListing
           postsEdges={posts.edges}
