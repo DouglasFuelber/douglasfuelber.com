@@ -9,19 +9,19 @@ import PostTags from '../PostTags';
 import { Container, PostInfo, PostMeta, LinkButton, Button } from './styles';
 
 interface IPost {
-  path: string;
-  tags: string[];
-  cover: string;
-  title: string;
-  category: string;
+  path: String;
+  tags: String[];
+  cover: String;
+  title: String;
+  category: String;
   date: Date;
-  excerpt: string;
+  excerpt: String;
   timeToRead: Number;
 }
 
 interface IPostPreviewProps {
   post: IPost;
-  postIndex: number;
+  postIndex: Number;
 }
 
 const PostPreview: React.FC<IPostPreviewProps> = ({ postIndex, post }) => {

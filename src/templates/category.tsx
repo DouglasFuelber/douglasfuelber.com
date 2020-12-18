@@ -1,54 +1,82 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { useIntl } from 'gatsby-plugin-react-intl';
 import PageTitle from '../components/PageTitle';
 import PostListing from '../components/PostListing';
 import Layout from '../components/Layout';
-import config from '../data/site-data';
 
-const CategoryTemplate = ({
-  pageContext,
+import { Container } from '../pages/blog-styles';
+
+interface IBlogCategoryPageProps {
+  pageContext: {
+    category: String;
+  };
+  data: {
+    posts: {
+      edges: {
+        node: {
+          fields: {
+            slug: String;
+            date: Date;
+          };
+          excerpt: String;
+          timeToRead: Number;
+          frontmatter: {
+            title: String;
+            tags: String[];
+            cover: String;
+            category: String;
+            language: String;
+            date: Date;
+          };
+        };
+      }[];
+    };
+    categories: {
+      edges: {
+        node: {
+          frontmatter: {
+            language: String;
+            category: String;
+          };
+        };
+      }[];
+    };
+    tags: {
+      edges: {
+        node: {
+          frontmatter: {
+            language: String;
+            tags: String[];
+          };
+        };
+      }[];
+    };
+  };
+}
+
+const CategoryTemplate: React.FC<IBlogCategoryPageProps> = ({
   data: { posts, categories, tags },
-  location,
+  pageContext,
 }) => {
   const { category } = pageContext;
-  const postEdges = posts.edges;
   const intl = useIntl();
 
   return (
     <Layout
-      location={location}
-      title={category.charAt(0).toUpperCase() + category.slice(1)}
+      pageTitle={`Blog | ${intl.formatMessage({
+        id: `blog.categories.category`,
+      })}: ${category}`}
+      pageRelativeUrl={`blog/categories/${category}`}
     >
-      <Helmet>
-        <title>
-          {`Blog | ${intl.formatMessage({
-            id: `blog.categories.category`,
-          })}: ${category} | ${config.siteTitle}`}
-        </title>
-        <link
-          rel="canonical"
-          href={`${config.siteUrl}/${intl.locale}/blog/categories/${category}`}
+      <PageTitle title="Blog" />
+      <Container>
+        <PostListing
+          postsEdges={posts.edges}
+          categoriesEdges={categories.edges}
+          tagsEdges={tags.edges}
         />
-      </Helmet>
-
-      <div id="blog-container" className="tertiary_bg">
-        <PageTitle
-          title="Blog"
-          subtitle1={intl.formatMessage({ id: `blog.categories.category` })}
-          subtitle2={intl.formatMessage({ id: `blog.categories.${category}` })}
-        />
-
-        <div id="page_content">
-          <PostListing
-            postEdges={postEdges}
-            categoriesEdges={categories.edges}
-            tagsEdges={tags.edges}
-            location={location}
-          />
-        </div>
-      </div>
+      </Container>
     </Layout>
   );
 };

@@ -10,17 +10,17 @@ interface IPostListingProps {
   postsEdges: {
     node: {
       fields: {
-        slug: string;
+        slug: String;
         date: Date;
       };
-      excerpt: string;
+      excerpt: String;
       timeToRead: Number;
       frontmatter: {
-        title: string;
-        tags: string[];
-        cover: string;
-        category: string;
-        language: string;
+        title: String;
+        tags: String[];
+        cover: String;
+        category: String;
+        language: String;
         date: Date;
       };
     };
@@ -28,29 +28,29 @@ interface IPostListingProps {
   categoriesEdges: {
     node: {
       frontmatter: {
-        language: string;
-        category: string;
+        language: String;
+        category: String;
       };
     };
   }[];
   tagsEdges: {
     node: {
       frontmatter: {
-        language: string;
-        tags: string[];
+        language: String;
+        tags: String[];
       };
     };
   }[];
 }
 
 interface IPost {
-  path: string;
-  tags: string[];
-  cover: string;
-  title: string;
-  category: string;
+  path: String;
+  tags: String[];
+  cover: String;
+  title: String;
+  category: String;
   date: Date;
-  excerpt: string;
+  excerpt: String;
   timeToRead: Number;
 }
 

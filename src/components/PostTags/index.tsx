@@ -6,7 +6,7 @@ import { FaTags } from 'react-icons/fa';
 import { Container } from './styles';
 
 interface IPostTagsProps {
-  tags: string[];
+  tags: String[];
 }
 
 const PostTags: React.FC<IPostTagsProps> = ({ tags }) => {

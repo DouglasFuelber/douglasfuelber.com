@@ -8,15 +8,15 @@ interface IPostTagsListingProps {
   tagsEdges: {
     node: {
       frontmatter: {
-        language: string;
-        tags: string[];
+        language: String;
+        tags: String[];
       };
     };
   }[];
 }
 
 interface IPostTag {
-  tagName: string;
+  tagName: String;
   count: number;
 }
 

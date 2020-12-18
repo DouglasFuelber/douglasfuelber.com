@@ -4,7 +4,7 @@ import path from 'path';
 import { StaticQuery, graphql } from 'gatsby';
 
 interface IPostCoverProps {
-  cover: string;
+  cover: String;
   coverHeight: Number;
 }
 

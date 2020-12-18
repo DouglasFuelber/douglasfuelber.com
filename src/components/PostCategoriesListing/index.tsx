@@ -1,22 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import _ from 'lodash';
 import { useIntl, Link } from 'gatsby-plugin-react-intl';
 
 import { Container, CategoriesList } from './styles';
+
+const config = require('../../data/site-data');
 
 interface IPostCategoriesListingProps {
   categoriesEdges: {
     node: {
       frontmatter: {
-        language: string;
-        category: string;
+        language: String;
+        category: String;
       };
     };
   }[];
 }
 
 interface IPostCategory {
-  categoryName: string;
+  categoryName: String;
   count: number;
 }
 
@@ -55,8 +56,13 @@ const PostCategoriesListing: React.FC<IPostCategoriesListingProps> = ({
       <CategoriesList>
         {categories.map(({ categoryName, count }) => {
           let active = false;
-          let categoryUrl = `/blog/categories/${_.kebabCase(categoryName)}`;
-          if (`/${intl.locale}${categoryUrl}` === window.location.pathname) {
+          let categoryUrl = `/blog/categories/${categoryName}`;
+
+          if (
+            (intl.locale === config.defaultLanguage &&
+              categoryUrl === window.location.pathname) ||
+            `/${intl.locale}${categoryUrl}` === window.location.pathname
+          ) {
             active = true;
             categoryUrl = `/blog`;
           }

@@ -6,7 +6,7 @@ import _ from 'lodash';
 import { Container } from './styles';
 
 interface IPostCategoryProps {
-  category: string;
+  category: String;
 }
 
 const PostCategory: React.FC<IPostCategoryProps> = ({ category }) => {
