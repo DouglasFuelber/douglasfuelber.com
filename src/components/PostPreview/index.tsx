@@ -6,7 +6,7 @@ import PostCover from '../PostCover';
 import PostDateTime from '../PostDateTime';
 import PostTags from '../PostTags';
 
-import { Container, PostMeta, Button } from './styles';
+import { Container, PostInfo, PostMeta, LinkButton, Button } from './styles';
 
 interface IPost {
   path: string;
@@ -25,7 +25,7 @@ interface IPostPreviewProps {
 }
 
 const PostPreview: React.FC<IPostPreviewProps> = ({ postIndex, post }) => {
-  // const intl = useIntl();
+  const intl = useIntl();
   const [coverHeight, setCoverHeight] = useState(0);
 
   const handleResize = useCallback(() => {
@@ -47,17 +47,21 @@ const PostPreview: React.FC<IPostPreviewProps> = ({ postIndex, post }) => {
         <h2>{post.title}</h2>
       </Link>
       <PostCover cover={post.cover} coverHeight={coverHeight} />
-      {/* <PostMeta>
-        <PostCategory category={postInfo.category} />
-        <PostDateTime date={postInfo.date} timeToRead={postInfo.timeToRead} />
-        {postInfo.excerpt}
-        <PostTags tags={postInfo.tags} />
-        <Link to={`/blog${post.path}`}>
-          <Button>
-            {intl.formatMessage({ id: `blog.posts.keepReading` })}
-          </Button>
-        </Link>
-      </PostMeta> */}
+      <PostInfo>
+        <PostMeta postIndex={postIndex}>
+          <PostCategory category={post.category} />
+          <PostDateTime
+            date={post.date}
+            timeToRead={post.timeToRead}
+            postIndex={postIndex}
+          />
+        </PostMeta>
+        <p>{post.excerpt}</p>
+        <PostTags tags={post.tags} />
+      </PostInfo>
+      <LinkButton to={`/blog${post.path}`}>
+        <Button>{intl.formatMessage({ id: `blog.posts.keepReading` })}</Button>
+      </LinkButton>
     </Container>
   );
 };

@@ -1,15 +1,16 @@
 import styled, { css } from 'styled-components';
 import { darken } from 'polished';
+import { Link } from 'gatsby-plugin-react-intl';
 
 interface PostPreviewProps {
-  postIndex: number;
+  postIndex: Number;
 }
 
 export const Container = styled.div<PostPreviewProps>`
   display: flex;
   flex-shrink: 0;
   flex-direction: column;
-  margin-bottom: 48px;
+  margin-bottom: 64px;
   width: 100%;
 
   @media (min-width: 768px) {
@@ -25,14 +26,14 @@ export const Container = styled.div<PostPreviewProps>`
     props.postIndex !== 0 &&
     props.postIndex % 2 === 0 &&
     css`
-      padding-left: 8px;
+      padding-left: 16px;
     `}
 
   ${props =>
     props.postIndex !== 0 &&
     props.postIndex % 2 !== 0 &&
     css`
-      padding-right: 8px;
+      padding-right: 16px;
     `}
   }
 
@@ -43,14 +44,40 @@ export const Container = styled.div<PostPreviewProps>`
   }
 `;
 
-export const PostMeta = styled.div``;
+export const PostInfo = styled.div`
+  border-left: 3px solid #70a1ff;
+  color: #00143c;
+  margin: 16px 0;
+  padding-left: 16px;
+
+  p {
+    margin: 24px 0;
+  }
+`;
+
+export const PostMeta = styled.div<PostPreviewProps>`
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    ${props =>
+    props.postIndex === 0 &&
+    css`
+        flex-direction: row;
+      `}
+  }
+`;
+
+export const LinkButton = styled.a<Link>`
+  text-align: right;
+`;
 
 export const Button = styled.button`
   background-color: #00143c;
   border: none;
   border-radius: 8px;
   color: #eee;
-  font-weight: 600;
+  font-size: 14px;
   margin-bottom: 8px;
   padding: 8px 16px;
 
