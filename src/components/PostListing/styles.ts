@@ -13,8 +13,8 @@ export const PostsMeta = styled.div`
   width: 100%;
 
   @media (min-width: 768px) {
-    padding-left: 8px;
-    width: 30%;
+    padding-left: 16px;
+    width: 33.3%;
   }
 `;
 
@@ -24,7 +24,7 @@ export const Posts = styled.div`
   width: 100%;
 
   @media (min-width: 768px) {
-    padding-right: 8px;
-    width: 70%;
+    padding-right: 16px;
+    width: 66.6%;
   }
 `;

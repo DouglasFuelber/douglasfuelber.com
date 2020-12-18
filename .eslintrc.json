@@ -40,7 +40,8 @@
     "import/prefer-default-export": "off",
     "react/jsx-props-no-spreading": "off",
     "no-unused-expressions": "off",
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "no-plusplus": "off"
   },
   "parser": "babel-eslint",
   "settings": {

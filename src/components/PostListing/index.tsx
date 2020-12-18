@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useIntl } from 'gatsby-plugin-react-intl';
-
-// import PostCategoriesListing from '../PostCategoriesListing';
-// import PostTagsListing from '../PostTagsListing';
+import PostCategoriesListing from '../PostCategoriesListing';
+import PostTagsListing from '../PostTagsListing';
 import PostPreview from '../PostPreview';
 
 import { Container, Posts, PostsMeta } from './styles';
@@ -86,13 +85,8 @@ const PostListing: React.FC<IPostListingProps> = ({
   return (
     <Container>
       <PostsMeta>
-        {/*
-        <PostCategoriesListing
-          location={location}
-          categoriesEdges={categoriesEdges}
-        />
-        <PostTagsListing location={location} tagsEdges={tagsEdges} />
-       */}
+        <PostCategoriesListing categoriesEdges={categoriesEdges} />
+        <PostTagsListing tagsEdges={tagsEdges} />
       </PostsMeta>
       <Posts>
         {posts.map((post, index) => (
