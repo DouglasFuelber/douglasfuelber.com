@@ -1,7 +1,9 @@
 import React, { ReactNode, useMemo } from 'react';
 import { Helmet } from 'react-helmet';
 import { useIntl } from 'gatsby-plugin-react-intl';
+
 import Header from '../Header';
+import SEO from '../SEO';
 import Footer from '../Footer';
 
 import config from '../../data/site-data';
@@ -13,6 +15,11 @@ interface ILayoutProps {
   isHome?: boolean;
   pageTitle?: string;
   pageRelativeUrl?: string;
+  post?: {
+    title: string;
+    excerpt: string;
+    cover: string;
+  };
   children: ReactNode;
 }
 
@@ -20,6 +27,7 @@ const Layout: React.FC<ILayoutProps> = ({
   isHome = false,
   pageTitle = '',
   pageRelativeUrl = '',
+  post = undefined,
   children,
 }) => {
   const intl = useIntl();
@@ -43,16 +51,13 @@ const Layout: React.FC<ILayoutProps> = ({
         <html lang={intl.locale} />
         <title>{title}</title>
         <link rel="canonical" href={pageLink} />
-        <meta
-          name="description"
-          content={intl.formatMessage({ id: 'site.description' })}
-        />
 
         <link
           href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
       </Helmet>
+      <SEO pageLink={pageLink} post={post} />
       {!isHome && <Header pageUrl={pageRelativeUrl} />}
       <ChildrenWrapper>{children}</ChildrenWrapper>
       <Footer IsHome={isHome} />

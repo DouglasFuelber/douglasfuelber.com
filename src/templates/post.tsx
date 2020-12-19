@@ -24,10 +24,10 @@ interface IBlogPostPageProps {
     markdownRemark: {
       html: string;
       timeToRead: Number;
-      excerpt: String;
+      excerpt: string;
       frontmatter: {
         title: string;
-        cover: String;
+        cover: string;
         date: Date;
         language: String;
         category: String;
@@ -66,6 +66,7 @@ const PostTemplate: React.FC<IBlogPostPageProps> = ({
     <Layout
       pageTitle={post.title}
       pageRelativeUrl={`blog${postNode.fields.slug}`}
+      post={{ title: post.title, excerpt: postNode.excerpt, cover: post.cover }}
     >
       <Container>
         <PageTitle title={post.title} />
