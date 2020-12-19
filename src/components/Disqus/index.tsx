@@ -15,9 +15,7 @@ const DisqusArea: React.FC<IDisqusAreaProps> = ({ postTitle, postUrl }) => {
 
   const postFullUrl = useMemo(() => {
     let url: string = process.env.SITE_URL || '';
-
     if (config.defaultLanguage !== intl.locale) url += `/${intl.locale}`;
-
     url += `/${postUrl}`;
 
     return url;

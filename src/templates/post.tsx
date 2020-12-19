@@ -9,6 +9,7 @@ import PostCover from '../components/PostCover';
 import PostCategory from '../components/PostCategory';
 import PostDateTime from '../components/PostDateTime';
 import PostTags from '../components/PostTags';
+import Sharer from '../components/Sharer';
 
 import {
   Container,
@@ -81,6 +82,10 @@ const PostTemplate: React.FC<IBlogPostPageProps> = ({
         <PostMeta postIndex={0}>
           <PostTags tags={post.tags} />
         </PostMeta>
+        <Sharer
+          postTitle={post.title}
+          postUrl={`blog${postNode.fields.slug}`}
+        />
         <DisqusArea
           postTitle={post.title}
           postUrl={`blog${postNode.fields.slug}`}
