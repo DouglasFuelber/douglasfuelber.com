@@ -2,13 +2,14 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
+import DisqusArea from '../components/Disqus';
 import PageTitle from '../components/PageTitle';
 import PostCover from '../components/PostCover';
 import PostCategory from '../components/PostCategory';
 import PostDateTime from '../components/PostDateTime';
 import PostTags from '../components/PostTags';
 
-import { Container, Post, PostMeta, PostBody } from './post-styles';
+import { Container, PostMeta, PostBody } from './post-styles';
 
 interface IBlogPostPageProps {
   data: {
@@ -36,7 +37,6 @@ const PostTemplate: React.FC<IBlogPostPageProps> = ({
   data: { markdownRemark: postNode },
 }) => {
   const post = postNode.frontmatter;
-
   const [coverHeight, setCoverHeight] = useState(0);
 
   const handleResize = useCallback(() => {
@@ -55,25 +55,35 @@ const PostTemplate: React.FC<IBlogPostPageProps> = ({
   return (
     <Layout
       pageTitle={post.title}
-      pageRelativeUrl={`blog/${postNode.fields.slug}`}
+      pageRelativeUrl={`blog${postNode.fields.slug}`}
     >
       <Container>
-        <Post>
-          <PageTitle title={post.title} />
-          <PostCover cover={post.cover} coverHeight={coverHeight} />
-          <PostMeta postIndex={0}>
-            <PostCategory category={post.category} />
-            <PostDateTime
-              date={post.date}
-              timeToRead={postNode.timeToRead}
-              postIndex={0}
-            />
-          </PostMeta>
-          <PostBody dangerouslySetInnerHTML={{ __html: postNode.html }} />
-          <PostMeta postIndex={0}>
-            <PostTags tags={post.tags} />
-          </PostMeta>
-        </Post>
+        <PageTitle title={post.title} />
+        <PostCover cover={post.cover} coverHeight={coverHeight} />
+        <PostMeta postIndex={0}>
+          <PostCategory category={post.category} />
+          <PostDateTime
+            date={post.date}
+            timeToRead={postNode.timeToRead}
+            postIndex={0}
+          />
+        </PostMeta>
+        <PostBody dangerouslySetInnerHTML={{ __html: postNode.html }} />
+        <PostMeta postIndex={0}>
+          <PostTags tags={post.tags} />
+        </PostMeta>
+        <DisqusArea
+          postTitle={post.title}
+          postUrl={`blog${postNode.fields.slug}`}
+        />
+
+        {/* <div className="md-grid post-back">
+          <Link className="md-cell--center" to="/blog/">
+            <Button className="secondary-button">
+              {intl.formatMessage({ id: `blog.posts.backToBlog` })}
+            </Button>
+          </Link>
+        </div> */}
       </Container>
     </Layout>
   );

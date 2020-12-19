@@ -218,7 +218,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: config.disqusShortName,
+        shortname: process.env.DISQUS_SHORT_NAME,
       },
     },
     {

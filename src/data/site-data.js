@@ -9,7 +9,6 @@ module.exports = {
   fixedFooter: false, // Whether the footer component is fixed, i.e. always visible
   siteDescription: 'Douglas Fuelber - Full Stack Web Developer', // Website description used for RSS feeds/meta description tag.
   siteRss: '/rss.xml', // Path to the RSS file.
-  disqusShortName: 'douglasfuelber', // Shortname used in Disqus comments component
   postDefaultCategoryID: 'Programming', // Default category for posts.
   dateFromFormat: 'YYYY-MM-DD', // Date format used in the frontmatter.
   userName: 'Douglas Fuelber', // Username to display in the author segment.

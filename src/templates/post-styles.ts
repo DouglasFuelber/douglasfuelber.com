@@ -5,9 +5,10 @@ interface IPostMetaProps {
 }
 
 export const Container = styled.div`
+  align-self: center;
   display: flex;
   flex-direction: column;
-  align-self: center;
+  flex-wrap: wrap;
   max-width: 768px;
   width: 100%;
 
@@ -15,14 +16,7 @@ export const Container = styled.div`
     color: #00143c;
     font-size: 32px;
     margin-bottom: 16px;
-    text-align: center;
   }
-`;
-
-export const Post = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
 `;
 
 export const PostMeta = styled.div<IPostMetaProps>`
@@ -50,13 +44,13 @@ export const PostBody = styled.div`
     color: #00143c;
     text-decoration: underline;
 
-    &[target='_blank']:after {
+    /* &[target='_blank']:after {
       content: '\f35d';
       font-family: 'Font Awesome 5 Free';
       font-size: 11px;
       font-weight: 900;
       margin-left: 5px;
-    }
+    } */
   }
 
   > h1,

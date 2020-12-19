@@ -31,7 +31,8 @@ const Layout: React.FC<ILayoutProps> = ({
   }, []);
 
   const pageLink = useMemo(() => {
-    let link = `${process.env.SITE_URL}/${intl.locale}/`;
+    let link: string = process.env.SITE_URL || '';
+    if (config.defaultLanguage !== intl.locale) link += `/${intl.locale}`;
     if (pageRelativeUrl) link = `${link}/${pageRelativeUrl}/`;
     return link;
   }, []);
