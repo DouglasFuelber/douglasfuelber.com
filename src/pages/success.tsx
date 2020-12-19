@@ -3,7 +3,7 @@ import { useIntl } from 'gatsby-plugin-react-intl';
 
 import Layout from '../components/Layout';
 
-import { Container, LinkButton } from './success-styles';
+import { Container, LinkButton } from '../styles/success-styles';
 
 const SuccessContact: React.FC = () => {
   const intl = useIntl();

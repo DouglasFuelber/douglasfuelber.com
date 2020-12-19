@@ -9,7 +9,7 @@ import {
   TitleWrapper,
   IconsWrapper,
   ItemLink,
-} from './index-styles';
+} from '../styles/index-styles';
 
 export default () => {
   const intl = useIntl();

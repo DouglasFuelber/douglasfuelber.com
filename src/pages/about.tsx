@@ -11,7 +11,7 @@ import ResumeSkills from '../components/ResumeSkills';
 import ResumeLanguages from '../components/ResumeLanguages';
 import ResumePublications from '../components/ResumePublications';
 
-import { Container } from './success-styles';
+import { Container } from '../styles/success-styles';
 
 const AboutPage: React.FC = () => {
   const intl = useIntl();

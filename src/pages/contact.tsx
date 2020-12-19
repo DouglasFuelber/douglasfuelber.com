@@ -12,7 +12,7 @@ import Textarea from '../components/Textarea';
 
 import getValidationErrors from '../utils/getValidationErrors';
 
-import { Container, ContentRow, Button } from './contact-styles';
+import { Container, ContentRow, Button } from '../styles/contact-styles';
 
 interface ContactFormData {
   Name: string;

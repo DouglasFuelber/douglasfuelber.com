@@ -4,7 +4,7 @@ import PageTitle from '../components/PageTitle';
 import PostListing from '../components/PostListing';
 import Layout from '../components/Layout';
 
-import { Container } from '../pages/blog-styles';
+import { Container } from '../styles/blog-styles';
 
 interface IBlogTagPageProps {
   pageContext: {

@@ -17,7 +17,7 @@ import {
   PostBody,
   LinkButton,
   Button,
-} from './post-styles';
+} from '../styles/post-styles';
 
 interface IBlogPostPageProps {
   data: {

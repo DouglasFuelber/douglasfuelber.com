@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import PageTitle from '../components/PageTitle';
 import PostListing from '../components/PostListing';
 
-import { Container } from './blog-styles';
+import { Container } from '../styles/blog-styles';
 
 interface IBlogPageProps {
   data: {
@@ -54,20 +54,18 @@ interface IBlogPageProps {
 
 const BlogPage: React.FC<IBlogPageProps> = ({
   data: { posts, categories, tags },
-}) => {
-  return (
-    <Layout pageTitle="Blog" pageRelativeUrl="blog">
-      <PageTitle title="Blog" />
-      <Container>
-        <PostListing
-          postsEdges={posts.edges}
-          categoriesEdges={categories.edges}
-          tagsEdges={tags.edges}
-        />
-      </Container>
-    </Layout>
-  );
-};
+}) => (
+  <Layout pageTitle="Blog" pageRelativeUrl="blog">
+    <PageTitle title="Blog" />
+    <Container>
+      <PostListing
+        postsEdges={posts.edges}
+        categoriesEdges={categories.edges}
+        tagsEdges={tags.edges}
+      />
+    </Container>
+  </Layout>
+);
 
 export default BlogPage;
 
