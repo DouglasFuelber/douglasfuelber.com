@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { graphql } from 'gatsby';
+import { useIntl } from 'gatsby-plugin-react-intl';
 
 import Layout from '../components/Layout';
 import DisqusArea from '../components/Disqus';
@@ -9,7 +10,13 @@ import PostCategory from '../components/PostCategory';
 import PostDateTime from '../components/PostDateTime';
 import PostTags from '../components/PostTags';
 
-import { Container, PostMeta, PostBody } from './post-styles';
+import {
+  Container,
+  PostMeta,
+  PostBody,
+  LinkButton,
+  Button,
+} from './post-styles';
 
 interface IBlogPostPageProps {
   data: {
@@ -36,6 +43,8 @@ interface IBlogPostPageProps {
 const PostTemplate: React.FC<IBlogPostPageProps> = ({
   data: { markdownRemark: postNode },
 }) => {
+  const intl = useIntl();
+
   const post = postNode.frontmatter;
   const [coverHeight, setCoverHeight] = useState(0);
 
@@ -76,14 +85,11 @@ const PostTemplate: React.FC<IBlogPostPageProps> = ({
           postTitle={post.title}
           postUrl={`blog${postNode.fields.slug}`}
         />
-
-        {/* <div className="md-grid post-back">
-          <Link className="md-cell--center" to="/blog/">
-            <Button className="secondary-button">
-              {intl.formatMessage({ id: `blog.posts.backToBlog` })}
-            </Button>
-          </Link>
-        </div> */}
+        <LinkButton to="/blog/">
+          <Button className="secondary-button">
+            {intl.formatMessage({ id: `blog.posts.backToBlog` })}
+          </Button>
+        </LinkButton>
       </Container>
     </Layout>
   );

@@ -1,4 +1,6 @@
 import styled, { css } from 'styled-components';
+import { darken } from 'polished';
+import { Link } from 'gatsby-plugin-react-intl';
 
 interface IPostMetaProps {
   postIndex: Number;
@@ -9,6 +11,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  margin-bottom: 16px;
   max-width: 768px;
   width: 100%;
 
@@ -34,6 +37,26 @@ export const PostMeta = styled.div<IPostMetaProps>`
     css`
         flex-direction: row;
       `}
+  }
+`;
+
+export const LinkButton = styled(Link)`
+  margin-bottom: 16px;
+  margin-top: 16px;
+  text-align: center;
+`;
+
+export const Button = styled.button`
+  background-color: #00143c;
+  border: none;
+  border-radius: 8px;
+  color: #eee;
+  font-size: 14px;
+  margin-bottom: 8px;
+  padding: 8px 16px;
+
+  &:hover {
+    background: ${darken(0.05, '#00143c')};
   }
 `;
 
