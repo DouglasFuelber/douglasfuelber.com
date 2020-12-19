@@ -7,11 +7,9 @@ interface IPostMetaProps {
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  align-self: center;
+  max-width: 768px;
   width: 100%;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
 
   h1 {
     color: #00143c;
@@ -25,11 +23,6 @@ export const Post = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-
-  @media (min-width: 768px) {
-    padding-right: 16px;
-    width: 66.6%;
-  }
 `;
 
 export const PostMeta = styled.div<IPostMetaProps>`
@@ -47,16 +40,6 @@ export const PostMeta = styled.div<IPostMetaProps>`
     css`
         flex-direction: row;
       `}
-  }
-`;
-
-export const PostAdditionalInfo = styled.div`
-  padding-top: 48px;
-  width: 100%;
-
-  @media (min-width: 768px) {
-    padding-left: 16px;
-    width: 33.3%;
   }
 `;
 
@@ -90,13 +73,14 @@ export const PostBody = styled.div`
 
   ol,
   ul {
-    padding: 24px;
+    padding-left: 24px;
   }
 
   li {
     color: #00143c;
     font-size: 16px;
     font-weight: 500;
+    line-height: 24px;
     margin-top: 16px;
   }
 

@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { graphql } from 'gatsby';
 
-import About from '../components/About';
 import Layout from '../components/Layout';
 import PageTitle from '../components/PageTitle';
 import PostCover from '../components/PostCover';
@@ -9,13 +8,7 @@ import PostCategory from '../components/PostCategory';
 import PostDateTime from '../components/PostDateTime';
 import PostTags from '../components/PostTags';
 
-import {
-  Container,
-  Post,
-  PostMeta,
-  PostBody,
-  PostAdditionalInfo,
-} from './post-styles';
+import { Container, Post, PostMeta, PostBody } from './post-styles';
 
 interface IBlogPostPageProps {
   data: {
@@ -64,10 +57,9 @@ const PostTemplate: React.FC<IBlogPostPageProps> = ({
       pageTitle={post.title}
       pageRelativeUrl={`blog/${postNode.fields.slug}`}
     >
-      <PageTitle title="Blog" blogPostPage />
       <Container>
         <Post>
-          <h1>{post.title}</h1>
+          <PageTitle title={post.title} />
           <PostCover cover={post.cover} coverHeight={coverHeight} />
           <PostMeta postIndex={0}>
             <PostCategory category={post.category} />
@@ -82,9 +74,6 @@ const PostTemplate: React.FC<IBlogPostPageProps> = ({
             <PostTags tags={post.tags} />
           </PostMeta>
         </Post>
-        <PostAdditionalInfo>
-          <About vertical />
-        </PostAdditionalInfo>
       </Container>
     </Layout>
   );
