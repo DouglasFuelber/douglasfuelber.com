@@ -1,7 +1,7 @@
 {
   "name": "douglasfuelber.com",
   "description": "Douglas Fuelber - Website",
-  "version": "1.8.5",
+  "version": "2.0.0",
   "author": "Douglas Fuelber <contato@douglasfuelber.com>",
   "dependencies": {
     "@unform/core": "^2.1.3",
