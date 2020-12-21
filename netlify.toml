@@ -2,4 +2,6 @@
   publish = "public"
   command = "yarn build"
 [build.environment]
+  NETLIFY_USE_YARN = true
   YARN_VERSION = "1.22.4"
+  YARN_FLAGS = "--ignore-engines --ignore-optional"
