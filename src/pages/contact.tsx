@@ -75,6 +75,7 @@ const ContactPage: React.FC = () => {
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
+          data-netlify-recaptcha="true"
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
