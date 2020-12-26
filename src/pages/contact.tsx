@@ -2,7 +2,7 @@ import React, { useRef, useCallback } from 'react';
 import { useIntl } from 'gatsby-plugin-react-intl';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
-import ReCAPTCHA from 'react-google-recaptcha';
+// import ReCAPTCHA from 'react-google-recaptcha';
 import * as Yup from 'yup';
 
 import Layout from '../components/Layout';
@@ -75,7 +75,6 @@ const ContactPage: React.FC = () => {
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          data-netlify-recaptcha="true"
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
@@ -108,11 +107,11 @@ const ContactPage: React.FC = () => {
           </ContentRow>
 
           <ContentRow>
-            <ReCAPTCHA
+            {/* <ReCAPTCHA
               sitekey={process.env.SITE_RECAPTCHA_KEY || ''}
               hl={intl.locale}
               size="invisible"
-            />
+            /> */}
             <Button type="submit">
               {intl.formatMessage({ id: 'contact.buttonLabel' })}
             </Button>
