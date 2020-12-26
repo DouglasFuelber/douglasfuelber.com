@@ -108,7 +108,7 @@ const ContactPage: React.FC = () => {
 
           <ContentRow>
             <ReCAPTCHA
-              sitekey={process.env.RECAPTCHA_PUBLIC_KEY || ''}
+              sitekey={process.env.SITE_RECAPTCHA_KEY || ''}
               hl={intl.locale}
               size="invisible"
             />

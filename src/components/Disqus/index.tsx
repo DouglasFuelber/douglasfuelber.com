@@ -24,7 +24,7 @@ const DisqusArea: React.FC<IDisqusAreaProps> = ({ postTitle, postUrl }) => {
   return (
     <Container>
       <h3>{intl.formatMessage({ id: `blog.posts.comments` })}</h3>
-      <Disqus title={postTitle} identifier={postFullUrl} url={postFullUrl} />
+      <Disqus title={postTitle} identifier={postUrl} url={postFullUrl} />
     </Container>
   );
 };
