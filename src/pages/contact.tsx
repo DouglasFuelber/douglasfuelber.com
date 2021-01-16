@@ -89,6 +89,8 @@ const ContactPage: React.FC = () => {
           data-netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
         >
+          <input type="hidden" name="form-name" value="Contact Form" />
+
           <ContentRow>
             <Input
               name="Name"
