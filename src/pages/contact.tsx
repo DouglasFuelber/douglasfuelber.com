@@ -1,9 +1,11 @@
-import React, { useRef, useCallback } from 'react';
+import React, { useRef, useCallback, useMemo } from 'react';
 import { useIntl } from 'gatsby-plugin-react-intl';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 // import ReCAPTCHA from 'react-google-recaptcha';
 import * as Yup from 'yup';
+
+import config from '../data/site-data';
 
 import Layout from '../components/Layout';
 import PageTitle from '../components/PageTitle';
@@ -24,6 +26,12 @@ interface ContactFormData {
 const ContactPage: React.FC = () => {
   const intl = useIntl();
   const formRef = useRef<FormHandles>(null);
+
+  const action = useMemo(() => {
+    return config.defaultLanguage !== intl.locale
+      ? `/${intl.locale}/success/`
+      : `/success/`;
+  }, []);
 
   const handleSubmit = useCallback(async (data: ContactFormData) => {
     try {
@@ -48,6 +56,7 @@ const ContactPage: React.FC = () => {
         abortEarly: false,
       });
 
+      formRef.current?.submitForm();
       return true;
     } catch (err) {
       if (err instanceof Yup.ValidationError) {
@@ -70,7 +79,7 @@ const ContactPage: React.FC = () => {
         <p>{intl.formatMessage({ id: 'contact.sentence' })}</p>
         <Form
           ref={formRef}
-          action={`/${intl.locale}/success/`}
+          action={action}
           name="contact"
           method="post"
           data-netlify="true"
