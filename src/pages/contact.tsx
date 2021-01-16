@@ -33,41 +33,44 @@ const ContactPage: React.FC = () => {
       : `/success/`;
   }, []);
 
-  const handleSubmit = useCallback(async (data: ContactFormData) => {
-    try {
-      formRef.current?.setErrors({});
+  const handleSubmit = useCallback(
+    async (data: ContactFormData, { reset }, event) => {
+      try {
+        formRef.current?.setErrors({});
 
-      const schema = Yup.object().shape({
-        Name: Yup.string().required(
-          intl.formatMessage({ id: 'contact.nameRequired' }),
-        ),
-        Email: Yup.string()
-          .required(intl.formatMessage({ id: 'contact.emailRequired' }))
-          .email(intl.formatMessage({ id: 'contact.emailInvalid' })),
-        Subject: Yup.string().required(
-          intl.formatMessage({ id: 'contact.subjectRequired' }),
-        ),
-        Message: Yup.string().required(
-          intl.formatMessage({ id: 'contact.messageRequired' }),
-        ),
-      });
+        const schema = Yup.object().shape({
+          Name: Yup.string().required(
+            intl.formatMessage({ id: 'contact.nameRequired' }),
+          ),
+          Email: Yup.string()
+            .required(intl.formatMessage({ id: 'contact.emailRequired' }))
+            .email(intl.formatMessage({ id: 'contact.emailInvalid' })),
+          Subject: Yup.string().required(
+            intl.formatMessage({ id: 'contact.subjectRequired' }),
+          ),
+          Message: Yup.string().required(
+            intl.formatMessage({ id: 'contact.messageRequired' }),
+          ),
+        });
 
-      await schema.validate(data, {
-        abortEarly: false,
-      });
+        await schema.validate(data, {
+          abortEarly: false,
+        });
 
-      formRef.current?.submitForm();
-      return true;
-    } catch (err) {
-      if (err instanceof Yup.ValidationError) {
-        const errors = getValidationErrors(err);
+        event.target.submit();
+        return true;
+      } catch (err) {
+        if (err instanceof Yup.ValidationError) {
+          const errors = getValidationErrors(err);
 
-        formRef.current?.setErrors(errors);
+          formRef.current?.setErrors(errors);
+        }
+
+        return false;
       }
-
-      return false;
-    }
-  }, []);
+    },
+    [],
+  );
 
   return (
     <Layout
