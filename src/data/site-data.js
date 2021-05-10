@@ -73,36 +73,28 @@ module.exports = {
   ],
   userSkills: [
     { level: 5, label: 'JavaScript' },
-    { level: 4, label: 'ReactJS' },
-    { level: 4, label: 'Gatsby.js' },
-
-    { level: 4, label: 'C#' },
-    { level: 4, label: 'Microsoft .NET' },
-    { level: 4, label: 'ASP.NET MVC' },
-
-    { level: 4, label: 'LINQ' },
-    { level: 4, label: 'Entity Framework' },
-    { level: 2, label: 'NUnit' },
-
-    { level: 2, label: 'React Native' },
-    { level: 2, label: 'Node.js' },
-    { level: 1, label: 'TypeScript' },
-
     { level: 5, label: 'HTML / CSS' },
-    { level: 4, label: 'SASS' },
-    { level: 5, label: 'Bootstrap' },
+    { level: 4, label: 'C#' },
+    { level: 4, label: '.NET (Framework/Core)' },
 
-    { level: 3, label: 'Ionic Framework' },
-    { level: 4, label: 'AngularJS' },
-    { level: 3, label: 'Microsoft SharePoint' },
+    { level: 4, label: 'Entity Framework' },
+    { level: 4, label: 'ASP.NET MVC' },
+    { level: 4, label: 'React' },
+    { level: 4, label: 'Gatsby' },
+
+    { level: 4, label: 'Git' },
+    { level: 4, label: 'Azure DevOps' },
+    { level: 3, label: 'Scrum' },
+    { level: 3, label: 'TypeScript' },
 
     { level: 3, label: 'SQL' },
     { level: 3, label: 'Microsoft SQL Server' },
-    { level: 5, label: 'WordPress' },
+    { level: 2, label: 'React Native' },
+    { level: 2, label: 'Node.js' },
 
-    { level: 3, label: 'PHP' },
-    { level: 3, label: 'MySQL' },
-    { level: 4, label: 'Git' },
+    { level: 2, label: 'NUnit' },
+    { level: 2, label: 'MySQL' },
+    { level: 1, label: 'GraphQL' },
   ],
   userLanguages: [
     {
@@ -115,7 +107,7 @@ module.exports = {
     },
     {
       key: 'es',
-      level: 1,
+      level: 2,
     },
   ],
   copyright: `Developed by Douglas Fuelber | ${new Date().getFullYear()}`,

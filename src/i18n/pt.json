@@ -1,7 +1,7 @@
 {
   "site": {
     "description": "Douglas Fuelber - Programador Full Stack",
-    "userDescription": "Programador desde 2016 e graduado em Ciência da Computação, trabalho no desenvolvimento de sistemas, websites, portais corporativos e aplicativos. Gosto sempre de aprender novas tecnologias, linguagens de programação e idiomas, buscando não me limitar em apenas aprimorar o conhecimento que já possuo, além de auxiliar a equipe com que trabalho, seja com ideias ou com apoio técnico. Além disso, gosto muito de filmes, séries, esportes e conhecer novos lugares.",
+    "userDescription": "Apaixonado por programação, estou sempre em busca de aprender novas tecnologias, metodologias, linguagens de programação ou qualquer conhecimento que agregue ao meu crescimento. Como programador, gosto de atuar em diferentes tipos de projetos, principalmente aplicações web, que me desafiam tecnicamente e me permitem atuar com equipes compostas por pessoas de diferentes perfis, o que permite uma grande troca de conhecimento e que agrega muito ao meu crescimento profissional e pessoal.",
     "userLocation": "Brasil",
     "copyright": "Desenvolvido por Douglas Fuelber"
   },
@@ -92,6 +92,17 @@
   "resume": {
     "career": {
       "1": {
+        "company": "Tekann",
+        "companyUrl": "https://tekann.com/pt/",
+        "companyLocation": "RS / Brasil",
+        "jobTitle": "Programador Pleno",
+        "beginDate": {
+          "month": "ABR",
+          "year": "2021"
+        },
+        "description": "Desenvolvimento de aplicações web utilizando C#, .NET, JavaScript e outras tecnologias web."
+      },
+      "2": {
         "company": "Conectt",
         "companyUrl": "https://conectt.com.br/",
         "companyLocation": "RS / Brasil",
@@ -102,7 +113,7 @@
         },
         "description": "Desenvolvimento de sistemas, websites, portais corporativos e aplicativos em diversas tecnologias e plataformas, destacando-se C#, Microsoft .NET, JavaScript, Microsoft SharePoint, Wordpress e Ionic Framework."
       },
-      "2": {
+      "3": {
         "company": "Conectt",
         "companyUrl": "https://conectt.com.br/",
         "companyLocation": "RS / Brasil",
@@ -113,7 +124,7 @@
         },
         "description": "Desenvolvimento de sistemas, websites e portais corporativos em diversas tecnologias e plataformas, destacando-se C#, Microsoft .NET, JavaScript, Microsoft SharePoint e Wordpress."
       },
-      "3": {
+      "4": {
         "company": "Conectt",
         "companyUrl": "https://conectt.com.br/",
         "companyLocation": "RS / Brasil",
@@ -124,7 +135,7 @@
         },
         "description": "Desenvolvimento de websites e portais corporativos sobre a plataforma Microsoft SharePoint."
       },
-      "4": {
+      "5": {
         "company": "Imagem.com",
         "companyUrl": "http://www.imaggem.com.br/",
         "companyLocation": "RS / Brasil",

@@ -1,7 +1,7 @@
 {
   "site": {
     "description": "Douglas Fuelber - Full Stack Software Developer",
-    "userDescription": "Software developer since 2016 and graduated in Computer Science, I work developing systems, websites, corporate portals and mobile apps. I like to learn new technologies, programming languages and languages, trying not only to just improve the knowledge I already have, besides helping the team I work with, either with ideas or with technical support. Also, I really like movies, series, sports and getting to know new places.",
+    "userDescription": "Passionate about programming, I am always looking to learn new technologies, methodologies, programming languages or any knowledge that adds to my growth. As a software developer, I like to work on different types of projects, especially web applications, which challenge me technically and allow me to work with teams composed by people of different profiles, which allows a great exchange of knowledge and adds a lot to my professional and personal growth.",
     "userLocation": "Brazil",
     "copyright": "Developed by Douglas Fuelber"
   },
@@ -92,6 +92,17 @@
   "resume": {
     "career": {
       "1": {
+        "company": "Tekann",
+        "companyUrl": "https://tekann.com/en/",
+        "companyLocation": "RS / Brazil",
+        "jobTitle": "Software Developer",
+        "beginDate": {
+          "month": "APR",
+          "year": "2021"
+        },
+        "description": "Development of web applications with C#, .NET, JavaScript and other web technologies."
+      },
+      "2": {
         "company": "Conectt",
         "companyUrl": "https://conectt.com.br/",
         "companyLocation": "RS / Brazil",
@@ -102,7 +113,7 @@
         },
         "description": "Development of systems, websites, corporate portals and mobile apps in different technologies and platforms, mostly C#, Microsoft .NET, JavaScript, Microsoft SharePoint, Wordpress and Ionic Framework."
       },
-      "2": {
+      "3": {
         "company": "Conectt",
         "companyUrl": "https://conectt.com.br/",
         "companyLocation": "RS / Brazil",
@@ -113,7 +124,7 @@
         },
         "description": "Developer of computer systems, websites and corporate portals in diverse technologies and platforms, highlighting C#, Microsoft .NET, JavaScript, Microsoft SharePoint and Wordpress."
       },
-      "3": {
+      "4": {
         "company": "Conectt",
         "companyUrl": "https://conectt.com.br/",
         "companyLocation": "RS / Brazil",
@@ -124,7 +135,7 @@
         },
         "description": "Developer of websites and corporate portals on the Microsoft SharePoint platform."
       },
-      "4": {
+      "5": {
         "company": "Imagem.com",
         "companyUrl": "http://www.imaggem.com.br/",
         "companyLocation": "RS / Brazil",
