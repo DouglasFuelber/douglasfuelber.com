@@ -27,16 +27,6 @@ export default () => {
         </TitleWrapper>
 
         <IconsWrapper>
-          <ItemLink to="/about/">
-            <FaUser />
-            <div className="info">
-              <span>
-                {intl.formatMessage({ id: 'navigation.about.subtitle' })}
-              </span>
-              <h3>{intl.formatMessage({ id: 'navigation.about.title' })}</h3>
-            </div>
-          </ItemLink>
-
           <ItemLink to="/blog/">
             <FaBookOpen />
             <div className="info">
