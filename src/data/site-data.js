@@ -33,11 +33,6 @@ module.exports = {
       iconClassName: 'fas fa-home',
     },
     {
-      id: 'about',
-      url: '/about/',
-      iconClassName: 'fas fa-id-card',
-    },
-    {
       id: 'blog',
       url: '/blog/',
       iconClassName: 'fas fa-book-open',

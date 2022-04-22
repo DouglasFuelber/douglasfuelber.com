@@ -44,11 +44,6 @@ const Header: React.FC<IHeaderProps> = ({ pageUrl = '' }) => {
                 </Link>
               </li>
               <li>
-                <Link to="/about/" className={getNavItemClass('about')}>
-                  {intl.formatMessage({ id: 'navigation.about.title' })}
-                </Link>
-              </li>
-              <li>
                 <Link to="/blog/" className={getNavItemClass('blog')}>
                   {intl.formatMessage({ id: 'navigation.blog.title' })}
                 </Link>
